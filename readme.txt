@@ -18,3 +18,6 @@ by Kai
 Is this thing working or not?
 by Joonas 
 31.1.2010
+
+Apparently not
+by Joonas 1.2.2010
