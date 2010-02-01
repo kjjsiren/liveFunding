@@ -27,3 +27,4 @@ by Joonas 1.2.2010 +10min
 
 I have a question, if I modify the text, then I use "git pull" to update, at this time, the text will be merged automatically, right?
 
+Joonas: It should, yeah. Best to test it out though. 
