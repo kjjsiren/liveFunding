@@ -25,3 +25,5 @@ by Joonas 1.2.2010
 Or apparently yes. Just have to know what you're doing...=)
 by Joonas 1.2.2010 +10min
 
+I have a question, if I modify the text, then I use "git pull" to update, at this time, the text will be merged automatically, right?
+
