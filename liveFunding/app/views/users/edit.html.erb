@@ -1,0 +1,38 @@
+
+<h1>Your registrations</h1>
+<ul>
+<% @registrations.each do |r| %>
+<li><%= r.exercise_group.course_instance.course.name %> <%= r.exercise_group.course_instance.name %> <%r.exercise_group.name%></li>
+<% end %>
+<h1>Edit your details</h1>
+
+<% form_for(@user, :html => {:class => 'validate', :multipart=>true}) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :username %><br/>
+    <strong><%= @user.username %></strong>
+  </p>
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :student_number %><br/>
+    <%= f.text_field :student_number %>
+  </p>
+  <p>
+    <%= f.label :password %><br/>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %><br/>
+    <%= f.password_field :password_confirmation %>
+  </p>
+    <p>
+    <%= f.submit 'Update' %>
+   </p>
+<% end %>
+
+
+<%= link_to 'Destroy account', user_path, :method => :delete, :confirm => "Are you sure?" %>
