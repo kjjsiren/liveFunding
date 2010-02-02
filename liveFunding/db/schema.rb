@@ -9,14 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100202093128) do
+ActiveRecord::Schema.define(:version => 20100202114019) do
 
   create_table "transactions", :force => true do |t|
-    t.decimal  "amount",     :null => false
-    t.string   "to"
-    t.string   "from"
+    t.decimal  "amount"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "to"
+    t.string   "from"
+    t.integer  "rank"
   end
 
   create_table "users", :force => true do |t|
