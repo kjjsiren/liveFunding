@@ -97,6 +97,7 @@ Rendering transactions/index
 Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/transactions]
 
 
+<<<<<<< HEAD
 Processing TransactionsController#index (for 127.0.0.1 at 2010-02-02 11:27:39) [GET]
   Parameters: {"action"=>"index", "controller"=>"transactions"}
 
@@ -216,3 +217,32 @@ ActionView::TemplateError (undefined local variable or method `session_url' for 
 Rendered rescues/_trace (98.7ms)
 Rendered rescues/_request_and_response (0.2ms)
 Rendering rescues/layout (internal_server_error)
+=======
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-02-01 18:58:30) [GET]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-01 18:58:44) [GET]
+  [4;35;1mTransaction Load (0.3ms)[0m   [0mSELECT * FROM "transactions" [0m
+Rendering template within layouts/transactions
+Rendering transactions/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/transactions]
+
+
+Processing TransactionsController#new (for 127.0.0.1 at 2010-02-01 18:58:46) [GET]
+Rendering template within layouts/transactions
+Rendering transactions/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/transactions/new]
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-01 19:01:14) [GET]
+  [4;36;1mTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM "transactions" [0m
+Rendering template within layouts/transactions
+Rendering transactions/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/transactions]
+>>>>>>> ba41a9cccf1e58095550307e3e6ef1e0c85e9bd5

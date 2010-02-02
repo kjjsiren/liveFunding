@@ -1,5 +1,4 @@
-ActionController::Routing::Routes.draw do |map|
-   
+ActionController::Routing::Routes.draw do |map|   
 	map.resources :users
 	map.resources :transactions
 	
