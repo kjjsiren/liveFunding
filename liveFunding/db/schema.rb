@@ -9,12 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100201162708) do
+ActiveRecord::Schema.define(:version => 20100202093128) do
 
   create_table "transactions", :force => true do |t|
     t.decimal  "amount",     :null => false
     t.string   "to"
     t.string   "from"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "email"
+    t.string   "phone_number"
+    t.string   "hashed_password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
