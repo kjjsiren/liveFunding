@@ -95,3 +95,32 @@ Processing TransactionsController#index (for 127.0.0.1 at 2010-02-01 18:37:35) [
 Rendering template within layouts/transactions
 Rendering transactions/index
 Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/transactions]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-02-01 18:58:30) [GET]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-01 18:58:44) [GET]
+  [4;35;1mTransaction Load (0.3ms)[0m   [0mSELECT * FROM "transactions" [0m
+Rendering template within layouts/transactions
+Rendering transactions/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/transactions]
+
+
+Processing TransactionsController#new (for 127.0.0.1 at 2010-02-01 18:58:46) [GET]
+Rendering template within layouts/transactions
+Rendering transactions/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/transactions/new]
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-01 19:01:14) [GET]
+  [4;36;1mTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM "transactions" [0m
+Rendering template within layouts/transactions
+Rendering transactions/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/transactions]
