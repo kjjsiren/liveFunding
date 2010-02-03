@@ -379,3 +379,286 @@ Migrating to AddColumnsToTransactions (20100202114019)
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-03 12:07:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `session_url' for #<ActionView::Base:0x116e3f0>) on line #3 of app/views/users/index.html.erb:
+1: <h2>Login</h2>
+2: 
+3: <% form_for @user, :url=>session_url do |f| %>
+4: 	<%= f.label :username %>
+5: 	<%= f.text_field :username %><br />
+6: 
+
+    app/views/users/index.html.erb:3
+
+Rendered rescues/_trace (42.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-03 12:08:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:is_authenticated?] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/transactions]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-03 12:08:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `session_url' for #<ActionView::Base:0x23f76e8>) on line #3 of app/views/users/index.html.erb:
+1: <h2>Login</h2>
+2: 
+3: <% form_for @user, :url=>session_url do |f| %>
+4: 	<%= f.label :username %>
+5: 	<%= f.text_field :username %><br />
+6: 
+
+    app/views/users/index.html.erb:3
+
+Rendered rescues/_trace (100.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-03 12:09:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `javascript_for_validatious' for #<ActionView::Base:0x252aa38>) on line #11 of app/views/layouts/application.html.erb:
+8:   <%= stylesheet_link_tag "application" %>
+9: 
+10:   <%= javascript_include_tag 'XMLHttpRequest' ,'v2.standalone.full.min', 'v2.config', 'v2.rails' %>
+11:  <!-- <%= javascript_for_validatious %>-->
+12:   <%= javascript_include_tag :defaults %>
+13:   
+14: </head>
+
+    app/views/layouts/application.html.erb:11
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-03 12:09:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (undefined method `logged_in?' for #<ActionView::Base:0x23a2468>) on line #18 of app/views/layouts/application.html.erb:
+15: 
+16: 	<div style="float:left; width: 50%;"><h1><%= link_to "Home", root_path %></h1>
+17: 	<h2><%= t :hello %></h2>
+18: 	<% if logged_in? %>
+19: 		<p>Welcome, <%= link_to current_user.username, edit_user_path(current_user) %> (<%= link_to "logout", logout_path %>)</p>
+20: 	<% end %>
+21: 	
+
+    app/views/layouts/application.html.erb:18
+
+Rendered rescues/_trace (102.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-03 12:11:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `page_generation_timestamp' for #<ActionView::Base:0x24a0a54>) on line #22 of app/views/layouts/application.html.erb:
+19: </div>
+20: <hr/>
+21: 	
+22: 	<p>This page was generated at <%= page_generation_timestamp %></p>
+23: 
+24: </body>
+25: </html>
+
+    app/views/layouts/application.html.erb:22
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-03 12:11:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Completed in 76ms (View: 68, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-03 12:11:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:is_authenticated?] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/transactions]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-03 12:11:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:11:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-03 12:11:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-03 12:12:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:12:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:12:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:12:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:12:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-03 12:12:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

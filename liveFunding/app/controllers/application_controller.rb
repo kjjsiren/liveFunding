@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   include UserAuthentication # /lib/user_authentication.rb
   
-  before_filter :is_authenticated?
+  #before_filter :is_authenticated?
   
   protected
   
