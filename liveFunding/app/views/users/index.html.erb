@@ -1,3 +1,7 @@
+<% if logged_in? %>
+		<p>Welcome, <%= link_to current_user.username, edit_user_path(current_user) %> (<%= link_to "logout", logout_path %>)</p>
+<% end %>
+<% if !logged_in? %>
 <h2>Login</h2>
 <% form_for @user, :url=>session_url do |f| %>
 	<%= f.label :username %>
@@ -8,7 +12,9 @@
 
 	<%= submit_tag "Log in"%>
 <% end %>
-
-
 <p><%= link_to 'Register', new_user_path %></p>
+<% end %>
+
+
+
 

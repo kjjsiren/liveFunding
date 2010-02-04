@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   
     if authenticated_user
       log_user_in(authenticated_user)  # lib/user_authentication.rb
-      redirect_to courses_path
+      redirect_to users_path
     else
       flash[:error] = "Login failed, check your username and password."
       redirect_to login_path
