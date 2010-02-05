@@ -2444,3 +2444,1252 @@ ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-05 02:34:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Completed in 94ms (View: 57, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-05 02:34:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.4ms)[0m   [0;1mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/transactions/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#new (for 127.0.0.1 at 2010-02-05 02:34:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"transactions"}
+Rendering template within layouts/application
+Rendering transactions/new
+Completed in 80ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/transactions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#create (for 127.0.0.1 at 2010-02-05 02:34:23) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"OXUyar98cRYL2WEoaQthxsLhirn3l48xYLz0w5Sng88=", "controller"=>"transactions", "transaction"=>{"from"=>"liang", "amount"=>"100", "to"=>"wang", "description"=>"first"}}
+  [4;35;1mTransaction Create (0.5ms)[0m   [0mINSERT INTO "transactions" ("created_at", "updated_at", "from", "amount", "to", "rank", "description") VALUES('2010-02-05 00:34:23', '2010-02-05 00:34:23', 'liang', 100.0, 'wang', NULL, 'first')[0m
+Redirected to http://0.0.0.0:3000/transactions/1
+Completed in 11ms (DB: 0) | 302 Found [http://0.0.0.0/transactions]
+
+
+Processing TransactionsController#show (for 127.0.0.1 at 2010-02-05 02:34:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ("transactions"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering transactions/show
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/transactions/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-05 02:34:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+  [4;35;1mTransaction Load (0.5ms)[0m   [0mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Completed in 164ms (View: 159, DB: 0) | 200 OK [http://0.0.0.0/transactions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:31) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#new (for 127.0.0.1 at 2010-02-05 02:34:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"transactions"}
+Rendering template within layouts/application
+Rendering transactions/new
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/transactions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#create (for 127.0.0.1 at 2010-02-05 02:34:51) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"OXUyar98cRYL2WEoaQthxsLhirn3l48xYLz0w5Sng88=", "controller"=>"transactions", "transaction"=>{"from"=>"liang", "amount"=>"200", "to"=>"Antti", "description"=>":-)"}}
+  [4;36;1mTransaction Create (0.4ms)[0m   [0;1mINSERT INTO "transactions" ("created_at", "updated_at", "from", "amount", "to", "rank", "description") VALUES('2010-02-05 00:34:51', '2010-02-05 00:34:51', 'liang', 200.0, 'Antti', NULL, ':-)')[0m
+Redirected to http://0.0.0.0:3000/transactions/2
+Completed in 11ms (DB: 0) | 302 Found [http://0.0.0.0/transactions]
+
+
+Processing TransactionsController#show (for 127.0.0.1 at 2010-02-05 02:34:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"transactions"}
+  [4;35;1mTransaction Load (0.2ms)[0m   [0mSELECT * FROM "transactions" WHERE ("transactions"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering transactions/show
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/transactions/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-05 02:34:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.6ms)[0m   [0;1mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Completed in 82ms (View: 77, DB: 1) | 200 OK [http://0.0.0.0/transactions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:34:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#new (for 127.0.0.1 at 2010-02-05 02:35:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"transactions"}
+Rendering template within layouts/application
+Rendering transactions/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/transactions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:35:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:35:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:35:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:35:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:35:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#create (for 127.0.0.1 at 2010-02-05 02:35:31) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"OXUyar98cRYL2WEoaQthxsLhirn3l48xYLz0w5Sng88=", "controller"=>"transactions", "transaction"=>{"from"=>"Joonas", "amount"=>"123", "to"=>"Antti", "description"=>"another"}}
+  [4;35;1mTransaction Create (0.4ms)[0m   [0mINSERT INTO "transactions" ("created_at", "updated_at", "from", "amount", "to", "rank", "description") VALUES('2010-02-05 00:35:31', '2010-02-05 00:35:31', 'Joonas', 123.0, 'Antti', NULL, 'another')[0m
+Redirected to http://0.0.0.0:3000/transactions/3
+Completed in 10ms (DB: 0) | 302 Found [http://0.0.0.0/transactions]
+
+
+Processing TransactionsController#show (for 127.0.0.1 at 2010-02-05 02:35:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ("transactions"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering transactions/show
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/transactions/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:35:31) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:35:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:35:32) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:35:32) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:35:32) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-05 02:36:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+  [4;35;1mTransaction Load (0.6ms)[0m   [0mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Completed in 24ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/transactions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#edit (for 127.0.0.1 at 2010-02-05 02:36:18) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ("transactions"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering transactions/edit
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/transactions/2/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#update (for 127.0.0.1 at 2010-02-05 02:36:23) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"OXUyar98cRYL2WEoaQthxsLhirn3l48xYLz0w5Sng88=", "id"=>"2", "controller"=>"transactions", "transaction"=>{"from"=>"liang", "amount"=>"205", "rank"=>"", "to"=>"Antti", "description"=>":-)"}}
+  [4;35;1mTransaction Load (0.2ms)[0m   [0mSELECT * FROM "transactions" WHERE ("transactions"."id" = 2) [0m
+  [4;36;1mTransaction Update (0.3ms)[0m   [0;1mUPDATE "transactions" SET "updated_at" = '2010-02-05 00:36:23', "amount" = 205.0 WHERE "id" = 2[0m
+Redirected to http://0.0.0.0:3000/transactions/2
+Completed in 12ms (DB: 1) | 302 Found [http://0.0.0.0/transactions/2]
+
+
+Processing TransactionsController#show (for 127.0.0.1 at 2010-02-05 02:36:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"transactions"}
+  [4;35;1mTransaction Load (0.2ms)[0m   [0mSELECT * FROM "transactions" WHERE ("transactions"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering transactions/show
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/transactions/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-05 02:36:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.6ms)[0m   [0;1mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Completed in 23ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/transactions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#edit (for 127.0.0.1 at 2010-02-05 02:36:28) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"transactions"}
+  [4;35;1mTransaction Load (0.2ms)[0m   [0mSELECT * FROM "transactions" WHERE ("transactions"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering transactions/edit
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/transactions/2/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#update (for 127.0.0.1 at 2010-02-05 02:36:34) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"OXUyar98cRYL2WEoaQthxsLhirn3l48xYLz0w5Sng88=", "id"=>"2", "controller"=>"transactions", "transaction"=>{"from"=>"liang", "amount"=>"205", "rank"=>"34", "to"=>"Antti", "description"=>":-)"}}
+  [4;36;1mTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ("transactions"."id" = 2) [0m
+  [4;35;1mTransaction Update (0.3ms)[0m   [0mUPDATE "transactions" SET "updated_at" = '2010-02-05 00:36:34', "rank" = 34 WHERE "id" = 2[0m
+Redirected to http://0.0.0.0:3000/transactions/2
+Completed in 11ms (DB: 1) | 302 Found [http://0.0.0.0/transactions/2]
+
+
+Processing TransactionsController#show (for 127.0.0.1 at 2010-02-05 02:36:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ("transactions"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering transactions/show
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/transactions/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-05 02:36:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+  [4;35;1mTransaction Load (0.6ms)[0m   [0mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/transactions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#edit (for 127.0.0.1 at 2010-02-05 02:36:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ("transactions"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering transactions/edit
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/transactions/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#update (for 127.0.0.1 at 2010-02-05 02:36:47) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"OXUyar98cRYL2WEoaQthxsLhirn3l48xYLz0w5Sng88=", "id"=>"1", "controller"=>"transactions", "transaction"=>{"from"=>"liang", "amount"=>"100", "rank"=>"12", "to"=>"wang", "description"=>"first"}}
+  [4;35;1mTransaction Load (64.8ms)[0m   [0mSELECT * FROM "transactions" WHERE ("transactions"."id" = 1) [0m
+  [4;36;1mTransaction Update (0.4ms)[0m   [0;1mUPDATE "transactions" SET "updated_at" = '2010-02-05 00:36:47', "rank" = 12 WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/transactions/1
+Completed in 77ms (DB: 65) | 302 Found [http://0.0.0.0/transactions/1]
+
+
+Processing TransactionsController#show (for 127.0.0.1 at 2010-02-05 02:36:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"transactions"}
+  [4;35;1mTransaction Load (0.3ms)[0m   [0mSELECT * FROM "transactions" WHERE ("transactions"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering transactions/show
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/transactions/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-05 02:36:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.6ms)[0m   [0;1mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/transactions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#edit (for 127.0.0.1 at 2010-02-05 02:36:52) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"transactions"}
+  [4;35;1mTransaction Load (0.2ms)[0m   [0mSELECT * FROM "transactions" WHERE ("transactions"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering transactions/edit
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/transactions/3/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:36:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#update (for 127.0.0.1 at 2010-02-05 02:37:00) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"OXUyar98cRYL2WEoaQthxsLhirn3l48xYLz0w5Sng88=", "id"=>"3", "controller"=>"transactions", "transaction"=>{"from"=>"Joonas", "amount"=>"123", "rank"=>"56", "to"=>"Antti", "description"=>"another"}}
+  [4;36;1mTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ("transactions"."id" = 3) [0m
+  [4;35;1mTransaction Update (0.3ms)[0m   [0mUPDATE "transactions" SET "updated_at" = '2010-02-05 00:37:00', "rank" = 56 WHERE "id" = 3[0m
+Redirected to http://0.0.0.0:3000/transactions/3
+Completed in 12ms (DB: 1) | 302 Found [http://0.0.0.0/transactions/3]
+
+
+Processing TransactionsController#show (for 127.0.0.1 at 2010-02-05 02:37:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ("transactions"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering transactions/show
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/transactions/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-05 02:37:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+  [4;35;1mTransaction Load (0.7ms)[0m   [0mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Completed in 86ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/transactions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#top (for 127.0.0.1 at 2010-02-05 02:37:06) [GET]
+  Parameters: {"action"=>"top", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (0.7ms)[0m   [0;1mSELECT * FROM "transactions" ORDER BY rank DESC LIMIT 10[0m
+Rendering template within layouts/application
+Rendering transactions/top
+Completed in 26ms (View: 22, DB: 1) | 200 OK [http://0.0.0.0/transactions/top]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:06) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:06) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:06) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:06) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-05 02:37:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+  [4;35;1mTransaction Load (0.6ms)[0m   [0mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/transactions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:37:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
