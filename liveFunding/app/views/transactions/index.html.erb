@@ -1,0 +1,32 @@
+<h2>All the transactions</h2>
+
+<table border="1">
+  <tr>
+    <th>id</th>
+    <th>Amount</th>
+    <th>From</th>
+    <th>To</th>
+	<th>Create Time</th>
+	<th>Rank</th>
+    <th>Operation</th>
+  </tr>
+
+<% @transactions.each do |transaction| %>
+  <tr>
+    <td><%=h transaction.id %></td>
+    <td><%=h transaction.amount %></td>
+    <td><%=h transaction.from %></td>
+    <td><%=h transaction.to %></td>
+	<td><%=h transaction.created_at %></td>
+	<td><%= link_to '+', transaction, :action => :incr_rank %> <%=h transaction.rank %></td>
+	<td><%= link_to 'Show', transaction %> 
+	<%= link_to 'Edit',  edit_transaction_path(transaction) %> 
+	<%= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New transaction', new_transaction_path %> &nbsp;&nbsp;
+<%= link_to 'Top 10', top_transactions_path %>

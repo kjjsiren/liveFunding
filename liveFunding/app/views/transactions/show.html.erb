@@ -1,0 +1,33 @@
+<h1>Transactions#show</h1>
+<h1>Transaction <% @transaction.id %></h1>
+
+<% form_for(@transaction) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :amount %><br />
+    <%=h @transaction.amount %>
+  </p>
+  <p>
+    <%= f.label :from %><br />
+    <%=h @transaction.from %>
+  </p>
+  <p>
+    <%= f.label :to %><br />
+    <%=h @transaction.to %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%=h @transaction.description %>
+  </p>
+  <p>
+    <%= f.label :rank %><br />
+    <%=h @transaction.rank %>
+  </p>
+
+<% end %>
+
+<br />
+
+<%= link_to 'Back', transactions_path %>
+<%= link_to 'Back', transactions_path %>
