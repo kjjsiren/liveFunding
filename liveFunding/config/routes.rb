@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
 	map.resources :users
 	map.resources :transactions, :collection => {:top => :get}
 	map.resource :session
+	map.resource :comments
   
 	
 	map.login "/login", :controller=>:users, :action=>:index
