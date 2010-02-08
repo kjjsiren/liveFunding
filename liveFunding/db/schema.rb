@@ -9,12 +9,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100207174345) do
+ActiveRecord::Schema.define(:version => 20100207233639) do
 
   create_table "comments", :force => true do |t|
     t.text     "content"
     t.integer  "user_id"
     t.integer  "transaction_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "organizations", :force => true do |t|
+    t.string   "name"
+    t.string   "leader"
+    t.string   "email"
+    t.string   "phone_number"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "thirdpartypeople", :force => true do |t|
+    t.string   "last_name"
+    t.string   "first_name"
+    t.string   "sex"
+    t.string   "phone_number"
+    t.date     "brithday"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -5127,3 +5127,2963 @@ ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:20:27) [GET]
+
+ActionController::RoutingError (No route matches "/organizations/transactions/" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ChangeAmountToDecimal (20100201162708)
+Migrating to CreateUsers (20100202093128)
+Migrating to CreateTransactions (20100202112429)
+Migrating to CreateNewTransactions (20100202113533)
+Migrating to AddColumnsToTransactions (20100202114019)
+Migrating to CreateComments (20100207174345)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("transactions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:21:11) [GET]
+
+ActionController::RoutingError (No route matches "/organizations/transactions/" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:21:15) [GET]
+
+ActionController::RoutingError (No route matches "/organizations/transactions/" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2010-02-07 23:21:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"transactions"}
+  [4;36;1mTransaction Load (1.0ms)[0m   [0;1mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Completed in 426ms (View: 365, DB: 1) | 200 OK [http://localhost/transactions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:21:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:21:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:21:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:21:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:21:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:21:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:21:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ChangeAmountToDecimal (20100201162708)
+Migrating to CreateUsers (20100202093128)
+Migrating to CreateTransactions (20100202112429)
+Migrating to CreateNewTransactions (20100202113533)
+Migrating to AddColumnsToTransactions (20100202114019)
+Migrating to CreateComments (20100207174345)
+Migrating to CreateOrganizations (20100207212308)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "leader" varchar(255), "email" varchar(255), "phone_number" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100207212308')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organizations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("transactions")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-07 23:26:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;36;1mOrganization Load (1.0ms)[0m   [0;1mSELECT * FROM "organizations" [0m
+
+ActionView::MissingTemplate (Missing template organizations/index.erb in view path app/views):
+  app/controllers/organizations_controller.rb:7:in `index'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-07 23:26:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;35;1mOrganization Load (1.0ms)[0m   [0mSELECT * FROM "organizations" [0m
+Rendering template within layouts/application
+Rendering organizations/index
+
+ActionView::TemplateError (undefined local variable or method `new_organization_path' for #<ActionView::Base:0x5c2d38c>) on line #28 of app/views/organizations/index.html.erb:
+25: 
+26: <br />
+27: 
+28: <%= link_to 'New organization', new_organization_path %>
+
+    app/views/organizations/index.html.erb:28
+    app/controllers/organizations_controller.rb:7:in `index'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-07 23:29:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;36;1mOrganization Load (1.0ms)[0m   [0;1mSELECT * FROM "organizations" [0m
+Rendering template within layouts/application
+Rendering organizations/index
+Completed in 74ms (View: 64, DB: 1) | 200 OK [http://localhost/organizations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:29:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:30:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x5b19a04>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (151.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:31:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x5c6b5ec>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (85.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:31:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x5aec374>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (147.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:31:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x5bfe6a4>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:31:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x5a7fb5c>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:31:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x5bac78c>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:32:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x5a29acc>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <p>
+5:     <%= f.label :name %><br />
+6:     <%= f.text_field :name %>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:33:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organizations) do |f| %>
+4:   <p>
+5:     <%= f.label :name %><br />
+6:     <%= f.text_field :name %>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (153.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:34:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x5c4ab58>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:34:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x3583434>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (104.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:37:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x58fa82c>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (151.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:39:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x5a05348>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:29:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (77.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TransactionsController#new (for 127.0.0.1 at 2010-02-07 23:40:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"transactions"}
+Rendering template within layouts/application
+Rendering transactions/new
+Completed in 216ms (View: 155, DB: 0) | 200 OK [http://localhost/transactions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:40:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:40:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:40:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:40:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:40:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:40:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:40:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:40:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:43:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x57d8674>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:23:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (159.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:46:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+Completed in 36ms (View: 24, DB: 0) | 200 OK [http://localhost/organizations/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:46:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:46:11) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:46:11) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:46:11) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:46:11) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-07 23:46:19) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:46:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x57c6c6c>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:23:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (160.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:46:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+Completed in 41ms (View: 27, DB: 0) | 200 OK [http://localhost/organizations/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:46:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:46:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:46:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:46:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:46:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#create (for 127.0.0.1 at 2010-02-07 23:47:15) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"sWK+KHpZxaGNgxUac/flHr5XydSNgaZkQhoncpsCn8g=", "controller"=>"organizations", "organization"=>{"name"=>"Euro Union", "leader"=>"Yinan", "phone_number"=>"1234567", "description"=>"blblbl...", "email"=>"aa@aa.eu"}}
+  [4;36;1mOrganization Create (2.0ms)[0m   [0;1mINSERT INTO "organizations" ("name", "updated_at", "leader", "phone_number", "description", "email", "created_at") VALUES('Euro Union', '2010-02-07 21:47:15', 'Yinan', '1234567', 'blblbl...', 'aa@aa.eu', '2010-02-07 21:47:15')[0m
+
+NoMethodError (undefined method `organization_url' for #<OrganizationsController:0x5a10428>):
+  app/controllers/organizations_controller.rb:39:in `create'
+  app/controllers/organizations_controller.rb:36:in `create'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-07 23:49:40) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (104.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-07 23:50:33) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (139.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:50:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+Completed in 38ms (View: 24, DB: 0) | 200 OK [http://localhost/organizations/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:50:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:50:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:50:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:50:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:50:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-07 23:50:50) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (151.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-07 23:54:51) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-07 23:54:55) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-07 23:54:58) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (134.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-07 23:55:00) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-07 23:55:26) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-07 23:58:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+Completed in 44ms (View: 29, DB: 0) | 200 OK [http://localhost/organizations/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:58:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:58:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:58:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:58:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-07 23:58:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-07 23:58:51) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-08 00:04:18) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-08 00:04:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+Completed in 40ms (View: 26, DB: 0) | 200 OK [http://localhost/organizations/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:04:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:04:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:04:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:04:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:04:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:04:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-08 00:04:28) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-08 00:04:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x5941b3c>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:23:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (99.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-08 00:05:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+
+ActionView::TemplateError (undefined method `organizations_path' for #<ActionView::Base:0x57af2ec>) on line #3 of app/views/organizations/new.html.erb:
+1: <h1>New organization</h1>
+2: 
+3: <% form_for(@organization) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/organizations/new.html.erb:3
+    app/controllers/organizations_controller.rb:23:in `new'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-08 00:05:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;35;1mOrganization Load (1.0ms)[0m   [0mSELECT * FROM "organizations" [0m
+
+Errno::ENOENT (No such file or directory - D:/Software/Git/msysgit/ohtu10k-LiveFunding/liveFunding/app/views/organizations/index.html.erb):
+  app/controllers/organizations_controller.rb:5:in `index'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-08 00:06:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;36;1mOrganization Load (1.0ms)[0m   [0;1mSELECT * FROM "organizations" [0m
+Rendering template within layouts/application
+Rendering organizations/index
+
+ActionView::TemplateError (undefined method `organization_path' for #<ActionView::Base:0x57eae78>) on line #19 of app/views/organizations/index.html.erb:
+16:     <td><%=h organization.email %></td>
+17:     <td><%=h organization.phone_number %></td>
+18:     <td><%=h organization.description %></td>
+19:     <td><%= link_to 'Show', organization %></td>
+20:     <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+21:     <td><%= link_to 'Destroy', organization, :confirm => 'Are you sure?', :method => :delete %></td>
+22:   </tr>
+
+    app/views/organizations/index.html.erb:19
+    app/views/organizations/index.html.erb:12:in `each'
+    app/views/organizations/index.html.erb:12
+    app/controllers/organizations_controller.rb:5:in `index'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-08 00:07:13) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:12:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (136.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-08 00:07:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+Completed in 37ms (View: 25, DB: 0) | 200 OK [http://localhost/organizations/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:07:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:07:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:07:19) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:07:19) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:07:19) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:07:19) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:07:19) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#create (for 127.0.0.1 at 2010-02-08 00:10:35) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"sWK+KHpZxaGNgxUac/flHr5XydSNgaZkQhoncpsCn8g=", "controller"=>"organizations", "organization"=>{"name"=>"", "leader"=>"", "phone_number"=>"", "description"=>"", "email"=>""}}
+  [4;35;1mOrganization Create (1.0ms)[0m   [0mINSERT INTO "organizations" ("name", "updated_at", "leader", "phone_number", "description", "email", "created_at") VALUES('', '2010-02-07 22:10:35', '', '', '', '', '2010-02-07 22:10:35')[0m
+
+NoMethodError (undefined method `organization_url' for #<OrganizationsController:0x57370a8>):
+  app/controllers/organizations_controller.rb:39:in `create'
+  app/controllers/organizations_controller.rb:36:in `create'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (134.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-08 00:14:56) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:13:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-08 00:15:00) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:13:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-08 00:15:03) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:13:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-08 00:36:56) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:13:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-08 00:40:08) [GET]
+  Parameters: {"action"=>"show", "controller"=>"organizations"}
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/organizations_controller.rb:13:in `show'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ChangeAmountToDecimal (20100201162708)
+Migrating to CreateUsers (20100202093128)
+Migrating to CreateTransactions (20100202112429)
+Migrating to CreateNewTransactions (20100202113533)
+Migrating to AddColumnsToTransactions (20100202114019)
+Migrating to CreateComments (20100207174345)
+Migrating to CreateOrganizations (20100207212308)
+Migrating to CreatePeople (20100207224322)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "last_name" varchar(255), "first_name" varchar(255), "sex" varchar(255), "phone_number" varchar(255), "brithday" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100207224322')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organizations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("transactions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-02-08 00:48:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"people"}
+
+NameError (uninitialized constant PeopleController::Persion):
+  app/controllers/people_controller.rb:3:in `index'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-02-08 00:49:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"people"}
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+
+ActionView::MissingTemplate (Missing template people/index.erb in view path app/views):
+  app/controllers/people_controller.rb:5:in `index'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-02-08 00:51:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"people"}
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+
+ActionView::TemplateError (undefined local variable or method `new_person_path' for #<ActionView::Base:0x5a38db0>) on line #28 of app/views/people/index.html.erb:
+25: 
+26: <br />
+27: 
+28: <%= link_to 'New person', new_person_path %>
+
+    app/views/people/index.html.erb:28
+    app/controllers/people_controller.rb:5:in `index'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (151.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-02-08 00:52:29) [GET]
+  Parameters: {"action"=>"show", "controller"=>"peoples"}
+
+NameError (uninitialized constant PeoplesController):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:55:18) [GET]
+
+ActionController::RoutingError (No route matches "/peoples" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#new (for 127.0.0.1 at 2010-02-08 00:56:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"organizations"}
+Rendering template within layouts/application
+Rendering organizations/new
+Completed in 98ms (View: 85, DB: 0) | 200 OK [http://localhost/organizations/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:56:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:56:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:56:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:56:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:56:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 00:56:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-08 01:17:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;36;1mOrganization Load (1.0ms)[0m   [0;1mSELECT * FROM "organizations" [0m
+Rendering template within layouts/organizations
+Rendering organizations/index
+Completed in 106ms (View: 93, DB: 1) | 200 OK [http://localhost/organizations/]
+
+
+Processing OrganizationsController#destroy (for 127.0.0.1 at 2010-02-08 01:18:02) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"sWK+KHpZxaGNgxUac/flHr5XydSNgaZkQhoncpsCn8g=", "id"=>"2", "controller"=>"organizations"}
+  [4;35;1mOrganization Load (1.0ms)[0m   [0mSELECT * FROM "organizations" WHERE ("organizations"."id" = 2) [0m
+  [4;36;1mOrganization Destroy (1.0ms)[0m   [0;1mDELETE FROM "organizations" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/organizations
+Completed in 83ms (DB: 2) | 302 Found [http://localhost/organizations/2]
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-08 01:18:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;35;1mOrganization Load (1.0ms)[0m   [0mSELECT * FROM "organizations" [0m
+Rendering template within layouts/organizations
+Rendering organizations/index
+Completed in 30ms (View: 16, DB: 1) | 200 OK [http://localhost/organizations]
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-08 01:20:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;36;1mOrganization Load (1.0ms)[0m   [0;1mSELECT * FROM "organizations" [0m
+Rendering template within layouts/organizations
+Rendering organizations/index
+
+ActionView::TemplateError (undefined method `organization_path' for #<ActionView::Base:0x5859f44>) on line #19 of app/views/organizations/index.html.erb:
+16:     <td><%=h organization.email %></td>
+17:     <td><%=h organization.phone_number %></td>
+18:     <td><%=h organization.description %></td>
+19:     <td><%= link_to 'Show', organization %></td>
+20:     <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+21:     <td><%= link_to 'Destroy', organization, :confirm => 'Are you sure?', :method => :delete %></td>
+22:   </tr>
+
+    app/views/organizations/index.html.erb:19
+    app/views/organizations/index.html.erb:12:in `each'
+    app/views/organizations/index.html.erb:12
+    app/controllers/organizations_controller.rb:7:in `index'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (173.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-08 01:21:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;35;1mOrganization Load (1.0ms)[0m   [0mSELECT * FROM "organizations" [0m
+Rendering template within layouts/application
+Rendering organizations/index
+Completed in 47ms (View: 34, DB: 1) | 200 OK [http://localhost/organizations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:21:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:21:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:21:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:21:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:21:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-08 01:22:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;36;1mOrganization Load (1.0ms)[0m   [0;1mSELECT * FROM "organizations" [0m
+Rendering template within layouts/application
+Rendering organizations/index
+Completed in 40ms (View: 27, DB: 1) | 200 OK [http://localhost/organizations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:22:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:22:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:22:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:22:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:22:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#index (for 127.0.0.1 at 2010-02-08 01:23:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"organizations"}
+  [4;35;1mOrganization Load (1.0ms)[0m   [0mSELECT * FROM "organizations" [0m
+Rendering template within layouts/application
+Rendering organizations/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/organizations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrganizationsController#show (for 127.0.0.1 at 2010-02-08 01:23:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"organizations"}
+  [4;36;1mOrganization Load (0.0ms)[0m   [0;1mSELECT * FROM "organizations" WHERE ("organizations"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering organizations/show
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/organizations/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/XMLHttpRequest.js" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.standalone.full.min" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.config" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:23:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/v2.rails" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ChangeAmountToDecimal (20100201162708)
+Migrating to CreateUsers (20100202093128)
+Migrating to CreateTransactions (20100202112429)
+Migrating to CreateNewTransactions (20100202113533)
+Migrating to AddColumnsToTransactions (20100202114019)
+Migrating to CreateComments (20100207174345)
+Migrating to CreateOrganizations (20100207212308)
+Migrating to CreateThirdPartyPerson (20100207232757)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "thirdpartyperson" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "last_name" varchar(255), "first_name" varchar(255), "sex" varchar(255), "phone_number" varchar(255), "brithday" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100207232757')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("organizations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("thirdpartyperson")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("transactions")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-08 01:32:46) [GET]
+
+ActionController::RoutingError (No route matches "/people" with {:method=>:get}):
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ThirdpartypeopleController#index (for 127.0.0.1 at 2010-02-08 01:32:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"thirdpartypeople"}
+  [4;36;1mThirdpartyperson Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: thirdpartypeople: SELECT * FROM "thirdpartypeople" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: thirdpartypeople: SELECT * FROM "thirdpartypeople" ):
+  app/controllers/thirdpartypeople_controller.rb:5:in `index'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ThirdpartypeopleController#index (for 127.0.0.1 at 2010-02-08 01:33:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"thirdpartypeople"}
+  [4;35;1mThirdpartyperson Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: thirdpartypeople: SELECT * FROM "thirdpartypeople" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: thirdpartypeople: SELECT * FROM "thirdpartypeople" ):
+  app/controllers/thirdpartypeople_controller.rb:5:in `index'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Software/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Software/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ChangeAmountToDecimal (20100201162708)
+Migrating to CreateUsers (20100202093128)
+Migrating to CreateTransactions (20100202112429)
+Migrating to CreateNewTransactions (20100202113533)
+Migrating to AddColumnsToTransactions (20100202114019)
+Migrating to CreateComments (20100207174345)
+Migrating to CreateOrganizations (20100207212308)
+Migrating to CreateThirdpartypeople (20100207233639)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "thirdpartypeople" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "last_name" varchar(255), "first_name" varchar(255), "sex" varchar(255), "phone_number" varchar(255), "brithday" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100207233639')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organizations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("thirdpartypeople")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("transactions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing ThirdpartypeopleController#index (for 127.0.0.1 at 2010-02-08 01:38:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"thirdpartypeople"}
+  [4;36;1mThirdpartyperson Load (0.0ms)[0m   [0;1mSELECT * FROM "thirdpartypeople" [0m
+Rendering template within layouts/thirdpartypeople
+Rendering thirdpartypeople/index
+Completed in 89ms (View: 76, DB: 0) | 200 OK [http://localhost/thirdpartypeople]
+
+
+Processing ThirdpartypeopleController#new (for 127.0.0.1 at 2010-02-08 01:38:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"thirdpartypeople"}
+Rendering template within layouts/thirdpartypeople
+Rendering thirdpartypeople/new
+Completed in 335ms (View: 320, DB: 0) | 200 OK [http://localhost/thirdpartypeople/new]
+
+
+Processing ThirdpartypeopleController#create (for 127.0.0.1 at 2010-02-08 01:38:46) [POST]
+  Parameters: {"commit"=>"Create", "thirdpartyperson"=>{"phone_number"=>"12345", "brithday(1i)"=>"2005", "sex"=>"M", "brithday(2i)"=>"2", "brithday(3i)"=>"22", "first_name"=>"Yinan", "last_name"=>"Qi"}, "action"=>"create", "authenticity_token"=>"sWK+KHpZxaGNgxUac/flHr5XydSNgaZkQhoncpsCn8g=", "controller"=>"thirdpartypeople"}
+  [4;35;1mThirdpartyperson Create (1.0ms)[0m   [0mINSERT INTO "thirdpartypeople" ("updated_at", "phone_number", "sex", "first_name", "brithday", "last_name", "created_at") VALUES('2010-02-07 23:38:46', '12345', 'M', 'Yinan', '2005-02-22', 'Qi', '2010-02-07 23:38:46')[0m
+Redirected to http://localhost:3000/thirdpartypeople/1
+Completed in 68ms (DB: 1) | 302 Found [http://localhost/thirdpartypeople]
+
+
+Processing ThirdpartypeopleController#show (for 127.0.0.1 at 2010-02-08 01:38:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"thirdpartypeople"}
+  [4;36;1mThirdpartyperson Load (1.0ms)[0m   [0;1mSELECT * FROM "thirdpartypeople" WHERE ("thirdpartypeople"."id" = 1) [0m
+Rendering template within layouts/thirdpartypeople
+Rendering thirdpartypeople/show
+Completed in 40ms (View: 25, DB: 1) | 200 OK [http://localhost/thirdpartypeople/1]
