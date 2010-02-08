@@ -1,0 +1,28 @@
+<h1>Listing thirdpartypeople</h1>
+
+<table>
+  <tr>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Sex</th>
+    <th>Phone number</th>
+    <th>Brithday</th>
+  </tr>
+
+<% @thirdpartypeople.each do |thirdpartyperson| %>
+  <tr>
+    <td><%=h thirdpartyperson.last_name %></td>
+    <td><%=h thirdpartyperson.first_name %></td>
+    <td><%=h thirdpartyperson.sex %></td>
+    <td><%=h thirdpartyperson.phone_number %></td>
+    <td><%=h thirdpartyperson.brithday %></td>
+    <td><%= link_to 'Show', thirdpartyperson %></td>
+    <td><%= link_to 'Edit', edit_thirdpartyperson_path(thirdpartyperson) %></td>
+    <td><%= link_to 'Destroy', thirdpartyperson, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New thirdpartyperson', new_thirdpartyperson_path %>

@@ -1,0 +1,32 @@
+<h1>Editing thirdpartyperson</h1>
+
+<% form_for(@thirdpartyperson) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :sex %><br />
+    <%= f.text_field :sex %>
+  </p>
+  <p>
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :brithday %><br />
+    <%= f.date_select :brithday %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @thirdpartyperson %> |
+<%= link_to 'Back', thirdpartypeople_path %>

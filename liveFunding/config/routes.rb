@@ -1,9 +1,13 @@
-ActionController::Routing::Routes.draw do |map|   
+ActionController::Routing::Routes.draw do |map|
+  map.resources :thirdpartypeople
+
+  map.resources :organizations
+   
 	map.resources :users
 	map.resources :transactions, :collection => {:top => :get}
 	map.resource :session
 	map.resource :comments
-  
+ 
 	
 	map.login "/login", :controller=>:users, :action=>:index
 	map.logout "/logout", :controller=>:sessions, :action=>:destroy

@@ -1,0 +1,28 @@
+<p>
+  <b>Last name:</b>
+  <%=h @thirdpartyperson.last_name %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%=h @thirdpartyperson.first_name %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%=h @thirdpartyperson.sex %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%=h @thirdpartyperson.phone_number %>
+</p>
+
+<p>
+  <b>Brithday:</b>
+  <%=h @thirdpartyperson.brithday %>
+</p>
+
+
+<%= link_to 'Edit', edit_thirdpartyperson_path(@thirdpartyperson) %> |
+<%= link_to 'Back', thirdpartypeople_path %>
