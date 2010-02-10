@@ -1,32 +1,48 @@
-<h1>Transactions#show</h1>
-<h1>Transaction <% @transaction.id %></h1>
+<h1>Transaction with the ID: <%=h @transaction.id %></h1>
 
 <% form_for(@transaction) do |f| %>
-  <%= f.error_messages %>
+<%= f.error_messages %>
 
-  <p>
-    <%= f.label :amount %><br />
-    <%=h @transaction.amount %>
-  </p>
-  <p>
-    <%= f.label :from %><br />
-    <%=h @transaction.from %>
-  </p>
-  <p>
-    <%= f.label :to %><br />
+<p>
+	<%= f.label :amount %><br />
+	<%=h @transaction.amount %>
+</p>
+  	
+<p>
+	<%= f.label :from %><br />
+	<%=h @transaction.from %>
+</p>
+
+<p>
+	<%= f.label :to %><br />
     <%=h @transaction.to %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%=h @transaction.description %>
-  </p>
-  <p>
-    <%= f.label :rank %><br />
-    <%=h @transaction.rank %>
-  </p>
+</p>
 
-<% end %>
+<p>
+	<%= f.label :description %><br />
+	<%=h @transaction.description %>
+</p>
+	
+<p>
+	<%= f.label :rank %><br />
+   	<%=h @transaction.rank %>
+</p>
 
-<br />
-
+<h2>Comments for this transaction:</h2>
+	<% @transaction.comments.each do |comment| %>
+  		<p>
+			<b>Commenter:</b>
+	  		<%=h comment.user %>
+		</p>
+	  
+		<p>  
+			<%=h comment.content %>
+		</p>
+		<br />
+		<%= link_to 'Edit this comment', edit_transaction_comment_path(@transaction, comment.id) %>  
+		<%= link_to 'Destroy', transaction_comment_path(@transaction, comment), :confirm => 'Are you sure?', :method => :delete %> 
+	<% end %>
+<br />	
+<%= link_to 'Comment', new_transaction_comment_path(@transaction)  %>
 <%= link_to 'Back', transactions_path %>
+<% end %>
