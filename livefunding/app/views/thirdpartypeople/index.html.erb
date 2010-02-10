@@ -6,7 +6,7 @@
     <th>First name</th>
     <th>Sex</th>
     <th>Phone number</th>
-    <th>Brithday</th>
+    <th>Birthday</th>
   </tr>
 
 <% @thirdpartypeople.each do |thirdpartyperson| %>
@@ -15,7 +15,7 @@
     <td><%=h thirdpartyperson.first_name %></td>
     <td><%=h thirdpartyperson.sex %></td>
     <td><%=h thirdpartyperson.phone_number %></td>
-    <td><%=h thirdpartyperson.brithday %></td>
+    <td><%=h thirdpartyperson.birthday %></td>
     <td><%= link_to 'Show', thirdpartyperson %></td>
     <td><%= link_to 'Edit', edit_thirdpartyperson_path(thirdpartyperson) %></td>
     <td><%= link_to 'Destroy', thirdpartyperson, :confirm => 'Are you sure?', :method => :delete %></td>

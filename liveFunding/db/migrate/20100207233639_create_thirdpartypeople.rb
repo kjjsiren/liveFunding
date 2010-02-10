@@ -5,7 +5,7 @@ class CreateThirdpartypeople < ActiveRecord::Migration
       t.string :first_name
       t.string :sex
       t.string :phone_number
-      t.date :brithday
+      t.date :birthday
 
       t.timestamps
     end
