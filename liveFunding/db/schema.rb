@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20100207233639) do
     t.string   "first_name"
     t.string   "sex"
     t.string   "phone_number"
-    t.date     "brithday"
+    t.date     "birthday"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
