@@ -16,14 +16,9 @@ class User < ActiveRecord::Base
 
   attr_accessor :password, :password_confirmation
 
-  has_many :users
-  has_many :registrations
-  has_many :exercise_groups, :through => :registrations
   before_save :hash_password
   
-  has_many :friendships
-  has_many :friends, :through => :friendships
-
+  
  
   #has_attached_file :avatar, :styles => {:medium => "300x300>", :thumb => "100x100>"}, :default_url =>"/images/thumbs/"
 

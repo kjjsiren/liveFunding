@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Admin</title>
+  <%= javascript_include_tag :defaults %>
+  <%= active_scaffold_includes %>
+
+ </head>
+
+<body>
+	<div id="header" style="width:100%; float:left;">
+	<div id="navigation" style="float:left;margin-top:20px;margin-left:20px;font-size:large;font-weight:bold;">
+		<%= link_to "Admin Transactions", admin_transactions_path %>
+		<%= link_to "Admin Organizations", admin_organizations_path %>
+		<%= link_to "Admin Users", admin_users_path %>
+		<%= link_to "Admin Comments", admin_comments_path %>
+		</div>
+		<div style ="float:right;">
+			<% if logged_in? %>
+					Welcome, <%= link_to current_user.username, edit_user_path(current_user) %> (<%= link_to "logout", logout_path %>)
+			<% end %>
+			<% if !logged_in? %>
+		<% form_for @user, :url=>session_url do |f| %>
+			<%= f.label :username %><br />
+			<%= f.text_field :username, :size =>"20" %><br />
+
+			<%= f.label :password %><br />
+			<%= f.password_field :password, :size =>"20" %><br />
+
+			<%= submit_tag "Login"%>
+			<%= link_to 'Register', new_user_path %>
+		<% end %>
+		<% end %>
+		</div>
+
+</div>
+<p>	<% if flash[:notice] %>
+		<p style="color: green"><%= flash[:notice] %></p>
+	<% end %>
+	<% if flash[:error] %>
+		<p style="color: red"><%= flash[:error] %></p>
+	<% end %>
+
+	<h1><%= link_to "Homepage", root_path %></h1>
+</p>
+	<%= yield %>
+
+	<hr/>
+	
+	<p>This page was generated at <%= page_generation_timestamp %></p>
+
+</body>
+</html>
