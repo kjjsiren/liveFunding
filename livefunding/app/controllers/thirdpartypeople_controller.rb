@@ -25,6 +25,7 @@ class ThirdpartypeopleController < ApplicationController
   # GET /thirdpartypeople/new.xml
   def new
     @thirdpartyperson = Thirdpartyperson.new
+	# @start_date = Date.new(params[:range][:"start_date(1i)"].to_i,params[:range][:"start_date(2i)"].to_i,params[:range][:"start_date(3i)"].to_i)
 
     respond_to do |format|
       format.html # new.html.erb
