@@ -21,7 +21,7 @@
   </p>
   <p>
     <%= f.label :birthday %><br />
-    <%= f.date_select :birthday %>
+	<%= f.date_select :birthday, :default => {:year => 1980, :month => 1, :day => 1}, :start_year => 1960, :end_year => 2000 %>
   </p>
   <p>
     <%= f.submit 'Create' %>
