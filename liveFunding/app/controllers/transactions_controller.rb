@@ -2,7 +2,8 @@ class TransactionsController < ApplicationController
   #display all the transactions by default
   def index
     @transactions = Transaction.all
-
+    @transaction = Transaction.new
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @transactions }
@@ -90,6 +91,11 @@ class TransactionsController < ApplicationController
   
   def show
     @transaction = Transaction.find(params[:id])
+  end
+  
+  def search
+    @transactions_from = Transaction.find(:all, :conditions => {:from => params[:transaction][:from]})
+    @transactions_to = Transaction.find(:all, :conditions => {:to => params[:transaction][:from]})
   end
 
 end

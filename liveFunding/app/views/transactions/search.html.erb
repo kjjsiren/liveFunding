@@ -1,0 +1,58 @@
+<h2 style="margin-left:20px;">Search results for: <%=params[:transaction][:from]%></h2>
+<div style="width:50%;float:left;">
+	<h3 style="margin-left:50px;">From <%=params[:transaction][:from]%>: <%= @transactions_from.size%> records</h3>
+<table border="0" cellspacing="10">
+  <tr>
+    <th>id</th>
+    <th>Amount(€)</th>
+    <th>From</th>
+    <th>To</th>
+	<th>Time created</th>
+	<th>Rank</th>
+    <th>Operation</th>
+  </tr>
+<% @transactions_from.each do |transaction| %>
+  <tr>
+    <td><%=h transaction.id %></td>
+    <td><%=h transaction.amount %></td>
+    <td style="font-weight:bold;"><%=h transaction.from %></td>
+    <td style="font-weight:bold;"><%=h transaction.to %></td>
+	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
+	<td><%=h transaction.rank %></td>
+	<td><%= link_to 'Show', transaction %> <br />
+	<%= link_to 'Edit',  edit_transaction_path(transaction) %> <br />
+	<%= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<div style="width:45%;float:right; clear:none;">
+	<h3 style="margin-left:50px;">To <%=params[:transaction][:from]%>: <%= @transactions_to.size%> records</h3>
+<table border="0" cellspacing="10" style="margin-left:20px;">
+  <tr>
+    <th>id</th>
+    <th>Amount(€)</th>
+    <th>From</th>
+    <th>To</th>
+	<th>Time created</th>
+	<th>Rank</th>
+    <th>Operation</th>
+  </tr>
+
+<% @transactions_to.each do |transaction| %>
+  <tr>
+    <td><%=h transaction.id %></td>
+    <td><%=h transaction.amount %></td>
+    <td style="font-weight:bold;"><%=h transaction.from %></td>
+    <td style="font-weight:bold;"><%=h transaction.to %></td>
+	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
+	<td><%=h transaction.rank %></td>
+	<td><%= link_to 'Show', transaction %> <br />
+	<%= link_to 'Edit',  edit_transaction_path(transaction) %> <br />
+	<%= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br />
+<br />

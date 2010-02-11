@@ -1,9 +1,4 @@
 
-<h1>Your registrations</h1>
-<ul>
-<% @registrations.each do |r| %>
-<li><%= r.exercise_group.course_instance.course.name %> <%= r.exercise_group.course_instance.name %> <%r.exercise_group.name%></li>
-<% end %>
 <h1>Edit your details</h1>
 
 <% form_for(@user, :html => {:class => 'validate', :multipart=>true}) do |f| %>
@@ -14,12 +9,12 @@
     <strong><%= @user.username %></strong>
   </p>
   <p>
-    <%= f.label :name %><br/>
-    <%= f.text_field :name %>
+    <%= f.label :firstname %><br/>
+    <%= f.text_field :firstname %>
   </p>
   <p>
-    <%= f.label :student_number %><br/>
-    <%= f.text_field :student_number %>
+    <%= f.label :lastname %><br/>
+    <%= f.text_field :lastname %>
   </p>
   <p>
     <%= f.label :password %><br/>

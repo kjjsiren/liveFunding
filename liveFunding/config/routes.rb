@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :organizations
    
 	map.resources :users
-	map.resources :transactions, :collection => {:top => :get}, :has_many => :comments
+	map.resources :transactions, :collection => {:top => :get, :search => :get}, :has_many => :comments
 	map.resource :session
  
 	

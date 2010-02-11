@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
     if @user.update_attributes(params[:user])
       flash[:notice] = 'Details were successfully updated.'
-      redirect_to courses_path
+      redirect_to root_path
     else
       render :action => "edit" 
     end

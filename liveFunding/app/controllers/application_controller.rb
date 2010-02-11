@@ -10,16 +10,15 @@ class ApplicationController < ActionController::Base
 
   include UserAuthentication # /lib/user_authentication.rb
   
-  #before_filter :is_authenticated?
+  before_filter :is_authenticated?
   
   protected
-  
-  
+   
   def is_authenticated?
     if logged_in?
       return true
     else
-      redirect_to login_path
+      @user = User.new
     end
   end
 end

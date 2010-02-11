@@ -1,6 +1,6 @@
 <h2>All the transactions</h2>
 
-<table border="1">
+<table border="0" cellspacing="20" style="margin-left:200px;">
   <tr>
     <th>id</th>
     <th>Amount</th>
@@ -17,10 +17,10 @@
     <td><%=h transaction.amount %></td>
     <td><%=h transaction.from %></td>
     <td><%=h transaction.to %></td>
-	<td><%=h transaction.created_at %></td>
+	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M")  %></td>
 	<td><%= link_to '+', transaction, :action => :incr_rank %> <%=h transaction.rank %></td>
-	<td><%= link_to 'Show', transaction %> 
-	<%= link_to 'Edit',  edit_transaction_path(transaction) %> 
+	<td><%= link_to 'Show', transaction %> <br />
+	<%= link_to 'Edit',  edit_transaction_path(transaction) %> <br/>
 	<%= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
