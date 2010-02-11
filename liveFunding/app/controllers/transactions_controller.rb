@@ -70,8 +70,13 @@ class TransactionsController < ApplicationController
 
   def incr_rank
     @transaction = Transaction.find(params[:id])
+    @transaction.increment_rank
   end
   
+  def decr_rank
+    transaction = Transaction.find(params[:id])
+    transaction.decrease_rank
+  end  
   
   def top
     @transactions = Transaction.top

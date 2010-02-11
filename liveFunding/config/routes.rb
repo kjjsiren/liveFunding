@@ -4,9 +4,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :organizations
    
 	map.resources :users
-	map.resources :transactions, :collection => {:top => :get}
+	map.resources :transactions, :collection => {:top => :get}, :has_many => :comments
 	map.resource :session
-	map.resource :comments
  
 	
 	map.login "/login", :controller=>:users, :action=>:index
