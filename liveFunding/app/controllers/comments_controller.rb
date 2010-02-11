@@ -8,7 +8,8 @@ class CommentsController < ApplicationController
         if @comment.save
           flash[:notice] = "A new comment was added."
           redirect_to transaction_url(@transaction) 
-        else  
+        else
+          flash[:notice] = "Invalid transaction or user ID"  
           render :action => "new"
         end 
   end
@@ -29,9 +30,10 @@ class CommentsController < ApplicationController
     @transaction = Transaction.find(params[:transaction_id])
     @comment = Comment.find(params[:id])
     if @comment.update_attributes(params[:comment])
-        flash[:notice] = "Comment succesfully updated."
-        redirect_to transaction_url(@transaction)
+      flash[:notice] = "Comment succesfully updated."
+      redirect_to transaction_url(@transaction)
     else
+      flash[:notice] = "Invalid comment or transaction ID"
       render :action => "edit"
     end 
   end

@@ -28,21 +28,25 @@
    	<%=h @transaction.rank %>
 </p>
 
-<h2>Comments for this transaction:</h2>
+<div id="comment-list">
+	<h2>Comments for this transaction:</h2>
+	
 	<% @transaction.comments.each do |comment| %>
-  		<p>
-			<b>Commenter:</b>
-	  		<%=h comment.user %>
+  	<div class "<%= cycle('list-line-odd', 'list-line-even')%>">
+		<p>
+			<b><%=h comment.commenter %> said:</b>
 		</p>
 	  
 		<p>  
 			<%=h comment.content %>
 		</p>
-		<br />
 		<%= link_to 'Edit this comment', edit_transaction_comment_path(@transaction, comment.id) %>  
 		<%= link_to 'Destroy', transaction_comment_path(@transaction, comment), :confirm => 'Are you sure?', :method => :delete %> 
+	</div>
 	<% end %>
-<br />	
-<%= link_to 'Comment', new_transaction_comment_path(@transaction)  %>
+</div>	
+<br />
+	
+<%= link_to 'New Comment', new_transaction_comment_path(@transaction)  %>
 <%= link_to 'Back', transactions_path %>
 <% end %>

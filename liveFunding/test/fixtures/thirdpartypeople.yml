@@ -5,11 +5,11 @@ one:
   first_name: MyString
   sex: MyString
   phone_number: MyString
-  brithday: 2010-02-08
+  birthday: 2010-02-08
 
 two:
   last_name: MyString
   first_name: MyString
   sex: MyString
   phone_number: MyString
-  brithday: 2010-02-08
+  birthday: 2010-02-08
