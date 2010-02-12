@@ -1,9 +1,8 @@
-<h2>Rank Top 10 Transactions</h2>
+<h2>Latest Transactions</h2>
 
 <table border="0" cellspacing="20" style="margin-left:200px;">
   <tr>
-    <th>id</th>
-    <th>Amount(â‚¬)</th>
+    <th>Amount(€)</th>
     <th>From</th>
     <th>To</th>
 	<th>Create Time</th>
@@ -13,15 +12,12 @@
 
 <% @transactions.each do |transaction| %>
   <tr>
-    <td><%=h transaction.id %></td>
     <td><%=h transaction.amount %></td>
     <td style="font-weight:bold;"><%=h transaction.from %></td>
     <td style="font-weight:bold;"><%=h transaction.to %></td>
 	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
 	<td><%=h transaction.rank %></td>
 	<td><%= link_to 'Show', transaction %> <br />
-	<%= link_to 'Edit',  edit_transaction_path(transaction) %> <br />
-	<%= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

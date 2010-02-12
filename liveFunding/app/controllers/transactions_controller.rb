@@ -87,6 +87,24 @@ class TransactionsController < ApplicationController
       format.xml  { render :xml => @transactions }
     end
   end
+  
+  def fundtop
+    @transactions = Transaction.fundtop
+
+    respond_to do |format|
+      format.html # top.html.erb
+      format.xml  { render :xml => @transactions }
+    end
+  end
+  
+  def newsfeed
+    @transactions = Transaction.newsfeed
+
+    respond_to do |format|
+      format.html # top.html.erb
+      format.xml  { render :xml => @transactions }
+    end
+  end
 
   
   def show
