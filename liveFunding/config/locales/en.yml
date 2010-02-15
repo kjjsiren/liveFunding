@@ -2,4 +2,32 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+
+    layout:
+        navigation:
+            home:   "Home"
+            transactions: "Transactions"
+            organizations: "Organizations"
+            thirdparty: "Third parties"
+            latest_transactions: "Latest transactions"
+        
+        login:
+            username: "Username"
+            password: "Password"
+            submit: "Login"
+            register: "Register"
+        
+        search:
+            search: "Search"
+            
+        language:
+            select: "Select language:"
+            
+    transactions:
+        
+    organizations:
+        
+    thirdparty:
+        
+    latest_transactions:
+        
