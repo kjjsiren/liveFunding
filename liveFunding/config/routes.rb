@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
 	map.resources :users
 	map.resources :transactions, :collection => {:top => :get, :search => :get, :fundtop => :get, :newsfeed => :get}, :has_many => :comments
 	map.resource :session
+  map.resource :homes
  
 	map.namespace(:admin) do |admin|
       admin.resources :users, :active_scaffold => true
