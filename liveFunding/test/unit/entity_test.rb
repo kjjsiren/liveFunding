@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class EntityTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  test "invalid with empty attributes" do
+    entity = Comment.new
+    assert !entity.valid?
+    assert entity.errors.invalid?(:content)
+    assert entity.errors.invalid?(:commenter)
   end
 end
