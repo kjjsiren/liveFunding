@@ -1,0 +1,30 @@
+<h1>Listing entities</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Leader</th>
+    <th>Email</th>
+    <th>Phone number</th>
+    <th>Description</th>
+    <th>Is organization</th>
+  </tr>
+
+<% @entities.each do |entity| %>
+  <tr>
+    <td><%=h entity.name %></td>
+    <td><%=h entity.leader %></td>
+    <td><%=h entity.email %></td>
+    <td><%=h entity.phone_number %></td>
+    <td><%=h entity.description %></td>
+    <td><%=h entity.is_organization %></td>
+    <td><%= link_to 'Show', entity %></td>
+    <td><%= link_to 'Edit', edit_entity_path(entity) %></td>
+    <td><%= link_to 'Destroy', entity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New entity', new_entity_path %>

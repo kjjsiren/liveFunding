@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @entity.name %>
+</p>
+
+<p>
+  <b>Leader:</b>
+  <%=h @entity.leader %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @entity.email %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%=h @entity.phone_number %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @entity.description %>
+</p>
+
+<p>
+  <b>Is organization:</b>
+  <%=h @entity.is_organization %>
+</p>
+
+
+<%= link_to 'Edit', edit_entity_path(@entity) %> |
+<%= link_to 'Back', entities_path %>

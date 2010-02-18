@@ -7,7 +7,7 @@ en:
         navigation:
             home:   "Home"
             transactions: "Transactions"
-            organizations: "Organizations"
+            entities: "Entities"
             thirdparty: "Third parties"
             latest_transactions: "Latest transactions"
         
