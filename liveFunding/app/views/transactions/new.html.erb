@@ -10,6 +10,9 @@
   <p>
     <%= f.label :from %><br />
     <%= f.text_field :from %>
+	<%= @from_who = Thirdpartyperson.find(:all, :order => 'last_name ASC').map {|u| [u.last_name, u.id] }
+		f.select(:from, @from_who)
+	%>
   </p>
   <p>
     <%= f.label :to %><br />
