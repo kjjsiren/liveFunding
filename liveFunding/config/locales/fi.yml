@@ -3,7 +3,7 @@ fi:
         navigation:
             home:   "Pääsivu"
             transactions: "Tapahtumat"
-            organizations: "Organisaatiot"
+            entities: "Rahoittajat"
             thirdparty: "Kolmannet osapuolet"
             latest_transactions: "Viimeisimmät tapahtumat"
             back: "Takaisin"
@@ -34,13 +34,14 @@ fi:
             title: "Muuta tapahtuman tietoja:"
             update: "Päivitä"
 
-    organizations:
+    entities:
         information:
             name: "Nimi"
             leader: "Johtaja"
             email: "Sähköposti"
             phone_number: "Puhelinnumero"
             description: "Kuvaus"
+            is_organization: "Yritys?"
             
         edit:
             title: "Muuta tämän organisaation tietoja:"
