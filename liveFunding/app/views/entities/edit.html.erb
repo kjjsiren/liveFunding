@@ -1,0 +1,36 @@
+<h1><%= I18n.t('entities.edit.title')%></h1>
+
+<% form_for(@entity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, I18n.t('entities.information.name') %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :leader, I18n.t('entities.information.leader') %><br />
+    <%= f.text_field :leader %>
+  </p>
+  <p>
+    <%= f.label :email, I18n.t('entities.information.email') %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :phone_number, I18n.t('entities.information.phone_number') %><br />
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :description, I18n.t('entities.information.description') %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :is_organization, I18n.t('entities.information.is_organization') %><br />
+    <%= f.check_box :is_organization %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to I18n.t('layout.navigation.edit'), @entity %> |
+<%= link_to I18n.t('layout.navigation.back'), entities_path %>

@@ -1,32 +1,32 @@
-<h1>Edit transaction <%=h @transaction.id %></h1>
+<h1><%= I18n.t('transactions.edit.title') %> <%=h @transaction.id %></h1>
 
 <% form_for(@transaction) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :amount %><br />
+    <%= f.label :amount, I18n.t('transactions.information.amount') %><br />
     <%= f.text_field :amount %>
   </p>
   <p>
-    <%= f.label :from %><br />
+    <%= f.label :from, I18n.t('transactions.information.from.') %><br />
     <%= f.text_field :from %>
   </p>
   <p>
-    <%= f.label :to %><br />
+    <%= f.label :to, I18n.t('transactions.information.to') %><br />
     <%= f.text_field :to %>
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label :description, I18n.t('transactions.information.description') %><br />
     <%= f.text_field :description %>
   </p>
   <p>
-    <%= f.label :rank %><br />
+    <%= f.label :rank, I18n.t('transactions.information.rank') %><br />
     <%= f.text_field :rank %>
   </p>
 
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit I18n.t('transactions.edit.update') %>
   </p>
 <% end %>
 
-<%= link_to 'Back', transactions_path %>
+<%= link_to I18n.t('layout.navigation.back'), transactions_path %>

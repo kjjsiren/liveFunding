@@ -1,32 +1,32 @@
-<h1>Editing organization</h1>
+<h1><%= I18n.t('organizations.edit.title')%></h1>
 
 <% form_for(@organization) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name, I18n.t('organizations.information.name') %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :leader %><br />
+    <%= f.label :leader, I18n.t('organizations.information.leader') %><br />
     <%= f.text_field :leader %>
   </p>
   <p>
-    <%= f.label :email %><br />
+    <%= f.label :email, I18n.t('organizations.information.email') %><br />
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :phone_number %><br />
+    <%= f.label :phone_number, I18n.t('organizations.information.phone_number') %><br />
     <%= f.text_field :phone_number %>
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label :description, I18n.t('organizations.information.description') %><br />
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit I18n.t('organizations.edit.update') %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @organization %> |
-<%= link_to 'Back', organizations_path %>
+<%= link_to I18n.t('layout.navigation.show'), @organization %> |
+<%= link_to I18n.t('layout.navigation.back'), organizations_path %>

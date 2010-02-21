@@ -1,0 +1,78 @@
+fi:
+    layout:
+        navigation:
+            home:   "Pääsivu"
+            transactions: "Tapahtumat"
+            entities: "Rahoittajat"
+            thirdparty: "Kolmannet osapuolet"
+            latest_transactions: "Viimeisimmät tapahtumat"
+            back: "Takaisin"
+            show: "Näytä"
+            edit: "Muuta"
+            
+        login:
+            username: "Käyttäjätunnus"
+            password: "Salasana"
+            submit: "Kirjaudu"
+            register: "Rekisteröidy"
+            
+        search:
+            search: "Etsi"
+            
+        language:
+            select: "Valitse kieli:"
+            
+    transactions:
+        information:
+            amount: "Määrä"
+            from: "Lahjoittaja"
+            to: "Kohde"
+            description: "Kuvaus"
+            rank: "Arvostus"
+            
+        edit:
+            title: "Muuta tapahtuman tietoja:"
+            update: "Päivitä"
+
+    entities:
+        information:
+            name: "Nimi"
+            leader: "Johtaja"
+            email: "Sähköposti"
+            phone_number: "Puhelinnumero"
+            description: "Kuvaus"
+            is_organization: "Yritys?"
+            
+        edit:
+            title: "Muuta tämän organisaation tietoja:"
+            update: "Päivitä"
+            
+        new:
+            create: "Luo uusi organisaatio"
+            title: "Syötä uuden organisaation tiedot:"
+            
+        controls:
+            show: "Näytä"
+            edit: "Muuta"
+            destroy: "Poista"
+        
+        index:
+            title: "Kaikki organisaatiot:"
+            
+    thirdparty:
+
+    latest_transactions:
+        
+    comments:
+        edit:
+            title: "Muuta kommenttiasi:"
+            content: "Kommenttisi"
+            edit: "Muuta"
+                
+        new:
+            title: "Kommentoi tätä tapahtumaa:"
+            name: "Nimesi:"
+            comment: "Kommenttisi"
+            submit: "Lähetä"    
+            
+        

@@ -1,11 +1,11 @@
-<h1>Edit your comment:</h1>
+<h1><%= I18n.t('comments.edit.title')%></h1>
 <% form_for([@transaction, @comment]) do |f| %>
 	
-	<%= f.label :content %><br />
+	<%= f.label I18n.t('comments.edit.content') %><br />
 	<%= f.text_area :content %>
 	
 	<p>
-		<%= f.submit "Edit" %>
+		<%= f.submit I18n.t('comments.edit.edit') %>
 	</p>
 <% end %>
-<%= link_to 'Back', transaction_path(@transaction) %>
+<%= link_to I18n.t('layout.navigation.back'), transaction_path(@transaction) %>

@@ -13,12 +13,23 @@
 
 <body>
 <div id="header" style="width:100%; float:left;">
+	
+	<div id="language">
+		<p><%= I18n.t('layout.language.select') %> </p>
+		<% form_tag '', :method => 'GET' do %>
+			<%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale),
+		  		:onchange => 'this.form.submit()' %>
+			<%= submit_tag 'submit' %>
+			<%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+		<% end %>	
+	</div>
+
 <div id="navigation" style="float:left;margin-top:20px;margin-left:20px;font-size:large;font-weight:bold;">
-	<%= link_to "Home", root_path %>
-	<%= link_to "Transactions", transactions_path %>
-	<%= link_to "Organizations", organizations_path %>
-	<%= link_to "Create a new 3rd party entity", thirdpartypeople_path %>
-	<%= link_to "Latest transactions", newsfeed_transactions_path %>
+	<%= link_to I18n.t('layout.navigation.home'), root_path %>
+	<%= link_to I18n.t('layout.navigation.transactions'), transactions_path %>
+	<%= link_to I18n.t('layout.navigation.entities'), entities_path %>
+	<%= link_to I18n.t('layout.navigation.thirdparty'), thirdpartypeople_path %>
+	<%= link_to I18n.t('layout.navigation.latest_transactions'), newsfeed_transactions_path %>
 	</div>
 	<div style ="float:right;">
 		<% if logged_in? %>
@@ -26,14 +37,14 @@
 		<% end %>
 		<% if !logged_in? %>
 	<% form_for @user, :url=>session_url do |f| %>
-		<%= f.label :username %><br />
+		<%= f.label I18n.t('layout.login.username') %><br />
 		<%= f.text_field :username, :size =>"20" %><br />
 
-		<%= f.label :password %><br />
+		<%= f.label I18n.t('layout.login.password') %><br />
 		<%= f.password_field :password, :size =>"20" %><br />
 
-		<%= submit_tag "Login"%>
-		<%= link_to 'Register', new_user_path %>
+		<%= submit_tag I18n.t('layout.login.submit')%>
+		<%= link_to I18n.t('layout.login.register'), new_user_path %>
 	<% end %>
 	<% end %>
 	</div>
@@ -44,7 +55,7 @@
 		<br />
 		<% form_for Transaction.new, :url => search_transactions_path  do |f| %>
 			<%= f.text_field :from, :size =>"20" %>
-			<%= submit_tag "Search"%>
+			<%= submit_tag I18n.t('layout.search.search')%>
 		<% end %>
 	</div>
 	</div>

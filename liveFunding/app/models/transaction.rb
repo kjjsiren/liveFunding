@@ -1,6 +1,9 @@
 class Transaction < ActiveRecord::Base
   has_many :comments
   
+  validates_presence_of :from, :to
+  validates_numericality_of :amount
+  
   def self.top
     self.find(:all, :order => 'rank DESC', :limit => 10)
   end
@@ -13,6 +16,7 @@ class Transaction < ActiveRecord::Base
     self.find(:all, :order => 'created_at DESC', :limit => 10)
   end
     
+  # only for test
   def self.increment_rank(transaction_id)
     
   end  
