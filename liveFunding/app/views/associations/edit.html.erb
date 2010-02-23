@@ -1,0 +1,14 @@
+<h1>Edit Association </h1>
+<% form_for([@entity, @associatio]) do |f| %>
+	
+	<%= f.label :entity %><br />
+	<%= f.text_field :entity %>
+	
+	<%= f.label :thirdpartyperson %><br />
+	<%= f.text_field :thirdpartyperson %>
+	
+	<p>
+		<%= f.submit I18n.t('comments.edit.edit') %>
+	</p>
+<% end %>
+<%= link_to I18n.t('layout.navigation.back'), entity_path(@entity) %>
