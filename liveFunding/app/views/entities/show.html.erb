@@ -1,37 +1,37 @@
 <p>
   <b>Name:</b>
-  <%=h @entity.name %>
+  <%=h @transaction.entity.name %>
 </p>
 
 <p>
   <b>Leader:</b>
-  <%=h @entity.leader %>
+  <%=h @transaction.entity.leader %>
 </p>
 
 <p>
   <b>Email:</b>
-  <%=h @entity.email %>
+  <%=h @transaction.entity.email %>
 </p>
 
 <p>
   <b>Phone number:</b>
-  <%=h @entity.phone_number %>
+  <%=h @transaction.entity.phone_number %>
 </p>
 
 <p>
   <b>Description:</b>
-  <%=h @entity.description %>
+  <%=h @transaction.entity.description %>
 </p>
 
 <p>
   <b>Is organization:</b>
-  <%=h @entity.is_organization %>
+  <%=h @transaction.entity.is_organization %>
 </p>
 
 
 <div id="association-list">
 	<h2>Associations for this entity:</h2>
-		<% @entity.associations.each do |association| %>
+		<% @transaction.entity.associations.each do |association| %>
 		<p>
 		<%=h association.thirdpartyperson_id %>
 		</p>

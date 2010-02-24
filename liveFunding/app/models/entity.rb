@@ -1,6 +1,6 @@
 class Entity < ActiveRecord::Base
 	has_many :associations
-	belongs_to :entity
+	belongs_to :transactions
 
 	validates_presence_of :leader, :if => :is_organization;
 	validates_presence_of :name, :email, :phone_number, :description
