@@ -1,5 +1,6 @@
 class Transaction < ActiveRecord::Base
   has_many :comments
+  has_many :entities
   
   validates_presence_of :from, :to
   validates_numericality_of :amount
