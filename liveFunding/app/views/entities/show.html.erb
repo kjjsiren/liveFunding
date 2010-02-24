@@ -31,6 +31,11 @@
 
 <div id="association-list">
 	<h2>Associations for this entity:</h2>
+		<% @entity.associations.each do |association| %>
+		<p>
+		<%=h association.thirdpartyperson_id %>
+		</p>
+	<% end %>
 </div>	
 <br />
 

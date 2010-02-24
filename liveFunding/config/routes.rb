@@ -1,26 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :entities
-
-  map.resources :entities
-
-  map.resources :organizations
-
-  map.resources :organizations
-
-  map.resources :organizations
-
-  map.resources :organizations
-
-  map.resources :organizations
-
-  map.resources :organizations
-
-  map.resources :organizations
+  map.resources :entities, :has_many => :associations
 
   map.resources :thirdpartypeople
 
-  map.resources :organizations
-   
 	map.resources :users
 	map.resources :transactions, :collection => {:top => :get, :search => :get, :fundtop => :get, :newsfeed => :get}, :has_many => :comments
 	map.resource :session
