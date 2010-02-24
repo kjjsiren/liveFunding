@@ -1,8 +1,4 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-
     layout:
         navigation:
             home:   "Home"
@@ -10,24 +6,75 @@ en:
             entities: "Entities"
             thirdparty: "Third parties"
             latest_transactions: "Latest transactions"
-        
+            back: "Back"
+            show: "Show"
+            edit: "Edit"
+            
         login:
             username: "Username"
             password: "Password"
-            submit: "Login"
+            submit: "Submit"
             register: "Register"
-        
+            
         search:
             search: "Search"
             
         language:
-            select: "Select language:"
+            select: "Choose language"
             
     transactions:
+        information:
+            amount: "Amount"
+            from: "From"
+            to: "To"
+            description: "Description"
+            rank: "Rank"
+            
+        edit:
+            title: "Edit the information"
+            update: "Update"
+            
+        fundtop:
+            id: "ID"    
+
+    entities:
+        information:
+            name: "Name"
+            leader: "Leader"
+            email: "Email"
+            phone_number: "Phonenumber"
+            description: "Description"
+            is_organization: "Organization"
+            
+        edit:
+            title: "Change"
+            update: "Update"
+            
+        new:
+            create: "Create a new organization"
+            title: "Input organization's information"
+            
+        controls:
+            show: "Show"
+            edit: "Edit"
+            destroy: "Delete"
         
-    organizations:
-        
+        index:
+            title: "All organizations:"
+            
     thirdparty:
-        
+
     latest_transactions:
+        
+    comments:
+        edit:
+            title: "Edit your comment:"
+            content: "Your comment"
+            edit: "Edit"
+                
+        new:
+            title: "Comment this transaction"
+            name: "Your name:"
+            comment: "Your comment:"
+            submit: "Submit"
         
