@@ -1,8 +1,12 @@
 require 'test_helper'
 
-class AssociationTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+class NewsfeedTest < ActiveSupport::TestCase
+
+  test "invalid with empty attributes" do
+    comment = Comment.new
+    assert !comment.valid?
+    assert comment.errors.invalid?(:content)
+    assert comment.errors.invalid?(:commenter)
+
   end
 end
