@@ -9,14 +9,15 @@
   </p>
   <p>
     <%= f.label :from %><br />
-    <%= f.text_field :from %>
-	<%= @from_who = Thirdpartyperson.find(:all, :order => 'last_name ASC').map {|u| [u.last_name, u.id] }
+	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.id] }
 		f.select(:from, @from_who)
 	%>
   </p>
   <p>
     <%= f.label :to %><br />
-    <%= f.text_field :to %> This will be replaced when Kai finish his part.
+	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.id] }
+		f.select(:to, @from_who)
+	%>
   </p>
   <p>
     <%= f.label :description %><br />
