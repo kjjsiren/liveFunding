@@ -1,13 +1,13 @@
-<h1>Listing entities</h1>
+<h1><%= I18n.t('entities.index.title')%></h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Leader</th>
-    <th>Email</th>
-    <th>Phone number</th>
-    <th>Description</th>
-    <th>Is organization</th>
+    <th><%= I18n.t('entities.information.name')%></th>
+    <th><%= I18n.t('entities.information.leader')%></th>
+    <th><%= I18n.t('entities.information.email')%></th>
+    <th><%= I18n.t('entities.information.phone_number')%></th>
+    <th><%= I18n.t('entities.information.description')%></th>
+    <th><%= I18n.t('entities.information.is_organization')%></th>
   </tr>
 
 <% @entities.each do |entity| %>
@@ -18,13 +18,13 @@
     <td><%=h entity.phone_number %></td>
     <td><%=h entity.description %></td>
     <td><%=h entity.is_organization %></td>
-    <td><%= link_to 'Show', entity %></td>
-    <td><%= link_to 'Edit', edit_entity_path(entity) %></td>
-    <td><%= link_to 'Destroy', entity, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to I18n.t('layout.navigation.show'), entity %></td>
+    <td><%= link_to I18n.t('layout.navigation.edit'), edit_entity_path(entity) %></td>
+    <td><%= link_to I18n.t('layout.navigation.destroy'), entity, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New entity', new_entity_path %>
+<%= link_to I18n.t('entities.new.title'), new_entity_path %>

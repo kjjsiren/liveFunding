@@ -26,6 +26,13 @@ en:
         language:
             select: "Choose language"
             
+    association:
+        edit:
+            title: "Edit Association"
+            
+        new:
+            title: "New Association"
+            
     transactions:
         index:
             title: "All The Transactions"
@@ -99,7 +106,7 @@ en:
             
         new:
             create: "Create a new organization"
-            title: "Input organization's information"
+            title: "New Organization"
             
         controls:
             show: "Show"
