@@ -42,6 +42,8 @@ fi:
             to: "Kohde"
             description: "Kuvaus"
             rank: "Arvostus"
+            create_time: "Tapahtuma-aika"
+            operation: ""
             
         edit:
             title: "Muuta tapahtuman tietoja:"
@@ -81,7 +83,13 @@ fi:
             operation: ""
 
         newsfeed:
-            title: "Uutisvirta"    
+            title: "Uutisvirta"
+            
+        show:
+            title: "Tapahtuman tiedot"
+            comments_title: "Kommentit tälle tapahtumalle"
+            commenter_said: "sanoi"
+            new: "Uusi kommentti"        
 
     entities:
         information:

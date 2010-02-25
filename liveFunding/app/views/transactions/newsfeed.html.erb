@@ -2,12 +2,12 @@
 
 <table border="0" cellspacing="20" style="margin-left:200px;">
   <tr>
-    <th>Amount(€)</th>
-    <th>From</th>
-    <th>To</th>
-	<th>Create Time</th>
-	<th>Rank</th>
-    <th>Operation</th>
+    <th><%= I18n.t('transactions.information.amount') %></th>
+    <th><%= I18n.t('transactions.information.from') %></th>
+    <th><%= I18n.t('transactions.information.to') %></th>
+	<th><%= I18n.t('transactions.information.create_time') %></th>
+	<th><%= I18n.t('transactions.information.rank') %></th>
+    <th><%= I18n.t('transactions.information.operation') %></th>
   </tr>
 
 <% @transactions.each do |transaction| %>
@@ -17,12 +17,12 @@
     <td style="font-weight:bold;"><%=h transaction.to %></td>
 	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
 	<td><%=h transaction.rank %></td>
-	<td><%= link_to 'Show', transaction %> <br />
+	<td><%= link_to I18n.t('layout.navigation.show'), transaction %> <br />
   </tr>
 <% end %>
 </table>
 
 <br />
-<%= link_to 'Back', transactions_path %>
+<%= link_to I18n.t('layout.navigation.back'), transactions_path %>
 
 <br />

@@ -4,23 +4,23 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :amount %><br />
+    <%= f.label :amount, I18n.t('transactions.information.amount') %><br />
     <%= f.text_field :amount %>
   </p>
   <p>
-    <%= f.label :from %><br />
+    <%= f.label :from, I18n.t('transactions.information.from') %><br />
 	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.id] }
 		f.select(:from, @from_who)
 	%>
   </p>
   <p>
-    <%= f.label :to %><br />
+    <%= f.label :to, I18n.t('transactions.information.to') %><br />
 	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.id] }
 		f.select(:to, @from_who)
 	%>
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label :description, I18n.t('transactions.information.description') %><br />
     <%= f.text_field :description %>
   </p>
   <p>

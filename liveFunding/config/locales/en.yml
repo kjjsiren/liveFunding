@@ -50,6 +50,8 @@ en:
             to: "To"
             description: "Description"
             rank: "Rank"
+            create_time: "Create time"
+            operation: "Operation"
             
         edit:
             title: "Edit the information"
@@ -90,6 +92,12 @@ en:
         
         newsfeed:
             title: "Newsfeed"
+            
+        show:
+            title: "Transaction with the ID"
+            comments_title: "Comments for this transaction"
+            commenter_said: "said"
+            new: "New comment"  
 
     entities:
         information:
