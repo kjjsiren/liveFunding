@@ -19,9 +19,9 @@
     <td style="font-weight:bold;"><%=h transaction.to %></td>
 	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
 	<td><%=h transaction.rank %></td>
-	<td><%= link_to 'Show', transaction %> <br />
-	<%= link_to 'Edit',  edit_transaction_path(transaction) %> <br />
-	<%= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td><%= link_to link_to I18n.t('layout.navigation.show'), transaction %> <br />
+	<%= link_to link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(transaction) %> <br />
+	<%= link_to link_to I18n.t('layout.navigation.destroy'), transaction, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -47,9 +47,9 @@
     <td style="font-weight:bold;"><%=h transaction.to %></td>
 	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
 	<td><%=h transaction.rank %></td>
-	<td><%= link_to 'Show', transaction %> <br />
-	<%= link_to 'Edit',  edit_transaction_path(transaction) %> <br />
-	<%= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td><%= link_to link_to I18n.t('layout.navigation.show'), transaction %> <br />
+	<%= link_to link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(transaction) %> <br />
+	<%= link_to link_to I18n.t('layout.navigation.destroy'), transaction, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
