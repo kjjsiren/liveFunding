@@ -9,6 +9,9 @@ en:
             back: "Back"
             show: "Show"
             edit: "Edit"
+            create: "Create"
+            destroy: "Destroy"
+            sure: "Are you sure?"
             
         login:
             username: "Username"
@@ -23,6 +26,16 @@ en:
             select: "Choose language"
             
     transactions:
+        index:
+            title: "All The Transactions"
+            id: "ID"
+            amount: "Amount"
+            from: "From"
+            to: "To"
+            create_time: "Create Time"
+            rank: "Rank"
+            operation: "Operation"
+            
         information:
             amount: "Amount"
             from: "From"
@@ -34,8 +47,31 @@ en:
             title: "Edit the information"
             update: "Update"
             
+        new:
+            title: "New Transaction"
+            
+        top:
+            title: "Rank Top 10"
+            id: "ID"
+            amount: "Amount(€)"
+            from: "From"
+            to: "To"
+            create_time: "Create Time"
+            rank: "Rank"
+            operation: "Operation"
+            
         fundtop:
-            id: "ID"    
+            title: "Fund Top 10 Transactions"
+            id: "ID"
+            amount: "Amount(€)"
+            from: "From"
+            to: "To"
+            create_time: "Create Time"
+            rank: "Rank"
+            operation: "Operation"
+        
+        newsfeed:
+            title: "Newsfeed"
 
     entities:
         information:

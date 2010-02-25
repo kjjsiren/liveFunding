@@ -1,14 +1,14 @@
-<h2>All the transactions</h2>
+<h2><%= I18n.t('transactions.index.title') %></h2>
 
 <table border="0" cellspacing="20" style="margin-left:200px;">
   <tr>
-    <th>id</th>
-    <th>Amount</th>
-    <th>From</th>
-    <th>To</th>
-	<th>Create Time</th>
-	<th>Rank</th>
-    <th>Operation</th>
+    <th><%= I18n.t('transactions.index.id') %></th>
+    <th><%= I18n.t('transactions.index.amount') %></th>
+    <th><%= I18n.t('transactions.index.from') %></th>
+    <th><%= I18n.t('transactions.index.to') %></th>
+	<th><%= I18n.t('transactions.index.create_time') %></th>
+	<th><%= I18n.t('transactions.index.rank') %></th>
+    <th><%= I18n.t('transactions.index.operation') %></th>
   </tr>
 
 <% @transactions.each do |transaction| %>
@@ -19,16 +19,16 @@
     <td><%=h transaction.to %></td>
 	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M")  %></td>
 	<td><%= link_to '+', transaction, :action => :incr_rank %> <%=h transaction.rank %></td>
-	<td><%= link_to 'Show', transaction %> <br />
-	<%= link_to 'Edit',  edit_transaction_path(transaction) %> <br/>
-	<%= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td><%= link_to I18n.t('layout.navigation.show'), transaction %> <br />
+	<%= link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(transaction) %> <br/>
+	<%= link_to I18n.t('layout.navigation.destroy'), transaction, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New transaction', new_transaction_path %> &nbsp;&nbsp;
-<%= link_to 'Rank Top 10', top_transactions_path %> &nbsp;&nbsp;
-<%= link_to 'Funding Top 10', fundtop_transactions_path %> 
+<%= link_to I18n.t('transactions.new.title'), new_transaction_path %> &nbsp;&nbsp;
+<%= link_to I18n.t('transactions.top.title'), top_transactions_path %> &nbsp;&nbsp;
+<%= link_to I18n.t('transactions.fundtop.title'), fundtop_transactions_path %> 
 
