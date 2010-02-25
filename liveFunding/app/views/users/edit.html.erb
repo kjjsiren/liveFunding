@@ -1,33 +1,33 @@
 
-<h1>Edit your details</h1>
+<h1><%= I18n.t('users.edit.title') %></h1>
 
 <% form_for(@user, :html => {:class => 'validate', :multipart=>true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :username %><br/>
+    <%= f.label :username, I18n.t('users.information.username') %><br/>
     <strong><%= @user.username %></strong>
   </p>
   <p>
-    <%= f.label :firstname %><br/>
+    <%= f.label :firstname, I18n.t('users.information.firstname') %><br/>
     <%= f.text_field :firstname %>
   </p>
   <p>
-    <%= f.label :lastname %><br/>
+    <%= f.label :lastname, I18n.t('users.information.lastname') %><br/>
     <%= f.text_field :lastname %>
   </p>
   <p>
-    <%= f.label :password %><br/>
+    <%= f.label :password, I18n.t('users.information.password') %><br/>
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :password_confirmation %><br/>
+    <%= f.label :password_confirmation, I18n.t('users.information.password_confirmation') %><br/>
     <%= f.password_field :password_confirmation %>
   </p>
     <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit I18n.t('layout.navigation.update') %>
    </p>
 <% end %>
 
 
-<%= link_to 'Destroy account', user_path, :method => :delete, :confirm => "Are you sure?" %>
+<%= link_to I18n.t('users.edit.destroy'), user_path, :method => :delete, :confirm => "Are you sure?" %>

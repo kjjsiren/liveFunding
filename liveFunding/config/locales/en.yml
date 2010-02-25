@@ -140,4 +140,18 @@ en:
             name: "Your name:"
             comment: "Your comment:"
             submit: "Submit"
+            
+    users:
+        edit:
+            title: "Edit your information"
+            destroy: "Destroy your account"
         
+        information:
+            username: "Username"
+            firstname: "Firstname"
+            lastname: "Lastname"
+            password: "Password"
+            password_confirmation: "Password confirmation"
+                        
+        new:
+            title: "Registering to LiveFunding"

@@ -10,6 +10,8 @@ fi:
             show: "Näytä"
             edit: "Muuta"
             destroy: "Poista"
+            update: "Päivitä"
+            create: "Luo"
             
         login:
             username: "Käyttäjätunnus"
@@ -90,6 +92,21 @@ fi:
             title: "Kommentoi tätä tapahtumaa:"
             name: "Nimesi:"
             comment: "Kommenttisi"
-            submit: "Lähetä"    
+            submit: "Lähetä"
+            
+    users:
+        edit:
+            title: "Muokkaa tietojasi"
+            destroy: "Poista tilisi"
+
+        information:
+            username: "Käyttäjänimi"
+            firstname: "Etunimi"
+            lastname: "Sukunimi"
+            password: "Salasana"
+            password_confirmation: "Varmista salasana" 
+        
+        new:
+            title: "Rekisteröidy Vaalirahakoneen käyttäjäksi"                
             
         

@@ -1,32 +1,32 @@
-<h1>Registering to LiveFunding</h1>
+<h1><%= I18n.t('users.new.title') %></h1>
 
 <% form_for(@user, :html => {:class => 'validate', :multipart => true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :username %><br />
+    <%= f.label :username, I18n.t('users.information.username') %><br />
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label :firstname %><br />
+    <%= f.label :firstname, I18n.t('users.information.firstname') %><br />
     <%= f.text_field :firstname %>
   </p>
   <p>
-    <%= f.label :lastname %><br />
+    <%= f.label :lastname, I18n.t('users.information.lastname') %><br />
     <%= f.text_field :lastname %>
   </p>
 
   <p>
-    <%= f.label :password %><br />
+    <%= f.label :password, I18n.t('users.information.password') %><br />
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, I18n.t('users.information.password_confirmation') %><br />
     <%= f.password_field :password_confirmation %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit I18n.t('layout.navigation.create') %>
   </p>
 <% end %>
 
-<%= link_to 'Back', users_path %>
+<%= link_to I18n.t('layout.navigation.back'), users_path %>
