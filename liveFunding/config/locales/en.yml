@@ -69,6 +69,16 @@ en:
             create_time: "Create Time"
             rank: "Rank"
             operation: "Operation"
+            
+        search:
+            title: "Search Results For"
+            id: "ID"
+            amount: "Amount(€)"
+            from: "From"
+            to: "To"
+            create_time: "Create Time"
+            rank: "Rank"
+            operation: "Operation"
         
         newsfeed:
             title: "Newsfeed"

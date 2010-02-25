@@ -1,15 +1,15 @@
-<h2 style="margin-left:20px;">Search results for: <%=params[:transaction][:from]%></h2>
+<h2 style="margin-left:20px;"><%= I18n.t('transactions.search.title') %> <%=params[:transaction][:from]%></h2>
 <div style="width:50%;float:left;">
 	<h3 style="margin-left:50px;">From <%=params[:transaction][:from]%>: <%= @transactions_from.size%> records</h3>
 <table border="0" cellspacing="10">
   <tr>
-    <th>id</th>
-    <th>Amount(€)</th>
-    <th>From</th>
-    <th>To</th>
-	<th>Time created</th>
-	<th>Rank</th>
-    <th>Operation</th>
+    <th><%= I18n.t('transactions.search.id') %></th>
+    <th><%= I18n.t('transactions.search.amount') %></th>
+    <th><%= I18n.t('transactions.search.from') %></th>
+    <th><%= I18n.t('transactions.search.to') %></th>
+	<th><%= I18n.t('transactions.search.create_time') %></th>
+	<th><%= I18n.t('transactions.search.rank') %></th>
+    <th><%= I18n.t('transactions.search.operation') %></th>
   </tr>
 <% @transactions_from.each do |transaction| %>
   <tr>
@@ -30,13 +30,13 @@
 	<h3 style="margin-left:50px;">To <%=params[:transaction][:from]%>: <%= @transactions_to.size%> records</h3>
 <table border="0" cellspacing="10" style="margin-left:20px;">
   <tr>
-    <th>id</th>
-    <th>Amount(€)</th>
-    <th>From</th>
-    <th>To</th>
-	<th>Time created</th>
-	<th>Rank</th>
-    <th>Operation</th>
+    <th><%= I18n.t('transactions.search.id') %></th>
+    <th><%= I18n.t('transactions.search.amount') %></th>
+    <th><%= I18n.t('transactions.search.from') %></th>
+    <th><%= I18n.t('transactions.search.to') %></th>
+	<th><%= I18n.t('transactions.search.create_time') %></th>
+	<th><%= I18n.t('transactions.search.rank') %></th>
+    <th><%= I18n.t('transactions.search.operation') %></th>
   </tr>
 
 <% @transactions_to.each do |transaction| %>
