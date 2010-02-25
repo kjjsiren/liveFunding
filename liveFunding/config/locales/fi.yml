@@ -26,6 +26,16 @@ fi:
             select: "Valitse kieli:"
             
     transactions:
+        index:
+            title: "Kaikki tapahtumat"
+            id: "ID"
+            amount: "Määrä"
+            from: "Lahjoittaja"
+            to: "Saaja"
+            create_time: "Tapahtuma-aika"
+            rank: "Arvostus"
+            operation: ""
+        
         information:
             amount: "Määrä"
             from: "Lahjoittaja"
@@ -36,6 +46,42 @@ fi:
         edit:
             title: "Muuta tapahtuman tietoja:"
             update: "Päivitä"
+            
+        new:
+            title: "Uusi tapahtuma"
+
+        top:
+            title: "Top 10"
+            id: "ID"
+            amount: "Määrä (€)"
+            from: "Lahjoittaja"
+            to: "Saaja"
+            create_time: "Tapahtuma-aika"
+            rank: "Arvostus"
+            operation: ""
+
+        fundtop:
+            title: "Top 10 tapahtumat"
+            id: "ID"
+            amount: "Määrä (€)"
+            from: "Lahjoittaja"
+            to: "Saaja"
+            create_time: "Tapahtuma-aika"
+            rank: "Arvostus"
+            operation: ""
+
+        search:
+            title: "Hakutulokset hakusanoille"
+            id: "ID"
+            amount: "Määrä (€)"
+            from: "Lahjoittaja"
+            to: "Saaja"
+            create_time: "Tapahtuma-aika"
+            rank: "Arvostus"
+            operation: ""
+
+        newsfeed:
+            title: "Uutisvirta"    
 
     entities:
         information:
