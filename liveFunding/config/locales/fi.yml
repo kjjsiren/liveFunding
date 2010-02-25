@@ -9,6 +9,7 @@ fi:
             back: "Takaisin"
             show: "Näytä"
             edit: "Muuta"
+            destroy: "Poista"
             
         login:
             username: "Käyttäjätunnus"
@@ -60,6 +61,22 @@ fi:
             title: "Kaikki organisaatiot:"
             
     thirdparty:
+        information:
+            last_name: "Etunimi"
+            first_name: "Sukunimi"
+            phone_number: "Puhelinnumero"
+            sex: "Sukupuoli"
+            birthday: "Syntymäpäivä"
+            
+        edit:
+            title: "Edit this third party person's information"    
+            
+        index:
+            title: "Kaikki kolmannet osapuolet"
+            create_new: "Luo uusi kolmas osapuoli"
+            
+        new:
+            title: "Luo uusi kolmas osapuoli"        
 
     latest_transactions:
         

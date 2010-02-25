@@ -12,6 +12,7 @@ en:
             create: "Create"
             destroy: "Destroy"
             sure: "Are you sure?"
+            update: "Update"
             
         login:
             username: "Username"
@@ -109,6 +110,22 @@ en:
             title: "All organizations:"
             
     thirdparty:
+        information:
+            last_name: "Last name"
+            first_name: "First name"
+            phone_number: "Phone number"
+            sex: "Sex"
+            birthday: "Birthday"
+        
+        edit:
+            title: "Edit this third party person's information"
+            
+        index:
+            title: "Listing all third party people"
+            create_new: "Create a new third party person"
+            
+        new:
+            title: "New thirdparty person"    
 
     latest_transactions:
         
