@@ -156,6 +156,17 @@ en:
             comment: "Your comment:"
             submit: "Submit"
             
+    people:
+        information:
+            last_name: "Last Name"
+            first_name: "First Name"
+            sex: "Sex"
+            phone_number: "Phone Number"
+            birthday: "Birthday"
+
+        index:
+            title: "Listing people"
+        
     users:
         edit:
             title: "Edit your information"

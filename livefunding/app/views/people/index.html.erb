@@ -1,12 +1,12 @@
-<h1>Listing people</h1>
+<h1><%= I18n.t('people.index.title') %></h1>
 
 <table>
   <tr>
-    <th>Last Name</th>
-	<th>First Name</th>
-    <th>Sex</th>
-    <th>Phone number</th>
-    <th>Brithday</th>
+    <th><%= I18n.t('people.index.last_name') %></th>
+	<th><%= I18n.t('people.index.first_name') %></th>
+    <th><%= I18n.t('people.index.sex') %></th>
+    <th><%= I18n.t('people.index.phone_number') %></th>
+    <th><%= I18n.t('people.index.birthday') %></th>
   </tr>
 
 <% @people.each do |person| %>
@@ -16,9 +16,9 @@
     <td><%=h person.sex %></td>
     <td><%=h person.phone_number %></td>
     <td><%=h person.brithday %></td>
-    <td><%= link_to 'Show', person %></td>
-    <td><%= link_to 'Edit', edit_person_path(person) %></td>
-    <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to I18n.t('layout.navigation.show'), person %></td>
+    <td><%= link_to I18n.t('layout.navigation.edit'), edit_person_path(person) %></td>
+    <td><%= link_to I18n.t('layout.navigation.destroy'), person, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
