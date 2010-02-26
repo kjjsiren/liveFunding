@@ -1,11 +1,14 @@
-<h1>New Association</h1>
+<h1>Add a known association</h1>
 	
 	<% form_for([@entity, @association]) do |f| %>
 		<%= f.error_messages %>
 		
 		<p>
-			<%= f.label :third_party_person %><br />
-			<%= f.text_field :thirdpartyperson %>
+			<%= f.label :thirdpartyperson_id, 'Association in question' %>
+			<%= f.text_field :thirdpartyperson_id %>
+				<%= f.label :description, 'Description of relationship' %><%= f.text_field :description %> &nbsp;&nbsp;<%= f.label :infosource ,'Source of information' %>
+			<%= f.text_field :infosource %>
+			
 		</p>
 			
 		<p>

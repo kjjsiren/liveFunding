@@ -8,15 +8,15 @@
     <%= f.text_field :amount %>
   </p>
   <p>
-    <%= f.label :from %><br />
-	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.id] }
-		f.select(:from, @from_who)
+    <%= f.label :donor %><br />
+	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
+		f.select(:donor, @from_who)
 	%>
   </p>
   <p>
-    <%= f.label :to %><br />
-	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.id] }
-		f.select(:to, @from_who)
+    <%= f.label :recipient %><br />
+	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
+		f.select(:recipient, @from_who)
 	%>
   </p>
   <p>

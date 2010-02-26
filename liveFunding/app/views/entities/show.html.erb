@@ -1,39 +1,40 @@
+<%if @entity.is_organization != false%>
+<h2>Organization information</h2>
+<%else%>
+<h2>Person profile</h2>
+<%end%>
 <p>
   <b>Name:</b>
-  <%=h @transaction.entity.name %>
+  <%=h @entity.name %>
 </p>
 
 <p>
-  <b>Leader:</b>
-  <%=h @transaction.entity.leader %>
+  <%if @entity.leader != "None" and @entity.leader != "" %><b>Leader:</b>
+  <%=h @entity.leader %>
+<%end%>
 </p>
 
 <p>
   <b>Email:</b>
-  <%=h @transaction.entity.email %>
+  <%=h @entity.email %>
 </p>
 
 <p>
   <b>Phone number:</b>
-  <%=h @transaction.entity.phone_number %>
+  <%=h @entity.phone_number %>
 </p>
 
 <p>
   <b>Description:</b>
-  <%=h @transaction.entity.description %>
-</p>
-
-<p>
-  <b>Is organization:</b>
-  <%=h @transaction.entity.is_organization %>
+  <%=h @entity.description %>
 </p>
 
 
 <div id="association-list">
-	<h2>Associations for this entity:</h2>
-		<% @transaction.entity.associations.each do |association| %>
+	<h2>Known associations:</h2>
+		<% @entity.associations.each do |association| %>
 		<p>
-		<%=h association.thirdpartyperson_id %>
+		<%=h association.thirdpartyperson_id %>, 		<%=h association.description %>, 	Source:	<%=h association.infosource %>
 		</p>
 	<% end %>
 </div>	

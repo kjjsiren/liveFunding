@@ -13,23 +13,12 @@
 
 <body>
 <div id="header" style="width:100%; float:left;">
-	
-	<div id="language">
-		<p><%= I18n.t('layout.language.select') %> </p>
-		<% form_tag '', :method => 'GET' do %>
-			<%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale),
-		  		:onchange => 'this.form.submit()' %>
-			<%= javascript_tag "$$('.locale input').each(Element.hide)" %>
-		<% end %>	
-	</div>
-
-<div id="navigation" style="float:left;margin-top:20px;margin-left:20px;font-size:large;font-weight:bold;">
+<div id="navigation" style="float:left;margin-top:20px;margin-left:100px;font-size:large;font-weight:bold;">
 	<%= link_to I18n.t('layout.navigation.home'), root_path %>
 	<%= link_to I18n.t('layout.navigation.transactions'), transactions_path %>
 	<%= link_to I18n.t('layout.navigation.entities'), entities_path %>
 	<%= link_to I18n.t('layout.navigation.thirdparty'), thirdpartypeople_path %>
-	<%= link_to I18n.t('layout.navigation.latest_transactions'), newsfeed_transactions_path %>
-	</div>
+	</div> 
 	<div style ="float:right;">
 		<% if logged_in? %>
 				Welcome, <%= link_to current_user.username, edit_user_path(current_user) %> (<%= link_to "logout", logout_path %>)
@@ -53,12 +42,21 @@
 		<br />
 		<br />
 		<% form_for Transaction.new, :url => search_transactions_path  do |f| %>
-			<%= f.text_field :from, :size =>"20" %>
+			<%= f.text_field :donor, :size =>"20" %>
 			<%= submit_tag I18n.t('layout.search.search')%>
 		<% end %>
 	</div>
+	
+	<div id="language" style="float:left;clear:left;margin-top:40px;">
+	                <% form_tag '', :method => 'GET' do %>
+		                        <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale),
+		                                :onchange => 'this.form.submit()' %>
+		                        <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+		                <% end %>       
+		        </div>
+	
 	</div>
-	<div id="notifcations" style="width:100%;max-height:200px; float:left;clear:both;">
+	<div id="notifications" style="width:100%;max-height:200px; float:left;clear:both;">
 		<% if flash[:notice] %>
 				<p style="color: green"><%= flash[:notice] %></p>
 			<% end %>
@@ -66,12 +64,9 @@
 				<p style="color: red"><%= flash[:error] %></p>
 			<% end %>
 		</div>
-	<div style="min-height:400px;float:left;clear:both;width:100%;">
-	<div style="float:left; width: 70%;">
+		<hr style="width:100%;float:left;clear:both;"/>
+	<div id="content" style="margin-top:40px;min-height:400px;float:left;clear:both;width:100%;">
 	<%= yield %>
-	</div>
-	<div style="float:left; width:29%;clear:none;">
-	</div>
 	</div>
 	<div id="footer" style="width:100%; float:left; clear:both;">
 		<hr />

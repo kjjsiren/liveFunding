@@ -1,4 +1,4 @@
-<div id="about">	
+<div id="about" style="width:50%;float:left;">	
 	<h2>Vaalirahakone</h2>
 	<p>Vaalirahakoneen tarkoitus on parantaa poliittisen rahoituksen läpinäkyvyyttä Suomessa. Sen avulla tavalliset kansalaiset 		voivat tarkastella ja kommentoida poliitikkojen yhteyksiä eri yrityksiin, yhteisöihin ja järjestöihin. Järjestelmän avulla kaikki käyttäjät voivat myös raportoida tietämistään yhteyksistä poliitikkojen ja muiden tahojen välillä. Tarkoituksena ei ole pelkästään 	rahoitusyhteyksien selvittäminen, vaan myös muiden vaikutuskanavien selvittäminen. 
 	</p>
@@ -22,3 +22,29 @@
 		</ol>	
 	</p>
 </div>
+<div id="newsfeed" style="width:40%;float:right;clear:none;">
+	<h2>Newsfeed</h2>
+	<table id="newest" border="0" cellspacing="20" style="">
+	  <tr>
+	    <th><%= I18n.t('transactions.index.amount') %></th>
+	    <th><%= I18n.t('transactions.index.from') %></th>
+	    <th><%= I18n.t('transactions.index.to') %></th>
+		<th><%= I18n.t('transactions.index.create_time') %></th>
+	  </tr>
+	<% @transactions.each do |transaction| %>
+	    <% link_to transactions_path do %>
+		<tr><td><%=h transaction.amount %></td>
+	    <td><%=h transaction.donor %></td>
+	    <td><%=h transaction.recipient %></td>
+		<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M")  %></td>
+	  </tr><% end %>
+	<% end %>
+	</table>
+
+	<br />
+
+	<%= link_to I18n.t('transactions.new.title'), new_transaction_path %> &nbsp;&nbsp;
+	<%= link_to I18n.t('transactions.top.title'), top_transactions_path %> &nbsp;&nbsp;
+	<%= link_to I18n.t('transactions.fundtop.title'), fundtop_transactions_path %>
+	
+	</div>

@@ -1,6 +1,7 @@
 class EntitiesController < ApplicationController
   # GET /entities
   # GET /entities.xml
+  
   def index
     @entities = Entity.all
 
@@ -13,10 +14,8 @@ class EntitiesController < ApplicationController
   # GET /entities/1
   # GET /entities/1.xml
   def show
-#    @entity = Entity.find(params[:id])
-     @transaction = Transaction.find(params[:transaction_id])
-     @entity = @transaction.entities.find(params[:entity])
-    respond_to do |format|
+     @entity = Entity.find(params[:id]) 
+       respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @entity }
     end
@@ -25,9 +24,8 @@ class EntitiesController < ApplicationController
   # GET /entities/new
   # GET /entities/new.xml
   def new
-#    @entity = Entity.new
-    @transaction = Transaction.find(params[:transaction_id]) 
-    @entity = @transaction.entities.build 
+    @entity = Entity.new
+#    @entity = @transaction.entities.build 
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @entity }
@@ -36,17 +34,15 @@ class EntitiesController < ApplicationController
 
   # GET /entities/1/edit
   def edit
-#    @entity = Entity.find(params[:id])
-	@transaction = Transaction.find(params[:transaction_id])
-    @entity = @transaction.entities.find(params[:id]) 
+    @entity = Entity.find(params[:id])
+   #@entity = @transaction.entities.find(params[:id]) 
   end
 
   # POST /entities
   # POST /entities.xml
   def create
-#    @entity = Entity.new(params[:entity])
-     @transaction = Transaction.find(params[:transaction_id])
-     @entity = @transaction.entities.build(params[:entity])
+    @entity = Entity.new(params[:entity])
+    #@entity = @transaction.entities.build(params[:entity])
     respond_to do |format|
       if @entity.save
         flash[:notice] = 'Entity was successfully created.'
@@ -62,9 +58,7 @@ class EntitiesController < ApplicationController
   # PUT /entities/1
   # PUT /entities/1.xml
   def update
-#    @entity = Entity.find(params[:id])
-	@transaction = Transaction.find(params[:transaction_id])
-    @entity = Entity.find(params[:id])
+   @entity = Entity.find(params[:id])
     respond_to do |format|
       if @entity.update_attributes(params[:entity])
         flash[:notice] = 'Entity was successfully updated.'
@@ -80,10 +74,7 @@ class EntitiesController < ApplicationController
   # DELETE /entities/1
   # DELETE /entities/1.xml
   def destroy
-#    @entity = Entity.find(params[:id])
-#    @entity.destroy
-	@transaction = Transaction.find(params[:transaction_id])
-    @entity = Entity.find(params[:id]) 
+	  @entity = Entity.find(params[:id]) 
     @entity.destroy 
     respond_to do |format|
       format.html { redirect_to(entities_url) }

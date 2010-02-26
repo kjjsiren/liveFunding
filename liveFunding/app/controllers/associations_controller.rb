@@ -1,20 +1,20 @@
 class AssociationsController < ApplicationController
   #Create a new association 
   def create
-     @entity = Entity.find(params[:entity_id])
-     @association = @entity.associations.build(params[:id])
-        if @association.save
-          flash[:notice] = "A new association was added."
-          redirect_to entity_url(@entity) 
-        else
-          flash[:notice] = "Invalid association"  
-          render :action => "new"
-        end 
-  end
-  
+  	     @entity = Entity.find(params[:entity_id])
+  	     @association = Association.new(params[:association])
+  	     @association.entity_id = params[:entity_id]
+  	        if @association.save
+  	          flash[:notice] = "A new association was added."
+  	          redirect_to entity_url(@entity)
+  	        else
+  	          flash[:notice] = "Invalid association" 
+  	          render :action => "new"
+  	        end 
+  	  end
   def new
-    @entity = Entity.find(params[:entity_id]) 
-    @association = @entity.associations.build 
+    @entity = Entity.find(params[:entity_id])
+    @association = Association.new 
   end
   
   #Edit

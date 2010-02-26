@@ -9,13 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100224115020) do
+ActiveRecord::Schema.define(:version => 20100226033606) do
 
   create_table "associations", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "entity_id"
-    t.integer  "thirdpartyperson_id"
+    t.string   "thirdpartyperson_id"
+    t.string   "infosource"
+    t.string   "description"
   end
 
   create_table "comments", :force => true do |t|
@@ -53,9 +55,10 @@ ActiveRecord::Schema.define(:version => 20100224115020) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "to"
-    t.string   "from"
+    t.string   "recipient"
+    t.string   "donor"
     t.integer  "rank"
+    t.integer  "entity_id"
   end
 
   create_table "users", :force => true do |t|

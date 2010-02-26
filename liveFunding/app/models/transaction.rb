@@ -1,8 +1,14 @@
 class Transaction < ActiveRecord::Base
   has_many :comments
-  has_many :entities
+  belongs_to :entities
+  #belongs_to :donor, :class_name => 'Entity'
+  #belongs_to :recipient, :class_name => 'Entity'
   
-  validates_presence_of :from, :to
+  named_scope :latest, lambda { |amount|
+      {:limit => amount}
+    }
+  
+  validates_presence_of :recipient, :donor
   validates_numericality_of :amount
   
   def self.top
