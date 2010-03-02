@@ -1,14 +1,15 @@
-<h1>Transaction with the ID: <%=h @transaction.id %></h1>
+<h1><%= I18n.t('transactions.show.title') %> <%=h @transaction.id %></h1>
 
 <% form_for(@transaction) do |f| %>
 <%= f.error_messages %>
 
 <p>
-	<%= f.label :amount %><br />
+	<%= f.label :amount, I18n.t('transactions.information.amount') %><br />
 	<%=h @transaction.amount %>
 </p>
   	
 <p>
+<<<<<<< HEAD
 	<%= f.label :donor %><br />
 	<%=h @transaction.donor%>
 </p>
@@ -16,37 +17,46 @@
 <p>
 	<%= f.label :recipient %><br />
     <%=h @transaction.recipient %>
+=======
+	<%= f.label :from, I18n.t('transactions.information.from') %><br />
+	<%=h @transaction.from %>
 </p>
 
 <p>
-	<%= f.label :description %><br />
+	<%= f.label :to, I18n.t('transactions.information.to') %><br />
+    <%=h @transaction.to %>
+>>>>>>> 17204c0f1e0edc5ae27e38f83573f537633e80b1
+</p>
+
+<p>
+	<%= f.label :description, I18n.t('transactions.information.description') %><br />
 	<%=h @transaction.description %>
 </p>
 	
 <p>
-	<%= f.label :rank %><br />
+	<%= f.label :rank, I18n.t('transactions.information.rank') %><br />
    	<%=h @transaction.rank %>
 </p>
 
 <div id="comment-list">
-	<h2>Comments for this transaction:</h2>
+	<h2><%= I18n.t('transactions.show.comments_title') %>:</h2>
 	
 	<% @transaction.comments.each do |comment| %>
   	<div class "<%= cycle('list-line-odd', 'list-line-even')%>">
 		<p>
-			<b><%=h comment.commenter %> said:</b>
+			<b><%=h comment.commenter %> <%= I18n.t('transactions.show.commenter_said') %></b>
 		</p>
 	  
 		<p>  
 			<%=h comment.content %>
 		</p>
-		<%= link_to 'Edit this comment', edit_transaction_comment_path(@transaction, comment.id) %>  
-		<%= link_to 'Destroy', transaction_comment_path(@transaction, comment), :confirm => 'Are you sure?', :method => :delete %> 
+		<%= link_to I18n.t('layout.navigation.edit'), edit_transaction_comment_path(@transaction, comment.id) %>  
+		<%= link_to I18n.t('layout.navigation.destroy'), transaction_comment_path(@transaction, comment), :confirm => 'Are you sure?', :method => :delete %> 
 	</div>
 	<% end %>
 </div>	
 <br />
 	
-<%= link_to 'New Comment', new_transaction_comment_path(@transaction)  %>
-<%= link_to 'Back', transactions_path %>
+<%= link_to I18n.t('transactions.show.new'), new_transaction_comment_path(@transaction)  %>
+<%= link_to I18n.t('layout.navigation.back'), transactions_path %>
 <% end %>

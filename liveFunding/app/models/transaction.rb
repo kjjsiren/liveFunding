@@ -1,8 +1,7 @@
 class Transaction < ActiveRecord::Base
   has_many :comments
-  belongs_to :entities
-  #belongs_to :donor, :class_name => 'Entity'
-  #belongs_to :recipient, :class_name => 'Entity'
+  belongs_to :donor, :class_name => 'Entity'
+  belongs_to :recipient, :class_name => 'Entity'
   
   named_scope :latest, lambda { |amount|
       {:limit => amount}

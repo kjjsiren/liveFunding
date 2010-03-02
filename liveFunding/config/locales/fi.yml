@@ -26,16 +26,70 @@ fi:
             select: "Valitse kieli:"
             
     transactions:
+        index:
+            title: "Kaikki tapahtumat"
+            id: "ID"
+            amount: "Määrä"
+            from: "Lahjoittaja"
+            to: "Saaja"
+            create_time: "Tapahtuma-aika"
+            rank: "Arvostus"
+            operation: ""
+        
         information:
             amount: "Määrä"
             from: "Lahjoittaja"
             to: "Kohde"
             description: "Kuvaus"
             rank: "Arvostus"
+            create_time: "Tapahtuma-aika"
+            operation: ""
             
         edit:
             title: "Muuta tapahtuman tietoja:"
             update: "Päivitä"
+            
+        new:
+            title: "Uusi tapahtuma"
+
+        top:
+            title: "Top 10"
+            id: "ID"
+            amount: "Määrä (€)"
+            from: "Lahjoittaja"
+            to: "Saaja"
+            create_time: "Tapahtuma-aika"
+            rank: "Arvostus"
+            operation: ""
+
+        fundtop:
+            title: "Top 10 tapahtumat"
+            id: "ID"
+            amount: "Määrä (€)"
+            from: "Lahjoittaja"
+            to: "Saaja"
+            create_time: "Tapahtuma-aika"
+            rank: "Arvostus"
+            operation: ""
+
+        search:
+            title: "Hakutulokset hakusanoille"
+            id: "ID"
+            amount: "Määrä (€)"
+            from: "Lahjoittaja"
+            to: "Saaja"
+            create_time: "Tapahtuma-aika"
+            rank: "Arvostus"
+            operation: ""
+
+        newsfeed:
+            title: "Uutisvirta"
+            
+        show:
+            title: "Tapahtuman tiedot"
+            comments_title: "Kommentit tälle tapahtumalle"
+            commenter_said: "sanoi"
+            new: "Uusi kommentti"        
 
     entities:
         information:

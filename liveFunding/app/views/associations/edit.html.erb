@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <h1>Edit Association </h1>
 <% form_for([@entity, @association]) do |f| %>
+=======
+<h1><%= I18n.t('association.edit.title') %></h1>
+<% form_for([@entity, @associatio]) do |f| %>
+>>>>>>> 17204c0f1e0edc5ae27e38f83573f537633e80b1
 	
 	<%= f.label :entity %><br />
 	<%= f.text_field :entity %>

@@ -4,6 +4,7 @@
 <h2>Person profile</h2>
 <%end%>
 <p>
+<<<<<<< HEAD
   <b>Name:</b>
   <%=h @entity.name %>
 </p>
@@ -27,6 +28,35 @@
 <p>
   <b>Description:</b>
   <%=h @entity.description %>
+=======
+  <b><%= I18n.t('entities.information.name')%>:</b>
+  <%=h @transaction.entity.name %>
+</p>
+
+<p>
+  <b><%= I18n.t('entities.information.leader')%>:</b>
+  <%=h @transaction.entity.leader %>
+</p>
+
+<p>
+  <b><%= I18n.t('entities.information.email')%>:</b>
+  <%=h @transaction.entity.email %>
+</p>
+
+<p>
+  <b><%= I18n.t('entities.information.phone_number')%>:</b>
+  <%=h @transaction.entity.phone_number %>
+</p>
+
+<p>
+  <b><%= I18n.t('entities.information.description')%>:</b>
+  <%=h @transaction.entity.description %>
+</p>
+
+<p>
+  <b><%= I18n.t('entities.information.is_organization')%>:</b>
+  <%=h @transaction.entity.is_organization %>
+>>>>>>> 17204c0f1e0edc5ae27e38f83573f537633e80b1
 </p>
 
 
@@ -40,8 +70,8 @@
 </div>	
 <br />
 
-<%= link_to 'New Association', new_entity_association_path(@entity)  %>
+<%= link_to I18n.t('entities.new.title'), new_entity_association_path(@entity)  %>
 
 
-<%= link_to 'Edit', edit_entity_path(@entity) %>
-<%= link_to 'Back', entities_path %>
+<%= link_to I18n.t('layout.navigation.edit'), edit_entity_path(@entity) %>
+<%= link_to I18n.t('layout.navigation.back'), entities_path %>
