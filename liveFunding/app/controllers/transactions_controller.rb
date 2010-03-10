@@ -1,5 +1,7 @@
 class TransactionsController < ApplicationController
   #display all the transactions by default
+  layout "application", :except => [ :export_csv ]
+  
   def index
     @transactions = Transaction.all
     @transaction = Transaction.new
@@ -157,10 +159,12 @@ class TransactionsController < ApplicationController
 
   def export_csv
     #raise params.inspect
-    respond_to do |format|
-      format.html { redirect_to(transactions_url) }
-      format.xml  { head :ok }
-    end
+    @transactions = Transaction.find(:all)
+    #raise f.inspect
+    #respond_to do |format|
+    #  format.html { redirect_to(transactions_url) }
+    #  format.xml  { head :ok }
+    #end
   end
-  
+
 end
