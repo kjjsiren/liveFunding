@@ -89,7 +89,6 @@ en:
         
         importcsv:
             title: "Import from CSV"
-            successful: "Import successfully!"
 
     entities:
         information:

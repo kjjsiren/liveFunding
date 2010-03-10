@@ -4,7 +4,7 @@
 <%= link_to I18n.t('transactions.exportcsv.title'), { :controller => :transactions, :action => "export_csv" } %> 
 
 
-<% form_for :transaction, @transaction, :url=>{:controller=>"transactions", :action=>"import_csv"}, :html => { :multipart => true } do |f| %> 
+<% form_for :transaction, @transaction, :url=>{:controller=>"transactions", :action=>"import_csv"} do |f| %> 
 <%= I18n.t('transactions.importcsv.title') %>  : <%= f.file_field :file %> <%= submit_tag 'Submit' %> <% end %> <br />
 
 <h3><%= I18n.t('transactions.index.title') %></h3>
