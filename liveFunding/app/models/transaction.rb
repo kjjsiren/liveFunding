@@ -22,10 +22,9 @@ class Transaction < ActiveRecord::Base
   def self.newsfeed
     self.find(:all, :order => 'created_at DESC', :limit => 10)
   end
-    
-  # only for test
-  def self.increment_rank(transaction_id)
-    
+
+  def self.increment_rank
+    #self.update_attribute("rank", 1)
   end  
 end
 

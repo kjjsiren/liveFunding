@@ -88,13 +88,33 @@ class TransactionsController < ApplicationController
 
   def incr_rank
     @transaction = Transaction.find(params[:id])
-    @transaction.increment_rank
+    @transaction.rank = @transaction.rank==nil ? 1 : @transaction.rank+1
+    @transaction.save!()
+    #raise params.inspect
+    respond_to do |format|
+      format.html { redirect_to(transactions_url) }
+      format.xml  { head :ok }
+    end
   end
   
+  
+  def incr_ilike
+    @transaction = Transaction.find(params[:id])
+    @transaction.ilike = @transaction.ilike==nil ? 1 : @transaction.ilike+1
+    @transaction.save!()
+
+    respond_to do |format|
+      format.html { redirect_to(transactions_url) }
+      format.xml  { head :ok }
+    end
+  end
+  
+  
   def decr_rank
-    transaction = Transaction.find(params[:id])
-    transaction.decrease_rank
+    @transaction = Transaction.find(params[:id])
+    @transaction.decrease_rank
   end  
+  
   
   def top
     @transactions = Transaction.top
@@ -104,6 +124,7 @@ class TransactionsController < ApplicationController
       format.xml  { render :xml => @transactions }
     end
   end
+  
   
   def fundtop
     @transactions = Transaction.fundtop
