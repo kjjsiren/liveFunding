@@ -83,6 +83,9 @@ en:
         
         newsfeed:
             title: "Newsfeed"
+            
+        exportcsv:
+            title: "Export to CSV"
 
     entities:
         information:

@@ -1,7 +1,7 @@
 <%= link_to I18n.t('transactions.new.title'), new_transaction_path %> &nbsp;&nbsp;
 <%= link_to I18n.t('transactions.top.title'), top_transactions_path %> &nbsp;&nbsp;
-<%= link_to I18n.t('transactions.fundtop.title'), fundtop_transactions_path %> 
-
+<%= link_to I18n.t('transactions.fundtop.title'), fundtop_transactions_path %> &nbsp;&nbsp;
+<%= link_to I18n.t('transactions.exportcsv.title'), { :controller => :transactions, :action => "export_csv" } %> 
 
 
 <h3><%= I18n.t('transactions.index.title') %></h3>

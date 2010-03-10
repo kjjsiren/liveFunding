@@ -154,4 +154,13 @@ class TransactionsController < ApplicationController
     @transactions_to = Transaction.find(:all, :conditions => {:donor => params[:transaction][:recipient]})
   end
 
+
+  def export_csv
+    #raise params.inspect
+    respond_to do |format|
+      format.html { redirect_to(transactions_url) }
+      format.xml  { head :ok }
+    end
+  end
+  
 end
