@@ -11,10 +11,24 @@
 <table borders="0" cellspacing="15">
 <% @transactions.each do |transaction| %>
 <tr>
-	<td><%= I18n.t('transactions.index.id') %>: <%=h transaction.id %></td>
-	<td> <%=h I18n.t('transactions.index.from') %>: <strong><%=h transaction.donor %></strong></td>
-	<td><strong><%=h transaction.amount %></strong>€ </td><td>--></td><td><strong><%=h transaction.recipient %></strong></td>
-	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M")  %></td>
+	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
+        onmouseout="this.style.background='white';" onclick = "location='<%= transaction.id%>'">
+        <%= I18n.t('transactions.index.id') %>: <%=h transaction.id %></td>
+	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
+        onmouseout="this.style.background='white';" onclick = "location='<%= transaction.id%>'">
+        <%=h I18n.t('transactions.index.from') %>: <strong><%=h transaction.donor %></strong></td>
+	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
+        onmouseout="this.style.background='white';" onclick = "location='<%= transaction.id%>'">
+        <strong><%=h transaction.amount %></strong>€ </td>
+  <td  onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
+        onmouseout="this.style.background='white';" onclick = "location='<%= transaction.id%>'">
+        --></td>
+  <td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
+        onmouseout="this.style.background='white';" onclick = "location='<%= transaction.id%>'">
+        <strong><%=h transaction.recipient %></strong></td>
+	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
+        onmouseout="this.style.background='white';" onclick = "location='<%= transaction.id%>'">
+        <%=h transaction.created_at.strftime("%d.%m.%Y %H:%M")  %></td>
 	<td><%= link_to '+', { :controller => :transactions, :action => "incr_rank", :id => transaction.id }, :title => "Rank It!" %> <%=h transaction.rank %></td>
 	<td><%= link_to '♥', { :controller => :transactions, :action => "incr_ilike", :id => transaction.id }, :title => "I Like It!"  %> <%=h transaction.ilike %></td>
 	<td><%= link_to I18n.t('layout.navigation.show'), transaction %> </td>
@@ -24,4 +38,3 @@
 <% end %>
 </table>
 <br />
-
