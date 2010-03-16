@@ -176,10 +176,10 @@ class TransactionsController < ApplicationController
 			transaction.amount = row[0]        
 			transaction.recipient = row[1]
 			transaction.donor = row[2]        
-      if transaction.save  
+       if transaction.save  
          n=n+1  
          GC.start if n%50==0  
-      end             
+       end             
 			flash.now[:notice]="CSV Import Successful"
 		end
 	end

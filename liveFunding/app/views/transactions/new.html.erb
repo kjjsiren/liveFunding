@@ -13,6 +13,7 @@
 	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
 		f.select(:donor, @from_who)
 	%>
+	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
   </p>
   <p>
     <%= f.label :recipient %><br />
@@ -23,6 +24,7 @@
 	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.id] }
 		f.select(:from, @from_who)
 	%>
+	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
   </p>
   <p>
     <%= f.label :to, I18n.t('transactions.information.to') %><br />

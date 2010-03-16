@@ -26,13 +26,6 @@ en:
         language:
             select: "Choose language"
             
-    association:
-        edit:
-            title: "Edit Association"
-            
-        new:
-            title: "New Association"
-            
     transactions:
         index:
             title: "All The Transactions"
@@ -50,8 +43,6 @@ en:
             to: "To"
             description: "Description"
             rank: "Rank"
-            create_time: "Create time"
-            operation: "Operation"
             
         edit:
             title: "Edit the information"
@@ -93,20 +84,11 @@ en:
         newsfeed:
             title: "Newsfeed"
             
-<<<<<<< HEAD
-        show:
-            title: "Transaction with the ID"
-            comments_title: "Comments for this transaction"
-            commenter_said: "said"
-            new: "New comment"  
-=======
         exportcsv:
             title: "Export to CSV"
         
         importcsv:
             title: "Import from CSV"
-            successful: "Import successfully!"
->>>>>>> d17ec520de251c4f29b93fb89e511539e1607d37
 
     entities:
         information:
@@ -123,7 +105,7 @@ en:
             
         new:
             create: "Create a new organization"
-            title: "New Organization"
+            title: "Input organization's information"
             
         controls:
             show: "Show"
@@ -165,17 +147,6 @@ en:
             comment: "Your comment:"
             submit: "Submit"
             
-    people:
-        information:
-            last_name: "Last Name"
-            first_name: "First Name"
-            sex: "Sex"
-            phone_number: "Phone Number"
-            birthday: "Birthday"
-
-        index:
-            title: "Listing people"
-        
     users:
         edit:
             title: "Edit your information"

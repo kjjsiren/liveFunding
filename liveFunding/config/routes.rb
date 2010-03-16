@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :thirdpartypeople
 
 	map.resources :users
-	map.resources :transactions, :collection => {:top => :get, :search => :get, :fundtop => :get, :newsfeed => :get}, :has_many => :comments
+	map.resources :transactions, :collection => {:top => :get, :search => :get, :fundtop => :get, :newsfeed => :get, :export_csv => :get }, :has_many => :comments
 	map.resource :session
   map.resource :home
  
