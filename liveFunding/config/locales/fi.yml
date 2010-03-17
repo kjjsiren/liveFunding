@@ -12,6 +12,7 @@ fi:
             destroy: "Poista"
             update: "Päivitä"
             create: "Luo"
+            favourite: "Lisää suosikkeihin"
             
         login:
             username: "Käyttäjätunnus"
@@ -163,4 +164,8 @@ fi:
         new:
             title: "Rekisteröidy Vaalirahakoneen käyttäjäksi"                
             
-        
+    flash:
+        favourite:
+            added: "Tapahtuma lisätty suosikkeihisi."
+            fail: "Tapahtuman lisääminen suosikkeihin epäonnistui."        
+            deleted: "Tapahtuma poistettu suosikeistasi."

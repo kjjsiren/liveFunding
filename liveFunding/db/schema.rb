@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100310112913) do
+ActiveRecord::Schema.define(:version => 20100317084108) do
 
   create_table "associations", :force => true do |t|
     t.datetime "created_at"
@@ -60,6 +60,11 @@ ActiveRecord::Schema.define(:version => 20100310112913) do
     t.integer  "rank"
     t.integer  "entity_id"
     t.integer  "ilike"
+  end
+
+  create_table "transactions_users", :id => false, :force => true do |t|
+    t.integer "transaction_id"
+    t.integer "user_id"
   end
 
   create_table "users", :force => true do |t|

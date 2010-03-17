@@ -9,10 +9,9 @@ class User < ActiveRecord::Base
   validates_length_of :password, :in => 5..30, :on => :create
   validates_confirmation_of :password
   
-  #validates_length_of :student_number, :is => 9, :allow_blank => true
-  
   named_scope :with_email, :conditions => "email IS NOT NULL"
   
+  has_and_belongs_to_many :transactions
 
   attr_accessor :password, :password_confirmation
 
