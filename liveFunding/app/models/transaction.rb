@@ -1,6 +1,7 @@
 class Transaction < ActiveRecord::Base
   has_many :comments
   belongs_to :entities
+  has_and_belongs_to_many :users
   #belongs_to :donor, :class_name => 'Entity'
   #belongs_to :recipient, :class_name => 'Entity'
   

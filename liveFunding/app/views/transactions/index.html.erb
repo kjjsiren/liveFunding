@@ -5,7 +5,9 @@
 
 
 <% form_for :transaction, @transaction, :url=>{:controller=>"transactions", :action=>"import_csv"}, :html => { :multipart => true } do |f| %> 
-<%= I18n.t('transactions.importcsv.title') %>  : <%= f.file_field :file %> <%= submit_tag 'Submit' %> <% end %> <br />
+<%= I18n.t('transactions.importcsv.title') %>  : <%= f.file_field :file %> <%= 
+
+submit_tag 'Submit' %> <% end %> <br />
 
 <h3><%= I18n.t('transactions.index.title') %></h3>
 <table borders="0" cellspacing="15">
@@ -34,6 +36,7 @@
 	<td><%= link_to I18n.t('layout.navigation.show'), transaction %> </td>
 	<td><%= link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(transaction) %></td>
 	<td><%= link_to I18n.t('layout.navigation.destroy'), transaction, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td>
+	<td><%= link_to I18n.t('layout.navigation.favourite'), {:controller => :favourite, :action => "favourite_transaction", :id => transaction.id } %></td>
 </tr>
 <% end %>
 </table>

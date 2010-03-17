@@ -13,6 +13,7 @@ en:
             destroy: "Destroy"
             sure: "Are you sure?"
             update: "Update"
+            favourite: "Favourite"
             
         login:
             username: "Username"
@@ -25,6 +26,7 @@ en:
             
         language:
             select: "Choose language"
+                
             
     transactions:
         index:
@@ -162,3 +164,9 @@ en:
                         
         new:
             title: "Registering to LiveFunding"
+            
+    flash:
+        favourite:
+            added: "The transaction was added to your favourites"
+            fail: "Transaction favouriting failed"
+            deleted: "Transaction deleted from your favourites."        
