@@ -34,8 +34,8 @@
 	<% @transactions.each do |transaction| %>
 	    <% link_to transactions_path do %>
 		<tr><td><%=h transaction.amount %></td>
-	    <td><%=h transaction.donor %></td>
-	    <td><%=h transaction.recipient %></td>
+	    <td><%=h transaction.donor.name %></td>
+	    <td><%=h transaction.recipient.name %></td>
 		<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M")  %></td>
 	  </tr><% end %>
 	<% end %>

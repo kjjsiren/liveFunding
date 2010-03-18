@@ -12,32 +12,33 @@
 </head>
 
 <body>
-<div id="header" style="width:100%; float:left;">
-<div id="navigation" style="float:left;margin-top:20px;margin-left:100px;font-size:large;font-weight:bold;">
-	<%= link_to I18n.t('layout.navigation.home'), root_path %>
-	<%= link_to I18n.t('layout.navigation.transactions'), transactions_path %>
-	<%= link_to I18n.t('layout.navigation.entities'), entities_path %>
-	<%= link_to I18n.t('layout.navigation.thirdparty'), thirdpartypeople_path %>
-	</div> 
-	<div style ="float:right;">
-		<% if logged_in? %>
-				Welcome, <%= link_to current_user.username, edit_user_path(current_user) %> (<%= link_to "logout", logout_path %>)
+<div id="header">
+		<div style ="float:right;">
+			<% if logged_in? %>
+					Welcome, <%= link_to current_user.username, edit_user_path(current_user) %> (<%= link_to "logout", logout_path %>)
+			<% end %>
+			<% if !logged_in? %>
+		<% form_for @user, :url=>session_url do |f| %>
+			<%= f.label I18n.t('layout.login.username') %><br />
+			<%= f.text_field :username, :size =>"20" %><br />
+
+			<%= f.label I18n.t('layout.login.password') %><br />
+			<%= f.password_field :password, :size =>"20" %><br />
+
+			<%= submit_tag I18n.t('layout.login.submit')%>
+			<%= link_to I18n.t('layout.login.register'), new_user_path %>
 		<% end %>
-		<% if !logged_in? %>
-	<% form_for @user, :url=>session_url do |f| %>
-		<%= f.label I18n.t('layout.login.username') %><br />
-		<%= f.text_field :username, :size =>"20" %><br />
-
-		<%= f.label I18n.t('layout.login.password') %><br />
-		<%= f.password_field :password, :size =>"20" %><br />
-
-		<%= submit_tag I18n.t('layout.login.submit')%>
-		<%= link_to I18n.t('layout.login.register'), new_user_path %>
-	<% end %>
-	<% end %>
-	</div>
-	
-	<div id="search" style="float:right; clear:none; margin-right:150px;">
+		<% end %>
+		</div>
+		<div>		
+		<div id="language">
+		                <% form_tag '', :method => 'GET' do %>
+			                        <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale),
+			                                :onchange => 'this.form.submit()' %>
+			                        <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+			                <% end %>       
+			        </div>
+			<div id="search">
 		<br />
 		<br />
 		<br />
@@ -47,28 +48,47 @@
 		<% end %>
 	</div>
 	
-	<div id="language" style="float:left;clear:left;margin-top:40px;">
-	                <% form_tag '', :method => 'GET' do %>
-		                        <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale),
-		                                :onchange => 'this.form.submit()' %>
-		                        <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
-		                <% end %>       
-		        </div>
+
+	</div>
 	
+	<hr style="width:100%;clear:both;float;left;margin-top:170px;"/>
 	</div>
-	<div id="notifications" style="width:100%;max-height:200px; float:left;clear:both;">
-		<% if flash[:notice] %>
-				<p style="color: green"><%= flash[:notice] %></p>
-			<% end %>
-			<% if flash[:error] %>
-				<p style="color: red"><%= flash[:error] %></p>
-			<% end %>
+<div class="container">	
+	<div class="left">
+		<div class="navigation">
+		<ul>
+			<li><%= link_to I18n.t('layout.navigation.home'), root_path %></li>
+			<li><%= link_to I18n.t('layout.navigation.transactions'), transactions_path %></li>
+			<ul><li><%= link_to I18n.t('transactions.new.title'), new_transaction_path %></li>
+				<li><%= link_to I18n.t('transactions.top.title'), top_transactions_path %></li>
+				<li><%= link_to I18n.t('transactions.fundtop.title'), fundtop_transactions_path %></li>
+			</ul>
+			<li><%= link_to I18n.t('layout.navigation.entities'), entities_path %></li>
+			<ul>
+				<li><%= link_to I18n.t('entities.new.title'), new_entity_path %></li>
+			</ul>
+			<li><%= link_to I18n.t('layout.navigation.thirdparty'), thirdpartypeople_path %></li>
+		</ul>
+		</div> 
+	</div>
+	
+	
+	<div class="center">
+		<div id="notifications">
+			<% if flash[:notice] %>
+					<p id="notice"><%= flash[:notice] %></p>
+				<% end %>
+				<% if flash[:error] %>
+					<p id="error"><%= flash[:error] %></p>
+				<% end %>
 		</div>
-		<hr style="width:100%;float:left;clear:both;"/>
-	<div id="content" style="margin-top:40px;min-height:400px;float:left;clear:both;width:100%;">
-	<%= yield %>
+		<div id="content">
+			<%= yield %>
+		</div>
 	</div>
-	<div id="footer" style="width:100%; float:left; clear:both;">
+	</div>
+		
+	<div id="footer">
 		<hr />
 	<p>This page was generated at <%= page_generation_timestamp %></p>
 </div>
