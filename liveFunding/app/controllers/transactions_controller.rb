@@ -99,8 +99,32 @@ class TransactionsController < ApplicationController
   
   def decr_rank
     @transaction = Transaction.find(params[:id])
-    @transaction.decrease_rank
+    if @transaction.rank != 0
+      @transaction.rank = @transaction.rank==nil ? 0 : @transaction.rank-1
+    end
+    
+    @transaction.save!()
+    #raise params.inspect
+    respond_to do |format|
+      format.html { redirect_to(transactions_url) }
+      format.xml  { head :ok }
+    end
   end  
+  
+  
+  def decr_ilike
+    @transaction = Transaction.find(params[:id])
+    if @transaction.ilike != 0
+      @transaction.ilike = @transaction.ilike==nil ? 0 : @transaction.ilike-1
+    end
+    
+    @transaction.save!()
+    #raise params.inspect
+    respond_to do |format|
+      format.html { redirect_to(transactions_url) }
+      format.xml  { head :ok }
+    end
+  end
   
   
   def top
