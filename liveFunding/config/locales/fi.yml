@@ -160,6 +160,8 @@ fi:
         edit:
             title: "Muokkaa tietojasi"
             destroy: "Poista tilisi"
+            favorite: "käyttäjän suosikki liiketoimien"
+
 
         information:
             username: "Käyttäjänimi"
@@ -168,6 +170,7 @@ fi:
             password: "Salasana"
             password_confirmation: "Varmista salasana" 
             link: "linkki"
+            favor: "ennakkosuosikki" 
         new:
             title: "Rekisteröidy Vaalirahakoneen käyttäjäksi"                
             
