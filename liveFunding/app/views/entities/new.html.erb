@@ -5,7 +5,7 @@
   
   
   <p>
-    <%= f.label :is_organization %><br />
+    <%= f.label :is_organization, I18n.t('entities.information.is_organization') %><br />
     <%= f.check_box :is_organization %>
   </p>
   <p>
@@ -29,8 +29,8 @@
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit I18n.t('entities.new.submit') %>
   </p>
 <% end %>
 
-<%= link_to I18n.t('layout.navigation.back')%>, entities_path %>
+<%= link_to I18n.t('layout.navigation.back'), entities_path %>

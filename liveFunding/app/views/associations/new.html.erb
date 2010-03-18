@@ -1,12 +1,16 @@
-<h1><%= I18n.t('association.new.title') %></h1>
+<h2><%= I18n.t('association.new.title') %></h2>
+	<%= @entity.name%><br />
 	
 	<% form_for([@entity, @association]) do |f| %>
 		<%= f.error_messages %>
 		
 		<p>
-			<%= f.label :thirdpartyperson_id, 'Association in question' %>
-			<%= f.text_field :thirdpartyperson_id %>
-				<%= f.label :description, 'Description of relationship' %><%= f.text_field :description %> &nbsp;&nbsp;<%= f.label :infosource ,'Source of information' %>
+			<%= f.label :knows_entity_id %><br />
+			<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
+				f.select(:knows_entity_id, @from_who) %>
+			<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
+		  </p>
+		<p>		<%= f.label :description, I18n.t('association.new.relationship') %><br /><%= f.text_field :description %> &nbsp;&nbsp;<br/><%= f.label :infosource ,I18n.t('association.new.source') %><br/>
 			<%= f.text_field :infosource %>
 			
 		</p>

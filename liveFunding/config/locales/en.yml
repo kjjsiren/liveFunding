@@ -31,10 +31,15 @@ en:
     association:
         edit:
             title: "Edit Association"
-            
+            new: "Enter a new Association"
+            knows_entity_id: "Association to:"
+            relationship: "Description of the relationship:"
+            source: "Source of information:"
         new:
             title: "New Association"
-            
+            relationship: "Description of the relationship:"
+            knows_entity_id: "Association to:"
+            source: "Source of information:"
     transactions:
         index:
             title: "All The Transactions"
@@ -115,15 +120,19 @@ en:
             email: "Email"
             phone_number: "Phonenumber"
             description: "Description"
-            is_organization: "Organization"
+            is_organization: "Is an organization"
+            associations: "Known associations"
+            organization_information: "Organization information"
+            person_profile: "Person profile"
             
         edit:
-            title: "Change"
+            title: "Update profile"
             update: "Update"
             
         new:
-            create: "Create a new organization"
-            title: "New Organization"
+            create: "Create a new entity"
+            title: "Create a new entity"
+            submit: "Create"
             
         controls:
             show: "Show"
@@ -132,6 +141,9 @@ en:
         
         index:
             title: "All organizations:"
+            organizations: "Organizations:"
+            persons: "Persons:"
+            orgsandpersons: "Organizations and persons in database"
             
     thirdparty:
         information:

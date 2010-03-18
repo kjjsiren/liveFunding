@@ -5,10 +5,16 @@ class AssociationsController < ApplicationController
   	     @association = Association.new(params[:association])
   	     @association.entity_id = params[:entity_id]
   	        if @association.save
-  	          flash[:notice] = "A new association was added."
+  	          flash[:notice] = "A new association created"
+  	          @reverse_association = Association.new(params[:association])
+        	    @reverse_association.entity_id = params[:association][:knows_entity_id]
+        	    @reverse_association.knows_entity_id = params[:entity_id]
+              if @reverse_association.save
+  	            flash[:notice] = "A new association created between both entities."
+              end
   	          redirect_to entity_url(@entity)
   	        else
-  	          flash[:notice] = "Invalid association" 
+  	          flash[:notice] = "Creation of association failed" 
   	          render :action => "new"
   	        end 
   	  end

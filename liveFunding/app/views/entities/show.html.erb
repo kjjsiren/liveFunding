@@ -1,7 +1,7 @@
 <%if @entity.is_organization != false%>
-<h2>Organization information</h2>
+<h2><%= I18n.t('entities.information.organization_information')%></h2>
 <%else%>
-<h2>Person profile</h2>
+<h2><%= I18n.t('entities.information.person_profile')%></h2>
 <%end%>
 <p>
   <b><%= I18n.t('entities.information.name')%>:</b>
@@ -9,8 +9,8 @@
 </p>
 
 <p>
-  <b><%= I18n.t('entities.information.leader')%>:</b>
-<%if @entity != nil %> <%=h @entity.leader %><%end%>
+  <b><%if @entity.is_organization %><%= I18n.t('entities.information.leader')%>:</b>
+ <%=h @entity.leader %><%end%>
 </p>
 
 <p>
@@ -28,23 +28,18 @@
 <%if @entity != nil %>  <%=h @entity.description %><%end%>
 </p>
 
-<p>
-  <b><%= I18n.t('entities.information.is_organization')%>:</b>
-<%if @entity != nil %>  <%=h @entity.is_organization %><%end%>
-</p>
-
 
 <div id="association-list">
-	<h2>Known associations:</h2>
+	<h2><%= I18n.t('entities.information.associations')%>:</h2>
 		<% @entity.associations.each do |association| %>
 		<p>
-		<%=h association.thirdpartyperson_id %>, 		<%=h association.description %>, 	Source:	<%=h association.infosource %>
+		<%if is_a_number?(association.knows_entity_id) %>  <%=h association.knows_entity.name %><%else%>  <%=h association.knows_entity %><%end%>, 		<%=h association.description %>, 	Source:	<%=h association.infosource %>
 		</p>
 	<% end %>
 </div>	
 <br />
 
-<%= link_to I18n.t('entities.new.title'), new_entity_association_path(@entity)  %>
+<%= link_to I18n.t('association.new.title'), new_entity_association_path(@entity)  %>
 
 
 <%= link_to I18n.t('layout.navigation.edit'), edit_entity_path(@entity) %>
