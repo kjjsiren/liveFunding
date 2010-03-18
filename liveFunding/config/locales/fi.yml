@@ -167,7 +167,7 @@ fi:
             lastname: "Sukunimi"
             password: "Salasana"
             password_confirmation: "Varmista salasana" 
-        
+            link: "linkki"
         new:
             title: "Rekisteröidy Vaalirahakoneen käyttäjäksi"                
             

@@ -17,6 +17,10 @@
     <%= f.text_field :lastname %>
   </p>
   <p>
+    <%= f.label :link, I18n.t('users.information.link') %><br/>
+    <%= f.text_field :link %>
+  </p>  
+  <p>
     <%= f.label :password, I18n.t('users.information.password') %><br/>
     <%= f.password_field :password %>
   </p>
