@@ -90,7 +90,14 @@ fi:
             title: "Tapahtuman tiedot"
             comments_title: "Kommentit tälle tapahtumalle"
             commenter_said: "sanoi"
-            new: "Uusi kommentti"        
+            new: "Uusi kommentti"
+            
+        exportcsv:
+            title: "Vie CSV-tiedostona"
+
+        importcsv:
+            title: "Tuo CSV-tiedosto"
+            successful: "Tuonti onnistui!"            
 
     entities:
         information:
