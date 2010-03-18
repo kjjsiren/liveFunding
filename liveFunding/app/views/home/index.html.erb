@@ -37,7 +37,6 @@
 	    <td><%=h transaction.donor %></td>
 	    <td><%=h transaction.recipient %></td>
 		<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M")  %></td>
-		<td><%= link_to I18n.t('comments.new.title'), new_transaction_comment_path(transaction) %> </td>
 	  </tr><% end %>
 	<% end %>
 	</table>
