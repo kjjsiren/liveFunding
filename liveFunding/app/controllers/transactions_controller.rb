@@ -1,5 +1,8 @@
 class TransactionsController < ApplicationController
   #display all the transactions by default
+	require 'faster_csv'
+	require 'tempfile'
+
   layout "application", :except => [ :export_csv ]
   
   def index
@@ -169,14 +172,20 @@ class TransactionsController < ApplicationController
   def export_csv
     #raise params.inspect
     @transactions = Transaction.find(:all)
-    #raise f.inspect
-    #respond_to do |format|
-    #  format.html { redirect_to(transactions_url) }
-    #  format.xml  { head :ok }
-    #end
+    csv_string = ''
+    @transactions.each do |transaction|
+      csv_string += FasterCSV.generate do |csv|
+        csv << [transaction.id, transaction.amount, transaction.created_at, transaction.updated_at, transaction.recipient, transaction.donor, transaction.rank, transaction.entity_id, transaction.ilike]
+      end
+    end
+    
+    csv_file = Tempfile.new('csv', 'tmp')
+  	csv_file.print(csv_string)
+  	csv_file.flush
+  	
+    send_file csv_file.path
   end
 
-	require 'faster_csv'
 	
   def import_csv   
   n=0
