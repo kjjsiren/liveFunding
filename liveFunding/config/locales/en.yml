@@ -172,7 +172,7 @@ en:
             edit: "Edit"
                 
         new:
-            title: "Comment this transaction"
+            title: "Comment"
             name: "Your name:"
             comment: "Your comment:"
             submit: "Submit"

@@ -43,6 +43,7 @@ submit_tag 'Submit' %> <% end %> <br />
 	<td><%= link_to I18n.t('layout.navigation.destroy'), transaction, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td>
 	<% if logged_in? %>
 	<td><%= link_to I18n.t('layout.navigation.favourite'), {:controller => :favourite, :action => "favourite_transaction", :id => transaction.id } %></td>
+	<td><%= link_to I18n.t('comments.new.title'), new_transaction_comment_path(transaction) %> </td>
 	<% end %>
 </tr>
 <% end %>
