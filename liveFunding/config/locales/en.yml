@@ -95,20 +95,18 @@ en:
         newsfeed:
             title: "Newsfeed"
             
-<<<<<<< HEAD
+
         show:
             title: "Transaction with the ID"
             comments_title: "Comments for this transaction"
             commenter_said: "said"
             new: "New comment"  
-=======
         exportcsv:
             title: "Export to CSV"
         
         importcsv:
             title: "Import from CSV"
             successful: "Import successfully!"
->>>>>>> d17ec520de251c4f29b93fb89e511539e1607d37
 
     entities:
         information:

@@ -1,14 +1,9 @@
 class Transaction < ActiveRecord::Base
   has_many :comments
-<<<<<<< HEAD
   belongs_to :donor, :class_name => 'Entity'
   belongs_to :recipient, :class_name => 'Entity'
-=======
   belongs_to :entities
   has_and_belongs_to_many :users
-  #belongs_to :donor, :class_name => 'Entity'
-  #belongs_to :recipient, :class_name => 'Entity'
->>>>>>> aba183d3e1ff5c741b7a8531cc1fd1983e1fb3d9
   
   named_scope :latest, lambda { |amount|
       {:limit => amount}

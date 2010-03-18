@@ -8,30 +8,16 @@
     <%= f.text_field :amount %>
   </p>
   <p>
-<<<<<<< HEAD
-    <%= f.label :donor %><br />
+    <%= f.label :donor_id %><br />
 	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
-		f.select(:donor, @from_who)
-	%>
+		f.select(:donor_id, @from_who)	%>
 	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
   </p>
   <p>
-    <%= f.label :recipient %><br />
+    <%= f.label :recipient_id %><br />
 	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
-		f.select(:recipient, @from_who)
-=======
-    <%= f.label :from, I18n.t('transactions.information.from') %><br />
-	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.id] }
-		f.select(:from, @from_who)
-	%>
+		f.select(:recipient_id, @from_who) %>
 	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
-  </p>
-  <p>
-    <%= f.label :to, I18n.t('transactions.information.to') %><br />
-	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.id] }
-		f.select(:to, @from_who)
->>>>>>> 17204c0f1e0edc5ae27e38f83573f537633e80b1
-	%>
   </p>
   <p>
     <%= f.label :description, I18n.t('transactions.information.description') %><br />

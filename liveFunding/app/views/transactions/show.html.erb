@@ -7,25 +7,15 @@
 	<%= f.label :amount, I18n.t('transactions.information.amount') %><br />
 	<%=h @transaction.amount %>
 </p>
-  	
+
 <p>
-<<<<<<< HEAD
-	<%= f.label :donor %><br />
-	<%=h @transaction.donor%>
+	<%= f.label :donor, I18n.t('transactions.information.from') %><br />
+	<%=h @transaction.donor.name %>
 </p>
 
 <p>
-	<%= f.label :recipient %><br />
-    <%=h @transaction.recipient %>
-=======
-	<%= f.label :from, I18n.t('transactions.information.from') %><br />
-	<%=h @transaction.from %>
-</p>
-
-<p>
-	<%= f.label :to, I18n.t('transactions.information.to') %><br />
-    <%=h @transaction.to %>
->>>>>>> 17204c0f1e0edc5ae27e38f83573f537633e80b1
+	<%= f.label :recipient, I18n.t('transactions.information.to') %><br />
+    <%=h @transaction.recipient.name %>
 </p>
 
 <p>

@@ -18,7 +18,7 @@ submit_tag 'Submit' %> <% end %> <br />
         <%= I18n.t('transactions.index.id') %>: <%=h transaction.id %></td>
 	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
-        <%=h I18n.t('transactions.index.from') %>: <strong><%=h transaction.donor %></strong></td>
+        <%=h I18n.t('transactions.index.from') %>: <strong><% if transaction.donor !=nil%><%=h transaction.donor.name %><%end%></strong></td>
 	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
         <strong><%=h transaction.amount %></strong>€ </td>
@@ -27,7 +27,7 @@ submit_tag 'Submit' %> <% end %> <br />
         --></td>
   <td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
-        <strong><%=h transaction.recipient %></strong></td>
+        <strong><%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong></td>
 	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
         <%=h transaction.created_at.strftime("%d.%m.%Y %H:%M")  %></td>

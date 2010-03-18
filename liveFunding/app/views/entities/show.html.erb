@@ -4,59 +4,33 @@
 <h2>Person profile</h2>
 <%end%>
 <p>
-<<<<<<< HEAD
-  <b>Name:</b>
-  <%=h @entity.name %>
-</p>
-
-<p>
-  <%if @entity.leader != "None" and @entity.leader != "" %><b>Leader:</b>
-  <%=h @entity.leader %>
-<%end%>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%=h @entity.email %>
-</p>
-
-<p>
-  <b>Phone number:</b>
-  <%=h @entity.phone_number %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%=h @entity.description %>
-=======
   <b><%= I18n.t('entities.information.name')%>:</b>
-  <%=h @transaction.entity.name %>
+<%if @entity != nil %>  <%=h @entity.name %><%end%>
 </p>
 
 <p>
   <b><%= I18n.t('entities.information.leader')%>:</b>
-  <%=h @transaction.entity.leader %>
+<%if @entity != nil %> <%=h @entity.leader %><%end%>
 </p>
 
 <p>
   <b><%= I18n.t('entities.information.email')%>:</b>
-  <%=h @transaction.entity.email %>
+<%if @entity != nil %>  <%=h @entity.email %><%end%>
 </p>
 
 <p>
   <b><%= I18n.t('entities.information.phone_number')%>:</b>
-  <%=h @transaction.entity.phone_number %>
+<%if @entity != nil %>  <%=h @entity.phone_number %><%end%>
 </p>
 
 <p>
   <b><%= I18n.t('entities.information.description')%>:</b>
-  <%=h @transaction.entity.description %>
+<%if @entity != nil %>  <%=h @entity.description %><%end%>
 </p>
 
 <p>
   <b><%= I18n.t('entities.information.is_organization')%>:</b>
-  <%=h @transaction.entity.is_organization %>
->>>>>>> 17204c0f1e0edc5ae27e38f83573f537633e80b1
+<%if @entity != nil %>  <%=h @entity.is_organization %><%end%>
 </p>
 
 

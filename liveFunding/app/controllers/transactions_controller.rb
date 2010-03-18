@@ -24,26 +24,11 @@ class TransactionsController < ApplicationController
   
 
   def create
-    to_entity_id = params[:transaction][:recipient]
-    from_entity_id = params[:transaction][:donor]
-    params[:transaction][:recipient] = Entity.find(params[:transaction][:recipient]).name
-    params[:transaction][:donor] = Entity.find(params[:transaction][:donor]).name
     @transaction = Transaction.new(params[:transaction])
     
     respond_to do |format|
       if @transaction.save
-        @association = Association.new
-        @association.entity_id = to_entity_id
-        @association.thirdpartyperson_id = Entity.find(from_entity_id).name
-        @association.description = "Money transfer logged by the system"
-        @association.infosource = "liveFund"
-        @association.save
-        @association = Association.new
-        @association.entity_id = from_entity_id
-        @association.thirdpartyperson_id = Entity.find(to_entity_id).name
-        @association.description = "Money transfer logged by the system"
-        @association.infosource = "liveFund"
-        @association.save
+       
         flash[:notice] = 'Transaction was successfully created.'
         format.html { redirect_to(@transaction) }
         format.xml  { render :xml => @transaction, :status => :created, :location => @transaction }
@@ -174,8 +159,10 @@ class TransactionsController < ApplicationController
 		FasterCSV.parse(params[:transaction][:file],:headers=>false) do |row|
     	transaction = Transaction.new       
 			transaction.amount = row[0]        
-			transaction.recipient = row[1]
-			transaction.donor = row[2]        
+			rec = row[1]
+			don = row[2]
+			transaction.recipient = Entity.find(:first, :conditions =>"name = '#{rec}'")
+			transaction.donor = Entity.find(:first, :conditions =>"name = '#{don}'")        
       if transaction.save  
          n=n+1  
          GC.start if n%50==0  
