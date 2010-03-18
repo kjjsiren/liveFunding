@@ -15,8 +15,8 @@
   <tr>
     <td><%=h transaction.id %></td>
     <td><%=h transaction.amount %></td>
-    <td style="font-weight:bold;"><%=h transaction.donor %></td>
-    <td style="font-weight:bold;"><%=h transaction.recipient %></td>
+    <td style="font-weight:bold;">	<%if transaction.donor !=nil %><%=h transaction.donor.name %><%end%></td>
+    <td style="font-weight:bold;">	<%if transaction.recipient !=nil%><%=h transaction.recipient.name %><%end%></td>
 	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
 	<td><%=h transaction.rank %></td>
 	<td><%= link_to I18n.t('layout.navigation.show'), transaction %> <br />

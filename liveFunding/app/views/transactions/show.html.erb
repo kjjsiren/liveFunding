@@ -10,12 +10,12 @@
 
 <p>
 	<%= f.label :donor, I18n.t('transactions.information.from') %><br />
-	<%=h @transaction.donor.name %>
+	<%if @transaction.donor !=nil %><%=h @transaction.donor.name %><%end%>
 </p>
 
 <p>
 	<%= f.label :recipient, I18n.t('transactions.information.to') %><br />
-    <%=h @transaction.recipient.name %>
+    	<%if @transaction.recipient !=nil %><%=h @transaction.recipient.name %><%end%>
 </p>
 
 <p>
