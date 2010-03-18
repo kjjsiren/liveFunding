@@ -31,12 +31,19 @@ submit_tag 'Submit' %> <% end %> <br />
 	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
         <%=h transaction.created_at.strftime("%d.%m.%Y %H:%M")  %></td>
-	<td><%= link_to '+', { :controller => :transactions, :action => "incr_rank", :id => transaction.id }, :title => "Rank It!" %> <%=h transaction.rank %></td>
-	<td><%= link_to '♥', { :controller => :transactions, :action => "incr_ilike", :id => transaction.id }, :title => "I Like It!"  %> <%=h transaction.ilike %></td>
+	<td>
+	<% if logged_in? %>
+		<%= link_to '+', { :controller => :transactions, :action => "incr_rank", :id => transaction.id }, :title => "Rank It!" %>
+		<%= link_to '-', { :controller => :transactions, :action => "decr_rank", :id => transaction.id }, :title => "Unrank It!" %> <%=h transaction.rank %>
+	<% end %>
+	</td>
+	<td><%= link_to '♥', { :controller => :transactions, :action => "incr_ilike", :id => transaction.id }, :title => "I Like It!"  %> <%= link_to 'X', { :controller => :transactions, :action => "decr_ilike", :id => transaction.id }, :title => "I don't Like It!"  %> <%=h transaction.ilike %></td>
 	<td><%= link_to I18n.t('layout.navigation.show'), transaction %> </td>
 	<td><%= link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(transaction) %></td>
 	<td><%= link_to I18n.t('layout.navigation.destroy'), transaction, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td>
+	<% if logged_in? %>
 	<td><%= link_to I18n.t('layout.navigation.favourite'), {:controller => :favourite, :action => "favourite_transaction", :id => transaction.id } %></td>
+	<% end %>
 </tr>
 <% end %>
 </table>

@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   
   named_scope :with_email, :conditions => "email IS NOT NULL"
   
-  has_and_belongs_to_many :transactions
+  has_and_belongs_to_many :transactions, :uniq => true
 
   attr_accessor :password, :password_confirmation
 

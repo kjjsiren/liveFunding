@@ -1,5 +1,8 @@
 class TransactionsController < ApplicationController
   #display all the transactions by default
+	require 'faster_csv'
+	require 'tempfile'
+
   layout "application", :except => [ :export_csv ]
   
   def index
@@ -99,8 +102,32 @@ class TransactionsController < ApplicationController
   
   def decr_rank
     @transaction = Transaction.find(params[:id])
-    @transaction.decrease_rank
+    if @transaction.rank != 0
+      @transaction.rank = @transaction.rank==nil ? 0 : @transaction.rank-1
+    end
+    
+    @transaction.save!()
+    #raise params.inspect
+    respond_to do |format|
+      format.html { redirect_to(transactions_url) }
+      format.xml  { head :ok }
+    end
   end  
+  
+  
+  def decr_ilike
+    @transaction = Transaction.find(params[:id])
+    if @transaction.ilike != 0
+      @transaction.ilike = @transaction.ilike==nil ? 0 : @transaction.ilike-1
+    end
+    
+    @transaction.save!()
+    #raise params.inspect
+    respond_to do |format|
+      format.html { redirect_to(transactions_url) }
+      format.xml  { head :ok }
+    end
+  end
   
   
   def top
@@ -145,14 +172,20 @@ class TransactionsController < ApplicationController
   def export_csv
     #raise params.inspect
     @transactions = Transaction.find(:all)
-    #raise f.inspect
-    #respond_to do |format|
-    #  format.html { redirect_to(transactions_url) }
-    #  format.xml  { head :ok }
-    #end
+    csv_string = ''
+    @transactions.each do |transaction|
+      csv_string += FasterCSV.generate do |csv|
+        csv << [transaction.id, transaction.amount, transaction.created_at, transaction.updated_at, transaction.recipient, transaction.donor, transaction.rank, transaction.entity_id, transaction.ilike]
+      end
+    end
+    
+    csv_file = Tempfile.new('csv', 'tmp')
+  	csv_file.print(csv_string)
+  	csv_file.flush
+  	
+    send_file csv_file.path
   end
 
-	require 'faster_csv'
 	
   def import_csv   
   n=0
