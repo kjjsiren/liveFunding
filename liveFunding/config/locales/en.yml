@@ -192,6 +192,7 @@ en:
         edit:
             title: "Edit your information"
             destroy: "Destroy your account"
+            favorite: "User's favorite transactions"
         
         information:
             username: "Username"
@@ -199,7 +200,8 @@ en:
             lastname: "Lastname"
             password: "Password"
             password_confirmation: "Password confirmation"
-                        
+            link: "Homepage/URL"  
+            favor: "Favorite"			
         new:
             title: "Registering to LiveFunding"
             
