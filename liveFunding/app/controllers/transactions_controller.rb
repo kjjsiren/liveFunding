@@ -164,8 +164,12 @@ class TransactionsController < ApplicationController
   end
   
   def search
-    @transactions_from = Transaction.find(:all, :conditions => {:recipient => params[:transaction][:recipient]})
-    @transactions_to = Transaction.find(:all, :conditions => {:donor => params[:transaction][:recipient]})
+    find = Entity.find(:first, :conditions => {:name => params[:transaction][:donor]})
+    @transactions_to = Transaction.find(:all, :conditions => {:recipient_id => find})
+    @transactions_from = Transaction.find(:all, :conditions => {:donor_id => find})
+    if @transactions_from.size == 0 && @transactions_to.size == 0
+      flash[:error]="No results"
+    end
   end
 
 

@@ -1,6 +1,7 @@
 <h2 style="margin-left:20px;"><%= I18n.t('transactions.search.title') %> <%=params[:transaction][:from]%></h2>
 <div style="width:50%;float:left;">
 	<h3 style="margin-left:50px;">From <%=params[:transaction][:from]%>: <%= @transactions_from.size%> records</h3>
+<%if @transactions_from.size > 0%>
 <table border="0" cellspacing="10">
   <tr>
     <th><%= I18n.t('transactions.search.id') %></th>
@@ -15,8 +16,8 @@
   <tr>
     <td><%=h transaction.id %></td>
     <td><%=h transaction.amount %></td>
-    <td style="font-weight:bold;"><%=h transaction.donor %></td>
-    <td style="font-weight:bold;"><%=h transaction.recipient %></td>
+    <td style="font-weight:bold;"><%=h transaction.donor.name %></td>
+    <td style="font-weight:bold;"><%=h transaction.recipient.name %></td>
 	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
 	<td><%=h transaction.rank %></td>
 	<td><%= link_to link_to I18n.t('layout.navigation.show'), transaction %> <br />
@@ -25,9 +26,11 @@
   </tr>
 <% end %>
 </table>
+<%end%>
 </div>
 <div style="width:45%;float:right; clear:none;">
 	<h3 style="margin-left:50px;">To <%=params[:transaction][:from]%>: <%= @transactions_to.size%> records</h3>
+<%if @transactions_to.size > 0%>
 <table border="0" cellspacing="10" style="margin-left:20px;">
   <tr>
     <th><%= I18n.t('transactions.search.id') %></th>
@@ -43,8 +46,8 @@
   <tr>
     <td><%=h transaction.id %></td>
     <td><%=h transaction.amount %></td>
-    <td style="font-weight:bold;"><%=h transaction.donor %></td>
-    <td style="font-weight:bold;"><%=h transaction.recipient %></td>
+    <td style="font-weight:bold;"><%=h transaction.donor.name %></td>
+    <td style="font-weight:bold;"><%=h transaction.recipient.name %></td>
 	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
 	<td><%=h transaction.rank %></td>
 	<td><%= link_to link_to I18n.t('layout.navigation.show'), transaction %> <br />
@@ -53,6 +56,7 @@
   </tr>
 <% end %>
 </table>
+<%end%>
 </div>
 <br />
 <br />

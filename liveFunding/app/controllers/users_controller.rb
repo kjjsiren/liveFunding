@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   
   def index
     @user = User.new
+    redirect_to :back
 	end
 
   def new
