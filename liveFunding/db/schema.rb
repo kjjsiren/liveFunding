@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100318195411) do
+ActiveRecord::Schema.define(:version => 20100322173128) do
 
   create_table "associations", :force => true do |t|
     t.datetime "created_at"
@@ -77,6 +77,9 @@ ActiveRecord::Schema.define(:version => 20100318195411) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
   end
 
 end

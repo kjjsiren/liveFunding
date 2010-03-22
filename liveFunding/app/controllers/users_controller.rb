@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
     if @user.update_attributes(params[:user])
       flash[:notice] = 'Details were successfully updated.'
-      redirect_to root_path
+      render :action => "edit"
     else
       render :action => "edit" 
     end
@@ -43,5 +43,11 @@ class UsersController < ApplicationController
     current_user.destroy
     redirect_to(login_path)
   end
-  
+  def delete_image
+    @user = User.find(params[:user])
+    @user.photo = nil
+    @user.save
+    params[:id]=@user.id
+    redirect_to :back
+  end
 end

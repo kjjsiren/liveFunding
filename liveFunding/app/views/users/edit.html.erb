@@ -10,7 +10,18 @@
     		<strong><%= @user.username %></strong>
   		</p>
 	</div>
-	<div style="float:left;width:150px;height:200px;background:yellow;margin:10px;"></div>
+	<div style="float:left;width:150px;height:200px;background:yellow;margin:10px;">
+	<% if @user.photo.exists? then %>
+	<p><%= image_tag @user.photo.url(:small) %></p>
+		<%= f.file_field :photo, :size =>"10" %>
+		<%= link_to "Delete Image", { :action => "delete_image", :user => @user},
+	            :confirm => "Are you sure?"	
+	 %>
+	<% else %>
+	<p><%= I18n.t('users.information.noimage')%><br />
+  		<%= f.file_field :photo, :size =>"10" %>
+	</p><% end %>
+	</div>
 	<div style="border:1px solid;float:left;padding:35px;">
 	<div style="float:left;clear:both;">
 		<div style="float:left;clear:none;">

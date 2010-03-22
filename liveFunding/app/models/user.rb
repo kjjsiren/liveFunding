@@ -1,5 +1,12 @@
 class User < ActiveRecord::Base
   require 'digest/sha1'
+  has_attached_file :photo,
+     :styles => {
+       :thumb=> "100x100#",
+       :small  => "150x150>",
+       :medium => "300x300>",
+       :large =>   "400x400>"}
+
   
   validates_length_of :username, :in => 3..15
   validates_length_of :firstname, :in => 3..50, :allow_blank => true
@@ -16,8 +23,6 @@ class User < ActiveRecord::Base
   attr_accessor :password, :password_confirmation
 
   before_save :hash_password
-  
-  
  
   #has_attached_file :avatar, :styles => {:medium => "300x300>", :thumb => "100x100>"}, :default_url =>"/images/thumbs/"
 
