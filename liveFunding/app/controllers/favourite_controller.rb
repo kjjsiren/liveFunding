@@ -35,4 +35,9 @@ class FavouriteController < ApplicationController
     end
   end
   
+  def show
+   @user = User.find_by_id(session[:user_id])
+   @favourite = @user.transactions.find(params[:id])
+  end 
+  
 end
