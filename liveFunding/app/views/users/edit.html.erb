@@ -60,11 +60,12 @@
     <%= f.label :favorite, I18n.t('users.information.favor') %><br/>
 	<% @user.transactions.each do |transaction| %>
 		<p>
-			<b><%=h @user.transactions.id %> 
+			<%=h transaction.id %> 
 		</p>
-	<% end %>
 	</p> 
+	<% end %>
    </div>
+   	
 <% end %>
 
 
