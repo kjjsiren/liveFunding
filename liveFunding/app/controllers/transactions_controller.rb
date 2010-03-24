@@ -219,7 +219,7 @@ class TransactionsController < ApplicationController
          n=n+1  
          GC.start if n%50==0  
       end             
-			flash.now[:notice]="CSV Import Successful"
+			flash.now[:notice]=I18n.t('transactions.importcsv.successful')
 		end
 	end
 end
