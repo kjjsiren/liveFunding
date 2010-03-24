@@ -59,9 +59,9 @@
 	<p>
     <%= f.label :favorite, I18n.t('users.information.favor') %><br/>
 	<% @user.transactions.each do |transaction| %>
-		<p>
-			<%=h transaction.id %> 
-		</p>
+		<p onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
+        onmouseout="this.style.background='white';" onclick = "location='http://localhost:3000/transactions/<%= transaction.id%>'">
+        <%= I18n.t('transactions.index.id') %>: <%=h transaction.id %></p>
 	</p> 
 	<% end %>
    </div>
