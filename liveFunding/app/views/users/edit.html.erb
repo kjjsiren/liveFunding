@@ -57,7 +57,6 @@
 <div style="float:left;clear:both;">
   <h2><%= I18n.t('users.edit.favorite') %></h2>
 	<p>
-    <%= f.label :favorite, I18n.t('users.information.favor') %><br/>
 	<% @user.transactions.each do |transaction| %>
 		<p onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='http://localhost:3000/transactions/<%= transaction.id%>'">
