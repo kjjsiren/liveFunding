@@ -174,23 +174,6 @@ class TransactionsController < ApplicationController
 
 
   def export_csv
-    #raise params.inspect
-    #@transactions = Transaction.find(:all)
-    #csv_string = ''
-    #@transactions.each do |transaction|
-      #csv_string += FasterCSV.generate do |csv|
-      #  csv << [transaction.id, transaction.amount, transaction.created_at, transaction.updated_at, transaction.recipient, transaction.donor, transaction.rank, transaction.entity_id, transaction.ilike]
-     # end
-    #end
-    
-    #csv_file = Tempfile.new('csv', 'tmp')
-  	#csv_file.print(csv_string)
-  	#csv_file.flush
-  	
-    #send_file csv_file.path
-    
-    
-    # Another way to do this, by Joonas. This way we get a csv-file, instead of binary as we did before
     @outfile = "transactions_" + Time.now.strftime("%m-%d-%Y") + ".csv"
      @transactions = Transaction.find(:all)
      csv_string = ''
