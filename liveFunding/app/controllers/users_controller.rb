@@ -17,12 +17,14 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-
+    raise.params
     if @user.save
       flash[:notice] = 'Account created'
       redirect_to(root_path) 
     else
-      render :action => "new"
+      
+      #render :action => "new"
+      flash[:error] ="Error while saving, account not created"
     end
   end
 

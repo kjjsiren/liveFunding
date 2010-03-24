@@ -29,7 +29,7 @@
   		<%= f.file_field :photo %>
 	</p>
   <p>
-    <%= f.submit I18n.t('layout.navigation.create') %>
+    <%= f.submit I18n.t('layout.navigation.create', :action => "create") %>
   </p>
 <% end %>
 
