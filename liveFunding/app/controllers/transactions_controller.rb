@@ -199,8 +199,6 @@ class TransactionsController < ApplicationController
          csv << [transaction.id, transaction.amount, transaction.created_at, transaction.updated_at, transaction.recipient.name, transaction.donor.name, transaction.rank, transaction.entity_id, transaction.ilike]
        end
      end
-
-
      send_data csv_string, :type => 'text/csv; charset=iso-8859-1; header=present',
      :disposition => "attachment; filename=#{@outfile}"
     
