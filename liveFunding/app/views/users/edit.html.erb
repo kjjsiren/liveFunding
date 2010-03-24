@@ -58,9 +58,14 @@
   <h2><%= I18n.t('users.edit.favorite') %></h2>
 	<p>
     <%= f.label :favorite, I18n.t('users.information.favor') %><br/>
-
+	<% @user.transactions.each do |transaction| %>
+		<p>
+			<%=h transaction.id %> 
+		</p>
 	</p> 
+	<% end %>
    </div>
+   	
 <% end %>
 
 
