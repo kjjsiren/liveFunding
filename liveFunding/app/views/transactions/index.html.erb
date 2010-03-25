@@ -10,21 +10,22 @@
 submit_tag 'Submit' %> <% end %> <br />
 
 <h3><%= I18n.t('transactions.index.title') %></h3>
-<table borders="0" cellspacing="15">
+<table border="0" cellspacing="15">
+<tr>
+	<th><%= link_to I18n.t('transactions.index.from'), { :controller => :transactions, :action => "index", :sort_by => "from"}, :title => "sort by from" %></th>
+	<th><%= link_to I18n.t('transactions.index.amount'), { :controller => :transactions, :action => "index", :sort_by => "amount"}, :title => "sort by amount" %></th>
+	<th><%= I18n.t('transactions.index.create_time') %></th>
+	<th colspan="5"> Operation </th>
+
+</tr>
 <% @transactions.each do |transaction| %>
 <tr>
-	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
-        onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
-        <%= I18n.t('transactions.index.id') %>: <%=h transaction.id %></td>
 	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
         <%=h I18n.t('transactions.index.from') %>: <strong><% if transaction.donor !=nil%><%=h transaction.donor.name %><%end%></strong></td>
 	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
         <strong><%=h transaction.amount %></strong>€ </td>
-  <td  onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
-        onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
-        --></td>
   <td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
         <strong><%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong></td>

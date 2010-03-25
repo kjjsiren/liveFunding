@@ -7,7 +7,15 @@ class TransactionsController < ApplicationController
   
   def index
     @transactions = Transaction.all
-    @transaction = Transaction.new
+    raise params.inspect
+    sort_by = params[:sort_by]
+    if sort_by == "from"
+      @transactions = Transaction.find(:all, :order => 'id DESC')
+    end
+    
+    if sort_by == "amount_down"
+      @transactions = Transaction.find(:all, :order => 'amount DESC')
+    end
     
     respond_to do |format|
       format.html # index.html.erb
