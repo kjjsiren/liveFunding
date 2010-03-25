@@ -206,7 +206,8 @@ class TransactionsController < ApplicationController
 			don = row[2]
 			transaction.recipient = Entity.find(:first, :conditions =>"name = '#{rec}'")
 			transaction.donor = Entity.find(:first, :conditions =>"name = '#{don}'")        
-      if transaction.save  
+      if transaction.save
+      	 # Clean the waste  
          n=n+1  
          GC.start if n%50==0  
       end             
