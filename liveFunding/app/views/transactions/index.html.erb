@@ -3,6 +3,11 @@
 <%= link_to I18n.t('transactions.fundtop.title'), fundtop_transactions_path %> &nbsp;&nbsp;
 <%= link_to I18n.t('transactions.exportcsv.title'), { :controller => :transactions, :action => "export_csv" } %> 
 
+<%
+	#For sort order control
+	sort_order = params[:sort_order]=="0" ? "1" : "0"
+	arrow_str = sort_order=="0" ? "▲" : "▼"
+%>
 
 <% form_for :transaction, @transaction, :url=>{:controller=>"transactions", :action=>"import_csv"}, :html => { :multipart => true } do |f| %> 
 <%= I18n.t('transactions.importcsv.title') %>  : <%= f.file_field :file %> <%= 
@@ -12,9 +17,10 @@ submit_tag 'Submit' %> <% end %> <br />
 <h3><%= I18n.t('transactions.index.title') %></h3>
 <table border="0" cellspacing="15">
 <tr>
-	<th><%= link_to I18n.t('transactions.index.from'), { :controller => :transactions, :action => "index", :sort_by => "from"}, :title => "sort by from" %></th>
-	<th><%= link_to I18n.t('transactions.index.amount'), { :controller => :transactions, :action => "index", :sort_by => "amount"}, :title => "sort by amount" %></th>
-	<th><%= I18n.t('transactions.index.create_time') %></th>
+	<th><%= link_to I18n.t('transactions.index.from')+(params[:sort_by]=="from" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "from", :sort_order => sort_order}, :title => "sort by from" %></th>
+	<th><%= link_to I18n.t('transactions.index.amount')+(params[:sort_by]=="amount" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "amount", :sort_order => sort_order}, :title => "sort by amount" %></th>
+	<th><%= link_to I18n.t('transactions.index.to')+(params[:sort_by]=="to" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "to", :sort_order => sort_order}, :title => "sort by to" %></th>
+	<th><%= link_to I18n.t('transactions.index.create_time')+(params[:sort_by]=="create_time" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "create_time", :sort_order => sort_order}, :title => "sort by create time" %></th>
 	<th colspan="5"> Operation </th>
 
 </tr>

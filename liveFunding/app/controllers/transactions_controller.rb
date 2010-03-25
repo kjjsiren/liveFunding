@@ -7,14 +7,38 @@ class TransactionsController < ApplicationController
   
   def index
     @transactions = Transaction.all
-    raise params.inspect
     sort_by = params[:sort_by]
+    sort_order = params[:sort_order]
     if sort_by == "from"
-      @transactions = Transaction.find(:all, :order => 'id DESC')
+      if sort_order == "0"
+        @transactions = Transaction.find(:all, :order => '"from" DESC')
+      else
+        @transactions = Transaction.find(:all, :order => '"from" ASC')
+      end
     end
     
-    if sort_by == "amount_down"
-      @transactions = Transaction.find(:all, :order => 'amount DESC')
+    if sort_by == "amount"
+      if sort_order == "0"
+        @transactions = Transaction.find(:all, :order => 'amount DESC')
+      else
+        @transactions = Transaction.find(:all, :order => 'amount ASC')
+      end
+    end
+
+    if sort_by == "to"
+      if sort_order == "0"
+        @transactions = Transaction.find(:all, :order => '"to" DESC')
+      else
+        @transactions = Transaction.find(:all, :order => '"to" ASC')
+      end
+    end
+    
+    if sort_by == "create_time"
+      if sort_order == "0"
+        @transactions = Transaction.find(:all, :order => 'created_at DESC')
+      else
+        @transactions = Transaction.find(:all, :order => 'created_at ASC')
+      end
     end
     
     respond_to do |format|
