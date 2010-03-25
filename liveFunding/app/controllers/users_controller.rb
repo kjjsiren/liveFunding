@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
+  # Will skip the filter is_authenticated before the index, new and create action
   skip_before_filter :is_authenticated?, :only => [ :index, :new, :create ]
+  
   
   def index
     @user = User.new
@@ -11,10 +13,14 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  #Edit the user information
+  
   def edit
     @user = User.find(params[:id])
   end
 
+  #Create a new user
+  
   def create
     @user = User.new(params[:user])
     if @user.save
@@ -26,6 +32,8 @@ class UsersController < ApplicationController
     end
   end
 
+  #Update the user
+  
   def update
     @user = User.find(params[:id])
 
@@ -37,13 +45,18 @@ class UsersController < ApplicationController
     end
   end
 
+  #Delete the user
+  
   def destroy
     # Using current_user ensures that only current_user can be destroyed (instead of finding by parameter)
     log_user_out!
     current_user.destroy
     redirect_to(login_path)
   end
-  def delete_image
+  
+	# Using avatar plug-in, delete the user's headpicture
+
+	def delete_image
     @user = User.find(params[:user])
     @user.photo = nil
     @user.save

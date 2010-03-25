@@ -76,6 +76,7 @@ class TransactionsController < ApplicationController
   end
   
 
+	# Increase the rank
   def incr_rank
     @transaction = Transaction.find(params[:id])
     @transaction.rank = @transaction.rank==nil ? 1 : @transaction.rank+1
@@ -88,6 +89,7 @@ class TransactionsController < ApplicationController
   end
   
   
+  # Increase the ilike
   def incr_ilike
     @transaction = Transaction.find(params[:id])
     @transaction.ilike = @transaction.ilike==nil ? 1 : @transaction.ilike+1
@@ -100,6 +102,7 @@ class TransactionsController < ApplicationController
   end
   
   
+  # Decrease the rank
   def decr_rank
     @transaction = Transaction.find(params[:id])
     if @transaction.rank != 0
@@ -115,6 +118,7 @@ class TransactionsController < ApplicationController
   end  
   
   
+  # Decrease the ilike
   def decr_ilike
     @transaction = Transaction.find(params[:id])
     if @transaction.ilike != 0
@@ -140,6 +144,7 @@ class TransactionsController < ApplicationController
   end
   
   
+  # Show the top 10 transactions
   def fundtop
     @transactions = Transaction.fundtop
 
@@ -149,6 +154,7 @@ class TransactionsController < ApplicationController
     end
   end
   
+  # Show the newest transactions
   def newsfeed
     @transactions = Transaction.newsfeed
 
@@ -173,24 +179,8 @@ class TransactionsController < ApplicationController
   end
 
 
+	# Export transactions to csv file
   def export_csv
-    #raise params.inspect
-    #@transactions = Transaction.find(:all)
-    #csv_string = ''
-    #@transactions.each do |transaction|
-      #csv_string += FasterCSV.generate do |csv|
-      #  csv << [transaction.id, transaction.amount, transaction.created_at, transaction.updated_at, transaction.recipient, transaction.donor, transaction.rank, transaction.entity_id, transaction.ilike]
-     # end
-    #end
-    
-    #csv_file = Tempfile.new('csv', 'tmp')
-  	#csv_file.print(csv_string)
-  	#csv_file.flush
-  	
-    #send_file csv_file.path
-    
-    
-    # Another way to do this, by Joonas. This way we get a csv-file, instead of binary as we did before
     @outfile = "transactions_" + Time.now.strftime("%m-%d-%Y") + ".csv"
      @transactions = Transaction.find(:all)
      csv_string = ''
@@ -206,6 +196,7 @@ class TransactionsController < ApplicationController
   end
 
 	
+	# Import csv file to transactions
   def import_csv   
   n=0
 		FasterCSV.parse(params[:transaction][:file],:headers=>false) do |row|
@@ -215,11 +206,12 @@ class TransactionsController < ApplicationController
 			don = row[2]
 			transaction.recipient = Entity.find(:first, :conditions =>"name = '#{rec}'")
 			transaction.donor = Entity.find(:first, :conditions =>"name = '#{don}'")        
-      if transaction.save  
+      if transaction.save
+      	 # Clean the waste  
          n=n+1  
          GC.start if n%50==0  
       end             
-			flash.now[:notice]="CSV Import Successful"
+			flash.now[:notice]=I18n.t('transactions.importcsv.successful')
 		end
 	end
 end

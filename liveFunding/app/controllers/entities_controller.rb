@@ -1,7 +1,7 @@
 class EntitiesController < ApplicationController
-  # GET /entities
-  # GET /entities.xml
   
+  #List all the entities including entity name, leader, email, phone
+  #descriptions and the association with other entities
   def index
     @entities = Entity.all
 
@@ -10,9 +10,8 @@ class EntitiesController < ApplicationController
       format.xml  { render :xml => @entities }
     end
   end
-
-  # GET /entities/1
-  # GET /entities/1.xml
+  
+  #Show the entity information 
   def show
      @entity = Entity.find(params[:id]) 
        respond_to do |format|
@@ -20,9 +19,8 @@ class EntitiesController < ApplicationController
       format.xml  { render :xml => @entity }
     end
   end
-
-  # GET /entities/new
-  # GET /entities/new.xml
+  
+  #create a new entity
   def new
     @entity = Entity.new
 #    @entity = @transaction.entities.build 
@@ -31,16 +29,8 @@ class EntitiesController < ApplicationController
       format.xml  { render :xml => @entity }
     end
   end
-
-  # GET /entities/1/edit
-  def edit
-    @entity = Entity.find(params[:id])
-   #@entity = @transaction.entities.find(params[:id]) 
-  end
-
-  # POST /entities
-  # POST /entities.xml
-  def create
+  
+    def create
     @entity = Entity.new(params[:entity])
     #@entity = @transaction.entities.build(params[:entity])
     respond_to do |format|
@@ -53,10 +43,15 @@ class EntitiesController < ApplicationController
         format.xml  { render :xml => @entity.errors, :status => :unprocessable_entity }
       end
     end
+  end  
+  
+  #Edit the entity
+  def edit
+    @entity = Entity.find(params[:id])
+   #@entity = @transaction.entities.find(params[:id]) 
   end
-
-  # PUT /entities/1
-  # PUT /entities/1.xml
+ 
+  #Update an edited entity  
   def update
    @entity = Entity.find(params[:id])
     respond_to do |format|
@@ -71,8 +66,7 @@ class EntitiesController < ApplicationController
     end
   end
 
-  # DELETE /entities/1
-  # DELETE /entities/1.xml
+  #Delete the entity
   def destroy
 	  @entity = Entity.find(params[:id]) 
     @entity.destroy 
