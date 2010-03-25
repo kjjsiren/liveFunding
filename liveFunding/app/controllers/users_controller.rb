@@ -62,13 +62,7 @@ class UsersController < ApplicationController
     redirect_to(login_path)
   end
   
-<<<<<<< HEAD
-	# Using avatar plug-in, delete the user's headpicture
-
 	def delete_image
-=======
-  def delete_image
->>>>>>> security-fixes
     @user = User.find(params[:user])
     @user.photo = nil
     @user.save
