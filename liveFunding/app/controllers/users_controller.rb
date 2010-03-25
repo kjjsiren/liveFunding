@@ -13,10 +13,18 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  #Edit the user information
-  
+  # Enables editing of the user profile.
+  # Using current_user makes sure that the user profile can't be edited by other users.
   def edit
-    @user = User.find(params[:id])
+    user = User.find(params[:id])
+    if user == current_user 
+      @user = User.find(params[:id])
+    else
+     redirect_to(root_path)
+    end
+  rescue
+    flash[:notice] = I18n.t('flash.users.invalid_id')
+    redirect_to(root_path)  
   end
 
   #Create a new user
@@ -54,9 +62,13 @@ class UsersController < ApplicationController
     redirect_to(login_path)
   end
   
+<<<<<<< HEAD
 	# Using avatar plug-in, delete the user's headpicture
 
 	def delete_image
+=======
+  def delete_image
+>>>>>>> security-fixes
     @user = User.find(params[:user])
     @user.photo = nil
     @user.save
