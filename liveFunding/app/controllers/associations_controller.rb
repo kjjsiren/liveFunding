@@ -18,6 +18,8 @@ class AssociationsController < ApplicationController
   	          render :action => "new"
   	        end 
   	  end
+  	  
+  # New an association
   def new
     @entity = Entity.find(params[:entity_id])
     @association = Association.new 
