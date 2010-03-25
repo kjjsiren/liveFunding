@@ -8,9 +8,15 @@ class AdminController < ApplicationController
   end
   
   def export_db
-    db_file = sqlite3 db/development.sqlite3 .dump .quit >> export.sqlite.sql
-    send_file db_file 
+    `sqlite3 db/development.sqlite3 .dump .quit >> export.sqlite.sql` 
+    send_file "export.sqlite.sql"
    end
   
+  def import_db
+    file = params[:file]
+    `sqlite3 db/development.sqlite3 < #{file}`
+    render :action => "index"
+    flash[:notice] = "Import complete"
+  end
   
   end
