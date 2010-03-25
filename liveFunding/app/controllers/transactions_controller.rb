@@ -46,6 +46,9 @@ class TransactionsController < ApplicationController
 
   def edit
     @transaction = Transaction.find(params[:id])
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
 
@@ -73,6 +76,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
 
@@ -85,6 +91,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   
@@ -97,6 +106,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   
@@ -112,6 +124,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end  
   
   
@@ -127,6 +142,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   
@@ -161,6 +179,9 @@ class TransactionsController < ApplicationController
   
   def show
     @transaction = Transaction.find(params[:id])
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   def search
@@ -201,8 +222,6 @@ class TransactionsController < ApplicationController
      end
      send_data csv_string, :type => 'text/csv; charset=iso-8859-1; header=present',
      :disposition => "attachment; filename=#{@outfile}"
-    
-    
   end
 
 	
