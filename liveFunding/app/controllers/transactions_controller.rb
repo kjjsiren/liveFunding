@@ -76,6 +76,7 @@ class TransactionsController < ApplicationController
   end
   
 
+	# Increase the rank
   def incr_rank
     @transaction = Transaction.find(params[:id])
     @transaction.rank = @transaction.rank==nil ? 1 : @transaction.rank+1
@@ -88,6 +89,7 @@ class TransactionsController < ApplicationController
   end
   
   
+  # Increase the ilike
   def incr_ilike
     @transaction = Transaction.find(params[:id])
     @transaction.ilike = @transaction.ilike==nil ? 1 : @transaction.ilike+1
@@ -100,6 +102,7 @@ class TransactionsController < ApplicationController
   end
   
   
+  # Decrease the rank
   def decr_rank
     @transaction = Transaction.find(params[:id])
     if @transaction.rank != 0
@@ -115,6 +118,7 @@ class TransactionsController < ApplicationController
   end  
   
   
+  # Decrease the ilike
   def decr_ilike
     @transaction = Transaction.find(params[:id])
     if @transaction.ilike != 0
@@ -140,6 +144,7 @@ class TransactionsController < ApplicationController
   end
   
   
+  # Show the top 10 transactions
   def fundtop
     @transactions = Transaction.fundtop
 
@@ -149,6 +154,7 @@ class TransactionsController < ApplicationController
     end
   end
   
+  # Show the newest transactions
   def newsfeed
     @transactions = Transaction.newsfeed
 
@@ -173,6 +179,7 @@ class TransactionsController < ApplicationController
   end
 
 
+	# Export transactions to csv file
   def export_csv
     @outfile = "transactions_" + Time.now.strftime("%m-%d-%Y") + ".csv"
      @transactions = Transaction.find(:all)
@@ -189,6 +196,7 @@ class TransactionsController < ApplicationController
   end
 
 	
+	# Import csv file to transactions
   def import_csv   
   n=0
 		FasterCSV.parse(params[:transaction][:file],:headers=>false) do |row|
