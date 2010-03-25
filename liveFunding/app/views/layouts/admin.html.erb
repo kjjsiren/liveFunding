@@ -43,13 +43,11 @@
 	<% if flash[:error] %>
 		<p style="color: red"><%= flash[:error] %></p>
 	<% end %>
-
-	Go back to the <%= link_to "Homepage", root_path %>
 </p>
 	<%= yield %>
 
 	<hr/>
-	
+		Go back to the <%= link_to "Homepage", root_path %>
 	<p>This page was generated at <%= page_generation_timestamp %></p>
 
 </body>

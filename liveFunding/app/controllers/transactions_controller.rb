@@ -54,6 +54,9 @@ class TransactionsController < ApplicationController
 
   def edit
     @transaction = Transaction.find(params[:id])
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
 
@@ -81,9 +84,13 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
 
+	# Increase the rank
   def incr_rank
     @transaction = Transaction.find(params[:id])
     @transaction.rank = @transaction.rank==nil ? 1 : @transaction.rank+1
@@ -93,9 +100,13 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   
+  # Increase the ilike
   def incr_ilike
     @transaction = Transaction.find(params[:id])
     @transaction.ilike = @transaction.ilike==nil ? 1 : @transaction.ilike+1
@@ -105,9 +116,13 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   
+  # Decrease the rank
   def decr_rank
     @transaction = Transaction.find(params[:id])
     if @transaction.rank != 0
@@ -120,9 +135,13 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end  
   
   
+  # Decrease the ilike
   def decr_ilike
     @transaction = Transaction.find(params[:id])
     if @transaction.ilike != 0
@@ -135,6 +154,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   
@@ -148,6 +170,7 @@ class TransactionsController < ApplicationController
   end
   
   
+  # Show the top 10 transactions
   def fundtop
     @transactions = Transaction.fundtop
 
@@ -157,6 +180,7 @@ class TransactionsController < ApplicationController
     end
   end
   
+  # Show the newest transactions
   def newsfeed
     @transactions = Transaction.newsfeed
 
@@ -169,6 +193,9 @@ class TransactionsController < ApplicationController
   
   def show
     @transaction = Transaction.find(params[:id])
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   def search
@@ -181,6 +208,7 @@ class TransactionsController < ApplicationController
   end
 
 
+	# Export transactions to csv file
   def export_csv
     @outfile = "transactions_" + Time.now.strftime("%m-%d-%Y") + ".csv"
      @transactions = Transaction.find(:all)
@@ -192,11 +220,10 @@ class TransactionsController < ApplicationController
      end
      send_data csv_string, :type => 'text/csv; charset=iso-8859-1; header=present',
      :disposition => "attachment; filename=#{@outfile}"
-    
-    
   end
 
 	
+	# Import csv file to transactions
   def import_csv   
   n=0
 		FasterCSV.parse(params[:transaction][:file],:headers=>false) do |row|
@@ -206,7 +233,8 @@ class TransactionsController < ApplicationController
 			don = row[2]
 			transaction.recipient = Entity.find(:first, :conditions =>"name = '#{rec}'")
 			transaction.donor = Entity.find(:first, :conditions =>"name = '#{don}'")        
-      if transaction.save  
+      if transaction.save
+      	 # Clean the waste  
          n=n+1  
          GC.start if n%50==0  
       end             

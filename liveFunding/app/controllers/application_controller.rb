@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
   
   protected
    
+  # Judge if the user is logged in
   def is_authenticated?
     if logged_in?
       return true
