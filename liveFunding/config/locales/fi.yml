@@ -26,6 +26,19 @@ fi:
         language:
             select: "Valitse kieli:"
             
+    association:
+        edit:
+            title: "Muuta tietoja"
+            new: "Syötä uusi yhteys"
+            knows_entity_id: "Yhteys"
+            relationship: "Yhteyden kuvaus"
+            source: "Tietolähde:"
+        new:
+            title: "Uusi yhteys"
+            knows_entity_id: "Yhteys"
+            relationship: "Yhteyden kuvaus"
+            source: "Tietolähde:"
+                    
     transactions:
         index:
             title: "Kaikki tapahtumat"
@@ -35,7 +48,7 @@ fi:
             to: "Saaja"
             create_time: "Tapahtuma-aika"
             rank: "Arvostus"
-            operation: ""
+            operation: "Toiminnot"
         
         information:
             amount: "Määrä"
@@ -107,6 +120,9 @@ fi:
             phone_number: "Puhelinnumero"
             description: "Kuvaus"
             is_organization: "Yritys?"
+            associations: "Tunnetut yhteydet"
+            organization_information: "Organisaation tiedot"
+            person_profile: "Henkilöprofiili"
             
         edit:
             title: "Muuta tämän organisaation tietoja:"
@@ -123,6 +139,9 @@ fi:
         
         index:
             title: "Kaikki organisaatiot:"
+            organizations: "Organisaatiot:"
+            persons: "Henkilöt:"
+            orgsandpersons: "Organisaatiot ja henkilöt tietokannassa"
             
     thirdparty:
         information:
@@ -179,3 +198,5 @@ fi:
             added: "Tapahtuma lisätty suosikkeihisi."
             fail: "Tapahtuman lisääminen suosikkeihin epäonnistui."        
             deleted: "Tapahtuma poistettu suosikeistasi."
+        transactions:
+            invalid_id: "Tuntematon tunniste."    

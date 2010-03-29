@@ -210,4 +210,7 @@ en:
         favourite:
             added: "The transaction was added to your favourites"
             fail: "Transaction favouriting failed"
-            deleted: "Transaction deleted from your favourites."        
+            deleted: "Transaction deleted from your favourites."
+        transactions:
+            invalid_id: "Invalid ID"
+                        

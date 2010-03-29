@@ -21,7 +21,7 @@ submit_tag 'Submit' %> <% end %> <br />
 	<th><%= link_to I18n.t('transactions.index.amount')+(params[:sort_by]=="amount" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "amount", :sort_order => sort_order}, :title => "sort by amount" %></th>
 	<th><%= link_to I18n.t('transactions.index.to')+(params[:sort_by]=="to" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "to", :sort_order => sort_order}, :title => "sort by to" %></th>
 	<th><%= link_to I18n.t('transactions.index.create_time')+(params[:sort_by]=="create_time" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "create_time", :sort_order => sort_order}, :title => "sort by create time" %></th>
-	<th colspan="5"> Operation </th>
+	<th colspan="5"> <%= I18n.t('transactions.index.operation') %> </th>
 
 </tr>
 <% @transactions.each do |transaction| %>
