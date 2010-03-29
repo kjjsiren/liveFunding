@@ -2,10 +2,14 @@
 	
 	<% form_for([@transaction, @comment]) do |f| %>
 		<%= f.error_messages %>
-		
-		<p>
-			<%= f.label :commenter, I18n.t('comments.new.name') %><br />
-			<%= f.text_field :commenter %>
+		<p>	
+			<% if logged_in? %> 
+				<%= f.label :commenter, current_user.username %>
+				<%= f.hidden_field :commenter, :value => current_user.username %>
+			<% else %>
+				<%= f.label :commenter, I18n.t('comments.new.name') %><br />
+				<%= f.text_field :commenter %>
+			<% end %>		
 		</p>	
 
 		<p>
