@@ -27,8 +27,7 @@ class UsersController < ApplicationController
     redirect_to(root_path)  
   end
 
-  #Create a new user
-  
+  # Create a new user
   def create
     @user = User.new(params[:user])
     if @user.save
@@ -40,8 +39,7 @@ class UsersController < ApplicationController
     end
   end
 
-  #Update the user
-  
+  # Update the user
   def update
     @user = User.find(params[:id])
 
@@ -53,15 +51,15 @@ class UsersController < ApplicationController
     end
   end
 
-  #Delete the user
-  
+  # Delete the user  
   def destroy
     # Using current_user ensures that only current_user can be destroyed (instead of finding by parameter)
     log_user_out!
     current_user.destroy
     redirect_to(login_path)
   end
-  
+
+	# Delete the image of the user  
 	def delete_image
     @user = User.find(params[:user])
     @user.photo = nil
