@@ -144,24 +144,7 @@ en:
             organizations: "Organizations:"
             persons: "Persons:"
             orgsandpersons: "Organizations and persons in database"
-            
-    thirdparty:
-        information:
-            last_name: "Last name"
-            first_name: "First name"
-            phone_number: "Phone number"
-            sex: "Sex"
-            birthday: "Birthday"
-        
-        edit:
-            title: "Edit this third party person's information"
-            
-        index:
-            title: "Listing all third party people"
-            create_new: "Create a new third party person"
-            
-        new:
-            title: "New thirdparty person"    
+              
 
     latest_transactions:
         
