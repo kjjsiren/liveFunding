@@ -179,7 +179,7 @@ fi:
         edit:
             title: "Muokkaa tietojasi"
             destroy: "Poista tilisi"
-            favorite: "käyttäjän suosikki liiketoimien"
+            favorite: "Suosikkitapahtumasi"
 
 
         information:
@@ -188,8 +188,10 @@ fi:
             lastname: "Sukunimi"
             password: "Salasana"
             password_confirmation: "Varmista salasana" 
-            link: "linkki"
-            favor: "ennakkosuosikki" 
+            link: "Kotisivu"
+            favor: "Suosikki"
+            noimage: "Kuvaa ei saatavilla"
+             
         new:
             title: "Rekisteröidy Vaalirahakoneen käyttäjäksi"                
             
