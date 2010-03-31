@@ -31,7 +31,7 @@ class AssociationsController < ApplicationController
     @association = @transaction.associations.find(params[:id]) 
   end
   
-  #Update a edited association:
+  # Update a edited association:
   def update
     @entity = Entity.find(params[:entity_id])
     @association = Association.find(params[:id])
@@ -44,7 +44,7 @@ class AssociationsController < ApplicationController
     end 
   end
   
-  #Deletes the ID-specified association:
+  # Deletes the ID-specified association:
   def destroy
     @entity = Entity.find(params[:entity_id])
     @association = Association.find(params[:id]) 
@@ -56,7 +56,7 @@ class AssociationsController < ApplicationController
     end 
   end 
   
-  #Show a single association belonging to a specified entity:
+  # Show a single association belonging to a specified entity:
   def show
     @entity = Entity.find(params[:entity_id]) 
     @association = @entity.associations.find(params[:id])

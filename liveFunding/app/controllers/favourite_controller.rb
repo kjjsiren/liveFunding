@@ -2,7 +2,7 @@ class FavouriteController < ApplicationController
   
   before_filter :is_authenticated?
   
-  #Enables user to favourite a transaction:
+  # Enables user to favourite a transaction:
   def favourite_transaction
     #Get user_id from session and transaction_id from params.
     @user = User.find_by_id(session[:user_id])
@@ -22,7 +22,7 @@ class FavouriteController < ApplicationController
     end
   end  
   
-  #Deletes the transaction from user's favourites:
+  # Deletes the transaction from user's favourites:
   def delete_from_favourites  
    @user = User.find_by_id(session[:user_id])
    @favourite = @user.transactions.find(params[:id])
