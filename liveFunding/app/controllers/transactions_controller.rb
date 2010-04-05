@@ -265,4 +265,18 @@ class TransactionsController < ApplicationController
 			flash.now[:notice]=I18n.t('transactions.importcsv.successful')
 		end
 	end
+	
+	
+	# Only for test purpose
+	include PageParser
+	def test
+    @test_str = get_all_pdfs
+
+    respond_to do |format|
+      format.html # test.html.erb
+      format.xml  { render :xml => @transactions }
+    end
+  end
+	
 end
+
