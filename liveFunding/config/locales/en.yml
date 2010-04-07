@@ -78,7 +78,7 @@ en:
             operation: "Operation"
             
         fundtop:
-            title: "Fund Top 10 Transactions"
+            title: "Fund Top 10"
             id: "ID"
             amount: "Amount(€)"
             from: "From"
