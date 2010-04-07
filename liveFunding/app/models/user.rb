@@ -24,8 +24,6 @@ class User < ActiveRecord::Base
 
   before_save :hash_password
  
-  #has_attached_file :avatar, :styles => {:medium => "300x300>", :thumb => "100x100>"}, :default_url =>"/images/thumbs/"
-
   def self.authenticate(username, password)
     user = User.find_by_username(username)
     
