@@ -11,6 +11,7 @@ class TransactionsController < ApplicationController
     
     respond_to do |format|
       format.html # index.html.erb
+      format.rss
       format.xml  { render :xml => @transactions }
     end
   end

@@ -12,7 +12,7 @@ ActionController::Routing::Routes.draw do |map|
       admin.resources :users, :active_scaffold => true
       admin.resources :transactions, :active_scaffold => true
       admin.resources :comments, :active_scaffold => true
-      admin.resources :organizations, :active_scaffold => true
+      admin.resources :entities, :active_scaffold => true
       
     end
     
