@@ -60,7 +60,10 @@
 	<% @user.transactions.each do |transaction| %>
 		<p onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='http://localhost:3000/transactions/<%= transaction.id%>'">
-        <%= I18n.t('transactions.index.id') %>: <%=h transaction.id %></p>
+        <%=h I18n.t('transactions.index.from') %>: <strong><% if transaction.donor !=nil%><%=h transaction.donor.name %><%end%></strong> 
+		       <strong><%=h transaction.amount %></strong> 
+		       To :<strong><%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong>
+		</p>
 	</p> 
 	<% end %>
    </div>
