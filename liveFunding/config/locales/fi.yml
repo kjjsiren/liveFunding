@@ -26,6 +26,19 @@ fi:
         language:
             select: "Valitse kieli:"
             
+    association:
+        edit:
+            title: "Muuta tietoja"
+            new: "Syötä uusi yhteys"
+            knows_entity_id: "Yhteys"
+            relationship: "Yhteyden kuvaus"
+            source: "Tietolähde:"
+        new:
+            title: "Uusi yhteys"
+            knows_entity_id: "Yhteys"
+            relationship: "Yhteyden kuvaus"
+            source: "Tietolähde:"
+                    
     transactions:
         index:
             title: "Kaikki tapahtumat"
@@ -35,7 +48,7 @@ fi:
             to: "Saaja"
             create_time: "Tapahtuma-aika"
             rank: "Arvostus"
-            operation: ""
+            operation: "Toiminnot"
         
         information:
             amount: "Määrä"
@@ -107,6 +120,9 @@ fi:
             phone_number: "Puhelinnumero"
             description: "Kuvaus"
             is_organization: "Yritys?"
+            associations: "Tunnetut yhteydet"
+            organization_information: "Organisaation tiedot"
+            person_profile: "Henkilöprofiili"
             
         edit:
             title: "Muuta tämän organisaation tietoja:"
@@ -123,24 +139,10 @@ fi:
         
         index:
             title: "Kaikki organisaatiot:"
-            
-    thirdparty:
-        information:
-            last_name: "Etunimi"
-            first_name: "Sukunimi"
-            phone_number: "Puhelinnumero"
-            sex: "Sukupuoli"
-            birthday: "Syntymäpäivä"
-            
-        edit:
-            title: "Edit this third party person's information"    
-            
-        index:
-            title: "Kaikki kolmannet osapuolet"
-            create_new: "Luo uusi kolmas osapuoli"
-            
-        new:
-            title: "Luo uusi kolmas osapuoli"        
+            organizations: "Organisaatiot:"
+            persons: "Henkilöt:"
+            orgsandpersons: "Organisaatiot ja henkilöt tietokannassa"
+                 
 
     latest_transactions:
         
@@ -160,7 +162,7 @@ fi:
         edit:
             title: "Muokkaa tietojasi"
             destroy: "Poista tilisi"
-            favorite: "käyttäjän suosikki liiketoimien"
+            favorite: "Suosikkitapahtumasi"
 
 
         information:
@@ -169,8 +171,10 @@ fi:
             lastname: "Sukunimi"
             password: "Salasana"
             password_confirmation: "Varmista salasana" 
-            link: "linkki"
-            favor: "ennakkosuosikki" 
+            link: "Kotisivu"
+            favor: "Suosikki"
+            noimage: "Kuvaa ei saatavilla"
+             
         new:
             title: "Rekisteröidy Vaalirahakoneen käyttäjäksi"                
             
@@ -179,3 +183,5 @@ fi:
             added: "Tapahtuma lisätty suosikkeihisi."
             fail: "Tapahtuman lisääminen suosikkeihin epäonnistui."        
             deleted: "Tapahtuma poistettu suosikeistasi."
+        transactions:
+            invalid_id: "Tuntematon tunniste."    

@@ -78,7 +78,7 @@ en:
             operation: "Operation"
             
         fundtop:
-            title: "Fund Top 10 Transactions"
+            title: "Fund Top 10"
             id: "ID"
             amount: "Amount(€)"
             from: "From"
@@ -144,24 +144,7 @@ en:
             organizations: "Organizations:"
             persons: "Persons:"
             orgsandpersons: "Organizations and persons in database"
-            
-    thirdparty:
-        information:
-            last_name: "Last name"
-            first_name: "First name"
-            phone_number: "Phone number"
-            sex: "Sex"
-            birthday: "Birthday"
-        
-        edit:
-            title: "Edit this third party person's information"
-            
-        index:
-            title: "Listing all third party people"
-            create_new: "Create a new third party person"
-            
-        new:
-            title: "New thirdparty person"    
+              
 
     latest_transactions:
         
@@ -210,4 +193,7 @@ en:
         favourite:
             added: "The transaction was added to your favourites"
             fail: "Transaction favouriting failed"
-            deleted: "Transaction deleted from your favourites."        
+            deleted: "Transaction deleted from your favourites."
+        transactions:
+            invalid_id: "Invalid ID"
+                        

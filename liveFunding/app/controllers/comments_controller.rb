@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   
-  #Create a new comment for the ID-specified transaction. If succesful redirect to
-  #show the transaction and its comments:
+  # Create a new comment for the ID-specified transaction. If succesful redirect to
+  # show the transaction and its comments:
   def create
      @transaction = Transaction.find(params[:transaction_id])
      @comment = @transaction.comments.build(params[:comment])
@@ -19,13 +19,13 @@ class CommentsController < ApplicationController
     @comment = @transaction.comments.build 
   end
   
-  #Edit a comment:
+  # Edit a comment:
   def edit
     @transaction = Transaction.find(params[:transaction_id])
     @comment = @transaction.comments.find(params[:id]) 
   end
   
-  #Update a edited comment:
+  # Update a edited comment:
   def update
     @transaction = Transaction.find(params[:transaction_id])
     @comment = Comment.find(params[:id])
@@ -38,7 +38,7 @@ class CommentsController < ApplicationController
     end 
   end
   
-  #Deletes the ID-specified comment:
+  # Deletes the ID-specified comment:
   def destroy
     @transaction = Transaction.find(params[:transaction_id])
     @comment = Comment.find(params[:id]) 
@@ -50,7 +50,7 @@ class CommentsController < ApplicationController
     end 
   end 
   
-  #Show a single comment belonging to a specified transaction:
+  # Show a single comment belonging to a specified transaction:
   def show
     @transaction = Transaction.find(params[:transaction_id]) 
     @comment = @transaction.comments.find(params[:id])

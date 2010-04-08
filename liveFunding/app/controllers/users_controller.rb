@@ -13,14 +13,21 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  #Edit the user information
-  
+  # Enables editing of the user profile.
+  # Using current_user makes sure that the user profile can't be edited by other users.
   def edit
-    @user = User.find(params[:id])
+    user = User.find(params[:id])
+    if user == current_user 
+      @user = User.find(params[:id])
+    else
+     redirect_to(root_path)
+    end
+  rescue
+    flash[:notice] = I18n.t('flash.users.invalid_id')
+    redirect_to(root_path)  
   end
 
-  #Create a new user
-  
+  # Create a new user
   def create
     @user = User.new(params[:user])
     if @user.save
@@ -32,8 +39,7 @@ class UsersController < ApplicationController
     end
   end
 
-  #Update the user
-  
+  # Update the user
   def update
     @user = User.find(params[:id])
 
@@ -45,17 +51,15 @@ class UsersController < ApplicationController
     end
   end
 
-  #Delete the user
-  
+  # Delete the user  
   def destroy
     # Using current_user ensures that only current_user can be destroyed (instead of finding by parameter)
     log_user_out!
     current_user.destroy
     redirect_to(login_path)
   end
-  
-	# Using avatar plug-in, delete the user's headpicture
 
+	# Delete the image of the user  
 	def delete_image
     @user = User.find(params[:user])
     @user.photo = nil

@@ -7,7 +7,39 @@ class TransactionsController < ApplicationController
   
   def index
     @transactions = Transaction.all
-    @transaction = Transaction.new
+    sort_by = params[:sort_by]
+    sort_order = params[:sort_order]
+    if sort_by == "from"
+      if sort_order == "0"
+        @transactions = Transaction.find(:all, :order => '"from" DESC')
+      else
+        @transactions = Transaction.find(:all, :order => '"from" ASC')
+      end
+    end
+    
+    if sort_by == "amount"
+      if sort_order == "0"
+        @transactions = Transaction.find(:all, :order => 'amount DESC')
+      else
+        @transactions = Transaction.find(:all, :order => 'amount ASC')
+      end
+    end
+
+    if sort_by == "to"
+      if sort_order == "0"
+        @transactions = Transaction.find(:all, :order => '"to" DESC')
+      else
+        @transactions = Transaction.find(:all, :order => '"to" ASC')
+      end
+    end
+    
+    if sort_by == "create_time"
+      if sort_order == "0"
+        @transactions = Transaction.find(:all, :order => 'created_at DESC')
+      else
+        @transactions = Transaction.find(:all, :order => 'created_at ASC')
+      end
+    end
     
     respond_to do |format|
       format.html # index.html.erb
@@ -47,6 +79,9 @@ class TransactionsController < ApplicationController
 
   def edit
     @transaction = Transaction.find(params[:id])
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
 
@@ -74,6 +109,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
 
@@ -87,6 +125,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   
@@ -100,6 +141,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   
@@ -116,6 +160,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end  
   
   
@@ -132,6 +179,9 @@ class TransactionsController < ApplicationController
       format.html { redirect_to(transactions_url) }
       format.xml  { head :ok }
     end
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   
@@ -168,6 +218,9 @@ class TransactionsController < ApplicationController
   
   def show
     @transaction = Transaction.find(params[:id])
+  rescue
+    flash[:notice] = I18n.t('flash.transactions.invalid_id')
+    redirect_to :action => "index"  
   end
   
   def search
@@ -192,8 +245,6 @@ class TransactionsController < ApplicationController
      end
      send_data csv_string, :type => 'text/csv; charset=iso-8859-1; header=present',
      :disposition => "attachment; filename=#{@outfile}"
-    
-    
   end
 
 	
@@ -215,4 +266,18 @@ class TransactionsController < ApplicationController
 			flash.now[:notice]=I18n.t('transactions.importcsv.successful')
 		end
 	end
+	
+	
+	# Only for test purpose
+	include PageParser
+	def test
+    @test_str = get_all_pdfs
+
+    respond_to do |format|
+      format.html # test.html.erb
+      format.xml  { render :xml => @transactions }
+    end
+  end
+	
 end
+

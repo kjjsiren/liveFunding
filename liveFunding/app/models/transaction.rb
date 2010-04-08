@@ -9,11 +9,13 @@ class Transaction < ActiveRecord::Base
       {:limit => amount}
     }
   
-  validates_presence_of :recipient, :donor
-  validates_numericality_of :amount
+  validates_presence_of :recipient, :donor # Recipient and donor can't be empty
+  validates_numericality_of :amount	
+  
+  # Three way to rank the transactions, according to the rank,amount and time
   
   def self.top
-    self.find(:all, :order => 'rank DESC', :limit => 10)
+    self.find(:all, :order => 'rank DESC', :limit => 10) 
   end
       
   def self.fundtop

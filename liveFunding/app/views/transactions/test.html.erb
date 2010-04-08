@@ -1,0 +1,5 @@
+<h3>Political Members and Their PDFs</h3>
+<br/>
+<% @test_str.each do |m| %>
+<%=h m[1] %> [<a href="<%=h m[0] %>">pdf</a>] <br/>
+<% end %>
