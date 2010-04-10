@@ -17,1236 +17,204 @@ var Log = {
     function init(){
         //init data
         var json = {
-          "id": "1",
-          "name": "Keskusta",
+          "id": "2",
+          "name": "Eero Heinäluoma",
           "children": [
  				
 {
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
 				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": []
-				},
-				{
-				"id": "4",
 				"name": "SDP",
 				"data": { 
 					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
+					"relation": "Puolueen jäsen"},
 				"children": [ 				
 {
 				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": []
-				}]
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": []
-				},
-				{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				}]
-				},
-				{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
 				"name": "Eero Heinäluoma",
 				"data": { 
 					"band": "SDP",
-					"relation": "Ex-puheenjohtaja"},
+					"relation": "Puolueen jäsen"},
 				"children": [ 				
 {
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
 				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": []
-				},
-				{
-				"id": "4",
 				"name": "SDP",
 				"data": { 
 					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
+					"relation": "Puolueen jäsen"},
+				"children": [ 				
+{
+				"id": "2",
+				"name": "Eero Heinäluoma",
+				"data": { 
+					"band": "SDP",
+					"relation": "Puolueen jäsen"},
+				"children": [ 				
+{
+				"id": "1",
+				"name": "SDP",
 				"data": { 
 					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
+					"relation": "Puolueen jäsen"},
 				"children": []
 				}]
 				},
 				{
-				"id": "5",
+				"id": "3",
 				"name": "Jutta Urpilainen",
 				"data": { 
 					"band": "SDP",
 					"relation": "Puheenjohtaja"},
 				"children": [ 				
 {
-				"id": "4",
+				"id": "1",
 				"name": "SDP",
 				"data": { 
 					"band": "Jutta Urpilainen",
 					"relation": "Puheenjohtaja"},
 				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Not friends."},
-				"children": []
-				}]
 				}]
 				},
 				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": [ 				
-{
 				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
+				"name": "Paavo Lipponen",
 				"data": { 
 					"band": "SDP",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Not friends."},
+					"relation": "Puolueen jäsen"},
 				"children": [ 				
 {
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
 				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": []
-				},
-				{
-				"id": "4",
 				"name": "SDP",
 				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
+					"band": "Paavo Lipponen",
+					"relation": "Puolueen jäsen"},
 				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				}]
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": []
-				},
-				{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": []
-				}]
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": []
-				}]
-				},
-				{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "SDP",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": [ 				
-{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Not friends."},
-				"children": []
-				}]
 				}]
 				}]
 				}]
 				},
 				{
 				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": []
-				}]
-				},
-				{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "SDP",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": [ 				
-{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": []
-				},
-				{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				}]
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": []
-				},
-				{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": []
-				}]
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": []
-				}]
-				},
-				{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "SDP",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": [ 				
-{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				}]
-				}]
-				},
-				{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "SDP",
-					"relation": "Ex-puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": []
-				}]
-				},
-				{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "SDP",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": [ 				
-{
-				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				}]
-				},
-				{
-				"id": "5",
 				"name": "Jutta Urpilainen",
 				"data": { 
 					"band": "SDP",
 					"relation": "Puheenjohtaja"},
 				"children": [ 				
 {
-				"id": "4",
+				"id": "1",
 				"name": "SDP",
 				"data": { 
 					"band": "Jutta Urpilainen",
 					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "SDP",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Not friends."},
 				"children": [ 				
 {
 				"id": "2",
-				"name": "Matti Vanhanen",
+				"name": "Eero Heinäluoma",
 				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
+					"band": "SDP",
+					"relation": "Puolueen jäsen"},
+				"children": [ 				
+{
 				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": []
-				},
-				{
-				"id": "4",
 				"name": "SDP",
 				"data": { 
 					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
+					"relation": "Puolueen jäsen"},
 				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				}]
 				}]
 				},
 				{
-				"id": "5",
+				"id": "3",
 				"name": "Jutta Urpilainen",
 				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
+					"band": "SDP",
+					"relation": "Puheenjohtaja"},
 				"children": [ 				
 {
-				"id": "4",
+				"id": "1",
 				"name": "SDP",
 				"data": { 
 					"band": "Jutta Urpilainen",
 					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
+				"children": []
+				}]
+				},
+				{
+				"id": "4",
+				"name": "Paavo Lipponen",
 				"data": { 
 					"band": "SDP",
-					"relation": "Ex-puheenjohtaja"},
+					"relation": "Puolueen jäsen"},
+				"children": [ 				
+{
+				"id": "1",
+				"name": "SDP",
+				"data": { 
+					"band": "Paavo Lipponen",
+					"relation": "Puolueen jäsen"},
+				"children": []
+				}]
+				}]
+				}]
+				},
+				{
+				"id": "4",
+				"name": "Paavo Lipponen",
+				"data": { 
+					"band": "SDP",
+					"relation": "Puolueen jäsen"},
+				"children": [ 				
+{
+				"id": "1",
+				"name": "SDP",
+				"data": { 
+					"band": "Paavo Lipponen",
+					"relation": "Puolueen jäsen"},
 				"children": [ 				
 {
 				"id": "2",
-				"name": "Matti Vanhanen",
+				"name": "Eero Heinäluoma",
 				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
+					"band": "SDP",
+					"relation": "Puolueen jäsen"},
+				"children": [ 				
+{
 				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": []
-				},
-				{
-				"id": "4",
 				"name": "SDP",
 				"data": { 
 					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
+					"relation": "Puolueen jäsen"},
 				"children": []
 				}]
 				},
 				{
-				"id": "5",
+				"id": "3",
 				"name": "Jutta Urpilainen",
 				"data": { 
 					"band": "SDP",
 					"relation": "Puheenjohtaja"},
 				"children": [ 				
 {
-				"id": "4",
+				"id": "1",
 				"name": "SDP",
 				"data": { 
 					"band": "Jutta Urpilainen",
 					"relation": "Puheenjohtaja"},
 				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Not friends."},
-				"children": []
-				}]
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Not friends."},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Friends, yeah right."},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
-				"children": []
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "1",
-				"name": "Keskusta",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Wannabe farmer"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Matti Vanhanen",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
-				"children": []
 				}]
 				},
 				{
 				"id": "4",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Ex-puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "3",
-				"name": "Eero Heinäluoma",
+				"name": "Paavo Lipponen",
 				"data": { 
 					"band": "SDP",
-					"relation": "Ex-puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "5",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Not friends."},
+					"relation": "Puolueen jäsen"},
 				"children": [ 				
 {
-				"id": "4",
+				"id": "1",
 				"name": "SDP",
 				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				},
-				{
-				"id": "3",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Not friends."},
+					"band": "Paavo Lipponen",
+					"relation": "Puolueen jäsen"},
 				"children": []
 				}]
 				}]

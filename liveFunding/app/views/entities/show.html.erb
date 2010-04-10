@@ -38,7 +38,7 @@
 	<% end %>
 </div>	
 <br />
-<%= link_to "Associations map", :action => "map", :id=>@entity.id, :target => "_blank" %>
+<%= link_to I18n.t('association.show.association_map'), :action => "map", :id=>@entity.id, :target => "_blank" %>
 <%= link_to I18n.t('association.new.title'), new_entity_association_path(@entity)  %>
 
 

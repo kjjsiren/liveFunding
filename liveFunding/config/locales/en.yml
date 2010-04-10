@@ -26,8 +26,10 @@ en:
             
         language:
             select: "Choose language"
-                
-            
+         
+    home:     
+         newsfeed: "Newsfeed"   
+         
     association:
         edit:
             title: "Edit Association"
@@ -40,6 +42,10 @@ en:
             relationship: "Description of the relationship:"
             knows_entity_id: "Association to:"
             source: "Source of information:"
+            
+        show:
+            association_map: "Association map"
+                
     transactions:
         index:
             title: "All The Transactions"
@@ -50,6 +56,8 @@ en:
             create_time: "Create Time"
             rank: "Rank"
             operation: "Operation"
+            submit: "Submit"
+            browse: "Browse"
             
         information:
             amount: "Amount"
@@ -59,6 +67,9 @@ en:
             rank: "Rank"
             create_time: "Create time"
             operation: "Operation"
+            date: "When the transaction took place?"
+            donor: "Donor"
+            recipient: "Recipient"    
             
         edit:
             title: "Edit the information"

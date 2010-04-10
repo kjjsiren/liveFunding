@@ -8,13 +8,13 @@
     <%= f.text_field :amount %>
   </p>
   <p>
-    <%= f.label :donor_id %><br />
+    <%= f.label :donor_id, I18n.t('transactions.information.donor') %><br />
 	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
 		f.select(:donor_id, @from_who)	%>
 	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
   </p>
   <p>
-    <%= f.label :recipient_id %><br />
+    <%= f.label :recipient_id, I18n.t('transactions.information.recipient') %><br />
 	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
 		f.select(:recipient_id, @from_who) %>
 	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
@@ -22,6 +22,10 @@
   <p>
     <%= f.label :description, I18n.t('transactions.information.description') %><br />
     <%= f.text_field :description %>
+  </p>
+  <p>
+  	<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
+	<%= f.date_select(:date_of_transaction, :use_month_numbers => true ,:order => [:month, :year]) %>
   </p>
   <p>
     <%= f.submit I18n.t('layout.navigation.create') %>

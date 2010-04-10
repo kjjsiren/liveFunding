@@ -23,7 +23,10 @@
     <%= f.label :rank, I18n.t('transactions.information.rank') %><br />
     <%= f.text_field :rank %>
   </p>
-
+  <p>
+	<%= f.label :date_of_transaction, I18n.t('transactions.information.date')%>
+	<%= f.date_select(:date_of_transaction, :use_month_numbers => true ,:order => [:month, :year]) %>
+  </p>
   <p>
     <%= f.submit I18n.t('transactions.edit.update') %>
   </p>
