@@ -48,6 +48,10 @@ module PageParser
   # This is a test function, with which you can retrieve a list for all the members 
   # and their corresponding pdf files. Parsing start from the constant link "Start_Uri"
   # You can modify this function for formal use
+  # Return Value: two dimensional array
+  # r[x][0] : Link to the PDF
+  # r[x][1] : Politician's Name
+  # r[x][2] : Political Party
   def get_all_pdfs
     r = Array.new
     
@@ -58,6 +62,7 @@ module PageParser
         m_list = get_member_list(Parent_Uri + "/" + l2[0])
         m_list.each do |l3|
           l3[0] = Parent_Uri + "/" + l3[0]
+          l3[2] = l1[1]
           r += [l3]
         end
       end
