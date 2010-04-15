@@ -19,6 +19,15 @@ class AssociationsController < ApplicationController
   	        end 
   	  end
   	  
+  	  
+  # Is this assocation already in the database?
+  def is_assoc_exist(id)
+    b_exist = false
+    @association = Association.find(id])
+    
+  end
+
+  
   # New an association
   def new
     @entity = Entity.find(params[:entity_id])
@@ -29,6 +38,7 @@ class AssociationsController < ApplicationController
   def edit
     @entity = Entity.find(params[:entity_id])
     @association = @transaction.associations.find(params[:id]) 
+    @test = Association.find(id])
   end
   
   # Update a edited association:
