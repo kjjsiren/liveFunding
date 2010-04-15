@@ -20,7 +20,7 @@ class AssociationsController < ApplicationController
   	  end
   	  
   	  
-  # Is this assocation already in the database?
+  # Is this association already in the database?
   # Parameters:
   # e_id -> entity_id
   # k_id -> knows_entity_id

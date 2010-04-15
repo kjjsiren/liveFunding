@@ -53,9 +53,6 @@
 #error {
 	color:red;
 }
-table tr:hover{
-	background:yellow;
-}
 #language{
 	float:left;
 	margin-top:110px;
