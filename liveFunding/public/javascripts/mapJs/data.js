@@ -17,204 +17,44 @@ var Log = {
     function init(){
         //init data
         var json = {
-          "id": "2",
-          "name": "Eero Heinäluoma",
+          "id": "1",
+          "name": "avc",
           "children": [
  				
 {
-				"id": "1",
-				"name": "SDP",
+				"id": "2",
+				"name": "ddddd",
 				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Puolueen jäsen"},
+					"band": "avc",
+					"relation": "bbb"},
+				"children": [ 				
+{
+				"id": "1",
+				"name": "avc",
+				"data": { 
+					"band": "ddddd",
+					"relation": "bbb"},
 				"children": [ 				
 {
 				"id": "2",
-				"name": "Eero Heinäluoma",
+				"name": "ddddd",
 				"data": { 
-					"band": "SDP",
-					"relation": "Puolueen jäsen"},
+					"band": "avc",
+					"relation": "bbb"},
 				"children": [ 				
 {
 				"id": "1",
-				"name": "SDP",
+				"name": "avc",
 				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Puolueen jäsen"},
+					"band": "ddddd",
+					"relation": "bbb"},
 				"children": [ 				
 {
 				"id": "2",
-				"name": "Eero Heinäluoma",
+				"name": "ddddd",
 				"data": { 
-					"band": "SDP",
-					"relation": "Puolueen jäsen"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Puolueen jäsen"},
-				"children": []
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "4",
-				"name": "Paavo Lipponen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puolueen jäsen"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Paavo Lipponen",
-					"relation": "Puolueen jäsen"},
-				"children": []
-				}]
-				}]
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puolueen jäsen"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Puolueen jäsen"},
-				"children": []
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "4",
-				"name": "Paavo Lipponen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puolueen jäsen"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Paavo Lipponen",
-					"relation": "Puolueen jäsen"},
-				"children": []
-				}]
-				}]
-				}]
-				},
-				{
-				"id": "4",
-				"name": "Paavo Lipponen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puolueen jäsen"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Paavo Lipponen",
-					"relation": "Puolueen jäsen"},
-				"children": [ 				
-{
-				"id": "2",
-				"name": "Eero Heinäluoma",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puolueen jäsen"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Eero Heinäluoma",
-					"relation": "Puolueen jäsen"},
-				"children": []
-				}]
-				},
-				{
-				"id": "3",
-				"name": "Jutta Urpilainen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puheenjohtaja"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Jutta Urpilainen",
-					"relation": "Puheenjohtaja"},
-				"children": []
-				}]
-				},
-				{
-				"id": "4",
-				"name": "Paavo Lipponen",
-				"data": { 
-					"band": "SDP",
-					"relation": "Puolueen jäsen"},
-				"children": [ 				
-{
-				"id": "1",
-				"name": "SDP",
-				"data": { 
-					"band": "Paavo Lipponen",
-					"relation": "Puolueen jäsen"},
+					"band": "avc",
+					"relation": "bbb"},
 				"children": []
 				}]
 				}]
