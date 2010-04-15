@@ -21,7 +21,7 @@ class AssociationsController < ApplicationController
   	  
   	  
   # Is this assocation already in the database?
-  def is_assoc_exist(id)
+  def is_assoc_exist(id_1, id_2)
     b_exist = false
     @association = Association.find(id])
     
@@ -38,7 +38,6 @@ class AssociationsController < ApplicationController
   def edit
     @entity = Entity.find(params[:entity_id])
     @association = @transaction.associations.find(params[:id]) 
-    @test = Association.find(id])
   end
   
   # Update a edited association:
@@ -70,5 +69,6 @@ class AssociationsController < ApplicationController
   def show
     @entity = Entity.find(params[:entity_id]) 
     @association = @entity.associations.find(params[:id])
+        @test = Association.find(id])
   end  
 end
