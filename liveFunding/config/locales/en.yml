@@ -129,7 +129,7 @@ en:
             name: "Name"
             leader: "Leader"
             email: "Email"
-            phone_number: "Phonenumber"
+            phone_number: "Phone"
             description: "Description"
             is_organization: "Is an organization"
             associations: "Known associations"

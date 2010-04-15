@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :entities, :has_many => :associations
+  map.resources :entities, :collection => {:new_ajax => :get}, :has_many => :associations
 
 
   map.resources :users	

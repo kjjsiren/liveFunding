@@ -20,9 +20,9 @@
 
 	<script>
 	function test_fn() {
-		var win = new Window({className: "alphacube",  width:350, height:400, zIndex: 100, resizable: true, title: "Sample window", showEffect:Effect.Appear, hideEffect: Effect.Fade, draggable:true, wiredDrag: true})
+		var win = new Window({className: "alphacube",  width:350, height:300, zIndex: 100, resizable: true, title: "create a new entity", showEffect:Effect.Appear, hideEffect: Effect.Fade, draggable:true, wiredDrag: true})
 
-		win.setURL("/entities/new.erb");
+		win.setURL("/entities/new_ajax");
 		win.showCenter(true);
 		return false;
 	}
