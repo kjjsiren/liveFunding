@@ -19,6 +19,16 @@ class AssociationsController < ApplicationController
   	        end 
   	  end
   	  
+  	  
+  # Is this association already in the database?
+  # Parameters:
+  # e_id -> entity_id
+  # k_id -> knows_entity_id
+  def is_assoc_exist(e_id, k_id)
+    return Association.exists?(:entity_id => e_id, :knows_entity_id => k_id)
+  end
+
+  
   # New an association
   def new
     @entity = Entity.find(params[:entity_id])

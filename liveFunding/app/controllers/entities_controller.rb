@@ -1,4 +1,5 @@
 class EntitiesController < ApplicationController
+  #layout "application", :except => [:new_ajax]
   
   #List all the entities including entity name, leader, email, phone
   #descriptions and the association with other entities
@@ -30,6 +31,12 @@ class EntitiesController < ApplicationController
       format.html # new.html.erb
       format.xml  { render :xml => @entity }
     end
+  end
+  
+  #create a new entity
+  def new_ajax
+    @entity = Entity.new
+    render :layout => false
   end
   
     def create

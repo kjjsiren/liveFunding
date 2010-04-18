@@ -1,3 +1,8 @@
+<link href="/stylesheets/themes/default.css" rel="stylesheet" type="text/css"/>
+<link href="/stylesheets/themes/mac_os_x.css" rel="stylesheet" type="text/css"/>
+<link href="/stylesheets/themes/alphacube.css" rel="stylesheet" type="text/css"/>
+<%= javascript_include_tag "prototype", "effects", "window" %>
+
 <h1><%= I18n.t('transactions.new.title') %></h1>
 
 <% form_for(@transaction) do |f| %>
@@ -8,13 +13,26 @@
     <%= f.text_field :amount %>
   </p>
   <p>
-    <%= f.label :donor_id %><br />
+    <%= f.label :donor_id, I18n.t('transactions.information.donor') %><br />
 	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
 		f.select(:donor_id, @from_who)	%>
 	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
+
+	<script>
+	function test_fn() {
+		var win = new Window({className: "alphacube",  width:350, height:300, zIndex: 100, resizable: true, title: "create a new entity", showEffect:Effect.Appear, hideEffect: Effect.Fade, draggable:true, wiredDrag: true})
+
+		win.setURL("/entities/new_ajax");
+		win.showCenter(true);
+		return false;
+	}
+	</script>
+	
+	<a href="#" onclick="test_fn(); return false;">test</a>
+	
   </p>
   <p>
-    <%= f.label :recipient_id %><br />
+    <%= f.label :recipient_id, I18n.t('transactions.information.recipient') %><br />
 	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
 		f.select(:recipient_id, @from_who) %>
 	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
@@ -22,6 +40,10 @@
   <p>
     <%= f.label :description, I18n.t('transactions.information.description') %><br />
     <%= f.text_field :description %>
+  </p>
+  <p>
+  	<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
+	<%= f.date_select(:date_of_transaction, :use_month_numbers => true ,:order => [:month, :year]) %>
   </p>
   <p>
     <%= f.submit I18n.t('layout.navigation.create') %>

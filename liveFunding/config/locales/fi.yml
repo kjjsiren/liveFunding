@@ -3,7 +3,7 @@ fi:
         navigation:
             home:   "Pääsivu"
             transactions: "Tapahtumat"
-            entities: "Rahoittajat"
+            entities: "Organisaatiot ja henkilöt"
             thirdparty: "Kolmannet osapuolet"
             latest_transactions: "Viimeisimmät tapahtumat"
             back: "Takaisin"
@@ -25,7 +25,10 @@ fi:
             
         language:
             select: "Valitse kieli:"
-            
+    
+    home:
+        newsfeed: "Uutisvirta"
+        
     association:
         edit:
             title: "Muuta tietoja"
@@ -38,6 +41,9 @@ fi:
             knows_entity_id: "Yhteys"
             relationship: "Yhteyden kuvaus"
             source: "Tietolähde:"
+            
+        show:
+            association_map: "Yhteyskartta"    
                     
     transactions:
         index:
@@ -49,6 +55,8 @@ fi:
             create_time: "Tapahtuma-aika"
             rank: "Arvostus"
             operation: "Toiminnot"
+            submit: "Lähetä"
+            browse: "Selaa"
         
         information:
             amount: "Määrä"
@@ -58,6 +66,9 @@ fi:
             rank: "Arvostus"
             create_time: "Tapahtuma-aika"
             operation: ""
+            date: "Tapahtuma-aika"
+            donor: "Lahjoittaja"
+            recipient: "Saaja"
             
         edit:
             title: "Muuta tapahtuman tietoja:"
@@ -87,7 +98,7 @@ fi:
             operation: ""
 
         search:
-            title: "Hakutulokset hakusanoille"
+            title: "Hakutulokset"
             id: "ID"
             amount: "Määrä (€)"
             from: "Lahjoittaja"
@@ -119,18 +130,19 @@ fi:
             email: "Sähköposti"
             phone_number: "Puhelinnumero"
             description: "Kuvaus"
-            is_organization: "Yritys?"
+            is_organization: "Organisaatio?"
             associations: "Tunnetut yhteydet"
             organization_information: "Organisaation tiedot"
             person_profile: "Henkilöprofiili"
             
         edit:
-            title: "Muuta tämän organisaation tietoja:"
+            title: "Muuta organisaation tietoja:"
             update: "Päivitä"
             
         new:
             create: "Luo uusi organisaatio"
-            title: "Syötä uuden organisaation tiedot:"
+            title: "Syötä uuden organisaation tiedot"
+            submit: "Luo"
             
         controls:
             show: "Näytä"
@@ -153,7 +165,7 @@ fi:
             edit: "Muuta"
                 
         new:
-            title: "Kommentoi tätä tapahtumaa:"
+            title: "Kommentoi"
             name: "Nimesi:"
             comment: "Kommenttisi"
             submit: "Lähetä"
