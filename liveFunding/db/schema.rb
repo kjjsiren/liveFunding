@@ -40,6 +40,16 @@ ActiveRecord::Schema.define(:version => 20100331120307) do
     t.datetime "updated_at"
   end
 
+  create_table "thirdpartypeople", :force => true do |t|
+    t.string   "last_name"
+    t.string   "first_name"
+    t.string   "sex"
+    t.string   "phone_number"
+    t.date     "birthday"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "transactions", :force => true do |t|
     t.decimal  "amount"
     t.string   "description"

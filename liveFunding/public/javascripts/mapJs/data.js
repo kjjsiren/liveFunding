@@ -17,23 +17,23 @@ var Log = {
     function init(){
         //init data
         var json = {
-          "id": "1",
-          "name": "Keskusta",
+          "id": "5",
+          "name": "Jutta Urpilainen",
           "children": [
  				
 {
-				"id": "2",
-				"name": "Matti Vanhanen",
+				"id": "4",
+				"name": "SDP",
 				"data": { 
-					"band": "Keskusta",
+					"band": "Jutta Urpilainen",
 					"relation": "Puheenjohtaja"},
 				"children": [ 				
 {
 				"id": "3",
 				"name": "Eero Heinäluoma",
 				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
+					"band": "SDP",
+					"relation": "Ex-puheenjohtaja"},
 				"children": [ 				
 {
 				"id": "2",
@@ -325,25 +325,25 @@ var Log = {
 				}]
 				},
 				{
-				"id": "1",
-				"name": "Keskusta",
+				"id": "5",
+				"name": "Jutta Urpilainen",
 				"data": { 
-					"band": "Matti Vanhanen",
+					"band": "SDP",
 					"relation": "Puheenjohtaja"},
 				"children": [ 				
 {
-				"id": "2",
-				"name": "Matti Vanhanen",
+				"id": "4",
+				"name": "SDP",
 				"data": { 
-					"band": "Keskusta",
+					"band": "Jutta Urpilainen",
 					"relation": "Puheenjohtaja"},
 				"children": [ 				
 {
 				"id": "3",
 				"name": "Eero Heinäluoma",
 				"data": { 
-					"band": "Matti Vanhanen",
-					"relation": "Friends, yeah right."},
+					"band": "SDP",
+					"relation": "Ex-puheenjohtaja"},
 				"children": [ 				
 {
 				"id": "2",
@@ -379,17 +379,17 @@ var Log = {
 				}]
 				},
 				{
-				"id": "1",
-				"name": "Keskusta",
+				"id": "5",
+				"name": "Jutta Urpilainen",
 				"data": { 
-					"band": "Matti Vanhanen",
+					"band": "SDP",
 					"relation": "Puheenjohtaja"},
 				"children": [ 				
 {
-				"id": "2",
-				"name": "Matti Vanhanen",
+				"id": "4",
+				"name": "SDP",
 				"data": { 
-					"band": "Keskusta",
+					"band": "Jutta Urpilainen",
 					"relation": "Puheenjohtaja"},
 				"children": []
 				},
@@ -397,8 +397,8 @@ var Log = {
 				"id": "3",
 				"name": "Eero Heinäluoma",
 				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
+					"band": "Jutta Urpilainen",
+					"relation": "Not friends."},
 				"children": []
 				}]
 				}]
@@ -407,8 +407,8 @@ var Log = {
 				"id": "3",
 				"name": "Eero Heinäluoma",
 				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
+					"band": "Jutta Urpilainen",
+					"relation": "Not friends."},
 				"children": [ 				
 {
 				"id": "2",
@@ -513,8 +513,8 @@ var Log = {
 				"id": "3",
 				"name": "Eero Heinäluoma",
 				"data": { 
-					"band": "Keskusta",
-					"relation": "Wannabe farmer"},
+					"band": "Jutta Urpilainen",
+					"relation": "Not friends."},
 				"children": [ 				
 {
 				"id": "2",
