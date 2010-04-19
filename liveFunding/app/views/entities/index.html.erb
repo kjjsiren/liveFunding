@@ -1,57 +1,31 @@
-<h1><%= I18n.t('entities.index.title')%></h1>
 
-<%= link_to I18n.t('entities.new.title'), new_entity_path %>
-<h2><%= I18n.t('entities.index.orgsandpersons')%></h2>
-<h3><%= I18n.t('entities.index.organizations')%></h3>
+<div style="width:49%;float:left;"><h3><%= I18n.t('entities.index.organizations')%></h3>
 <table cellspacing="10">
-  <tr>
-    <th><%= I18n.t('entities.information.name')%></th>
-    <th><%= I18n.t('entities.information.leader')%></th>
-    <th><%= I18n.t('entities.information.email')%></th>
-    <th><%= I18n.t('entities.information.phone_number')%></th>
-    <th><%= I18n.t('entities.information.description')%></th>
-    </tr>
 <% @entities.each do |entity| %>
 <%if entity.is_organization != false%>
-  <tr>
-    <td><%=h entity.name %></td>
-    <td><%=h entity.leader %></td>
-    <td><%=h entity.email %></td>
-    <td><%=h entity.phone_number %></td>
-    <td><%=h entity.description %></td>
-
-    <td><%= link_to I18n.t('layout.navigation.show'), entity %></td>
-    <td><%= link_to I18n.t('layout.navigation.edit'), edit_entity_path(entity) %></td>
-    <td><%= link_to I18n.t('layout.navigation.destroy'), entity, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td>
-  </tr>
+<tr>
+   <td><%= link_to entity.name, entity %></td>
+ 	<td>total sum of <%=h moneySum(entity) %>€</td>
+   	<td>in <%=h transactionsCount(entity) %> transactions</td>
+   </tr>
 <%end%>
 <% end %>
 </table>
-
-<h3><%= I18n.t('entities.index.persons')%></h3>
+</div>
+<div style="width:49%;float:left;clear:none;">
+	<h3><%= I18n.t('entities.index.persons')%></h3>
 <table cellspacing="10">
-  <tr>
-   	  <th><%= I18n.t('entities.information.name')%></th>
-	  <th><%= I18n.t('entities.information.email')%></th>
-	  <th><%= I18n.t('entities.information.phone_number')%></th>
-	  <th><%= I18n.t('entities.information.description')%></th>
- </tr>
-
 <% @entities.each do |entity| %>
 <%if entity.is_organization == false%>
   <tr>
-    <td><%=h entity.name %></td>
-    <td><%=h entity.email %></td>
-    <td><%=h entity.phone_number %></td>
-    <td><%=h entity.description %></td>
-    <td><%= link_to 'Show', entity %></td>
-    <td><%= link_to 'Edit', edit_entity_path(entity) %></td>
-    <td><%= link_to 'Destroy', entity, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+ 	 <td><%= link_to entity.name, entity %></td>
+	 	<td>total sum of <%=h moneySum(entity) %>€</td>
+	   	<td>in <%=h transactionsCount(entity) %> transactions</td>
+   </tr>
 <%end%>
 <% end %>
 </table>
-
+</div>
 
 
 <br />

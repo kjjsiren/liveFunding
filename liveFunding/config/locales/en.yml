@@ -132,9 +132,11 @@ en:
             phone_number: "Phone"
             description: "Description"
             is_organization: "Is an organization"
-            associations: "Known associations"
+            associations: "Associations with"
             organization_information: "Organization information"
             person_profile: "Person profile"
+            homepage: "Homepage"
+            transactions: "Transactions"
             
         edit:
             title: "Update profile"

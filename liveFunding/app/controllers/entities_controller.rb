@@ -6,7 +6,7 @@ class EntitiesController < ApplicationController
   $associations_list = Association.all
   
   def index
-    @entities = Entity.all
+    @entities = Entity.all(:order =>"name")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,6 +17,10 @@ class EntitiesController < ApplicationController
   #Show the entity information 
   def show
      @entity = Entity.find(params[:id]) 
+     id = @entity.id
+     @transactions_from = Transaction.find(:all, :conditions=>["donor_id = #{id}"])
+     @transactions_to = Transaction.find(:all, :conditions=>["recipient_id = #{id}"])
+
        respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @entity }
@@ -243,5 +247,14 @@ class EntitiesController < ApplicationController
       format.html { redirect_to(entities_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  # Delete the image of the entity  
+	def delete_image
+    @entity = Entity.find(params[:entity])
+    @entity.photo = nil
+    @entity.save
+    params[:id]=@entity.id
+    redirect_to :back
   end
 end

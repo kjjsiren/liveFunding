@@ -4,6 +4,10 @@ class AssociationsController < ApplicationController
   	     @entity = Entity.find(params[:entity_id])
   	     @association = Association.new(params[:association])
   	     @association.entity_id = params[:entity_id]
+  	       if is_assoc_exist(@entity, @association)
+	              flash[:notice] = "Association already exists"
+                redirect_to entity_url(@entity)
+	         end
   	        if @association.save
   	          flash[:notice] = "A new association created"
   	          @reverse_association = Association.new(params[:association])

@@ -13,8 +13,9 @@ class AdminController < ApplicationController
    end
   
   def import_db
-    file = params[:file]
-    `sqlite3 db/development.sqlite3 < #{file}`
+    
+    `sqlite3 db/development.sqlite3 < export.sqlite.sql`
+    
     render :action => "index"
     flash[:notice] = "Import complete"
   end

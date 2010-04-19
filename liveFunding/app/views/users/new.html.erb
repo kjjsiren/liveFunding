@@ -1,36 +1,58 @@
 <h1><%= I18n.t('users.new.title') %></h1>
-
-<% form_for(@user, :html => {:class => 'validate', :multipart => true}) do |f| %>
+<% form_for(@user, :html => {:class => 'validate', :multipart=>true}) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :username, I18n.t('users.information.username') %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :firstname, I18n.t('users.information.firstname') %><br />
-    <%= f.text_field :firstname %>
-  </p>
-  <p>
-    <%= f.label :lastname, I18n.t('users.information.lastname') %><br />
-    <%= f.text_field :lastname %>
-  </p>
-
-  <p>
-    <%= f.label :password, I18n.t('users.information.password') %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation, I18n.t('users.information.password_confirmation') %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-	<p>
-		<%= f.label 'Photo' %><br />
-  		<%= f.file_field :photo %>
-	</p>
-  <p>
-    <%= f.submit I18n.t('layout.navigation.create', :action => "create") %>
-  </p>
-<% end %>
+	<div>
+		<p>
+    		<%= f.label :username, I18n.t('users.information.username') %><br/>
+    		<%= f.text_field :username %>
+  		</p>
+	</div>
+	<div style="float:left;width:150px;height:200px;background:lightgrey;margin:10px;border:double 3px;border-color:grey;">
+	<% if @user.photo.exists? then %>
+	<p><%= image_tag @user.photo.url(:small) %></p>
+		<%= f.file_field :photo, :size =>"10" %>
+		<%= link_to "Delete Image", { :action => "delete_image", :user => @user},
+	            :confirm => "Are you sure?"	
+	 %>
+	<% else %>
+	<p><br style="margin-bottom:40px;"/>&nbsp;&nbsp;&nbsp;<%= I18n.t('users.information.noimage')%><br style="margin-bottom:120px;"/>
+  		<%= f.file_field :photo, :size =>"10" %>
+	</p><% end %>
+	</div>
+	
+	<div style="border:1px solid;float:left;padding:35px;">
+	<div style="float:left;clear:both;">
+		<div style="float:left;clear:none;">
+ 			<%= f.label :firstname, I18n.t('users.information.firstname') %><br/>
+    		<%= f.text_field :firstname, :size=>"10" %>
+ 		</div>
+		<div style="float:left;clear:none;margin-left:30px;">
+   			<%= f.label :lastname, I18n.t('users.information.lastname') %><br/>
+    		<%= f.text_field :lastname, :size=>"10"%>
+		</div>
+		<br />
+			<div style="float:left;clear:none; margin-top:10px;">
+		<%= f.label :link, I18n.t('users.information.link') %><br/>
+	    <%= f.text_field :link, :size=>"28" %>
+		</div>
+	</div>
+	<div style="float:left;clear:both;margin-top:30px;">
+			<div style="float:left;clear:none;">
+    			<%= f.label :password, I18n.t('users.information.password') %><br/>
+    			<%= f.password_field :password, :size=>"15" %>	
+			</div>
+			<div style="float:left;clear:both;margin-top:10px;">
+    			<%= f.label :password_confirmation, I18n.t('users.information.password_confirmation') %><br/>
+    			<%= f.password_field :password_confirmation, :size=>"15" %>
+			</div>
+	</div>
+	</div>
+    <div style="float:left;clear:both;margin-left:350px;">
+		<p>
+    		 <%= f.submit I18n.t('layout.navigation.create', :action => "create") %>
+   		</p>
+	</div>
+<%end%>
 
 <%= link_to I18n.t('layout.navigation.back'), users_path %>

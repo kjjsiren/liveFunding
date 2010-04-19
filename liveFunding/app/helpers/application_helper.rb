@@ -14,4 +14,8 @@ module ApplicationHelper
     def is_a_number?(s)
       s.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
     end
+    
+    def date_in_finnish_format(date)
+      date.strftime("%d.%m.%Y")
+    end
 end

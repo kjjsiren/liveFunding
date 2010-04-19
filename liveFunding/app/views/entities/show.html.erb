@@ -3,44 +3,77 @@
 <%else%>
 <h2><%= I18n.t('entities.information.person_profile')%></h2>
 <%end%>
-<p>
-  <b><%= I18n.t('entities.information.name')%>:</b>
-<%if @entity != nil %>  <%=h @entity.name %><%end%>
-</p>
+	<div>
+		<p>
+    		<%= label :name, I18n.t('entities.information.name') %><br/>
+  			<%if @entity != nil %><strong><%=h @entity.name %></strong><%end%>
+	</p>
+	</div>
+	<div style="border:1px solid;float:left;padding:35px;">
+	<div style="float:left;clear:both;">
+		<%if @entity.is_organization %>
+		<div style="float:left;clear:none;">
+ 			<%= I18n.t('entities.information.leader') %><br />
+			<strong><%=h @entity.leader %></strong>
+ 		</div>
+		<%end%>
+		<div style="float:left;clear:left;margin-top:10px;">
+ 			<%= I18n.t('entities.information.homepage') %><br />
+			<strong><%=h @entity.homepage %></strong>
+ 		</div>
+		<div style="float:left;clear:none;margin-top:10px;margin-left:60px;">
+   			<%= I18n.t('entities.information.email') %><br />
+		   <%if @entity != nil %>  <strong><%=h @entity.email %></strong><%end%>
+		 </div>
+		<br />
+			<div style="float:left;clear:none; margin-top:10px;">
+			  <%= I18n.t('entities.information.phone_number') %><br />
+			    <%if @entity != nil %><strong><%=h @entity.phone_number %></strong><%end%>
+		</div>
+	</div>
+	<div style="float:left;clear:both;margin-top:30px;">
+		<%= I18n.t('entities.information.description') %><br />
+	   <%if @entity != nil %><strong><%=h @entity.description %></strong><%end%>
+	  	</div>
+	</div>
+	<div style="float:left;width:150px;height:200px;background:lightgrey;margin:10px;border:double 3px;border-color:grey;">
+	<% if @entity.photo.exists? then %>
+	<p><%= image_tag @entity.photo.url(:small) %></p>
+	<% else %>
+	<p><br style="margin-bottom:40px;"/>&nbsp;&nbsp;&nbsp;<%= I18n.t('users.information.noimage')%><br style="margin-bottom:120px;"/>
+	</p><% end %>
+	</div>
 
-<p>
-  <b><%if @entity.is_organization %><%= I18n.t('entities.information.leader')%>:</b>
- <%=h @entity.leader %><%end%>
-</p>
-
-<p>
-  <b><%= I18n.t('entities.information.email')%>:</b>
-<%if @entity != nil %>  <%=h @entity.email %><%end%>
-</p>
-
-<p>
-  <b><%= I18n.t('entities.information.phone_number')%>:</b>
-<%if @entity != nil %>  <%=h @entity.phone_number %><%end%>
-</p>
-
-<p>
-  <b><%= I18n.t('entities.information.description')%>:</b>
-<%if @entity != nil %>  <%=h @entity.description %><%end%>
-</p>
 
 
-<div id="association-list">
+<div id="association-list" style="float:left;clear:none; margin-left:50px;">
+	<%= link_to I18n.t('association.show.association_map'), :action => "map", :id=>@entity.id, :target => "_blank" %>
+	<%= link_to I18n.t('association.new.title'), new_entity_association_path(@entity)  %>
+	
 	<h2><%= I18n.t('entities.information.associations')%>:</h2>
 		<% @entity.associations.each do |association| %>
-		<p>
-		<%if is_a_number?(association.knows_entity_id) %>  <%=h association.knows_entity.name %><%else%>  <%=h association.knows_entity %><%end%>, 		<%=h association.description %>, 	Source:	<%=h association.infosource %>
-		</p>
+		<%if is_a_number?(association.knows_entity_id) %>  <%=h association.knows_entity.name %><%else%>  <%=h association.knows_entity %><%end%><br/>
 	<% end %>
 </div>	
+
+<div style="float:left;clear:left;margin-top:10px;margin-left:300px;"><%= button_to I18n.t('layout.navigation.edit'), edit_entity_path(@entity) %></div>
+
+<div id="entity-transactions" style="float:left;clear:both; margin-top:50px;">
+<h2><%= I18n.t('entities.information.transactions')%>:</h2>
+<%=transactionsCount(@entity)%> transactions, in total of <%=moneySum(@entity)%>€<br style="margin-bottom:40px;margin-top:20px;"/>
+	<% @transactions_to.each do |t| %>
+	date_in_finnish_format(t.date_of_transaction), <%=t.recipient.name%> => <%=t.donor.name%> = <%=t.amount%>€<br />
+	<%end%>
+	<% @transactions_from.each do |t| %>
+<%=date_in_finnish_format(t.date_of_transaction)%>, <%=t.recipient.name%> => <%=t.donor.name%> = <%=t.amount%>€<br />
+	<%end%>
+</div>
+
 <br />
-<%= link_to I18n.t('association.show.association_map'), :action => "map", :id=>@entity.id, :target => "_blank" %>
-<%= link_to I18n.t('association.new.title'), new_entity_association_path(@entity)  %>
+<hr style="width:100%;float:left;clear:both;margin-top:40px;margin-bottom:20px;"/>
+<div id="actions" style="float:left;clear:left;">
 
-
-<%= link_to I18n.t('layout.navigation.edit'), edit_entity_path(@entity) %>
 <%= link_to I18n.t('layout.navigation.back'), entities_path %>
+</div>
+	
+</div>

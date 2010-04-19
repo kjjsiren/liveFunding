@@ -134,6 +134,8 @@ fi:
             associations: "Tunnetut yhteydet"
             organization_information: "Organisaation tiedot"
             person_profile: "Henkilöprofiili"
+            homepage: "Kotisivu"
+            transactions: "Tapahtumat"
             
         edit:
             title: "Muuta organisaation tietoja:"

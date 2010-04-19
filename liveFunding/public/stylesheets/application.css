@@ -77,23 +77,19 @@
 	clear:both;
 }
 h1 {
-	color: #000099;
 	font-size: x-large;
 	text-decoration:underline;
 }
 h2 {
-	color: #000099;
 	font-size: large;
 	text-decoration:underline;
 }
 h3 {
-	color: #000099;
 	font-size: medium;
 	text-decoration:underline;
 }
 p{
-	color:#000099;
 }
 body{
-	color:#000099;
+	color:black;
 }

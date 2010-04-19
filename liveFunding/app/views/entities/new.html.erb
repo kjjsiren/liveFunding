@@ -1,36 +1,62 @@
 <h1><%= I18n.t('entities.new.title')%></h1>
 
-<% form_for(@entity) do |f| %>
+<% form_for(@entity, :html => {:class => 'validate', :multipart=>true}) do |f| %>
   <%= f.error_messages %>
-  
-  
-  <p>
-    <%= f.label :is_organization, I18n.t('entities.information.is_organization') %><br />
-    <%= f.check_box :is_organization %>
-  </p>
-  <p>
-    <%= f.label :name, I18n.t('entities.information.name') %><br />
-    <%= f.text_field :name, :size=>"20" %>
-  </p>
-	 <p>
-   	<%= f.label :leader, I18n.t('entities.information.leader') %><br />
-    <%= f.text_field :leader, :size=>"20" %>
-  </p>
-  <p>
-    <%= f.label :email, I18n.t('entities.information.email') %><br />
-    <%= f.text_field :email, :size=>"20" %>
-  </p>
-  <p>
-    <%= f.label :phone_number, I18n.t('entities.information.phone_number') %><br />
-    <%= f.text_field :phone_number, :size=>"20" %>
-  </p>
-  <p>
-    <%= f.label :description, I18n.t('entities.information.description') %><br />
-    <%= f.text_area :description, :rows=>"5" %>
-  </p>
-  <p>
-    <%= f.submit I18n.t('entities.new.submit') %>
-  </p>
-<% end %>
 
-<%= link_to I18n.t('layout.navigation.back'), entities_path %>
+	<div>
+		<p>
+    		<%= f.label :name, I18n.t('entities.information.name') %><br/>
+    		<%= f.text_field :name %>
+  		</p>
+<p>
+		<%= f.label :is_organization, I18n.t('entities.information.is_organization') %><br />
+	    <%= f.check_box :is_organization %>
+</p>
+	</div>
+	<div style="border:1px solid;float:left;padding:35px;">
+	<div style="float:left;clear:both;">
+		<div style="float:left;clear:none;">
+ 			<%= f.label :leader, I18n.t('entities.information.leader') %><br />
+			<%= f.text_field :leader, :size=>"20" %>
+ 		</div>
+		<div style="float:left;clear:left;margin-top:10px;">
+	 			<%= f.label :homepage, I18n.t('entities.information.homepage') %><br />
+				<%= f.text_field :homepage, :size=>"20" %>
+	 	</div>
+		
+		<div style="float:left;clear:none;margin-left:30px;margin-top:10px;">
+   			<%= f.label :email, I18n.t('entities.information.email') %><br />
+		    <%= f.text_field :email, :size=>"20" %>
+		 </div>
+		<br />
+			<div style="float:left;clear:none; margin-top:10px;">
+			  <%= f.label :phone_number, I18n.t('entities.information.phone_number') %><br />
+			    <%= f.text_field :phone_number, :size=>"20" %>
+		</div>
+	</div>
+	<div style="float:left;clear:both;margin-top:30px;">
+		<%= f.label :description, I18n.t('entities.information.description') %><br />
+	    <%= f.text_area :description, :rows=>"5" %>
+	  	</div>
+	</div>
+	<div style="float:left;width:150px;height:200px;background:lightgrey;margin:10px;">
+	<% if @entity.photo.exists? then %>
+	<p><%= image_tag @entity.photo.url(:small) %></p>
+		<%= f.file_field :photo, :size =>"10" %>
+		<%= link_to "Delete Image", { :action => "delete_image", :entity => @entity},
+	            :confirm => "Are you sure?"	
+	 %>
+	<% else %>
+	<p><br style="margin-bottom:40px;"/>&nbsp;&nbsp;&nbsp;<%= I18n.t('users.information.noimage')%><br style="margin-bottom:120px;"/>
+  		<%= f.file_field :photo, :size =>"10" %>
+	</p><% end %>
+	</div>
+	
+    <div style="float:left;clear:both;margin-left:350px;">
+		<p>
+    		 <%= f.submit I18n.t('layout.navigation.create', :action => "create") %>
+   		</p>
+	</div>
+<%end%>
+
+<div style="width:100%;float:left;clear:both;"><%= link_to I18n.t('layout.navigation.back'), users_path %></div>
