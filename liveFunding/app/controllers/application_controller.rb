@@ -12,6 +12,8 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   before_filter :is_authenticated?
   
+
+  
   protected
    
   # Judge if the user is logged in
