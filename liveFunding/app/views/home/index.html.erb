@@ -40,6 +40,14 @@
 	  </tr><% end %>
 	<% end %>
 	</table>
+	
+	<% url = 'http://blogs.cs.helsinki.fi/livefunding/rss' %>
+	<% feed = RSS::Parser.parse(open(url).read, false) %>
+	<h2><%=h feed.channel.title %><br /></h2>
+	<% feed.items.each do |item| %>
+		<h3><%= link_to item.title, item.link %><br /></h3>
+		<%=h item.description %><br /><br />
+	<% end %>
 
 	<br />
 
