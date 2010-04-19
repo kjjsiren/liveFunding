@@ -11,7 +11,7 @@ fi:
             edit: "Muuta"
             destroy: "Poista"
             update: "Päivitä"
-            create: "Luo"
+            create: "Luo uusi"
             favourite: "Lisää suosikkeihin"
             
         login:
@@ -59,14 +59,14 @@ fi:
             browse: "Selaa"
         
         information:
-            amount: "Määrä"
+            amount: "Summa"
             from: "Lahjoittaja"
             to: "Kohde"
             description: "Kuvaus"
             rank: "Arvostus"
             create_time: "Tapahtuma-aika"
             operation: ""
-            date: "Tapahtuma-aika"
+            date: "Tapahtuma-aika (kk/vvvv)"
             donor: "Lahjoittaja"
             recipient: "Saaja"
             

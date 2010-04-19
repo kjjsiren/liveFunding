@@ -3,51 +3,57 @@
 <link href="/stylesheets/themes/alphacube.css" rel="stylesheet" type="text/css"/>
 <%= javascript_include_tag "prototype", "effects", "window" %>
 
-<h1><%= I18n.t('transactions.new.title') %></h1>
-
 <% form_for(@transaction) do |f| %>
   <%= f.error_messages %>
+	<div style="border:1px solid;float:left;padding:35px;">
+		<h1 style="margin-top:0;margin-bottom:35px;"><%= I18n.t('transactions.new.title') %></h1>
+			<div>
+				<div style="float:left;">  <%= f.label :donor_id, I18n.t('transactions.information.donor') %><br />
+			<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
+				f.select(:donor_id, @from_who)	%>
+		<br />	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>		 <script>
+					        function test_fn() {
+					                var win = new Window({className: "alphacube",  width:350, height:300, zIndex: 100, resizable: true, title: "create a new entity", showEffect:Effect.Appear, hideEffect: Effect.Fade, draggable:true, wiredDrag: true})
+					
+					                win.setURL("/entities/new_ajax");
+					                win.showCenter(true);
+					                return false;
+					        }
+					        </script>
+					       
+					        <a href="#" onclick="test_fn(); return false;">test</a>
+		</div>
+		<div style="float:left;margin-left:40px;">
+ 	  <%= f.label :recipient_id, I18n.t('transactions.information.recipient') %><br />
+			<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
+				f.select(:recipient_id, @from_who) %>
+		<br />	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
+			</div>
+		<br />
+			<div style="float:left;clear:none; margin-top:30px;">
+			 	<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
+				<%= f.date_select(:date_of_transaction, :use_month_numbers => true ,:order => [:month, :year]) %>	</div>
+	</div>
+	<br style="float:left;clear:both;" />	
 
-  <p>
-    <%= f.label :amount, I18n.t('transactions.information.amount') %><br />
-    <%= f.text_field :amount %>
-  </p>
-  <p>
-    <%= f.label :donor_id, I18n.t('transactions.information.donor') %><br />
-	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
-		f.select(:donor_id, @from_who)	%>
-	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
-
-	<script>
-	function test_fn() {
-		var win = new Window({className: "alphacube",  width:350, height:300, zIndex: 100, resizable: true, title: "create a new entity", showEffect:Effect.Appear, hideEffect: Effect.Fade, draggable:true, wiredDrag: true})
-
-		win.setURL("/entities/new_ajax");
-		win.showCenter(true);
-		return false;
-	}
-	</script>
+	<div style="float:left;clear:both;margin-top:30px;">
+	   <%= f.label :description, I18n.t('transactions.information.description') %><br />
+	   <%= f.text_area :description, :rows=>"5" %>
+	  	</div>
+		<div style="float:right;clear:both;margin-top:30px;">
+	    	   <%= f.label :amount, I18n.t('transactions.information.amount') %><br />
+			    <%= f.text_field :amount, :size =>"10" %>
+				</div>
+	</div>
 	
-	<a href="#" onclick="test_fn(); return false;">test</a>
-	
-  </p>
-  <p>
-    <%= f.label :recipient_id, I18n.t('transactions.information.recipient') %><br />
-	<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
-		f.select(:recipient_id, @from_who) %>
-	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
-  </p>
-  <p>
-    <%= f.label :description, I18n.t('transactions.information.description') %><br />
-    <%= f.text_field :description %>
-  </p>
-  <p>
-  	<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
-	<%= f.date_select(:date_of_transaction, :use_month_numbers => true ,:order => [:month, :year]) %>
-  </p>
-  <p>
-    <%= f.submit I18n.t('layout.navigation.create') %>
-  </p>
-<% end %>
+    <div style="float:left;clear:both;margin-left:350px;">
+		<p>
+    		 <%= f.submit I18n.t('layout.navigation.create', :action => "create") %>
+   		</p>
+	</div>
+<%end%>
 
+</div>
+<div style="float:left;clear:both;width:100%;"><hr style="width:100%;"/>
 <%= link_to I18n.t('layout.navigation.back'), transactions_path %>
+</div>

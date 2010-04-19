@@ -9,8 +9,8 @@ en:
             back: "Back"
             show: "Show"
             edit: "Edit"
-            create: "Create"
-            destroy: "Destroy"
+            create: "Create new"
+            destroy: "Delete"
             sure: "Are you sure?"
             update: "Update"
             favourite: "Favourite"
@@ -63,13 +63,15 @@ en:
             amount: "Amount"
             from: "From"
             to: "To"
-            description: "Description"
+            description: "Information"
             rank: "Rank"
             create_time: "Create time"
             operation: "Operation"
-            date: "When the transaction took place?"
+            date: "When the transaction took place? (Month/Year)"
             donor: "Donor"
-            recipient: "Recipient"    
+            recipient: "Recipient"  
+            created_at: "Record created: "
+            updated_at: "Record last updated: "  
             
         edit:
             title: "Edit the information"
@@ -113,8 +115,8 @@ en:
             
 
         show:
-            title: "Transaction with the ID"
-            comments_title: "Comments for this transaction"
+            title: "Transaction "
+            comments_title: "Comments"
             commenter_said: "said"
             new: "New comment"  
         exportcsv:

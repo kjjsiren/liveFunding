@@ -52,7 +52,7 @@
 	
 	<h2><%= I18n.t('entities.information.associations')%>:</h2>
 		<% @entity.associations.each do |association| %>
-		<%if is_a_number?(association.knows_entity_id) %>  <%=h association.knows_entity.name %><%else%>  <%=h association.knows_entity %><%end%><br/>
+		<%if is_a_number?(association.knows_entity_id) %>  <%=link_to association.knows_entity.name, association.knows_entity %><%else%>  <%=h association.knows_entity %><%end%><br/>
 	<% end %>
 </div>	
 
@@ -62,10 +62,12 @@
 <h2><%= I18n.t('entities.information.transactions')%>:</h2>
 <%=transactionsCount(@entity)%> transactions, in total of <%=moneySum(@entity)%>€<br style="margin-bottom:40px;margin-top:20px;"/>
 	<% @transactions_to.each do |t| %>
-	date_in_finnish_format(t.date_of_transaction), <%=t.recipient.name%> => <%=t.donor.name%> = <%=t.amount%>€<br />
+	<%=date_in_finnish_format(t.date_of_transaction)%>, <%=t.recipient.name%> => <%=link_to t.donor.name, t.donor%> = <%=t.amount%>€ 
+	&nbsp;&nbsp;&nbsp;<%=link_to 'Details', transaction_path(t)%><br />
 	<%end%>
 	<% @transactions_from.each do |t| %>
-<%=date_in_finnish_format(t.date_of_transaction)%>, <%=t.recipient.name%> => <%=t.donor.name%> = <%=t.amount%>€<br />
+<%=date_in_finnish_format(t.date_of_transaction)%>, <%=link_to t.recipient.name, t.recipient%> => <%=t.donor.name%> = <%=t.amount%>€
+&nbsp;&nbsp;&nbsp;<%=link_to 'Details', transaction_path(t)%><br />
 	<%end%>
 </div>
 

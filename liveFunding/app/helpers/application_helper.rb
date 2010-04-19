@@ -16,6 +16,12 @@ module ApplicationHelper
     end
     
     def date_in_finnish_format(date)
+      if date == nil
+        return nil 
+      end
       date.strftime("%d.%m.%Y")
+    end
+    def date_in_finnish_format_with_time(date)
+        date.strftime("%d.%m.%Y %H:%M")
     end
 end
