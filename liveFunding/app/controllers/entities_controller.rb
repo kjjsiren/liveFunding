@@ -43,20 +43,31 @@ class EntitiesController < ApplicationController
     render :layout => false
   end
   
-    def create
+  def create
     @entity = Entity.new(params[:entity])
     #@entity = @transaction.entities.build(params[:entity])
     respond_to do |format|
       if @entity.save
         flash[:notice] = 'Entity was successfully created.'
-        format.html { redirect_to(@entity) }
-        format.xml  { render :xml => @entity, :status => :created, :location => @entity }
+        if params[:from_ajax] == '0'
+          format.html { redirect_to(@entity) }
+          format.xml  { render :xml => @entity, :status => :created, :location => @entity }
+        else
+          format.html { render :action => "new_ajax", :layout => false }
+          format.xml  { render :xml => @entity, :status => :created, :location => @entity }
+        end
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @entity.errors, :status => :unprocessable_entity }
+        if params[:from_ajax] == '0'
+          format.html { render :action => "new" }
+          format.xml  { render :xml => @entity.errors, :status => :unprocessable_entity }
+        else
+          format.html { render :action => "new_ajax", :layout => false }
+          format.xml  { render :xml => @entity.errors, :status => :unprocessable_entity }
+        end
       end
     end
   end  
+  
   
   #Edit the entity
   def edit

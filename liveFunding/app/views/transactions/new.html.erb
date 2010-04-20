@@ -11,23 +11,29 @@
 				<div style="float:left;">  <%= f.label :donor_id, I18n.t('transactions.information.donor') %><br />
 			<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
 				f.select(:donor_id, @from_who)	%>
-		<br />	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>		 <script>
-					        function test_fn() {
-					                var win = new Window({className: "alphacube",  width:350, height:300, zIndex: 100, resizable: true, title: "create a new entity", showEffect:Effect.Appear, hideEffect: Effect.Fade, draggable:true, wiredDrag: true})
+		<br />
+		<script type="text/javascript"> 
+			function show_wnd_fn() {
+				var win = new Window({className: "alphacube",  width:350, height:300, zIndex: 100, resizable: true, title: "create a new entity", showEffect:Effect.Appear, hideEffect: Effect.Fade, draggable:true, wiredDrag: true})
+				win.setCloseCallback(close_trigger)
+				win.setURL("/entities/new_ajax");
+				win.showCenter(true);
+				return false;
+			}
+			
+			function close_trigger() {
+				window.location.reload()
+				return true;
+			}
 					
-					                win.setURL("/entities/new_ajax");
-					                win.showCenter(true);
-					                return false;
-					        }
-					        </script>
-					       
-					        <a href="#" onclick="test_fn(); return false;">test</a>
+		 </script>
+		<a href="#" onclick="show_wnd_fn(); return false;"><%= I18n.t('layout.navigation.create') %></a>
 		</div>
 		<div style="float:left;margin-left:40px;">
  	  <%= f.label :recipient_id, I18n.t('transactions.information.recipient') %><br />
 			<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
 				f.select(:recipient_id, @from_who) %>
-		<br />	<%= link_to I18n.t('layout.navigation.create'), new_entity_path, :popup => ['new_window_name', 'height=600,width=600'] %>
+		<br />	<a href="#" onclick="show_wnd_fn(); return false;"><%= I18n.t('layout.navigation.create') %></a>
 			</div>
 		<br />
 			<div style="float:left;clear:none; margin-top:30px;">

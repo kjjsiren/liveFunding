@@ -57,6 +57,7 @@
     		 <%= f.submit I18n.t('layout.navigation.create', :action => "create") %>
    		</p>
 	</div>
+	<%= hidden_field_tag 'from_ajax', 0 %>
 <%end%>
 
 <div style="width:100%;float:left;clear:both;"><%= link_to I18n.t('layout.navigation.back'), users_path %></div>
