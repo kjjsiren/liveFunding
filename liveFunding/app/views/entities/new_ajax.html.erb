@@ -1,0 +1,51 @@
+<% form_for(@entity, :html => {:class => 'validate', :multipart=>true}) do |f| %>
+  <script type="text/javascript">
+	//var msg = "a<%= f.error_messages %>"
+	//if (msg.length != 0) {
+	  //var win2 = new Window({className: "alphacube",  width:350, height:300, zIndex: 110, resizable: true, title: "create a new entity", showEffect:Effect.Appear, hideEffect: Effect.Fade, draggable:true, wiredDrag: true});
+	  //win2.setHTMLContent(msg);
+	  //win2.showCenter(true);
+	  //alert('avc');
+      //self.setTimeout("alert('abc')", 1000)
+    }
+  </script>
+  <font color='blue'><%= f.error_messages %></font>
+  
+  <table align="center">
+  <tr>
+    <td><%= f.label :is_organization, "Org?" %></td>
+    <td><%= f.check_box :is_organization %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :name, I18n.t('entities.information.name') %></td>
+    <td><%= f.text_field :name, :size=>"20" %></td>
+  </tr>
+  <tr>
+   	<td><%= f.label :leader, I18n.t('entities.information.leader') %></td>
+    <td><%= f.text_field :leader, :size=>"20" %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :email, I18n.t('entities.information.email') %></td>
+    <td><%= f.text_field :email, :size=>"20" %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :phone_number, I18n.t('entities.information.phone_number') %></td>
+    <td><%= f.text_field :phone_number, :size=>"20" %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :description, I18n.t('entities.information.description') %></td>
+    <td><%= f.text_area :description, :rows=>"5", :cols => "30" %></td>
+  </tr>
+  <tr>
+    <td colspan=2 align="center"><br />
+	<%= tag("input", {
+	     :type => "button",
+	     :onclick => "new_entity.submit();",
+	     :name => "submit_new_entity",
+	     :value => I18n.t('layout.navigation.create') },
+	  false) %>
+	</td>
+  </tr>
+  </table>
+  <%= hidden_field_tag 'from_ajax', 1 %>
+<% end %>
