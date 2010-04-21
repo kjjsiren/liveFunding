@@ -37,7 +37,7 @@ submit_tag I18n.t('transactions.index.submit') %> <% end %> <br />
         <strong><%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong></td>
 	<td onmouseover="this.style.background='yellow';this.style.cursor='pointer'"
         onmouseout="this.style.background='white';" onclick = "location='transactions/<%= transaction.id%>'">
-        <%=h transaction.date_of_transaction.strftime("%m / %Y")  %></td>
+        <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%m / %Y")  %><%end%></td>
 	<td>
 	<% if logged_in? %>
 		<%= link_to '+', { :controller => :transactions, :action => "incr_rank", :id => transaction.id }, :title => "Rank It!" %>
