@@ -6,8 +6,12 @@
 	  //win2.setHTMLContent(msg);
 	  //win2.showCenter(true);
 	  //alert('avc');
-      //self.setTimeout("alert('abc')", 1000)
-    }
+      //self.setTimeout("alert('abc')", 1000) 
+function close_window(){
+	 new_entity.submit();
+	window.parent.closeIframe();
+	window.location.reload();
+	}
   </script>
   <font color='blue'><%= f.error_messages %></font>
   
@@ -40,10 +44,10 @@
     <td colspan=2 align="center"><br />
 	<%= tag("input", {
 	     :type => "button",
-	     :onclick => "new_entity.submit();",
+	     :onclick => "close_window()",
 	     :name => "submit_new_entity",
-	     :value => I18n.t('layout.navigation.create') },
-	  false) %>
+	     :value => I18n.t('layout.navigation.create')},
+	  true) %>
 	</td>
   </tr>
   </table>

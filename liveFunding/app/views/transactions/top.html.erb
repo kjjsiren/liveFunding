@@ -1,26 +1,41 @@
 <h2><%= I18n.t('transactions.top.title') %></h2>
 
-<table border="0" cellspacing="20" style="margin-left:200px;">
-  <tr>
-    <th><%= I18n.t('transactions.top.id') %></th>
-    <th><%= I18n.t('transactions.top.amount') %></th>
-    <th><%= I18n.t('transactions.top.from') %></th>
-    <th><%= I18n.t('transactions.top.to') %></th>
-	<th><%= I18n.t('transactions.top.create_time') %></th>
-	<th><%= I18n.t('transactions.top.rank') %></th>
-    <th><%= I18n.t('transactions.top.operation') %></th>
-  </tr>
+<table class="transactions" border="0" cellspacing="0">
+<tr>
+	<th>#</th>
+	<th><%=I18n.t('transactions.index.from')%></th>
+	<th><%=I18n.t('transactions.index.amount')%></th>
+	<th><%=I18n.t('transactions.index.to') %></th>
+	<th><%=I18n.t('transactions.index.create_time')%></th>
+	<th></th>
 
+</tr>
 <% @transactions.each do |transaction| %>
-  <tr>
-    <td><%=h transaction.id %></td>
-    <td><%=h transaction.amount %></td>
-    <td style="font-weight:bold;">	<%if transaction.donor !=nil %><%=h transaction.donor.name %><%end%></td>
-    <td style="font-weight:bold;">	<%if transaction.recipient !=nil%><%=h transaction.recipient.name %><%end%></td>
-	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
-	<td><%=h transaction.rank %></td>
-	<td><%= link_to I18n.t('layout.navigation.show'), transaction %> <br />
-  </tr>
+<tr>
+	<td># <%=h transaction.id %></td>
+	<td>
+       <% if transaction.donor !=nil%><%=h transaction.donor.name %><%end%></td>
+	<td>
+        <%=h transaction.amount %>€ </td>
+  <td>
+        <%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong></td>
+	<td>
+        <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%m / %Y")  %><%end%></td>
+	<td>
+	<% if logged_in? %>
+		<%= link_to image_tag("accept.png", :border=>0), { :controller => :transactions, :action => "incr_rank", :id => transaction.id }, :title => "Rank It!" %>
+		<%= link_to image_tag("Block.png", :border=>0), { :controller => :transactions, :action => "decr_rank", :id => transaction.id }, :title => "Unrank It!" %> <%=h transaction.rank %> <%if transaction.ilike != nil %> rank(s)<%end%>
+	<% end %>
+	</td>
+	<td><%= link_to image_tag("Thumbs-up-icon.png", :border=>0), { :controller => :transactions, :action => "incr_ilike", :id => transaction.id }, :title => "I Like It!"  %> <%= link_to image_tag("thumbs-down-icon.png", :border=>0), { :controller => :transactions, :action => "decr_ilike", :id => transaction.id }, :title => "I don't Like It!"  %> <%=h transaction.ilike %><%if transaction.ilike !=nil %> like(s)<%end%></td>
+	<!-- <td><%= link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(transaction) %></td>
+	<td><%= link_to I18n.t('layout.navigation.destroy'), transaction, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td> -->
+	<% if logged_in? %>
+	<td><%= link_to image_tag("favorite_add.png", :border=>0), {:controller => :favourite, :action => "favourite_transaction", :id => transaction.id}, :title => I18n.t('layout.navigation.favourite') %></td>
+	<td><%= link_to image_tag("comment_edit.png", :border=>0), new_transaction_comment_path(transaction), :title =>I18n.t('comments.new.title') %> </td>
+	<% end %>
+		<td><%= link_to image_tag("info.png", :border=>0), transaction, :title =>I18n.t('layout.navigation.show') %> </td>
+</tr>
 <% end %>
 </table>
 

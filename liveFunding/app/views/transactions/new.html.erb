@@ -13,11 +13,13 @@
 				f.select(:donor_id, @from_who)	%>
 		<br />
 		<script type="text/javascript"> 
+			var window_id = null;
 			function show_wnd_fn() {
 				var win = new Window({className: "alphacube",  width:350, height:300, zIndex: 100, resizable: true, title: "create a new entity", showEffect:Effect.Appear, hideEffect: Effect.Fade, draggable:true, wiredDrag: true})
 				win.setCloseCallback(close_trigger)
 				win.setURL("/entities/new_ajax");
 				win.showCenter(true);
+				window_id = win.getId();
 				return false;
 			}
 			
@@ -25,7 +27,10 @@
 				window.location.reload()
 				return true;
 			}
-					
+			function closeIframe() {
+			   var iframe = document.getElementById(window_id);
+			   Windows.close(window_id);
+			}		
 		 </script>
 		<a href="#" onclick="show_wnd_fn(); return false;"><%= I18n.t('layout.navigation.create') %></a>
 		</div>

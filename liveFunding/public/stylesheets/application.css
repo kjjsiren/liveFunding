@@ -36,6 +36,16 @@
 	float:left;
 	width:15%;
 }
+.transactions  td{
+	padding-left:10px;
+	padding-right:10px;
+}
+.transactions  tr:nth-child(even) {
+	background: #CCC;
+	}
+.transactions  tr:nth-child(odd) {
+	background: #FFF;
+	}
 #content {
 	margin-top:40px;
 	min-height:400px;
