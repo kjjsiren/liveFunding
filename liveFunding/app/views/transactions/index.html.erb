@@ -1,3 +1,7 @@
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/prototype/1.6.1/prototype.js'></script>
+<script type='text/javascript' src='/prototip/js/prototip/prototip.js'></script>
+<link rel="stylesheet" type="text/css" href="/prototip/css/prototip.css" />
+
 <%= link_to I18n.t('transactions.new.title'), new_transaction_path %> &nbsp;&nbsp;
 <%= link_to I18n.t('transactions.top.title'), top_transactions_path %> &nbsp;&nbsp;
 <%= link_to I18n.t('transactions.fundtop.title'), fundtop_transactions_path %> &nbsp;&nbsp;
@@ -29,11 +33,11 @@ submit_tag I18n.t('transactions.index.submit') %> <% end %> <br />
 <tr>
 	<td># <%=h transaction.id %></td>
 	<td>
-       <% if transaction.donor !=nil%><%=h transaction.donor.name %><%end%></td>
+       <% if transaction.donor !=nil%><a class="info_tag"><%=h transaction.donor.name %></a><%end%></td>
 	<td>
         <%=h transaction.amount %>€ </td>
   <td>
-        <%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong></td>
+        <%if transaction.recipient !=nil %><a class="info_tag"><%=h transaction.recipient.name %></a><%end%></strong></td>
 	<td>
         <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%m / %Y")  %><%end%></td>
 	<td>
@@ -54,3 +58,22 @@ submit_tag I18n.t('transactions.index.submit') %> <% end %> <br />
 <% end %>
 </table>
 <br />
+<span rel="ttt">abc</span>
+<script type="text/javascript">
+//new Tip("ttt", 'content');
+document.observe('dom:loaded', function() {
+  $$("a[class='info_tag']").each(function(element) {
+    new Tip(element, "Show Detail Info", {
+	    style: 'protoblue',
+	  	hook: { tip: 'bottomRight', mouse: true },
+		offset: { x: 63, y: 0 },
+		stem: 'bottomMiddle',
+		width: 100,
+		height: 100,
+		//ajax: {
+		//    url: '/entities/new_ajax'
+		//}
+    });
+  });
+});
+</script>
