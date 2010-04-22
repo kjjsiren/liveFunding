@@ -9,8 +9,14 @@
       //self.setTimeout("alert('abc')", 1000)
     }
   </script>
-  <font color='blue'><%= f.error_messages %></font>
-  
+
+<% if params[:op_result] != nil %>
+  <br /><br />
+  <center><font color='green'>Succeed! You can continue add more entities!</font></center>
+<% else %>
+
+    <font color='red'><%= f.error_messages %></font>
+
   <table align="center">
   <tr>
     <td><%= f.label :is_organization, "Org?" %></td>
@@ -48,4 +54,6 @@
   </tr>
   </table>
   <%= hidden_field_tag 'from_ajax', 1 %>
+
+<% end %>
 <% end %>
