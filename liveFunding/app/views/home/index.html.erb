@@ -1,4 +1,12 @@
 <div id="about" style="width:50%;float:left;">	
+	<% url = 'http://blogs.cs.helsinki.fi/livefunding/rss' %>
+	<% feed = RSS::Parser.parse(open(url).read, false) %>
+	<h2><%=h feed.channel.title %><br /></h2>
+	<% feed.items.each do |item| %>
+		<h3><%= link_to item.title, item.link, :popup => true %><br /></h3>
+		<%=h item.description %><br /><br />
+	<% end %>
+	
 	<h2>Vaalirahakone</h2>
 	<p>Vaalirahakoneen tarkoitus on parantaa poliittisen rahoituksen läpinäkyvyyttä Suomessa. Sen avulla tavalliset kansalaiset 		voivat tarkastella ja kommentoida poliitikkojen yhteyksiä eri yrityksiin, yhteisöihin ja järjestöihin. Järjestelmän avulla kaikki käyttäjät voivat myös raportoida tietämistään yhteyksistä poliitikkojen ja muiden tahojen välillä. Tarkoituksena ei ole pelkästään 	rahoitusyhteyksien selvittäminen, vaan myös muiden vaikutuskanavien selvittäminen. 
 	</p>
@@ -40,14 +48,6 @@
 	  </tr><% end %>
 	<% end %>
 	</table>
-	
-	<% url = 'http://blogs.cs.helsinki.fi/livefunding/rss' %>
-	<% feed = RSS::Parser.parse(open(url).read, false) %>
-	<h2><%=h feed.channel.title %><br /></h2>
-	<% feed.items.each do |item| %>
-		<h3><%= link_to item.title, item.link %><br /></h3>
-		<%=h item.description %><br /><br />
-	<% end %>
 
 	<br />
 

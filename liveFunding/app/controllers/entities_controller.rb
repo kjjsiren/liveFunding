@@ -46,9 +46,11 @@ class EntitiesController < ApplicationController
   def create
     @entity = Entity.new(params[:entity])
     #@entity = @transaction.entities.build(params[:entity])
+
     respond_to do |format|
       if @entity.save
-        flash[:notice] = 'Entity was successfully created.'
+        #flash[:notice] = 'Entity was successfully created.'
+        params[:op_result] = "succeed"
         if params[:from_ajax] == '0'
           format.html { redirect_to(@entity) }
           format.xml  { render :xml => @entity, :status => :created, :location => @entity }
