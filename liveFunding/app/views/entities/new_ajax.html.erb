@@ -1,22 +1,16 @@
 <% form_for(@entity, :html => {:class => 'validate', :multipart=>true}) do |f| %>
   <script type="text/javascript">
-	//var msg = "a<%= f.error_messages %>"
-	//if (msg.length != 0) {
-	  //var win2 = new Window({className: "alphacube",  width:350, height:300, zIndex: 110, resizable: true, title: "create a new entity", showEffect:Effect.Appear, hideEffect: Effect.Fade, draggable:true, wiredDrag: true});
-	  //win2.setHTMLContent(msg);
-	  //win2.showCenter(true);
-	  //alert('avc');
-      //self.setTimeout("alert('abc')", 1000) 
-function close_window(){
-	 new_entity.submit();
+  function close_window(){
+	//new_entity.submit();
 	window.parent.closeIframe();
 	window.location.reload();
-	}
+  }
   </script>
 
 <% if params[:op_result] != nil %>
   <br /><br />
   <center><font color='green'>Succeed! You can continue add more entities!</font></center>
+  <script type="text/javascript">setTimeout(close_window, 1500);</script>
 <% else %>
 
     <font color='red'><%= f.error_messages %></font>
@@ -50,7 +44,7 @@ function close_window(){
     <td colspan=2 align="center"><br />
 	<%= tag("input", {
 	     :type => "button",
-	     :onclick => "close_window()",
+	     :onclick => "new_entity.submit()",
 	     :name => "submit_new_entity",
 	     :value => I18n.t('layout.navigation.create')},
 	  true) %>
