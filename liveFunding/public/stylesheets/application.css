@@ -4,6 +4,12 @@
 .navigation ul > li > a:hover{
 	color:red;
 }
+.navigation .first-level {
+	margin-top:15px;
+	border-top:1px solid;
+	border-top-color:white;
+	padding-top:15px;
+}
 .navigation ul, .navigation li{
 	list-style:none;
 }
@@ -13,14 +19,14 @@
 	width:100%;
 	background:#000099;
 	margin-top:0px;
-	min-width: 1000px;
+	min-width: 1250px;
 }
 .left {
 	float:left;
 	clear:none;
-	width:15%;
+	width:19%;
 	margin-top:10px;
-	margin-left:30px;
+	margin-left:0px;
 	font-color:white;
 }
 .center{
@@ -31,21 +37,63 @@
 	padding-left:50px;
 	min-height:350px;
 	clear: none;
+	min-width: 940px;
 }
 .right {
 	float:left;
 	width:15%;
 }
-.transactions  td{
+.transactions td{
 	padding-left:10px;
 	padding-right:10px;
 }
-.transactions  tr:nth-child(even) {
+.transactions tr:nth-child(even) {
 	background: #CCC;
 	}
-.transactions  tr:nth-child(odd) {
-	background: #FFF;
+.transactions tr:nth-child(odd) {
+	background: #EEE;
 	}
+	.transactions tr:hover{
+		background-color:lightgreen;
+	}
+#latest td {
+		padding-left:0;
+		padding-right:4px;
+	}
+#photo_container{
+	float:left;
+	width:150px;
+	height:200px;
+	background:lightgrey;
+	margin:10px;
+	border:double 3px;
+	border-color:grey;
+}
+#associations_container{
+	border:1px solid;
+	border-style:dotted;
+	background-color:#eee;
+	float:right;
+	padding:25px;
+	margin-right:40px;
+}
+#attachments_list{
+	float:left;
+	clear:both; 
+	margin-top:100px;
+}
+#associations_list{
+	float:left;
+	clear:both;
+}
+#entity_transactions{
+	float:left;
+	clear:both; 
+	margin-top:50px;
+}
+#export_csv{
+	float:rigth;
+}
 #content {
 	margin-top:40px;
 	min-height:400px;

@@ -1,9 +1,9 @@
 
 <div style="width:49%;float:left;"><h3><%= I18n.t('entities.index.organizations')%></h3>
-<table cellspacing="10">
+<table cellspacing="0" class="transactions">
 <% @entities.each do |entity| %>
 <%if entity.is_organization != false%>
-<tr>
+<tr style="line-height:35px;">
    <td><%= link_to entity.name, entity %></td>
  	<td>total sum of <%=h moneySum(entity) %>€</td>
    	<td>in <%=h transactionsCount(entity) %> transactions</td>
@@ -14,10 +14,10 @@
 </div>
 <div style="width:49%;float:left;clear:none;">
 	<h3><%= I18n.t('entities.index.persons')%></h3>
-<table cellspacing="10">
+<table cellspacing="0" class="transactions">
 <% @entities.each do |entity| %>
 <%if entity.is_organization == false%>
-  <tr>
+  <tr style="line-height:35px;">
  	 <td><%= link_to entity.name, entity %></td>
 	 	<td>total sum of <%=h moneySum(entity) %>€</td>
 	   	<td>in <%=h transactionsCount(entity) %> transactions</td>

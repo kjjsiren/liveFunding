@@ -13,6 +13,7 @@ fi:
             update: "Päivitä"
             create: "Luo uusi"
             favourite: "Lisää suosikkeihin"
+            about: "Tietoa Vaalirahakoneesta"
             
         login:
             username: "Käyttäjätunnus"
@@ -27,7 +28,7 @@ fi:
             select: "Valitse kieli:"
     
     home:
-        newsfeed: "Uutisvirta"
+        newsfeed: "Viimeisimmät tapahtumat"
         
     association:
         edit:
@@ -136,6 +137,7 @@ fi:
             person_profile: "Henkilöprofiili"
             homepage: "Kotisivu"
             transactions: "Tapahtumat"
+            documents: "Liitteet"
             
         edit:
             title: "Muuta organisaation tietoja:"

@@ -51,7 +51,6 @@ class TransactionsController < ApplicationController
 
   def new
     @transaction = Transaction.new
-  
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @transaction }
@@ -224,9 +223,9 @@ class TransactionsController < ApplicationController
   end
   
   def search
-    find = Entity.find(:first, :conditions => {:name => params[:transaction][:donor]})
-    @transactions_to = Transaction.find(:all, :conditions => {:recipient_id => find})
-    @transactions_from = Transaction.find(:all, :conditions => {:donor_id => find})
+    @entity = Entity.find(:first, :conditions => {:name => params[:transaction][:donor]})
+    @transactions_to = Transaction.find(:all, :conditions => {:recipient_id => @entity})
+    @transactions_from = Transaction.find(:all, :conditions => {:donor_id => @entity})
     if @transactions_from.size == 0 && @transactions_to.size == 0
       flash[:error]="No results"
     end

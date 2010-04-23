@@ -59,14 +59,17 @@
 		<div class="navigation">
 		<ul>
 			<li><%= link_to I18n.t('layout.navigation.home'), root_path %></li>
-			<li><%= link_to I18n.t('layout.navigation.transactions'), transactions_path %></li>
+			<li class="first-level"><%= link_to I18n.t('layout.navigation.transactions'), transactions_path %></li>
 			<ul><li><%= link_to I18n.t('transactions.new.title'), new_transaction_path %></li>
 				<li><%= link_to I18n.t('transactions.top.title'), top_transactions_path %></li>
 				<li><%= link_to I18n.t('transactions.fundtop.title'), fundtop_transactions_path %></li>
 			</ul>
-			<li><%= link_to I18n.t('layout.navigation.entities'), entities_path %></li>
+			<li class="first-level"><%= link_to I18n.t('layout.navigation.entities'), entities_path %></li>
 			<ul>
 				<li><%= link_to I18n.t('entities.new.title'), new_entity_path %></li>
+			</ul>
+			<li class="first-level"><%= link_to I18n.t('layout.navigation.about'), :action =>:about %></li>
+			
 		</div> 
 	</div>
 	

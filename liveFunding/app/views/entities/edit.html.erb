@@ -41,11 +41,11 @@
 	</div>
 	<div style="float:left;width:150px;height:200px;background:lightgrey;margin:10px;">
 	<% if @entity.photo.exists? then %>
-	<p><%= image_tag @entity.photo.url(:small) %></p>
-		<%= f.file_field :photo, :size =>"10" %>
 		<%= link_to "Delete Image", { :action => "delete_image", :entity => @entity},
 	            :confirm => "Are you sure?"	
 	 %>
+	<p><%= image_tag @entity.photo.url(:small) %></p>
+		<%= f.file_field :photo, :size =>"10" %>
 	<% else %>
 	<p><br style="margin-bottom:40px;"/>&nbsp;&nbsp;&nbsp;<%= I18n.t('users.information.noimage')%><br style="margin-bottom:120px;"/>
   		<%= f.file_field :photo, :size =>"10" %>

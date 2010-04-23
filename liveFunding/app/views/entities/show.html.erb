@@ -35,33 +35,44 @@
 		<%= I18n.t('entities.information.description') %><br />
 	   <%if @entity != nil %><strong><%=h @entity.description %></strong><%end%>
 	  	</div>
+		<div style="float:right;clear:left;"><%= link_to I18n.t('layout.navigation.edit'), edit_entity_path(@entity) %></div>
 	</div>
-	<div style="float:left;width:150px;height:200px;background:lightgrey;margin:10px;border:double 3px;border-color:grey;">
+	
+	<div id="photo_container">
 	<% if @entity.photo.exists? then %>
 	<p><%= image_tag @entity.photo.url(:small) %></p>
 	<% else %>
 	<p><br style="margin-bottom:40px;"/>&nbsp;&nbsp;&nbsp;<%= I18n.t('users.information.noimage')%><br style="margin-bottom:120px;"/>
 	</p><% end %>
 	</div>
-
-
-
-<div id="association-list" style="float:left;clear:none; margin-left:50px;">
-	<%= link_to I18n.t('association.show.association_map'), :action => "map", :id=>@entity.id, :target => "_blank" %>
-	<%= link_to I18n.t('association.new.title'), new_entity_association_path(@entity)  %>
+	
+<div id="associations_container" style="">
+<div id="association_list">
+	<%= link_to I18n.t('association.show.association_map'),"map/#{@entity.id}", :target => "_blank", :id=>@entity.id  %>
+	<%= link_to I18n.t('association.new.title'), new_entity_association_path(@entity)  , :style=>"margin-left:20px;"%>
 	
 	<h2><%= I18n.t('entities.information.associations')%>:</h2>
 		<% @entity.associations.each do |association| %>
 		<%if is_a_number?(association.knows_entity_id) %>  <%=link_to association.knows_entity.name, association.knows_entity %><%else%>  <%=h association.knows_entity %><%end%><br/>
 	<% end %>
 </div>	
+<div id="attachments_list">
+	<h2><%= I18n.t('entities.information.documents')%>:</h2>
+		<% @entity.documentss.each do |doc| %>
+		<%if (doc.document_name.include?".pdf")%><%= link_to image_tag("pdf.png", :border=>0), "/attachments/"+doc.document_name, :title =>doc.document_name, :style=>"float:right;clear:both;" %><%end%>
+		<%if (doc.document_name.include?".jpg")%><%= link_to image_tag("pdf.png", :border=>0), "/attachments/"+doc.document_name, :title =>doc.document_name, :style=>"float:right;clear:both;" %><%end%>
+		<%if (doc.document_name.include?".doc") or (doc.document_name.include?".odt") %><%= link_to image_tag("doc.png", :border=>0), "/attachments/"+doc.document_name, :title =>doc.document_name, :style=>"float:right;clear:both;" %><%end%>
+		<%if (doc.document_name.include?".xls")%><%= link_to image_tag("xls.png", :border=>0), "/attachments/"+doc.document_name, :title =>doc.document_name, :style=>"float:right;clear:both;" %><%end%>
+		<br/>
+	<% end %>
+</div>
+</div>
 
-<div style="float:left;clear:left;margin-top:10px;margin-left:300px;"><%= button_to I18n.t('layout.navigation.edit'), edit_entity_path(@entity) %></div>
-
-<div id="entity-transactions" style="float:left;clear:both; margin-top:50px;">
+<div id="entity_transactions">
 <h2><%= I18n.t('entities.information.transactions')%>:</h2>
-<%=transactionsCount(@entity)%> transactions, in total of <%=moneySum(@entity)%>€<br style="margin-bottom:40px;margin-top:20px;"/>
-<table class="transactions" border="0">
+<%=transactionsCount(@entity)%> transactions, in total of <%=moneySum(@entity)%>€
+<%= link_to I18n.t('transactions.new.title'), new_transaction_path, :style=>"margin-left:30px;" %><br style="margin-bottom:40px;margin-top:20px;"/>
+<table class="transactions" border="0" cellspacing="0">
 	<% @transactions_to.each do |t| %>
 	<tr><td><%if t.date_of_transaction != nil%><%=t.date_of_transaction.strftime("%m / %Y") %><%else%>?? / ????<%end%></td>
 	<td><%=t.recipient.name%></td> 
@@ -69,7 +80,7 @@
 	<td><%=link_to t.donor.name, t.donor%></td>
 	<td> = </td> 
 	<td><%=t.amount%>€ </td>
-	<td><%=link_to 'Details', transaction_path(t)%></td>
+	<td><%=link_to image_tag("info.png", :border=>0), transaction_path(t)%></td>
 	<%end%>
 	</tr>
 	<% @transactions_from.each do |t| %>
@@ -80,7 +91,7 @@
 <td><%=t.donor.name%></td>
 <td>=</td> 
 <td><%=t.amount%>€</td>
-<td><%=link_to 'Details', transaction_path(t)%></td>
+<td><%=link_to image_tag("info.png", :border=>0), transaction_path(t)%></td>
 	</tr>
 	<%end%>
 	</table>

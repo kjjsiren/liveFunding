@@ -6,53 +6,32 @@
 		<h3><%= link_to item.title, item.link, :popup => true %><br /></h3>
 		<%=h item.description %><br /><br />
 	<% end %>
-	
-	<h2>Vaalirahakone</h2>
-	<p>Vaalirahakoneen tarkoitus on parantaa poliittisen rahoituksen läpinäkyvyyttä Suomessa. Sen avulla tavalliset kansalaiset 		voivat tarkastella ja kommentoida poliitikkojen yhteyksiä eri yrityksiin, yhteisöihin ja järjestöihin. Järjestelmän avulla kaikki käyttäjät voivat myös raportoida tietämistään yhteyksistä poliitikkojen ja muiden tahojen välillä. Tarkoituksena ei ole pelkästään 	rahoitusyhteyksien selvittäminen, vaan myös muiden vaikutuskanavien selvittäminen. 
-	</p>
-	
-	<p> Vaalirahakoneen avulla voit etsiä yhteyksiä:
-		<ul>
-			<li>Poliitikon</li>
-			<li>Yrityksen</li>
-			<li>Järjestön</li>
-			<li>Yhdistyksen</li>
-		</ul>	
-		välillä.
-	</p>
-	<p>Mikäli sinulla on tietoa tietyn poliitikon ja muun tahon välisistä yhteyksistä, toimi seuraavalla tavalla:
-		<ol>
-			<li>Klikkaa "Tapahtumat"-linkkiä</li>
-			<li>Klikkaa "Uusi tapahtuma"-linkkiä sivun alalaidasta</li>
-			<li>Täytä lomake, anna myös tiedon varmentava dokumenttitiedosto tai web-sivun osoite </li>
-			<li>Valitse asianomainen poliitikko listasta</li>
-			<li>Klikkaa "Lähetä"-painiketta.</li>
-		</ol>	
-	</p>
 </div>
 <div id="newsfeed" style="width:40%;float:right;clear:none;">
 	<h2><%= I18n.t('home.newsfeed') %></h2>
-	<table id="newest" border="0" cellspacing="20" style="">
-	  <tr>
-	    <th><%= I18n.t('transactions.index.amount') %></th>
-	    <th><%= I18n.t('transactions.index.from') %></th>
-	    <th><%= I18n.t('transactions.index.to') %></th>
-		<th><%= I18n.t('transactions.index.create_time') %></th>
-	  </tr>
+	<table class="transactions" id="latest" border="0" cellspacing="0"
+	<tr>
+		<th>#</th>
+		<th><%=I18n.t('transactions.index.from')%></th>
+		<th><%=I18n.t('transactions.index.amount')%></th>
+		<th><%=I18n.t('transactions.index.to') %></th>
+		<th><%=I18n.t('transactions.index.create_time')%></th>
+		<th></th>
+
+	</tr>
 	<% @transactions.each do |transaction| %>
-	    <% link_to transactions_path do %>
-		<tr><td><%=h transaction.amount %></td>
-	    <td><%=h transaction.donor.name %></td>
-	    <td><%=h transaction.recipient.name %></td>
-		<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M")  %></td>
-	  </tr><% end %>
+	<tr>
+		<td># <%=h transaction.id %></td>
+		<td>
+	       <% if transaction.donor !=nil%><%=h transaction.donor.name %><%end%></td>
+		<td>
+	        <%=h transaction.amount %>€ </td>
+	  <td>
+	        <%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong></td>
+		<td>
+	        <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%m / %Y")  %><%end%></td>
+			<td><%= link_to image_tag("info.png", :border=>0), transaction, :title =>I18n.t('layout.navigation.show') %> </td>
+	</tr>
 	<% end %>
-	</table>
-
-	<br />
-
-	<%= link_to I18n.t('transactions.new.title'), new_transaction_path %> &nbsp;&nbsp;
-	<%= link_to I18n.t('transactions.top.title'), top_transactions_path %> &nbsp;&nbsp;
-	<%= link_to I18n.t('transactions.fundtop.title'), fundtop_transactions_path %>
-	
+	</table>	
 	</div>

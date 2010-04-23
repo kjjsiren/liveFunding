@@ -1,47 +1,18 @@
-<h2 style="margin-left:20px;"><%= I18n.t('transactions.search.title') %> <%=params[:transaction][:from]%></h2>
+<h2 style="margin-left:20px;"><%= I18n.t('transactions.search.title') %> <%=@entity.name%></h2>
 <div style="width:50%;float:left;">
-	<h3 style="margin-left:50px;">From <%=params[:transaction][:from]%>: <%= @transactions_from.size%> records</h3>
+	<h3 style="margin-left:50px;">From <%=@entity.name%>: <%= @transactions_from.size%> records</h3>
 <%if @transactions_from.size > 0%>
-<table border="0" cellspacing="10">
-  <tr>
-    <th><%= I18n.t('transactions.search.id') %></th>
-    <th><%= I18n.t('transactions.search.amount') %></th>
-    <th><%= I18n.t('transactions.search.from') %></th>
-    <th><%= I18n.t('transactions.search.to') %></th>
-	<th><%= I18n.t('transactions.search.create_time') %></th>
-	<th><%= I18n.t('transactions.search.rank') %></th>
-    <th><%= I18n.t('transactions.search.operation') %></th>
-  </tr>
-<% @transactions_from.each do |transaction| %>
-  <tr>
-    <td><%=h transaction.id %></td>
-    <td><%=h transaction.amount %></td>
-    <td style="font-weight:bold;"><%=h transaction.donor.name %></td>
-    <td style="font-weight:bold;"><%=h transaction.recipient.name %></td>
-	<td><%=h transaction.created_at.strftime("%d.%m.%Y %H:%M") %></td>
-	<td><%=h transaction.rank %></td>
-	<td><%= link_to link_to I18n.t('layout.navigation.show'), transaction %> <br />
-	<%= link_to link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(transaction) %> <br />
-	<%= link_to link_to I18n.t('layout.navigation.destroy'), transaction, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-<%end%>
-</div>
-<div style="width:45%;float:right; clear:none;">
-	<h3 style="margin-left:50px;">To <%=params[:transaction][:from]%>: <%= @transactions_to.size%> records</h3>
-<%if @transactions_to.size > 0%>
-<table class="transactions" border="0" cellspacing="0">
+<table class="transactions" id="latest" border="0" cellspacing="0"
 <tr>
 	<th>#</th>
-	<th><%= link_to I18n.t('transactions.index.from')+(params[:sort_by]=="from" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "from", :sort_order => sort_order}, :title => "sort by from" %></th>
-	<th><%= link_to I18n.t('transactions.index.amount')+(params[:sort_by]=="amount" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "amount", :sort_order => sort_order}, :title => "sort by amount" %></th>
-	<th><%= link_to I18n.t('transactions.index.to')+(params[:sort_by]=="to" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "to", :sort_order => sort_order}, :title => "sort by to" %></th>
-	<th><%= link_to I18n.t('transactions.index.create_time')+(params[:sort_by]=="create_time" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "create_time", :sort_order => sort_order}, :title => "sort by create time" %></th>
+	<th><%=I18n.t('transactions.index.from')%></th>
+	<th><%=I18n.t('transactions.index.amount')%></th>
+	<th><%=I18n.t('transactions.index.to') %></th>
+	<th><%=I18n.t('transactions.index.create_time')%></th>
 	<th></th>
 
 </tr>
-<% @transactions.each do |transaction| %>
+<% @transactions_from.each do |transaction| %>
 <tr>
 	<td># <%=h transaction.id %></td>
 	<td>
@@ -52,20 +23,37 @@
         <%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong></td>
 	<td>
         <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%m / %Y")  %><%end%></td>
+		<td><%= link_to image_tag("info.png", :border=>0), transaction, :title =>I18n.t('layout.navigation.show') %> </td>
+</tr>
+<% end %>
+</table>
+<%end%>
+</div>
+<div style="width:45%;float:right; clear:none;">
+	<h3 style="margin-left:50px;">To <%=@entity.name%>: <%= @transactions_to.size%> records</h3>
+<%if @transactions_to.size > 0%>
+<table class="transactions" id="latest" border="0" cellspacing="0"
+<tr>
+	<th>#</th>
+	<th><%=I18n.t('transactions.index.from')%></th>
+	<th><%=I18n.t('transactions.index.amount')%></th>
+	<th><%=I18n.t('transactions.index.to') %></th>
+	<th><%=I18n.t('transactions.index.create_time')%></th>
+	<th></th>
+
+</tr>
+<% @transactions_to.each do |transaction| %>
+<tr>
+	<td># <%=h transaction.id %></td>
 	<td>
-	<% if logged_in? %>
-		<%= link_to image_tag("accept.png", :border=>0), { :controller => :transactions, :action => "incr_rank", :id => transaction.id }, :title => "Rank It!" %>
-		<%= link_to image_tag("Block.png", :border=>0), { :controller => :transactions, :action => "decr_rank", :id => transaction.id }, :title => "Unrank It!" %> <%=h transaction.rank %> <%if transaction.ilike != nil %> rank(s)<%end%>
-	<% end %>
-	</td>
-	<td><%= link_to image_tag("Thumbs-up-icon.png", :border=>0), { :controller => :transactions, :action => "incr_ilike", :id => transaction.id }, :title => "I Like It!"  %> <%= link_to image_tag("thumbs-down-icon.png", :border=>0), { :controller => :transactions, :action => "decr_ilike", :id => transaction.id }, :title => "I don't Like It!"  %> <%=h transaction.ilike %><%if transaction.ilike !=nil %> like(s)<%end%></td>
-	<!-- <td><%= link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(transaction) %></td>
-	<td><%= link_to I18n.t('layout.navigation.destroy'), transaction, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td> -->
-	<% if logged_in? %>
-	<td><%= link_to image_tag("favorite_add.png", :border=>0), {:controller => :favourite, :action => "favourite_transaction", :id => transaction.id}, :title => I18n.t('layout.navigation.favourite') %></td>
-	<td><%= link_to image_tag("comment_edit.png", :border=>0), new_transaction_comment_path(transaction), :title =>I18n.t('comments.new.title') %> </td>
-	<td><%= link_to image_tag("info.png", :border=>0), transaction, :title =>I18n.t('layout.navigation.show') %> </td>
-	<% end %>
+       <% if transaction.donor !=nil%><%=h transaction.donor.name %><%end%></td>
+	<td>
+        <%=h transaction.amount %>€ </td>
+  <td>
+        <%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong></td>
+	<td>
+        <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%m / %Y")  %><%end%></td>
+		<td><%= link_to image_tag("info.png", :border=>0), transaction, :title =>I18n.t('layout.navigation.show') %> </td>
 </tr>
 <% end %>
 </table>

@@ -14,7 +14,7 @@
 		<br />
 			<div style="float:left;clear:none; margin-top:30px;">
 			 	<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
-				<strong><%=h date_in_finnish_format(@transaction.date_of_transaction)%></strong></div>
+				<strong><%=h @transaction.date_of_transaction.strftime("%m / %Y")%></strong></div>
 	</div>
 	<br style="float:left;clear:both;" />	
 
@@ -54,7 +54,7 @@
 	<%= button_to I18n.t('layout.navigation.edit'), edit_transaction_comment_path(@transaction, comment.id) %>  </div>
 	</div>
 	<% end %>
-	<p style="float:left;clear:both;"><%= link_to I18n.t('transactions.show.new'), new_transaction_comment_path(@transaction)  %></p>
+	<%= link_to image_tag("comment_add.png", :border=>0), new_transaction_comment_path(@transaction), :title =>I18n.t('transactions.show.new'), :style => "float:right;" %>
 </div>
 </div>
 <div style="float:left;clear:both;width:100%;"><hr style="width:100%;"/>

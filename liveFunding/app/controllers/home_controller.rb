@@ -8,4 +8,7 @@ class HomeController < ApplicationController
       @transaction = Transaction.new
   end
 
+  def about
+ 
+  end
 end

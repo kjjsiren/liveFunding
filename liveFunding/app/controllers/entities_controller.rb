@@ -20,7 +20,6 @@ class EntitiesController < ApplicationController
      id = @entity.id
      @transactions_from = Transaction.find(:all, :conditions=>["donor_id = #{id}"])
      @transactions_to = Transaction.find(:all, :conditions=>["recipient_id = #{id}"])
-
        respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @entity }

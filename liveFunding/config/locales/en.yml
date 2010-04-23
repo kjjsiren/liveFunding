@@ -14,6 +14,7 @@ en:
             sure: "Are you sure?"
             update: "Update"
             favourite: "Favourite"
+            about: "About"
             
         login:
             username: "Username"
@@ -28,7 +29,7 @@ en:
             select: "Choose language"
          
     home:     
-         newsfeed: "Newsfeed"   
+         newsfeed: "Latest transactions"   
          
     association:
         edit:
@@ -139,6 +140,7 @@ en:
             person_profile: "Person profile"
             homepage: "Homepage"
             transactions: "Transactions"
+            documents: "Attachments"
             
         edit:
             title: "Update profile"

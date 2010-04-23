@@ -3,6 +3,7 @@ class Entity < ActiveRecord::Base
 	has_many :transactions
 	has_many :donors, :through => :transactions
   has_many :recipients, :through => :transactions
+  has_many :documentss
 	has_attached_file :photo,
       :styles => {
         :thumb=> "100x100#",
