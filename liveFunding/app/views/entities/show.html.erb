@@ -19,7 +19,7 @@
 		<%end%>
 		<div style="float:left;clear:left;margin-top:10px;">
  			<%= I18n.t('entities.information.homepage') %><br />
-			<strong><%=h @entity.homepage %></strong>
+			<%if @entity.homepage != nil%><%=link_to @entity.homepage, @entity.homepage %><%end%>
  		</div>
 		<div style="float:left;clear:none;margin-top:10px;margin-left:60px;">
    			<%= I18n.t('entities.information.email') %><br />

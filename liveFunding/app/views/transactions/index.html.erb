@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-=======
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/prototype/1.6.1/prototype.js'></script>
 <script type='text/javascript' src='/prototip/js/prototip/prototip.js'></script>
 <link rel="stylesheet" type="text/css" href="/prototip/css/prototip.css" />
-
-<%= link_to I18n.t('transactions.new.title'), new_transaction_path %> &nbsp;&nbsp;
-<%= link_to I18n.t('transactions.top.title'), top_transactions_path %> &nbsp;&nbsp;
-<%= link_to I18n.t('transactions.fundtop.title'), fundtop_transactions_path %> &nbsp;&nbsp;
-<%= link_to I18n.t('transactions.exportcsv.title'), { :controller => :transactions, :action => "export_csv" } %> 
->>>>>>> 7abb4cc746ca8b81f235ba1f4f4afaa2b88183d9
-
 <%
 	#For sort order control
 	sort_order = params[:sort_order]=="0" ? "1" : "0"
