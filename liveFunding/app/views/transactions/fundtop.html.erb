@@ -1,3 +1,7 @@
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/prototype/1.6.1/prototype.js'></script>
+<script type='text/javascript' src='/prototip/js/prototip/prototip.js'></script>
+<link rel="stylesheet" type="text/css" href="/prototip/css/prototip.css" />
+
 <h2><%= I18n.t('transactions.fundtop.title') %></h2>
 
 <table class="transactions" border="0" cellspacing="0">
@@ -14,11 +18,11 @@
 <tr>
 	<td># <%=h transaction.id %></td>
 	<td>
-       <% if transaction.donor !=nil%><%=h transaction.donor.name %><%end%></td>
+       <% if transaction.donor !=nil%><a class="info_tag" id="<%=h transaction.donor.id %>"><%=h transaction.donor.name %></a><%end%></td>
 	<td>
         <%=h transaction.amount %>€ </td>
   <td>
-        <%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong></td>
+        <%if transaction.recipient !=nil %><a class="info_tag" id="<%=h transaction.recipient.id %>"><%=h transaction.recipient.name %></a><%end%></strong></td>
 	<td>
         <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%m / %Y")  %><%end%></td>
 	<td>
@@ -43,3 +47,24 @@
 <%= link_to I18n.t('layout.navigation.back'), transactions_path %>
 
 <br />
+<script type="text/javascript">
+document.observe('dom:loaded', function() {
+  $$("a[class='info_tag']").each(function(element) {
+    new Tip(element, "Show Detail Info", {
+	    style: 'protoblue',
+	  	hook: { target:'topMiddle', tip: 'bottomMiddle', mouse: false },
+		offset: { x: 0, y: 3 },
+		stem: 'bottomMiddle',
+		width: 200,
+		height: 100,
+		ajax: {
+		    url: '/entities/entity_info_ajax',
+			options: {
+				method: 'get',
+				parameters: {id: element.id}
+			}
+		}
+    });
+  });
+});
+</script>

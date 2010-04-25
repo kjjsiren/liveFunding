@@ -7,13 +7,15 @@
 	arrow_str = sort_order=="0" ? "▲" : "▼"
 %>
 
+<a id='tool_bar'>[tool]</a>
+<div id="tool_bar_div" style="display:none">
 <% form_for :transaction, @transaction, :url=>{:controller=>"transactions", :action=>"import_csv"}, :html => { :multipart => true } do |f| %> 
-<%= I18n.t('transactions.importcsv.title') %>  : <%= f.file_field :file %> <%= 
-
-submit_tag I18n.t('transactions.index.submit') %> <% end %> <br />
+<%= I18n.t("transactions.importcsv.title") %>  : <%= f.file_field :file %> <%= submit_tag I18n.t("transactions.index.submit") %> <% end %> <br />
+</div>
 
 <h3><%= I18n.t('transactions.index.title') %></h3> 
 <%= link_to image_tag("export.png", :border=>0), { :controller => :transactions, :action => "export_csv" }, :title =>I18n.t('transactions.exportcsv.title'), :style =>"margin-left:550px;"%>
+
 <table class="transactions" border="0" cellspacing="0">
 <tr style="background-color:white;">
 	<th>#</th>
@@ -28,11 +30,11 @@ submit_tag I18n.t('transactions.index.submit') %> <% end %> <br />
 <tr>
 	<td># <%=h transaction.id %></td>
 	<td>
-       <% if transaction.donor !=nil%><a class="info_tag"><%=h transaction.donor.name %></a><%end%></td>
+       <% if transaction.donor !=nil%><a class="info_tag" id="<%=h transaction.donor.id %>"><%=h transaction.donor.name %></a><%end%></td>
 	<td>
         <%=h transaction.amount %>€ </td>
   <td>
-        <%if transaction.recipient !=nil %><a class="info_tag"><%=h transaction.recipient.name %></a><%end%></strong></td>
+        <%if transaction.recipient !=nil %><a class="info_tag" id="<%=h transaction.recipient.id %>"><%=h transaction.recipient.name %></a><%end%></strong></td>
 	<td>
         <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%m / %Y")  %><%end%></td>
 	<td>
@@ -54,20 +56,38 @@ submit_tag I18n.t('transactions.index.submit') %> <% end %> <br />
 </table>
 <br />
 <script type="text/javascript">
-//new Tip("ttt", 'content');
 document.observe('dom:loaded', function() {
   $$("a[class='info_tag']").each(function(element) {
     new Tip(element, "Show Detail Info", {
 	    style: 'protoblue',
-	  	hook: { tip: 'bottomRight', mouse: true },
-		offset: { x: 63, y: 0 },
+	  	hook: { target:'topMiddle', tip: 'bottomMiddle', mouse: false },
+		offset: { x: 0, y: 3 },
 		stem: 'bottomMiddle',
-		width: 100,
+		width: 200,
 		height: 100,
-		//ajax: {
-		//    url: '/entities/new_ajax'
-		//}
+		ajax: {
+		    url: '/entities/entity_info_ajax',
+			options: {
+				method: 'get',
+				parameters: {id: element.id}
+			}
+		}
     });
   });
+
+  $$("a[id='tool_bar']").each(function(element) {
+    new Tip(element, $("tool_bar_div").innerHTML, {
+		title: 'Tool Bar',
+		closeButton: true,
+	    style: 'protoblue',
+	  	hook: { target:'rightMiddle', tip: 'leftMiddle', mouse: false },
+		offset: { x: 0, y: 3 },
+		stem: 'leftMiddle',
+		width: 500,
+		height: 60,
+		hideOn: { element: 'closeButton', event: 'click'},
+    });
+  });
+
 });
 </script>

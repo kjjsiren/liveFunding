@@ -70,6 +70,12 @@ class EntitiesController < ApplicationController
   end  
   
   
+  def entity_info_ajax
+    @entity = Entity.find(params[:id]) 
+    render :layout => false
+  end
+  
+  
   #Edit the entity
   def edit
     @entity = Entity.find(params[:id])
