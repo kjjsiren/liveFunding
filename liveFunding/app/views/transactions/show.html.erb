@@ -2,6 +2,7 @@
   <%= f.error_messages %>
 	<div style="border:1px solid;float:left;padding:35px;">
 		<h1 style="margin-top:0;margin-bottom:35px;"><%= I18n.t('transactions.show.title') %>: #<%=@transaction.id%></h1>
+		created by <%=h @transaction.creator.name %>
 			<div>
 				<div style="float:left;"> 	
 					<%= f.label :donor, I18n.t('transactions.information.from') %><br />

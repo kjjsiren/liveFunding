@@ -2,7 +2,7 @@ class Transaction < ActiveRecord::Base
   has_many :comments
   belongs_to :donor, :class_name => 'Entity'
   belongs_to :recipient, :class_name => 'Entity'
-  belongs_to :entities
+  belongs_to :creator, :class_name => 'User'
   has_and_belongs_to_many :users, :uniq => true
   
   named_scope :latest, lambda { |amount|
