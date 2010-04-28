@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100428123201) do
+ActiveRecord::Schema.define(:version => 20100428131059) do
 
   create_table "associations", :force => true do |t|
     t.datetime "created_at"
@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(:version => 20100428123201) do
     t.integer  "entity_id"
     t.integer  "ilike"
     t.date     "date_of_transaction"
-    t.integer  "creator"
+    t.integer  "creator_id"
   end
 
   create_table "transactions_users", :id => false, :force => true do |t|

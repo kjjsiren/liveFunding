@@ -2,7 +2,6 @@
   <%= f.error_messages %>
 	<div style="border:1px solid;float:left;padding:35px;">
 		<h1 style="margin-top:0;margin-bottom:35px;"><%= I18n.t('transactions.show.title') %>: #<%=@transaction.id%></h1>
-		created by <%=h @transaction.creator.name %>
 			<div>
 				<div style="float:left;"> 	
 					<%= f.label :donor, I18n.t('transactions.information.from') %><br />
@@ -33,7 +32,7 @@
 					<%=h date_in_finnish_format(@transaction.created_at) %>
 					<br />
 						<%= I18n.t('transactions.information.updated_at') %>					<%=h date_in_finnish_format(@transaction.created_at) %>
-					
+					<%if @transaction.creator != nil %><br />by <%=h @transaction.creator.username %><%end%>
 				</div>
 	</div>
 <%end%>
