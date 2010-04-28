@@ -1,3 +1,3 @@
 class Admin::TransactionsController < AdminController
-  active_scaffold :transactions
+  #active_scaffold :transactions
 end

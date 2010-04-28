@@ -9,10 +9,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :favourite
  
 	map.namespace(:admin) do |admin|
-      admin.resources :users, :active_scaffold => true
-      admin.resources :transactions, :active_scaffold => true
-      admin.resources :comments, :active_scaffold => true
-      admin.resources :entities, :active_scaffold => true
+      admin.resources :users #, :active_scaffold => true
+      admin.resources :transactions#, :active_scaffold => true
+      admin.resources :comments#, :active_scaffold => true
+      admin.resources :entities#, :active_scaffold => true
       
     end
     

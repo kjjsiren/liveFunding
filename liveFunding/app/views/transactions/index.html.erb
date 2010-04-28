@@ -7,15 +7,14 @@
 	arrow_str = sort_order=="0" ? "▲" : "▼"
 %>
 
-<a id='tool_bar'>[tool]</a>
+<a id="tool_bar"><%=image_tag "icon_tools_32px.png"%></a>
 <div id="tool_bar_div" style="display:none">
 <% form_for :transaction, @transaction, :url=>{:controller=>"transactions", :action=>"import_csv"}, :html => { :multipart => true } do |f| %> 
-<%= I18n.t("transactions.importcsv.title") %>  : <%= f.file_field :file %> <%= submit_tag I18n.t("transactions.index.submit") %> <% end %> <br />
+<%= I18n.t("transactions.importcsv.title") %>  : <%= f.file_field :file %> <%= submit_tag I18n.t("transactions.index.submit") %> <% end %> <br /><%= link_to I18n.t("transactions.exportcsv.title") + "&nbsp;&nbsp;" + image_tag("export.png", :border=>0), { :controller => :transactions, :action => "export_csv" }, :title =>I18n.t('transactions.exportcsv.title'), :style =>"color:white;text-decoration:none;"%>
+
 </div>
 
 <h3><%= I18n.t('transactions.index.title') %></h3> 
-<%= link_to image_tag("export.png", :border=>0), { :controller => :transactions, :action => "export_csv" }, :title =>I18n.t('transactions.exportcsv.title'), :style =>"margin-left:550px;"%>
-
 <table class="transactions" border="0" cellspacing="0">
 <tr style="background-color:white;">
 	<th>#</th>

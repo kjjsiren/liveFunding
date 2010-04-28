@@ -51,6 +51,7 @@ class TransactionsController < ApplicationController
 
   def new
     @transaction = Transaction.new
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @transaction }
@@ -60,7 +61,19 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(params[:transaction])
-    
+    @association = Association.new 
+    @association.entity_id = params[:recipient_id] 
+    @association.knows_entity_id = Entity.find(params[:transaction][:donor_id])
+    @association.description = "Money transfer logged by the system" 
+    @association.infosource = "liveFund" 
+    @association.save 
+    @association = Association.new 
+    @association.entity_id = params[:donor_id]
+    @association.knows_entity_id = Entity.find(params[:transaction][:recipient_id]) 
+    @association.description = "Money transfer logged by the system" 
+    @association.infosource = "liveFund" 
+    @association.save
+
     respond_to do |format|
       if @transaction.save
        

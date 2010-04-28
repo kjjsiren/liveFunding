@@ -1,4 +1,4 @@
 class Admin::CommentsController < AdminController
-  active_scaffold :comments
+#  active_scaffold :comments
 
 end
