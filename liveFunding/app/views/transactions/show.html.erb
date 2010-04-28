@@ -1,7 +1,13 @@
 <% form_for(@transaction) do |f| %>
   <%= f.error_messages %>
 	<div style="border:1px solid;float:left;padding:35px;">
-		<h1 style="margin-top:0;margin-bottom:35px;"><%= I18n.t('transactions.show.title') %>: #<%=@transaction.id%></h1>
+		<h1 style="margin-top:0;margin-bottom:35px;"><%= I18n.t('transactions.show.title') %>: #<%=@transaction.id%>
+		<%if @transaction.creator != nil %>
+			<% if @user.username==@transaction.creator.username %>
+				(<%= link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(@transaction) %>)
+		    <%end%>
+		<%end%>
+		</h1>
 			<div>
 				<div style="float:left;"> 	
 					<%= f.label :donor, I18n.t('transactions.information.from') %><br />
