@@ -68,7 +68,7 @@ en:
             rank: "Rank"
             create_time: "Create time"
             operation: "Operation"
-            date: "When the transaction took place? (Month/Year)"
+            date: "When the transaction took place? (Day/Month/Year)"
             donor: "Donor"
             recipient: "Recipient"  
             created_at: "Record created: "

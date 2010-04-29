@@ -20,7 +20,7 @@
 		<br />
 			<div style="float:left;clear:none; margin-top:30px;">
 			 	<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
-				<strong><%=h @transaction.date_of_transaction.strftime("%m / %Y")%></strong></div>
+				<strong><%=h @transaction.date_of_transaction.strftime("%d / %m / %Y")%></strong></div>
 	</div>
 	<br style="float:left;clear:both;" />	
 

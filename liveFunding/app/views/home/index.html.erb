@@ -29,7 +29,7 @@
 	  <td>
 	        <%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong></td>
 		<td>
-	        <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%m / %Y")  %><%end%></td>
+	        <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%d / %m / %Y")  %><%end%></td>
 			<td><%= link_to image_tag("info.png", :border=>0), transaction, :title =>I18n.t('layout.navigation.show') %> </td>
 	</tr>
 	<% end %>

@@ -43,7 +43,7 @@
 		<br />
 			<div style="float:left;clear:none; margin-top:30px;">
 			 	<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
-				<%= f.date_select(:date_of_transaction, :use_month_numbers => true ,:order => [:month, :year]) %>	</div>
+				<%= f.date_select(:date_of_transaction, :use_month_numbers => true ,:order => [:day, :month, :year]) %>	</div>
 	</div>
 	<br style="float:left;clear:both;" />	
 
