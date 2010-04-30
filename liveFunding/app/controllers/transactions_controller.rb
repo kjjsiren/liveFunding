@@ -73,6 +73,11 @@ class TransactionsController < ApplicationController
     @association.description = "Money transfer logged by the system" 
     @association.infosource = "liveFund" 
     @association.save
+    
+    creator_id = session[:user_id]
+    if creator_id != nil
+      @transaction.creator_id = creator_id
+    end
 
     respond_to do |format|
       if @transaction.save
