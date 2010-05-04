@@ -4,7 +4,7 @@ class Transaction < ActiveRecord::Base
   belongs_to :recipient, :class_name => 'Entity'
   belongs_to :creator, :class_name => 'User'
   has_and_belongs_to_many :users, :uniq => true
-  
+  has_one :information_source
   named_scope :latest, lambda { |amount|
       {:limit => amount}
     }

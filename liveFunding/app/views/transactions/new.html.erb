@@ -35,33 +35,41 @@
 		<a href="#" onclick="show_wnd_fn(); return false;"><%= I18n.t('layout.navigation.create') %></a>
 		</div>
 		<div style="float:left;margin-left:40px;">
- 	  <%= f.label :recipient_id, I18n.t('transactions.information.recipient') %><br />
+ 	  		<%= f.label :recipient_id, I18n.t('transactions.information.recipient') %><br />
 			<%= @from_who = Entity.find(:all, :order => 'name ASC').map {|u| [u.name, u.name, u.id] }
-				f.select(:recipient_id, @from_who) %>
-		<br />	<a href="#" onclick="show_wnd_fn(); return false;"><%= I18n.t('layout.navigation.create') %></a>
-			</div>
+			 f.select(:recipient_id, @from_who) %>
+			<br />
+			<a href="#" onclick="show_wnd_fn(); return false;"><%= I18n.t('layout.navigation.create') %></a>
+		</div>
 		<br />
 			<div style="float:left;clear:none; margin-top:30px;">
 			 	<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
 				<%= f.date_select(:date_of_transaction, :use_month_numbers => true ,:order => [:day, :month, :year]) %>	</div>
-	</div>
-	<br style="float:left;clear:both;" />	
-
-	<div style="float:left;clear:both;margin-top:30px;">
-	   <%= f.label :description, I18n.t('transactions.information.description') %><br />
-	   <%= f.text_area :description, :rows=>"5" %>
-	  	</div>
-		<div style="float:right;clear:both;margin-top:30px;">
+			</div>
+			<br style="float:left;clear:both;" />	
+			
+			<div style="float:left;clear:both;margin-top:30px;">
+				<% fields_for :information_sources do |fa| %>
+					<%= fa.label :source, I18n.t('transactions.information.source') %>
+					<%= fa.text_field :source, :size => "30" %>
+				<%end%>
+			</div>
+			<div style="float:left;clear:both;margin-top:30px;">
+	   			<%= f.label :description, I18n.t('transactions.information.description') %><br />
+	   			<%= f.text_area :description, :rows=>"5" %>
+	  		</div>
+	
+			<div style="float:right;clear:both;margin-top:30px;">
 	    	   <%= f.label :amount, I18n.t('transactions.information.amount') %><br />
 			    <%= f.text_field :amount, :size =>"10" %>
-				</div>
-	</div>
+			</div>
+		</div>
 
-    <div style="float:left;clear:both;margin-left:350px;">
-		<p>
-    		 <%= f.submit I18n.t('layout.navigation.create', :action => "create") %>
-   		</p>
-	</div>
+    	<div style="float:left;clear:both;margin-left:350px;">
+			<p>
+    		 	<%= f.submit I18n.t('layout.navigation.create', :action => "create") %>
+   			</p>
+		</div>
 <%end%>
 
 </div>

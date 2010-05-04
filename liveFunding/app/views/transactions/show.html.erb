@@ -12,59 +12,76 @@
 				<div style="float:left;"> 	
 					<%= f.label :donor, I18n.t('transactions.information.from') %><br />
 					<%if @transaction.donor !=nil %><strong><%=link_to @transaction.donor.name, @transaction.donor %></strong><%end%>					
-		</div>
-		<div style="float:left;margin-left:40px;">
- 			<%= f.label :recipient, I18n.t('transactions.information.to') %><br />
-		    	<%if @transaction.recipient !=nil %><strong><%=link_to @transaction.recipient.name, @transaction.recipient %></strong><%end%>
-		</div>
-		<br />
-			<div style="float:left;clear:none; margin-top:30px;">
-			 	<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
-				<strong><%=h @transaction.date_of_transaction.strftime("%d / %m / %Y")%></strong></div>
-	</div>
-	<br style="float:left;clear:both;" />	
+				</div>
+				<div style="float:left;margin-left:40px;">
+ 					<%= f.label :recipient, I18n.t('transactions.information.to') %><br />
+		    		<%if @transaction.recipient !=nil %><strong><%=link_to @transaction.recipient.name, @transaction.recipient %></strong><%end%>
+				</div>
+				<br />
+				<div style="float:left;clear:none; margin-top:30px;">
+			 		<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
+					<strong><%=h @transaction.date_of_transaction.strftime("%d / %m / %Y")%></strong></div>
+				</div>
+				<br style="float:left;clear:both;"/>
+				<div style="border:1px outset;float:left;padding:10px;width:100%;margin-bottom:20px;">
+					<%= f.label :information_source, I18n.t('transactions.information.source') %><br />
+					<% if @transaction.information_source != nil %>
+						<strong><%=h @transaction.information_source.source %></strong>
+					<% else %><strong>N/A</strong><%end%>
+					<br />
+					<% if @transaction.information_source != nil && logged_in? %>
+						<%= I18n.t('transactions.information.rank_source') %>
+						<%= link_to image_tag("accept.png", :border=>0), { :controller => :information_source, :action => "incr_rank", :id => @transaction.information_source.id }, :title => "Rank It!" %>
+						<%= link_to image_tag("Block.png", :border=>0), { :controller => :information_source, :action => "decr_rank", :id => @transaction.information_source.id }, :title => "Unrank It!" %>
+						<%=h @transaction.information_source.rank %> 
+						<%if @transaction.information_source.rank != nil %>
+						 	rank(s)
+						<%end%>
+					<%end%>
+				</div>	
+				<br style="float:left;clear:both;" />	
 
-	<div style="float:left;clear:both;margin-top:30px;">
-	 	<%= f.label :description, I18n.t('transactions.information.description') %><br />
-		<strong><%=h @transaction.description %></strong>
-	 	</div>
-		<div style="float:right;clear:both;margin-top:30px;">
-	    	  <%= f.label :amount, I18n.t('transactions.information.amount') %><br />
-			<strong><%=h @transaction.amount %>€</strong>
+				<div style="float:left;clear:both;margin-top:30px;">
+	 				<%= f.label :description, I18n.t('transactions.information.description') %><br />
+					<strong><%=h @transaction.description %></strong>
+	 			</div>
+				<div style="float:right;clear:both;margin-top:30px;">
+	    	  		<%= f.label :amount, I18n.t('transactions.information.amount') %><br />
+					<strong><%=h @transaction.amount %>€</strong>
 				</div>
 				
 				<div style="float:left;clear:both;font-size:x-small;">
-						<%= I18n.t('transactions.information.created_at') %>
+					<%= I18n.t('transactions.information.created_at') %>
 					<%=h date_in_finnish_format(@transaction.created_at) %>
 					<br />
-						<%= I18n.t('transactions.information.updated_at') %>					<%=h date_in_finnish_format(@transaction.created_at) %>
+					<%= I18n.t('transactions.information.updated_at') %> 
+					<%=h date_in_finnish_format(@transaction.created_at) %>
 					<%if @transaction.creator != nil %><br />by <%=h @transaction.creator.username %><%end%>
 				</div>
-	</div>
-<%end%>
-<div id="comment-list" style="float:left;margin-left:50px;border:0px solid;padding:35px;width:40%;">
-	<h2 style="margin:0;margin-bottom:20px;"><%= I18n.t('transactions.show.comments_title') %>:</h2>
-	
-	<% @transaction.comments.each do |comment| %>
-  	<div class "<%= cycle('list-line-odd', 'list-line-even')%>" style="border:1px outset;float:left;padding:10px;width:100%;margin-bottom:20px;">
-		<p style="font-size:x-small;"><%= date_in_finnish_format_with_time(comment.created_at)%></p>
-			<strong><%=h comment.commenter %> <%= I18n.t('transactions.show.commenter_said') %></strong>
-	  	<br />
-		<div style="padding-bottom:30px;padding-left:10px;border:1px solid;border-color:lightgrey;padding-top:10px;margin-bottom:10px;margin-top:20px;" id="comment_content">  
-			<%=h comment.content %>
-	</div>
-	<div id="comment_destroy_button" style="float:right;clear:none;">
-		<%= button_to I18n.t('layout.navigation.destroy'), transaction_comment_path(@transaction, comment), :confirm => I18n.t('layout.navigation.sure'), :method => :delete %> 
+			</div>
+			<%end%>
+			<div id="comment-list" style="float:left;margin-left:50px;border:0px solid;padding:35px;width:40%;">
+				<h2 style="margin:0;margin-bottom:20px;"><%= I18n.t('transactions.show.comments_title') %>:</h2>
+					<% @transaction.comments.each do |comment| %>
+  					<div class "<%= cycle('list-line-odd', 'list-line-even')%>" style="border:1px outset;float:left;padding:10px;width:100%;margin-bottom:20px;">
+						<p style="font-size:x-small;"><%= date_in_finnish_format_with_time(comment.created_at)%></p>
+						<strong><%=h comment.commenter %> <%= I18n.t('transactions.show.commenter_said') %></strong>
+	  					<br />
+						<div style="padding-bottom:30px;padding-left:10px;border:1px solid;border-color:lightgrey;padding-top:10px;margin-bottom:10px;margin-top:20px;" id="comment_content">  
+						<%=h comment.content %>
+						</div>
+						<div id="comment_destroy_button" style="float:right;clear:none;">
+							<%= button_to I18n.t('layout.navigation.destroy'), transaction_comment_path(@transaction, comment), :confirm => I18n.t('layout.navigation.sure'), :method => :delete %> 
+						</div>
+						<div id="comment_edit_button" style="float:right:clear:none;">	
+							<%= button_to I18n.t('layout.navigation.edit'), edit_transaction_comment_path(@transaction, comment.id) %>
+						</div>
+			</div>
+			<% end %>
+			<%= link_to image_tag("comment_add.png", :border=>0), new_transaction_comment_path(@transaction), :title =>I18n.t('transactions.show.new'), :style => "float:right;" %>
 		</div>
-		<div id="comment_edit_button" style="float:right:clear:none;">	
-	<%= button_to I18n.t('layout.navigation.edit'), edit_transaction_comment_path(@transaction, comment.id) %>  </div>
 	</div>
-	<% end %>
-	<%= link_to image_tag("comment_add.png", :border=>0), new_transaction_comment_path(@transaction), :title =>I18n.t('transactions.show.new'), :style => "float:right;" %>
-</div>
-</div>
-<div style="float:left;clear:both;width:100%;"><hr style="width:100%;"/>
-<%= link_to I18n.t('layout.navigation.back'), transactions_path %>
-</div>	
-<br />
-	
+	<div style="float:left;clear:both;width:100%;"><hr style="width:100%;"/>
+		<%= link_to I18n.t('layout.navigation.back'), transactions_path %>
+	</div>	
+	<br />

@@ -51,7 +51,7 @@ class TransactionsController < ApplicationController
 
   def new
     @transaction = Transaction.new
-    
+    @inforomation_source = InformationSource.new
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @transaction }
@@ -61,6 +61,7 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(params[:transaction])
+    
     @association = Association.new 
     @association.entity_id = params[:recipient_id] 
     @association.knows_entity_id = Entity.find(params[:transaction][:donor_id])
@@ -81,7 +82,9 @@ class TransactionsController < ApplicationController
 
     respond_to do |format|
       if @transaction.save
-       
+        @information_source = InformationSource.new(params[:information_sources])
+        @information_source.transaction_id = @transaction.id
+        @information_source.save
         flash[:notice] = 'Transaction was successfully created.'
         format.html { redirect_to(@transaction) }
         format.xml  { render :xml => @transaction, :status => :created, :location => @transaction }
@@ -236,6 +239,7 @@ class TransactionsController < ApplicationController
   def show
     @user = User.find_by_id(session[:user_id])
     @transaction = Transaction.find(params[:id])
+    #@information_source = InformationSource.find(params[:id])
   rescue
     flash[:notice] = I18n.t('flash.transactions.invalid_id')
     redirect_to :action => "index"  

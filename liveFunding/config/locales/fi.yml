@@ -70,6 +70,10 @@ fi:
             date: "Tapahtuma-aika (kk/vvvv)"
             donor: "Lahjoittaja"
             recipient: "Saaja"
+            created_at: "Luotu: "
+            updated_at: "Päivitetty: "
+            source: "Tietolähde:"
+            rank_source: "Äänestä tietolähteen luotettavuudesta:"
             
         edit:
             title: "Muuta tapahtuman tietoja:"

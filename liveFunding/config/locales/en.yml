@@ -72,7 +72,9 @@ en:
             donor: "Donor"
             recipient: "Recipient"  
             created_at: "Record created: "
-            updated_at: "Record last updated: "  
+            updated_at: "Record last updated: "
+            source: "Information Source:"
+            rank_source: "Rank this information source:"  
             
         edit:
             title: "Edit the information"
