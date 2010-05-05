@@ -21,4 +21,12 @@ module UserAuthentication
     session[:user_id]
   end
 
+  def is_admin?
+    if User.find(session[:user_id]).is_admin == 0
+      return true
+    else
+      return false
+    end
+  end
+
 end
