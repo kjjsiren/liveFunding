@@ -10,6 +10,15 @@ module NavigationHelpers
     
     when /the home\s?page/
       '/'
+      
+    when /home_page/i
+      root_path 
+    
+    when /profile_editing_page/i
+      edit_user_path
+    
+    when /registration_page/i
+       new_user_path 
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
