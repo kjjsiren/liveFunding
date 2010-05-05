@@ -7,3 +7,7 @@ Given /^\/\^on failure save_and_open_page\$\/$/ do
     save_and_open_page
     raise
 end
+
+Given /^I fill in the comment "([^\"]*)"$/ do |arg1|
+  fill_in "comment[content]", :with => arg1
+end

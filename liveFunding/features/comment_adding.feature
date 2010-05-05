@@ -6,4 +6,8 @@ Scenario: Adding a comment
 	Given I am logged_in
 	And I am on transactions_listing_page
 	And I follow "Comment"
-	Then I should be on transactions_listing_page
+	And I should be on comment_new_page
+	And I fill in the comment "test_comment #1, from Cucumber"
+	And I press "Submit"
+	Then I should see "test_comment #1, from Cucumber"
+	Then show me the page

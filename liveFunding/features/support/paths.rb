@@ -20,9 +20,15 @@ module NavigationHelpers
     when /registration_page/i
        new_user_path 
     
+     when /comment_new_page/i
+        new_transaction_comment_path
+    
      when /transactions_listing_page/i
        transactions_path
     
+      when /transactions_show_page/i
+        transactions_path
+        
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
