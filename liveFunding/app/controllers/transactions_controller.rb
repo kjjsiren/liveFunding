@@ -238,6 +238,9 @@ class TransactionsController < ApplicationController
   
   def show
     @user = User.find_by_id(session[:user_id])
+    if(@user == nil)
+      @user = User.new
+    end
     @transaction = Transaction.find(params[:id])
     #@information_source = InformationSource.find(params[:id])
   rescue
