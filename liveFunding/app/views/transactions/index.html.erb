@@ -47,7 +47,7 @@
 	<td><%= link_to I18n.t('layout.navigation.destroy'), transaction, :confirm => I18n.t('layout.navigation.sure'), :method => :delete %></td> -->
 	<% if logged_in? %>
 	<td><%= link_to image_tag("favorite_add.png", :border=>0), {:controller => :favourite, :action => "favourite_transaction", :id => transaction.id}, :title => I18n.t('layout.navigation.favourite') %></td>
-	<td><%= link_to image_tag("comment_edit.png", :border=>0), new_transaction_comment_path(transaction), :title =>I18n.t('comments.new.title') %> </td>
+	<td><%= link_to image_tag("comment_edit.png", :border=>0), new_transaction_comment_path(transaction), :title =>"#{I18n.t('comments.new.title')}_#{transaction.id}", :id=>"#{transaction.id}_transaction" %> </td>
 	<% end %>
 	<td><%= link_to image_tag("info.png", :border=>0), transaction, :title =>I18n.t('layout.navigation.show') %> </td>
 </tr>
