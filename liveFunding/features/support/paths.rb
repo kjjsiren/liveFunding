@@ -20,6 +20,10 @@ module NavigationHelpers
     when /registration_page/i
        new_user_path 
     
+     when /transactions_listing_page/i
+       transactions_path
+    
+    
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
