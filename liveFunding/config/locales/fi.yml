@@ -54,7 +54,7 @@ fi:
             from: "Lahjoittaja"
             to: "Saaja"
             create_time: "Tapahtuma-aika"
-            rank: "Arvostus"
+            rank: "Luotettavuus"
             operation: "Toiminnot"
             submit: "Lähetä"
             browse: "Selaa"
@@ -73,7 +73,13 @@ fi:
             created_at: "Luotu: "
             updated_at: "Päivitetty: "
             source: "Tietolähde:"
-            rank_source: "Äänestä tietolähteen luotettavuudesta:"
+            rank_source: "Luotettavuus:"
+            not_confirmed: "Ei varmistettu"
+            very_suspicious: "Todella epäluotettava"
+            suspicious: "Epäluotettava"
+            trustworthy: "Luotettava"
+            official_source: "Virallinen tietolähde"
+            likes: " käyttäjää on tykännyt tästä tapahtumasta "
             
         edit:
             title: "Muuta tapahtuman tietoja:"

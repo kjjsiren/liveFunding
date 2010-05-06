@@ -52,6 +52,8 @@
 				<% fields_for :information_sources do |fa| %>
 					<%= fa.label :source, I18n.t('transactions.information.source') %>
 					<%= fa.text_field :source, :size => "30" %>
+					<%= fa.label :rank, I18n.t('transactions.index.rank') %>
+					<%= fa.select(:rank, [["#{I18n.t('transactions.information.not_confirmed')}", 3],["#{I18n.t('transactions.information.very_suspicious')}", 1], ["#{I18n.t('transactions.information.suspicious')}", 2],["#{I18n.t('transactions.information.trustworthy')}", 4],["#{I18n.t('transactions.information.official_source')}", 5]]) %>
 				<%end%>
 			</div>
 			<div style="float:left;clear:both;margin-top:30px;">

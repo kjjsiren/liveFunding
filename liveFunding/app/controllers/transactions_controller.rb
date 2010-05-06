@@ -115,9 +115,11 @@ class TransactionsController < ApplicationController
   #Update the transaction model in the database:
   def update
     @transaction = Transaction.find(params[:id])
-
     respond_to do |format|
       if @transaction.update_attributes(params[:transaction])
+           @information_source = InformationSource.new(params[:information_sources])
+            @information_source.transaction_id = @transaction.id
+            @information_source.save
         flash[:notice] = 'Transaction was successfully updated.'
         format.html { redirect_to(@transaction) }
         format.xml  { head :ok }

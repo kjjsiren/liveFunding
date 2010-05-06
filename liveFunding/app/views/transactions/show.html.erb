@@ -31,12 +31,25 @@
 					<br />
 					<% if @transaction.information_source != nil && logged_in? %>
 						<%= I18n.t('transactions.information.rank_source') %>
-						<%= link_to image_tag("accept.png", :border=>0), { :controller => :information_source, :action => "incr_rank", :id => @transaction.information_source.id }, :title => "Rank It!" %>
-						<%= link_to image_tag("Block.png", :border=>0), { :controller => :information_source, :action => "decr_rank", :id => @transaction.information_source.id }, :title => "Unrank It!" %>
-						<%=h @transaction.information_source.rank %> 
+						<strong>
 						<%if @transaction.information_source.rank != nil %>
-						 	rank(s)
+								<%if @transaction.information_source.rank == 3 %>
+								<%=I18n.t('transactions.information.not_confirmed')%>
+								<%end%>
+								<%if @transaction.information_source.rank == 1 %>
+								<%I18n.t('transactions.information.very_suspicious')%>
+								<%end%>
+								<%if @transaction.information_source.rank == 2 %>
+								<%I18n.t('transactions.information.suspicious')%>
+								<%end%>
+								<%if @transaction.information_source.rank == 4 %>
+								<%I18n.t('transactions.information.trustworthy')%>
+								<%end%>
+								<%if @transaction.information_source.rank == 5 %>
+								<%I18n.t('transactions.information.official_source')%>
+								<%end%>
 						<%end%>
+						</strong>
 					<%end%>
 				</div>	
 				<br style="float:left;clear:both;" />	
@@ -57,6 +70,9 @@
 					<%= I18n.t('transactions.information.updated_at') %> 
 					<%=h date_in_finnish_format(@transaction.created_at) %>
 					<%if @transaction.creator != nil %><br />by <%=h @transaction.creator.username %><%end%>
+					
+					<br /><%if @transaction.ilike != nil%><%=h @transaction.ilike%><%=f.label :likes, I18n.t('transactions.information.likes'), :style => "margin-top:20px;float:left;font-size:large;"%>
+<%end%>
 				</div>
 			</div>
 			<%end%>
@@ -71,10 +87,10 @@
 						<%=h comment.content %>
 						</div>
 						<div id="comment_destroy_button" style="float:right;clear:none;">
-							<%= button_to I18n.t('layout.navigation.destroy'), transaction_comment_path(@transaction, comment), :confirm => I18n.t('layout.navigation.sure'), :method => :delete %> 
+							<%if @user.id == comment.user_id or @user.is_admin == 0%><%= button_to I18n.t('layout.navigation.destroy'), transaction_comment_path(@transaction, comment), :confirm => I18n.t('layout.navigation.sure'), :method => :delete %> <%end%>
 						</div>
 						<div id="comment_edit_button" style="float:right:clear:none;">	
-							<%= button_to I18n.t('layout.navigation.edit'), edit_transaction_comment_path(@transaction, comment.id) %>
+							<%if @user.id == comment.user_id or @user.is_admin == 0%><%= button_to I18n.t('layout.navigation.edit'), edit_transaction_comment_path(@transaction, comment.id) %><%end%>
 						</div>
 			</div>
 			<% end %>

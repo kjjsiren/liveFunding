@@ -55,7 +55,7 @@ en:
             from: "From"
             to: "To"
             create_time: "Create Time"
-            rank: "Rank"
+            rank: "Reliability"
             operation: "Operation"
             submit: "Submit"
             browse: "Browse"
@@ -74,7 +74,13 @@ en:
             created_at: "Record created: "
             updated_at: "Record last updated: "
             source: "Information Source:"
-            rank_source: "Rank this information source:"  
+            rank_source: "Reliability of this source:"  
+            not_confirmed: "Not confirmed"
+            very_suspicious: "Very suspicious"
+            suspicious: "Suspicious"
+            trustworthy: "Trustworthy"
+            official_source: "Official source"
+            likes: " users likes this transaction"
             
         edit:
             title: "Edit the information"
