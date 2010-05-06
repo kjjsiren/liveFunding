@@ -1,3 +1,5 @@
+#User models the registered user in the system. Each registered user has a profile page which contains personal information, picture and
+#transactions favorited by the user.
 class User < ActiveRecord::Base
   require 'digest/sha1'
   has_attached_file :photo,

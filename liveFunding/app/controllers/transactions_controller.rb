@@ -1,10 +1,11 @@
 class TransactionsController < ApplicationController
-  #display all the transactions by default
+  
 	require 'faster_csv'
 	require 'tempfile'
 
   layout "application", :except => [ :export_csv ]
   
+  #Display all the transactions by default
   def index
     @transactions = Transaction.all
     sort_by = params[:sort_by]
@@ -48,7 +49,7 @@ class TransactionsController < ApplicationController
     end
   end
 
-
+  #Display the form for a new transaction:
   def new
     @transaction = Transaction.new
     @inforomation_source = InformationSource.new
@@ -58,10 +59,11 @@ class TransactionsController < ApplicationController
     end
   end
   
-
+  #Create a new transaction into the database:
   def create
     @transaction = Transaction.new(params[:transaction])
     
+    #Associate the doning and receiving entities:
     @association = Association.new 
     @association.entity_id = params[:recipient_id] 
     @association.knows_entity_id = Entity.find(params[:transaction][:donor_id])
@@ -96,7 +98,7 @@ class TransactionsController < ApplicationController
     end
   end
   
-
+  #Edit a transaction:
   def edit
     @transaction = Transaction.find(params[:id])
   rescue
@@ -104,7 +106,7 @@ class TransactionsController < ApplicationController
     redirect_to :action => "index"  
   end
   
-
+  #Update the transaction model in the database:
   def update
     @transaction = Transaction.find(params[:id])
 
@@ -120,7 +122,7 @@ class TransactionsController < ApplicationController
     end
   end
   
-
+  #Delete the transaction from the database:
   def destroy
     @transaction = Transaction.find(params[:id])
     @transaction.destroy
@@ -135,7 +137,7 @@ class TransactionsController < ApplicationController
   end
   
 
-	# Increase the rank
+	# Increase the rank of a transaction:
   def incr_rank
     @transaction = Transaction.find(params[:id])
     @transaction.rank = @transaction.rank==nil ? 1 : @transaction.rank+1
@@ -151,7 +153,7 @@ class TransactionsController < ApplicationController
   end
   
   
-  # Increase the ilike
+  # Increase the ilike:
   def incr_ilike
     @transaction = Transaction.find(params[:id])
     @transaction.ilike = @transaction.ilike==nil ? 1 : @transaction.ilike+1
@@ -167,7 +169,7 @@ class TransactionsController < ApplicationController
   end
   
   
-  # Decrease the rank
+  # Decrease the rank:
   def decr_rank
     @transaction = Transaction.find(params[:id])
     if @transaction.rank != 0
@@ -186,7 +188,7 @@ class TransactionsController < ApplicationController
   end  
   
   
-  # Decrease the ilike
+  # Decrease the ilike:
   def decr_ilike
     @transaction = Transaction.find(params[:id])
     if @transaction.ilike != 0
@@ -235,7 +237,7 @@ class TransactionsController < ApplicationController
     end
   end
 
-  
+  #Show a single transaction:
   def show
     @user = User.find_by_id(session[:user_id])
     @transaction = Transaction.find(params[:id])
