@@ -12,7 +12,7 @@ module NavigationHelpers
       '/'
       
     when /home_page/i
-      root_path 
+      root_path
  
     when /new_entity_path/
       '/entities/new'
@@ -50,11 +50,18 @@ module NavigationHelpers
 	  when /transactions_listing_page/i
       transactions_path
     
+      when /transaction_show_page/i
+        transaction_path
+      
+      when /^(.*) transaction_show_page$/i
+        transaction_path(Transaction.find_by_id($1))
+
     when /transactions_show_page/i
       transactions_path
       
     when /user_edit_profile_page/i
       edit_user_path  
+
         
     
     # Add more mappings here.
