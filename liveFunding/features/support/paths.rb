@@ -61,9 +61,6 @@ module NavigationHelpers
       
     when /user_edit_profile_page/i
       edit_user_path  
-
-        
->>>>>>> c99f7186cac44368f88b4f8052e4459e24b5c226
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

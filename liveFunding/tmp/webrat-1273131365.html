@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>LiveFunding: index</title>
+  <link href="/stylesheets/application.css?1273057997" media="screen" rel="stylesheet" type="text/css" />
+
+  <script src="/javascripts/XMLHttpRequest.js" type="text/javascript"></script>
+  
+</head>
+
+<body>
+<div id="header">
+		<div style ="float:right;">
+			
+					Welcome, <a href="/users/6/edit">test</a> (<a href="/logout">logout</a>)
+			
+			
+		</div>
+		<div>		
+		<div id="language">
+						<p>Valitse kieli:</p>
+		                <form action="" method="get">
+			                        <select id="locale" name="locale" onchange="this.form.submit()"><option value="fi">Finnish</option>
+<option value="en" selected="selected">English</option></select>
+			                        <script type="text/javascript">
+//<![CDATA[
+$$('.locale input').each(Element.hide)
+//]]>
+</script>
+			                </form>       
+			        </div>
+			<div id="search">
+		<br />
+		<br />
+		<br />
+		<form action="/transactions/search" class="new_transaction" id="new_transaction" method="post">
+			<input id="transaction_donor" name="transaction[donor]" size="20" type="text" />
+			<input name="commit" type="submit" value="Search" />
+		</form>
+	</div>
+	
+
+	</div>
+	
+	<hr style="width:100%;clear:both;float;left;margin-top:170px;"/>
+	</div>
+<div class="container">	
+	<div class="left">
+		<div class="navigation">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li class="first-level"><a href="/transactions">Transactions</a></li>
+			<ul><li><a href="/transactions/new">New Transaction</a></li>
+				<li><a href="/transactions/top">Rank Top 10</a></li>
+				<li><a href="/transactions/fundtop">Most Money Top 10</a></li>
+			</ul>
+			<li class="first-level"><a href="/entities">Entities</a></li>
+			<ul>
+				<li><a href="/entities/new">Create a new entity</a></li>
+			</ul>
+			<li class="first-level"><a href="/transactions/about">About</a></li>
+			
+		</div> 
+	</div>
+	
+	
+	<div class="center">
+		<div id="notifications">
+			
+				
+		</div>
+		<div id="content">
+			<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/prototype/1.6.1/prototype.js'></script>
+<script type='text/javascript' src='/prototip/js/prototip/prototip.js'></script>
+<link rel="stylesheet" type="text/css" href="/prototip/css/prototip.css" />
+
+
+<a id="tool_bar"><img alt="Icon_tools_32px" src="/images/icon_tools_32px.png?1273057997" /></a>
+<div id="tool_bar_div" style="display:none">
+<form action="/transactions/import_csv" enctype="multipart/form-data" method="post"> 
+Import from CSV  : <input id="transaction_file" name="transaction[file]" size="30" type="file" /> <input name="commit" type="submit" value="Submit" /> </form> <br /><a href="/transactions/export_csv" style="color:white;text-decoration:none;" title="Export to CSV">Export to CSV&nbsp;&nbsp;<img alt="Export" border="0" src="/images/export.png?1273057997" /></a>
+
+</div>
+
+<h3>All The Transactions</h3> 
+<table class="transactions" border="0" cellspacing="0">
+<tr style="background-color:white;">
+	<th>#</th>
+	<th><a href="/transactions?sort_by=from&amp;sort_order=0" title="sort by from">From</a></th>
+	<th><a href="/transactions?sort_by=amount&amp;sort_order=0" title="sort by amount">Amount</a></th>
+	<th><a href="/transactions?sort_by=to&amp;sort_order=0" title="sort by to">To</a></th>
+	<th><a href="/transactions?sort_by=create_time&amp;sort_order=0" title="sort by create time">Create Time</a></th>
+	<th></th>
+
+</tr>
+
+<tr>
+	<td># 1</td>
+	<td>
+       <a class="info_tag" id="1">Keskusta</a></td>
+	<td>
+        200.0€ </td>
+  <td>
+        <a class="info_tag" id="4">SDP</a></strong></td>
+	<td>
+        01 / 04 / 2010</td>
+	<td>
+	
+		<a href="/transactions/incr_rank/1" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/1" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a> 1  rank(s)
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/1" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/1" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> 2 like(s)</td>
+	<!-- <td><a href="/transactions/1/edit">Edit</a></td>
+	<td><a href="/transactions/1" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/1" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/1/comments/new" id="1_transaction" title="Comment_1"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/1" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+<tr>
+	<td># 2</td>
+	<td>
+       <a class="info_tag" id="1">Keskusta</a></td>
+	<td>
+        12345.0€ </td>
+  <td>
+        <a class="info_tag" id="2">Matti Vanhanen</a></strong></td>
+	<td>
+        02 / 04 / 2010</td>
+	<td>
+	
+		<a href="/transactions/incr_rank/2" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/2" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a> 0  rank(s)
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/2" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/2" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> 1 like(s)</td>
+	<!-- <td><a href="/transactions/2/edit">Edit</a></td>
+	<td><a href="/transactions/2" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/2" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/2/comments/new" id="2_transaction" title="Comment_2"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/2" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+<tr>
+	<td># 3</td>
+	<td>
+       <a class="info_tag" id="1">Keskusta</a></td>
+	<td>
+        10000.0€ </td>
+  <td>
+        <a class="info_tag" id="2">Matti Vanhanen</a></strong></td>
+	<td>
+        </td>
+	<td>
+	
+		<a href="/transactions/incr_rank/3" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/3" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a> 2  rank(s)
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/3" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/3" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> 1 like(s)</td>
+	<!-- <td><a href="/transactions/3/edit">Edit</a></td>
+	<td><a href="/transactions/3" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/3" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/3/comments/new" id="3_transaction" title="Comment_3"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/3" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+<tr>
+	<td># 4</td>
+	<td>
+       <a class="info_tag" id="1">Keskusta</a></td>
+	<td>
+        10000.0€ </td>
+  <td>
+        <a class="info_tag" id="2">Matti Vanhanen</a></strong></td>
+	<td>
+        </td>
+	<td>
+	
+		<a href="/transactions/incr_rank/4" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/4" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a>  
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/4" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/4" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> </td>
+	<!-- <td><a href="/transactions/4/edit">Edit</a></td>
+	<td><a href="/transactions/4" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/4" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/4/comments/new" id="4_transaction" title="Comment_4"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/4" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+<tr>
+	<td># 5</td>
+	<td>
+       <a class="info_tag" id="1">Keskusta</a></td>
+	<td>
+        10000.0€ </td>
+  <td>
+        <a class="info_tag" id="2">Matti Vanhanen</a></strong></td>
+	<td>
+        </td>
+	<td>
+	
+		<a href="/transactions/incr_rank/5" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/5" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a>  
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/5" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/5" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> </td>
+	<!-- <td><a href="/transactions/5/edit">Edit</a></td>
+	<td><a href="/transactions/5" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/5" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/5/comments/new" id="5_transaction" title="Comment_5"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/5" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+<tr>
+	<td># 6</td>
+	<td>
+       <a class="info_tag" id="1">Keskusta</a></td>
+	<td>
+        10000.0€ </td>
+  <td>
+        <a class="info_tag" id="2">Matti Vanhanen</a></strong></td>
+	<td>
+        </td>
+	<td>
+	
+		<a href="/transactions/incr_rank/6" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/6" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a>  
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/6" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/6" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> </td>
+	<!-- <td><a href="/transactions/6/edit">Edit</a></td>
+	<td><a href="/transactions/6" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/6" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/6/comments/new" id="6_transaction" title="Comment_6"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/6" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+<tr>
+	<td># 7</td>
+	<td>
+       <a class="info_tag" id="1">Keskusta</a></td>
+	<td>
+        90000.0€ </td>
+  <td>
+        <a class="info_tag" id="2">Matti Vanhanen</a></strong></td>
+	<td>
+        </td>
+	<td>
+	
+		<a href="/transactions/incr_rank/7" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/7" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a>  
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/7" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/7" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> </td>
+	<!-- <td><a href="/transactions/7/edit">Edit</a></td>
+	<td><a href="/transactions/7" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/7" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/7/comments/new" id="7_transaction" title="Comment_7"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/7" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+<tr>
+	<td># 8</td>
+	<td>
+       <a class="info_tag" id="4">SDP</a></td>
+	<td>
+        200.0€ </td>
+  <td>
+        <a class="info_tag" id="38">Vihreät</a></strong></td>
+	<td>
+        01 / 04 / 2010</td>
+	<td>
+	
+		<a href="/transactions/incr_rank/8" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/8" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a>  
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/8" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/8" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> </td>
+	<!-- <td><a href="/transactions/8/edit">Edit</a></td>
+	<td><a href="/transactions/8" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/8" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/8/comments/new" id="8_transaction" title="Comment_8"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/8" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+<tr>
+	<td># 9</td>
+	<td>
+       <a class="info_tag" id="3">Eero Heinäluoma</a></td>
+	<td>
+        666.0€ </td>
+  <td>
+        <a class="info_tag" id="3">Eero Heinäluoma</a></strong></td>
+	<td>
+        30 / 04 / 2010</td>
+	<td>
+	
+		<a href="/transactions/incr_rank/9" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/9" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a>  
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/9" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/9" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> </td>
+	<!-- <td><a href="/transactions/9/edit">Edit</a></td>
+	<td><a href="/transactions/9" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/9" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/9/comments/new" id="9_transaction" title="Comment_9"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/9" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+<tr>
+	<td># 10</td>
+	<td>
+       <a class="info_tag" id="3">Eero Heinäluoma</a></td>
+	<td>
+        333.0€ </td>
+  <td>
+        <a class="info_tag" id="3">Eero Heinäluoma</a></strong></td>
+	<td>
+        30 / 04 / 2010</td>
+	<td>
+	
+		<a href="/transactions/incr_rank/10" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/10" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a>  
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/10" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/10" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> </td>
+	<!-- <td><a href="/transactions/10/edit">Edit</a></td>
+	<td><a href="/transactions/10" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/10" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/10/comments/new" id="10_transaction" title="Comment_10"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/10" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+<tr>
+	<td># 11</td>
+	<td>
+       <a class="info_tag" id="3">Eero Heinäluoma</a></td>
+	<td>
+        222.0€ </td>
+  <td>
+        <a class="info_tag" id="3">Eero Heinäluoma</a></strong></td>
+	<td>
+        30 / 04 / 2010</td>
+	<td>
+	
+		<a href="/transactions/incr_rank/11" title="Rank It!"><img alt="Accept" border="0" src="/images/accept.png?1273057997" /></a>
+		<a href="/transactions/decr_rank/11" title="Unrank It!"><img alt="Block" border="0" src="/images/Block.png?1273057997" /></a>  
+	
+	</td>
+	<td><a href="/transactions/incr_ilike/11" title="I Like It!"><img alt="Thumbs-up-icon" border="0" src="/images/Thumbs-up-icon.png?1273057997" /></a> <a href="/transactions/decr_ilike/11" title="I don't Like It!"><img alt="Thumbs-down-icon" border="0" src="/images/thumbs-down-icon.png?1273057997" /></a> </td>
+	<!-- <td><a href="/transactions/11/edit">Edit</a></td>
+	<td><a href="/transactions/11" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a></td> -->
+	
+	<td><a href="/favourite/favourite_transaction/11" title="Favourite"><img alt="Favorite_add" border="0" src="/images/favorite_add.png?1273057997" /></a></td>
+	<td><a href="/transactions/11/comments/new" id="11_transaction" title="Comment_11"><img alt="Comment_edit" border="0" src="/images/comment_edit.png?1273057997" /></a> </td>
+	
+	<td><a href="/transactions/11" title="Show"><img alt="Info" border="0" src="/images/info.png?1273057997" /></a> </td>
+</tr>
+
+</table>
+<br />
+<script type="text/javascript">
+document.observe('dom:loaded', function() {
+  $$("a[class='info_tag']").each(function(element) {
+    new Tip(element, "Show Detail Info", {
+	    style: 'protoblue',
+	  	hook: { target:'topMiddle', tip: 'bottomMiddle', mouse: false },
+		offset: { x: 0, y: 3 },
+		stem: 'bottomMiddle',
+		width: 200,
+		height: 100,
+		ajax: {
+		    url: '/entities/entity_info_ajax',
+			options: {
+				method: 'get',
+				parameters: {id: element.id}
+			}
+		}
+    });
+  });
+
+  $$("a[id='tool_bar']").each(function(element) {
+    new Tip(element, $("tool_bar_div").innerHTML, {
+		title: 'Tool Bar',
+		closeButton: true,
+	    style: 'protoblue',
+	  	hook: { target:'rightMiddle', tip: 'leftMiddle', mouse: false },
+		offset: { x: 0, y: 3 },
+		stem: 'leftMiddle',
+		width: 500,
+		height: 60,
+		showOn: 'click',
+		hideOn: { element: 'closeButton', event: 'click'},
+    });
+  });
+
+});
+</script>
+		</div>
+	</div>
+	</div>
+		
+	<div id="footer">
+		<hr />
+	<p>This page was generated at 06.05.2010 10:36</p>
+</div>
+</body>
+</html>
+
