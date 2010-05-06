@@ -68,7 +68,7 @@
 			<ul>
 				<li><%= link_to I18n.t('entities.new.title'), new_entity_path %></li>
 			</ul>
-			<li class="first-level"><%= link_to I18n.t('layout.navigation.about'), :action =>:about %></li>
+			<li class="first-level"><%= link_to I18n.t('layout.navigation.about'), :controller => "home", :action =>:about %></li>
 			
 		</div> 
 	</div>

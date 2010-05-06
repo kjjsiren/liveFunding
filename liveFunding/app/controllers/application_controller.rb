@@ -24,6 +24,7 @@ class ApplicationController < ActionController::Base
   end
   
   #Changes the language used in the views.
+  #Localization files are in config/locales/<lang>.yml.
   def set_locale
     #Get the locale from the session, set to default if not available:
     session[:locale] = params[:locale] if params[:locale]
