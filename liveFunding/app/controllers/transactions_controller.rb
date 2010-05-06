@@ -10,7 +10,9 @@ class TransactionsController < ApplicationController
     @transactions = Transaction.all
     sort_by = params[:sort_by]
     sort_order = params[:sort_order]
+	message = String.new
     if sort_by == "from"
+		message = "Transaction has been ranked by donor"
       if sort_order == "0"
         @transactions = Transaction.find(:all, :order => '"from" DESC')
       else
@@ -19,6 +21,7 @@ class TransactionsController < ApplicationController
     end
     
     if sort_by == "amount"
+		message = "Transaction has been ranked by amount"
       if sort_order == "0"
         @transactions = Transaction.find(:all, :order => 'amount DESC')
       else
@@ -27,6 +30,7 @@ class TransactionsController < ApplicationController
     end
 
     if sort_by == "to"
+		message = "Transaction has been ranked by recipent"
       if sort_order == "0"
         @transactions = Transaction.find(:all, :order => '"to" DESC')
       else
@@ -35,6 +39,7 @@ class TransactionsController < ApplicationController
     end
     
     if sort_by == "create_time"
+		message = "Transaction has been ranked by create time"
       if sort_order == "0"
         @transactions = Transaction.find(:all, :order => 'created_at DESC')
       else
@@ -43,7 +48,8 @@ class TransactionsController < ApplicationController
     end
     
     respond_to do |format|
-      format.html # index.html.erb
+      flash[:notice] = message
+	  format.html # index.html.erb
       format.rss
       format.xml  { render :xml => @transactions }
     end
