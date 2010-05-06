@@ -25,7 +25,7 @@
 			<%= f.label I18n.t('layout.login.password') %><br />
 			<%= f.password_field :password, :size =>"20" %><br />
 
-			<%= submit_tag I18n.t('layout.login.submit')%>
+			<%= submit_tag I18n.t('layout.login.submit'), :id => "login_btn" %>
 			<%= link_to I18n.t('layout.login.register'), new_user_path %>
 		<% end %>
 		<% end %>
@@ -68,7 +68,7 @@
 			<ul>
 				<li><%= link_to I18n.t('entities.new.title'), new_entity_path %></li>
 			</ul>
-			<li class="first-level"><%= link_to I18n.t('layout.navigation.about'), :action =>:about %></li>
+			<li class="first-level"><%= link_to I18n.t('layout.navigation.about'), :controller => "home", :action =>:about %></li>
 			
 		</div> 
 	</div>

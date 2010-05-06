@@ -1,3 +1,5 @@
+#Transactions models the monetary relationships between different entieties in the system. Each transaction has an amounnt, a creator,
+#a recipient, a donor, a information source and it can have multiple comments discussing the transaction.
 class Transaction < ActiveRecord::Base
   has_many :comments
   belongs_to :donor, :class_name => 'Entity'

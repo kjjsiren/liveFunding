@@ -1,4 +1,4 @@
-class AssociationsController < ApplicationController
+ class AssociationsController < ApplicationController
   #Create a new association 
   def create
   	     @entity = Entity.find(params[:entity_id])
@@ -33,7 +33,7 @@ class AssociationsController < ApplicationController
   end
 
   
-  # New an association
+  # New association
   def new
     @entity = Entity.find(params[:entity_id])
     @association = Association.new 

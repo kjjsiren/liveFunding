@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
     @comment = @transaction.comments.find(params[:id]) 
   end
   
-  # Update a edited comment:
+  # Update an edited comment:
   def update
     @transaction = Transaction.find(params[:transaction_id])
     @comment = Comment.find(params[:id])

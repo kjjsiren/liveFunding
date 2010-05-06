@@ -1,5 +1,5 @@
 class FavouriteController < ApplicationController
-  
+  #Only registered users can favourite transactions:
   before_filter :is_authenticated?
   
   # Enables user to favourite a transaction:

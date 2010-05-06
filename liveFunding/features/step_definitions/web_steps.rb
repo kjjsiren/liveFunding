@@ -13,7 +13,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "pat
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
-end  
+end
 
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
@@ -28,13 +28,8 @@ When /^(?:|I )follow "([^\"]*)"$/ do |link|
 end
 
 When /^(?:|I )follow "([^\"]*)" within "([^\"]*)"$/ do |link, parent|
-  begin
-    click_link_within(parent, link)
-    rescue
-      save_and_open_page
-      raise
-    end  
-  end
+  click_link_within(parent, link)
+end
 
 When /^(?:|I )fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
   fill_in(field, :with => value)

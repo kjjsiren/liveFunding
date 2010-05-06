@@ -1,3 +1,4 @@
+#For displaying the homepage with RSS-feed.
 class HomeController < ApplicationController
 
   require 'rss'

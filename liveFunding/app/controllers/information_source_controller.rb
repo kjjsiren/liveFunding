@@ -1,5 +1,6 @@
 class InformationSourceController < ApplicationController
   
+  #Increase the rank of a information source for transaction:
   def incr_rank
     @information_source = InformationSource.find(params[:id])
     @information_source.rank = @information_source.rank==nil ? 1 : @information_source.rank+1
@@ -13,7 +14,8 @@ class InformationSourceController < ApplicationController
     flash[:notice] = I18n.t('flash.transactions.invalid_id')
     redirect_to :action => "index"
   end  
-    
+  
+  #Decrease the rank of a information source for transaction:  
   def decr_rank
     @information_source = InformationSource.find(params[:id])
     if @information_source.rank != 0

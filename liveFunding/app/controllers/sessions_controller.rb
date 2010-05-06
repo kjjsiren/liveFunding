@@ -1,9 +1,8 @@
+#Handles the creation and destroying of user sessions.
 class SessionsController < ApplicationController
   
   # Use the database for sessions, to store highly confidential information
 
-  
-  
   # Will not run the filter is_authenticated before the index, new and create action
   skip_before_filter :is_authenticated?, :only => [ :create ]
   
@@ -13,14 +12,13 @@ class SessionsController < ApplicationController
   
     if authenticated_user
       log_user_in(authenticated_user)  # lib/user_authentication.rb
-      redirect_to users_path
+      redirect_to root_path
     else
       flash[:error] = "Login failed, check your username and password."
       redirect_to login_path
     end
      
   end
-  
     
   def destroy
     reset_session

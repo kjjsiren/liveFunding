@@ -149,7 +149,7 @@ fi:
             
         new:
             create: "Luo uusi organisaatio"
-            title: "Syötä uuden organisaation tiedot"
+            title: "Syötä uuden organisaation tai henkilön tiedot"
             submit: "Luo"
             
         controls:

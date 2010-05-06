@@ -39,7 +39,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # Update the user
+  # Update the user in the database:
   def update
     @user = User.find(params[:id])
 
@@ -51,7 +51,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # Delete the user  
+  # Delete the user from the database:
   def destroy
     # Using current_user ensures that only current_user can be destroyed (instead of finding by parameter)
     log_user_out!
@@ -59,7 +59,7 @@ class UsersController < ApplicationController
     redirect_to(login_path)
   end
 
-	# Delete the image of the user  
+	# Delete the image of the user:  
 	def delete_image
     @user = User.find(params[:user])
     @user.photo = nil

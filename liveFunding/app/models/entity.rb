@@ -1,3 +1,5 @@
+#An entity is a politician or an organization. Each transaction has a donor and a recipient, which are entities.
+#Each entity has a profile in the system with information (photo, email, url, leader name and attachment documents).
 class Entity < ActiveRecord::Base
 	has_many :associations
 	has_many :transactions

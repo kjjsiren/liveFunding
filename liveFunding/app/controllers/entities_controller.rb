@@ -36,12 +36,13 @@ class EntitiesController < ApplicationController
     end
   end
   
-  #create a new entity
+  #For creating a new entity in a AJAX-window.
   def new_ajax
     @entity = Entity.new
     render :layout => false
   end
   
+  #Create a new entity
   def create
     @entity = Entity.new(params[:entity])
     #@entity = @transaction.entities.build(params[:entity])
@@ -82,6 +83,7 @@ class EntitiesController < ApplicationController
    #@entity = @transaction.entities.find(params[:id]) 
   end
  
+  #JavaScript used to draw the Association graph for an entity.
   def map
     @entity = Entity.find(params[:id])
     data = File.new("public/javascripts/mapJs/data.js", "w")
@@ -212,6 +214,7 @@ class EntitiesController < ApplicationController
     render :layout => false
   end
   
+  #Generates the children for the association graph.
   def childgenerator(entity,times)
     @ent = Entity.find(entity)
     $associations_list.delete_if{|x| x.knows_entity == @ent}
