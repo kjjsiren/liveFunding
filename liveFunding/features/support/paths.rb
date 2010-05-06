@@ -13,6 +13,9 @@ module NavigationHelpers
       
     when /home_page/i
       root_path 
+<<<<<<< HEAD
+	  
+=======
  
     when /new_entity_path/
       '/entities/new'
@@ -20,6 +23,7 @@ module NavigationHelpers
     when /entity_info_path/
       '/entities'
     
+>>>>>>> babf2cd83dd9210bfa713910cc56d3cf464f98e4
     when /profile_editing_page/i
       edit_user_path
     
@@ -29,7 +33,22 @@ module NavigationHelpers
      when /comment_new_page/i
         new_transaction_comment_path
     
-     when /transactions_listing_page/i
+	when /transaction_page/i
+		transactions_path
+
+	when /amount_page/i
+		transactions_path
+
+	when /from_page/i
+		transactions_path
+
+	when /to_page/i
+		transactions_path	
+	
+	when /createtime_page/i
+		transactions_path	
+	
+	when /transactions_listing_page/i
        transactions_path
     
       when /transactions_show_page/i
