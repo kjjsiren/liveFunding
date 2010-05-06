@@ -8,7 +8,7 @@ Scenario: Sorting the transactions by Amount
 	And I follow "Amount"
 	
 	Then I should be on the amount_page
-	
+	Then show me the page
 	
 Scenario: Sorting the transactions by From
 	When I go to home_page
