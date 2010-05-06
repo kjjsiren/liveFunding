@@ -8,8 +8,10 @@ Scenario: Sorting the transactions by Amount
 	And I should not see "▲"
 	And I follow "Amount"
 	And I should see "▼"
+	And I should see "Transaction has been ranked by amount"
 	And I follow "Amount"
 	And I should see "▲"
+	And I should see "Transaction has been ranked by amount"
 	Then I should be on the transaction_page
 	Then show me the page
 	
