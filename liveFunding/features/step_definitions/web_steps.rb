@@ -28,8 +28,13 @@ When /^(?:|I )follow "([^\"]*)"$/ do |link|
 end
 
 When /^(?:|I )follow "([^\"]*)" within "([^\"]*)"$/ do |link, parent|
-  click_link_within(parent, link)
-end
+  begin
+    click_link_within(parent, link)
+    rescue
+      save_and_open_page
+      raise
+    end  
+  end
 
 When /^(?:|I )fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
   fill_in(field, :with => value)

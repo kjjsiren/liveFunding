@@ -67,4 +67,5 @@ class UsersController < ApplicationController
     params[:id]=@user.id
     redirect_to :back
   end
+  
 end

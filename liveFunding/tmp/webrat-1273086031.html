@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>LiveFunding: show</title>
+  <link href="/stylesheets/application.css?1273057997" media="screen" rel="stylesheet" type="text/css" />
+
+  <script src="/javascripts/XMLHttpRequest.js" type="text/javascript"></script>
+  
+</head>
+
+<body>
+<div id="header">
+		<div style ="float:right;">
+			
+			
+		<form action="http://www.example.com/session" class="new_user" id="new_user" method="post">
+			<label for="user_Username">Username</label><br />
+			<input id="user_username" name="user[username]" size="20" type="text" /><br />
+
+			<label for="user_Password">Password</label><br />
+			<input id="user_password" name="user[password]" size="20" type="password" /><br />
+
+			<input name="commit" type="submit" value="Submit" />
+			<a href="/users/new">Register</a>
+		</form>
+		
+		</div>
+		<div>		
+		<div id="language">
+						<p>Valitse kieli:</p>
+		                <form action="" method="get">
+			                        <select id="locale" name="locale" onchange="this.form.submit()"><option value="fi">Finnish</option>
+<option value="en" selected="selected">English</option></select>
+			                        <script type="text/javascript">
+//<![CDATA[
+$$('.locale input').each(Element.hide)
+//]]>
+</script>
+			                </form>       
+			        </div>
+			<div id="search">
+		<br />
+		<br />
+		<br />
+		<form action="/transactions/search" class="new_transaction" id="new_transaction" method="post">
+			<input id="transaction_donor" name="transaction[donor]" size="20" type="text" />
+			<input name="commit" type="submit" value="Search" />
+		</form>
+	</div>
+	
+
+	</div>
+	
+	<hr style="width:100%;clear:both;float;left;margin-top:170px;"/>
+	</div>
+<div class="container">	
+	<div class="left">
+		<div class="navigation">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li class="first-level"><a href="/transactions">Transactions</a></li>
+			<ul><li><a href="/transactions/new">New Transaction</a></li>
+				<li><a href="/transactions/top">Rank Top 10</a></li>
+				<li><a href="/transactions/fundtop">Most Money Top 10</a></li>
+			</ul>
+			<li class="first-level"><a href="/entities">Entities</a></li>
+			<ul>
+				<li><a href="/entities/new">Create a new entity</a></li>
+			</ul>
+			<li class="first-level"><a href="/transactions/about">About</a></li>
+			
+		</div> 
+	</div>
+	
+	
+	<div class="center">
+		<div id="notifications">
+			
+				
+		</div>
+		<div id="content">
+			<form action="/transactions/1" class="edit_transaction" id="edit_transaction_1" method="post"><div style="margin:0;padding:0;display:inline"><input name="_method" type="hidden" value="put" /></div>
+  
+	<div style="border:1px solid;float:left;padding:35px;">
+		<h1 style="margin-top:0;margin-bottom:35px;">Transaction : #1
+		
+			
+		
+		</h1>
+			<div>
+				<div style="float:left;"> 	
+					<label for="transaction_donor">From</label><br />
+					<strong><a href="/entities/1">Keskusta</a></strong>					
+				</div>
+				<div style="float:left;margin-left:40px;">
+ 					<label for="transaction_recipient">To</label><br />
+		    		<strong><a href="/entities/4">SDP</a></strong>
+				</div>
+				<br />
+				<div style="float:left;clear:none; margin-top:30px;">
+			 		<label for="transaction_date_of_transaction">When the transaction took place? (Day/Month/Year)</label><br />
+					<strong>01 / 04 / 2010</strong></div>
+				</div>
+				<br style="float:left;clear:both;"/>
+				<div style="border:1px outset;float:left;padding:10px;width:100%;margin-bottom:20px;">
+					<label for="transaction_information_source">Information Source:</label><br />
+					<strong>N/A</strong>
+					<br />
+					
+				</div>	
+				<br style="float:left;clear:both;" />	
+
+				<div style="float:left;clear:both;margin-top:30px;">
+	 				<label for="transaction_description">Information</label><br />
+					<strong>Varainsiirto</strong>
+	 			</div>
+				<div style="float:right;clear:both;margin-top:30px;">
+	    	  		<label for="transaction_amount">Amount</label><br />
+					<strong>200.0€</strong>
+				</div>
+				
+				<div style="float:left;clear:both;font-size:x-small;">
+					Record created: 
+					19.04.2010
+					<br />
+					Record last updated:  
+					19.04.2010
+					<br />by Joonas
+				</div>
+			</div>
+			</form>
+			<div id="comment-list" style="float:left;margin-left:50px;border:0px solid;padding:35px;width:40%;">
+				<h2 style="margin:0;margin-bottom:20px;">Comments:</h2>
+					
+  					<div class "list-line-odd" style="border:1px outset;float:left;padding:10px;width:100%;margin-bottom:20px;">
+						<p style="font-size:x-small;">19.04.2010 20:49</p>
+						<strong>Joonas said</strong>
+	  					<br />
+						<div style="padding-bottom:30px;padding-left:10px;border:1px solid;border-color:lightgrey;padding-top:10px;margin-bottom:10px;margin-top:20px;" id="comment_content">  
+						Testing commenting
+						</div>
+						<div id="comment_destroy_button" style="float:right;clear:none;">
+							<form method="post" action="/transactions/1/comments/4" class="button-to"><div><input name="_method" type="hidden" value="delete" /><input onclick="return confirm('Are you sure?');" type="submit" value="Delete" /></div></form> 
+						</div>
+						<div id="comment_edit_button" style="float:right:clear:none;">	
+							<form method="post" action="/transactions/1/comments/4/edit" class="button-to"><div><input type="submit" value="Edit" /></div></form>
+						</div>
+			</div>
+			
+  					<div class "list-line-even" style="border:1px outset;float:left;padding:10px;width:100%;margin-bottom:20px;">
+						<p style="font-size:x-small;">19.04.2010 21:29</p>
+						<strong>Joonas said</strong>
+	  					<br />
+						<div style="padding-bottom:30px;padding-left:10px;border:1px solid;border-color:lightgrey;padding-top:10px;margin-bottom:10px;margin-top:20px;" id="comment_content">  
+						Another comment
+
+						</div>
+						<div id="comment_destroy_button" style="float:right;clear:none;">
+							<form method="post" action="/transactions/1/comments/6" class="button-to"><div><input name="_method" type="hidden" value="delete" /><input onclick="return confirm('Are you sure?');" type="submit" value="Delete" /></div></form> 
+						</div>
+						<div id="comment_edit_button" style="float:right:clear:none;">	
+							<form method="post" action="/transactions/1/comments/6/edit" class="button-to"><div><input type="submit" value="Edit" /></div></form>
+						</div>
+			</div>
+			
+  					<div class "list-line-odd" style="border:1px outset;float:left;padding:10px;width:100%;margin-bottom:20px;">
+						<p style="font-size:x-small;">23.04.2010 05:53</p>
+						<strong>Joonas said</strong>
+	  					<br />
+						<div style="padding-bottom:30px;padding-left:10px;border:1px solid;border-color:lightgrey;padding-top:10px;margin-bottom:10px;margin-top:20px;" id="comment_content">  
+						Another comment
+						</div>
+						<div id="comment_destroy_button" style="float:right;clear:none;">
+							<form method="post" action="/transactions/1/comments/7" class="button-to"><div><input name="_method" type="hidden" value="delete" /><input onclick="return confirm('Are you sure?');" type="submit" value="Delete" /></div></form> 
+						</div>
+						<div id="comment_edit_button" style="float:right:clear:none;">	
+							<form method="post" action="/transactions/1/comments/7/edit" class="button-to"><div><input type="submit" value="Edit" /></div></form>
+						</div>
+			</div>
+			
+			<a href="/transactions/1/comments/new" style="float:right;" title="New comment"><img alt="Comment_add" border="0" src="/images/comment_add.png?1273057997" /></a>
+		</div>
+	</div>
+	<div style="float:left;clear:both;width:100%;"><hr style="width:100%;"/>
+		<a href="/transactions">Back</a>
+	</div>	
+	<br />
+		</div>
+	</div>
+	</div>
+		
+	<div id="footer">
+		<hr />
+	<p>This page was generated at 05.05.2010 22:00</p>
+</div>
+</body>
+</html>
+

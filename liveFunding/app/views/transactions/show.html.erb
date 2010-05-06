@@ -2,7 +2,7 @@
   <%= f.error_messages %>
 	<div style="border:1px solid;float:left;padding:35px;">
 		<h1 style="margin-top:0;margin-bottom:35px;"><%= I18n.t('transactions.show.title') %>: #<%=@transaction.id%>
-		<%if @transaction.creator != nil and @user != nil %>
+		<%if @transaction.creator != nil%>
 			<% if @user.username==@transaction.creator.username %>
 				(<%= link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(@transaction) %>)
 		    <%end%>
@@ -20,7 +20,7 @@
 				<br />
 				<div style="float:left;clear:none; margin-top:30px;">
 			 		<%= f.label :date_of_transaction, I18n.t('transactions.information.date') %><br />
-					<strong><%=h @transaction.date_of_transaction.strftime("%d / %m / %Y")%></strong></div>
+					<strong><%if @transaction.date_of_transaction !=nil %><%=h @transaction.date_of_transaction.strftime("%d / %m / %Y")%><%else%><%=h "N/A"%><%end%></strong></div>
 				</div>
 				<br style="float:left;clear:both;"/>
 				<div style="border:1px outset;float:left;padding:10px;width:100%;margin-bottom:20px;">

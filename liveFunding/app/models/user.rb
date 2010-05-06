@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   
   has_many :transactions
   has_and_belongs_to_many :transactions, :uniq => true
-
+  
   attr_accessor :password, :password_confirmation
 
   before_save :hash_password

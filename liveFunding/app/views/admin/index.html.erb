@@ -5,9 +5,6 @@
 <br />
 <%= link_to "Export DB", { :controller => "admin", :action => "export_db" } %> <br />
 <br />
-Import DB:<br />
-<%form_for :admin, :url => { :action => "import_db", :multipart => true } do |f|%>
-	<%= f.file_field :file, :size =>"50" %>
-	<%= f.submit "Submit"%>
-	<%end%>
-	<br />
+<%= button_to "Restore original DB", { :controller => "admin", :action => "import_db" } %> <br />
+<br />
+<br />
