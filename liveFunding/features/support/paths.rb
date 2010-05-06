@@ -13,6 +13,12 @@ module NavigationHelpers
       
     when /home_page/i
       root_path 
+ 
+    when /new_entity_path/
+      '/entities/new'
+
+    when /entity_info_path/
+      '/entities'
     
     when /profile_editing_page/i
       edit_user_path
@@ -24,6 +30,24 @@ module NavigationHelpers
       new_transaction_comment_path
     
     when /transactions_listing_page/i
+      transactions_path
+
+	  when /transaction_page/i
+		  transactions_path
+
+	  when /amount_page/i
+		  transactions_path
+
+	  when /from_page/i
+		  transactions_path
+
+	  when /to_page/i
+		  transactions_path	
+	
+	  when /createtime_page/i
+		  transactions_path	
+	
+	  when /transactions_listing_page/i
       transactions_path
     
     when /transactions_show_page/i
