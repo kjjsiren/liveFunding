@@ -13,6 +13,12 @@ module NavigationHelpers
       
     when /home_page/i
       root_path 
+ 
+    when /new_entity_path/
+      '/entities/new'
+
+    when /entity_info_path/
+      '/entities'
     
     when /profile_editing_page/i
       edit_user_path
