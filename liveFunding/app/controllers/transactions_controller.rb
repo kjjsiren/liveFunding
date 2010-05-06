@@ -12,9 +12,9 @@ class TransactionsController < ApplicationController
     sort_order = params[:sort_order]
     if sort_by == "from"
       if sort_order == "0"
-        @transactions = Transaction.find(:all, :order => '"from" DESC')
+        @transactions = Transaction.find(:all, :include => :donor, :order =>"entities.name DESC")
       else
-        @transactions = Transaction.find(:all, :order => '"from" ASC')
+         @transactions = Transaction.find(:all, :include => :donor, :order =>"entities.name ASC")
       end
     end
     
@@ -28,9 +28,9 @@ class TransactionsController < ApplicationController
 
     if sort_by == "to"
       if sort_order == "0"
-        @transactions = Transaction.find(:all, :order => '"to" DESC')
+        @transactions = Transaction.find(:all, :include => :recipient, :order => "entities.name DESC")
       else
-        @transactions = Transaction.find(:all, :order => '"to" ASC')
+        @transactions = Transaction.find(:all, :include => :recipient, :order => "entities.name ASC")
       end
     end
     
