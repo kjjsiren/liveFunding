@@ -10,4 +10,5 @@ Scenario: Adding a comment
 	And I fill in the comment "test_comment #1, from Cucumber"
 	And I press "Submit"
 	Then I should see "test_comment #1, from Cucumber"
+	Then I should be on 1 transaction_show_page
 	Then show me the page

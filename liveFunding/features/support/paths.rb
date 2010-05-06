@@ -25,10 +25,9 @@ module NavigationHelpers
     
      when /transactions_listing_page/i
        transactions_path
-    
-      when /transactions_show_page/i
-        transactions_path
-        
+      
+       when /^(.*) transaction_show_page$/i
+          transaction_path(Transaction.find_by_id($1))  
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
