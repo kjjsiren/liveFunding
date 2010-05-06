@@ -13,5 +13,4 @@ Scenario: Create a new entity in the system
 	And I fill in "entity_description" with "Some extra information..."
 	And I press "entity_submit"
 	
-	#Then I should be on the entity_info_path
 	Then I should see "An New Entity"
