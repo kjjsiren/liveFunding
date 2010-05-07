@@ -48,7 +48,7 @@
 	
 <div id="associations_container" style="">
 <div id="association_list">
-	<%= link_to I18n.t('association.show.association_map'),"map/#{@entity.id}", :target => "_blank", :id=>@entity.id  %>
+	<%= link_to I18n.t('association.show.association_map'),"map/#{@entity.id}", :target => "_blank", :id=>@entity.id, :class=>"info_tag"  %>
 	<%= link_to I18n.t('association.new.title'), new_entity_association_path(@entity)  , :style=>"margin-left:20px;"%>
 	
 	<h2><%= I18n.t('entities.information.associations')%>:</h2>
