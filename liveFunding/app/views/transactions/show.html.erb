@@ -56,7 +56,7 @@
 
 				<div style="float:left;clear:both;margin-top:30px;">
 	 				<%= f.label :description, I18n.t('transactions.information.description') %><br />
-					<strong><%=h @transaction.description %></strong>
+					<strong><%if @transaction.description != nil %><%=h @transaction.description %><%else%>N/A<%end%></strong>
 	 			</div>
 				<div style="float:right;clear:both;margin-top:30px;">
 	    	  		<%= f.label :amount, I18n.t('transactions.information.amount') %><br />
@@ -71,7 +71,7 @@
 					<%=h date_in_finnish_format(@transaction.created_at) %>
 					<%if @transaction.creator != nil %><br />by <%=h @transaction.creator.username %><%end%>
 					
-					<br /><%if @transaction.ilike != nil%><%=h @transaction.ilike%><%=f.label :likes, I18n.t('transactions.information.likes'), :style => "margin-top:20px;float:left;font-size:large;"%>
+					<br /><div style="margin-top:20px;float:left;font-size:large;"><%if @transaction.ilike != nil%><%=h @transaction.ilike%><%=h I18n.t('transactions.information.likes')%></div>
 <%end%>
 				</div>
 			</div>

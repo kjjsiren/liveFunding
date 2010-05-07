@@ -22,7 +22,7 @@
 	<th><%= link_to I18n.t('transactions.index.amount')+(params[:sort_by]=="amount" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "amount", :sort_order => sort_order}, :title => "sort by amount" %></th>
 	<th><%= link_to I18n.t('transactions.index.to')+(params[:sort_by]=="to" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "to", :sort_order => sort_order}, :title => "sort by to" %></th>
 	<th><%= link_to I18n.t('transactions.index.create_time')+(params[:sort_by]=="create_time" ? arrow_str : ""), { :controller => :transactions, :action => "index", :sort_by => "create_time", :sort_order => sort_order}, :title => "sort by create time" %></th>
-	<th></th>
+	<th><%=h I18n.t('transactions.information.rank_source')%></th>
 
 </tr>
 <% @transactions.each do |transaction| %>
@@ -37,10 +37,25 @@
 	<td>
         <%if transaction.date_of_transaction != nil%><%=h transaction.date_of_transaction.strftime("%d / %m / %Y")  %><%end%></td>
 	<td>
-	<% if logged_in? %>
-		<%= link_to image_tag("accept.png", :border=>0), { :controller => :transactions, :action => "incr_rank", :id => transaction.id }, :title => "Rank It!" %>
-		<%= link_to image_tag("Block.png", :border=>0), { :controller => :transactions, :action => "decr_rank", :id => transaction.id }, :title => "Unrank It!" %> <%=h transaction.rank %> <%if transaction.ilike != nil %> rank(s)<%end%>
-	<% end %>
+		<%if transaction.information_source != nil %>
+			<%if transaction.information_source.rank != nil %>
+				<%if transaction.information_source.rank == 3 %>
+				<%=h I18n.t('transactions.information.not_confirmed')%>
+				<%end%>
+				<%if transaction.information_source.rank == 1 %>
+				<%=h I18n.t('transactions.information.very_suspicious')%>
+				<%end%>
+				<%if transaction.information_source.rank == 2 %>
+				<%=h I18n.t('transactions.information.suspicious')%>
+				<%end%>
+				<%if transaction.information_source.rank == 4 %>
+				<%=h I18n.t('transactions.information.trustworthy')%>
+				<%end%>
+				<%if transaction.information_source.rank == 5 %>
+				<%=h I18n.t('transactions.information.official_source')%>
+				<%end%>
+				<%end%>
+		<%end%>
 	</td>
 	<td><%= link_to image_tag("Thumbs-up-icon.png", :border=>0), { :controller => :transactions, :action => "incr_ilike", :id => transaction.id }, :title => "I Like It!"  %> <%= link_to image_tag("thumbs-down-icon.png", :border=>0), { :controller => :transactions, :action => "decr_ilike", :id => transaction.id }, :title => "I don't Like It!"  %> <%=h transaction.ilike %><%if transaction.ilike !=nil %> like(s)<%end%></td>
 	<!-- <td><%= link_to I18n.t('layout.navigation.edit'),  edit_transaction_path(transaction) %></td>

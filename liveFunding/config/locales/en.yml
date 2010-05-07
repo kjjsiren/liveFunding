@@ -74,13 +74,13 @@ en:
             created_at: "Record created: "
             updated_at: "Record last updated: "
             source: "Information Source:"
-            rank_source: "Reliability of this source:"  
+            rank_source: "Reliability:"  
             not_confirmed: "Not confirmed"
             very_suspicious: "Very suspicious"
             suspicious: "Suspicious"
             trustworthy: "Trustworthy"
             official_source: "Official source"
-            likes: " users likes this transaction"
+            likes: " user(s) like(s) this transaction"
             positive_amount: "Amount must be positive"
             
         edit:
