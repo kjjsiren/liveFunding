@@ -81,6 +81,7 @@ en:
             trustworthy: "Trustworthy"
             official_source: "Official source"
             likes: " users likes this transaction"
+            positive_amount: "Amount must be positive"
             
         edit:
             title: "Edit the information"

@@ -34,19 +34,19 @@
 						<strong>
 						<%if @transaction.information_source.rank != nil %>
 								<%if @transaction.information_source.rank == 3 %>
-								<%=I18n.t('transactions.information.not_confirmed')%>
+								<%=h I18n.t('transactions.information.not_confirmed')%>
 								<%end%>
 								<%if @transaction.information_source.rank == 1 %>
-								<%I18n.t('transactions.information.very_suspicious')%>
+								<%=h I18n.t('transactions.information.very_suspicious')%>
 								<%end%>
 								<%if @transaction.information_source.rank == 2 %>
-								<%I18n.t('transactions.information.suspicious')%>
+								<%=h I18n.t('transactions.information.suspicious')%>
 								<%end%>
 								<%if @transaction.information_source.rank == 4 %>
-								<%I18n.t('transactions.information.trustworthy')%>
+								<%=h I18n.t('transactions.information.trustworthy')%>
 								<%end%>
 								<%if @transaction.information_source.rank == 5 %>
-								<%I18n.t('transactions.information.official_source')%>
+								<%=h I18n.t('transactions.information.official_source')%>
 								<%end%>
 						<%end%>
 						</strong>
