@@ -87,7 +87,7 @@
 	<tr>
 <td><%if t.date_of_transaction != nil%><%=t.date_of_transaction.strftime("%m / %Y") %><%else%>?? / ????<%end%></td>
 <td><%=link_to t.recipient.name, t.recipient%></td> 
-<td>=><td/>
+<td>=></td>
 <td><%=t.donor.name%></td>
 <td>=</td> 
 <td><%=t.amount%>€</td>

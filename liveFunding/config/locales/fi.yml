@@ -82,7 +82,7 @@ fi:
             likes: " käyttäjää on tykännyt tästä tapahtumasta "
             
         edit:
-            title: "Muuta tapahtuman tietoja:"
+            title: "Muuta tietoja #"
             update: "Päivitä"
             
         new:
