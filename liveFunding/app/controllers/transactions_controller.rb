@@ -117,8 +117,9 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.find(params[:id])
     respond_to do |format|
       if @transaction.update_attributes(params[:transaction])
-           @information_source = InformationSource.new(params[:information_sources])
-            @information_source.transaction_id = @transaction.id
+            @information_source = InformationSource.find_by_transaction_id(@transaction.id)
+            @information_source.source = params[:information_sources][:source]
+            @information_source.rank = params[:information_sources][:rank]
             @information_source.save
         flash[:notice] = 'Transaction was successfully updated.'
         format.html { redirect_to(@transaction) }
@@ -133,6 +134,9 @@ class TransactionsController < ApplicationController
   #Delete the transaction from the database:
   def destroy
     @transaction = Transaction.find(params[:id])
+    if @information_source = InformationSource.find_by_transaction_id(@transaction.id) != nil
+      @information_source.destroy
+    end  
     @transaction.destroy
 
     respond_to do |format|

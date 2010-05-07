@@ -10,7 +10,7 @@ class Transaction < ActiveRecord::Base
   named_scope :latest, lambda { |amount|
       {:limit => amount}
     }
-  
+  validate :amount_must_be_positive
   validates_presence_of :recipient, :donor # Recipient and donor can't be empty
   validates_numericality_of :amount	
   
@@ -28,5 +28,9 @@ class Transaction < ActiveRecord::Base
     self.find(:all, :order => 'created_at DESC', :limit => 10)
   end
   
+  protected
+      def amount_must_be_positive
+        errors.add(:amount, I18n.t('transactions.information.positive_amount')) if amount.nil? || amount < 0
+      end
 end
 
