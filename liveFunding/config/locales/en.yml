@@ -84,7 +84,7 @@ en:
             positive_amount: "Amount must be positive"
             
         edit:
-            title: "Edit the information"
+            title: "Edit transaction #"
             update: "Update"
             
         new:
