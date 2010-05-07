@@ -5,9 +5,7 @@ Feature: User login
 
 Scenario: Login in as an existing user
 	When I go to home_page
-	And I fill in "user_username" with "antti"
-	And I fill in "user_password" with "12345"
-	And I press "login_btn"
+	And I am logged_in
 	
-	Then I should be on the homepage
-	And I should see a message that says "Welcome, antti"
+	Then I should be on home_page
+	

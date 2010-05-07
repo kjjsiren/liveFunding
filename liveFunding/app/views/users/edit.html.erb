@@ -63,8 +63,8 @@
         <%=h I18n.t('transactions.index.from') %>: <strong><% if transaction.donor !=nil%><%=h transaction.donor.name %><%end%></strong> 
 		       <strong><%=h transaction.amount %></strong> 
 		       To :<strong><%if transaction.recipient !=nil %><%=h transaction.recipient.name %><%end%></strong>
-		</p>
-	</p> 
+		<%= link_to image_tag("delete.png", :border=>0), {:controller => :favourite, :action => "delete_from_favourites", :id => transaction.id}, :title => I18n.t('users.edit.delete_favourite') %>
+		</p> 
 	<% end %>
    </div>
    	

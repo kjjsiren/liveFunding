@@ -202,6 +202,7 @@ en:
             title: "Edit your information"
             destroy: "Destroy your account"
             favorite: "User's favourite transactions"
+            delete_favourite: "Favourite deleted"
         
         information:
             username: "Username"
