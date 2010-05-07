@@ -10,6 +10,4 @@ Scenario: User wants to register to the service
 	Then I am on registration_page
 	And I click the create_button
 	
-	Then I should be on the home_page
-	
 	

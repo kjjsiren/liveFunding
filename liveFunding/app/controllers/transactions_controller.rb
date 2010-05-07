@@ -118,9 +118,7 @@ class TransactionsController < ApplicationController
     respond_to do |format|
       if @transaction.update_attributes(params[:transaction])
             @information_source = InformationSource.find_by_transaction_id(@transaction.id)
-            @information_source.source = params[:information_sources][:source]
-            @information_source.rank = params[:information_sources][:rank]
-            @information_source.save
+            @information_source.update_attributes(params[:information_sources])
         flash[:notice] = 'Transaction was successfully updated.'
         format.html { redirect_to(@transaction) }
         format.xml  { head :ok }

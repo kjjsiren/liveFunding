@@ -189,6 +189,7 @@ fi:
             title: "Muokkaa tietojasi"
             destroy: "Poista tilisi"
             favorite: "Suosikkitapahtumasi"
+            delete_favourite: "Poista suosikeista"
 
 
         information:

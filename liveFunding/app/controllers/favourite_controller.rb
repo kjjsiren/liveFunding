@@ -30,7 +30,7 @@ class FavouriteController < ApplicationController
     
     respond_to do |format|
      flash[:notice] = I18n.t('flash.favourite.deleted')
-     format.html { redirect_to(transactions_url) }
+     format.html { redirect_to(edit_user_path) }
      format.xml  { head :ok }
     end
   end
